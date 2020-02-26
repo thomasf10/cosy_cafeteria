@@ -154,6 +154,35 @@ INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\gr
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\svg\svg.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\svg\svg.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\shellesc.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\shellesc.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifplatform\ifplatform.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifplatform\ifplatform.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\catchfile.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\catchfile.sty
+INPUT nul:.tex
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\transparent.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\transparent.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty
 INPUT Masterplan.aux
@@ -183,6 +212,10 @@ INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstop
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss10.tfm
@@ -217,11 +250,10 @@ INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
 INPUT C:\Users\thoma\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\eurosym\feymr10.tfm
-INPUT fig\situation.png
-INPUT .\fig\situation.png
-INPUT .\fig\situation.png
-INPUT .\fig\situation.png
-INPUT .\fig\situation.png
+INPUT situation.pdf
+INPUT .\situation.pdf
+INPUT .\situation.pdf
+INPUT .\situation.pdf
 INPUT Masterplan.aux
 INPUT .\Masterplan.out
 INPUT .\Masterplan.out
