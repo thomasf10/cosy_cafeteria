@@ -254,6 +254,10 @@ INPUT situation.pdf
 INPUT .\situation.pdf
 INPUT .\situation.pdf
 INPUT .\situation.pdf
+INPUT fig\architecture.pdf
+INPUT .\fig\architecture.pdf
+INPUT .\fig\architecture.pdf
+INPUT .\fig\architecture.pdf
 INPUT Masterplan.aux
 INPUT .\Masterplan.out
 INPUT .\Masterplan.out
