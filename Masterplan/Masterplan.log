@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.26)  27 FEB 2020 19:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.26)  28 FEB 2020 10:08
 entering extended mode
 **c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Masterplan/Masterplan.tex
 (c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Masterplan/Masterplan.tex
@@ -785,17 +785,17 @@ l.62 	\newpage
 
 pdfTeX warning: pdflatex (file ./situation.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<fig/architecture.pdf, id=83, 391.4625pt x 357.25468pt>
+<fig/architecture.pdf, id=83, 395.55779pt x 363.27718pt>
 File: fig/architecture.pdf Graphic file (type pdf)
 <use fig/architecture.pdf>
 Package pdftex.def Info: fig/architecture.pdf  used on input line 66.
-(pdftex.def)             Requested size: 345.0pt x 314.87024pt.
+(pdftex.def)             Requested size: 345.0pt x 316.86343pt.
  [3pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.80 		\item E
-              nclosure: Robin <./fig/architecture.pdf
+l.79 		\item O
+              nline dashboard to display data: Arthur <./fig/architecture.pdf
 
 pdfTeX warning: pdflatex (file ./fig/architecture.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
@@ -822,7 +822,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  46i,6n,63p,2054b,836s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on Masterplan.pdf (4 pages, 286066 bytes).
+Output written on Masterplan.pdf (4 pages, 282779 bytes).
 PDF statistics:
  149 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)
