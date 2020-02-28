@@ -35,4 +35,15 @@ F 3 "http://www.ti.com/lit/ds/symlink/bq2970.pdf" H 5800 3150 50  0001 C CNN
 	1    6050 2950
 	1    0    0    -1  
 $EndComp
+$Comp
+L Battery_Management:MCP73831-2-OT U?
+U 1 1 5E5930ED
+P 7200 3550
+F 0 "U?" H 7200 4031 50  0000 C CNN
+F 1 "MCP73831-2-OT" H 7200 3940 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7250 3300 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 7050 3500 50  0001 C CNN
+	1    7200 3550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
