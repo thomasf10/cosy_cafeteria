@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -784,4 +784,10 @@ $EndComp
 Wire Wire Line
 	6950 4550 6950 4600
 Connection ~ 6950 4600
+$Sheet
+S 7250 600  1150 950 
+U 5E6059B5
+F0 "MCU" 50
+F1 "MCU.sch" 50
+$EndSheet
 $EndSCHEMATC
