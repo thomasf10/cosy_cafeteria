@@ -1,4 +1,4 @@
-\documentclass[]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage{siunitx} % si eenheden
 \usepackage{hyperref}					% maak PDF van de thesis navigeerbaar
 \usepackage{url}
@@ -9,18 +9,22 @@
 \usepackage{svg}
 \usepackage[final]{pdfpages}
 
-
 % MFA: zet zoekpad voor figure
 \graphicspath{{fig/}}
 \usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
-%opening
-\title{Cosy Cafeteria: Masterplan}
-\author{ Robin Van de Poel\and Arthur Van den Storme\and Tobias Cromheecke\and Thomas Feys 
-}
 
 \begin{document}
-
+	\title{Embedded systems 2\\
+		\Huge Cosy Cafeteria: Masterplan
+	}
+	\author{Robin Van de Poel\and Arthur Van den Storme\and Tobias Cromheecke\and Thomas Feys}
+	\date{\today}
 	\maketitle
+	\newpage
+	
+	\tableofcontents
+	\newpage
+
 	
 	\section{Concept}
 	To improve the experience of the students in the cafeteria, an embedded system will be developed to gather a variety of data. This data will then be display to the students through an online medium such as a website. The main focus will be to gather information about the amount off people that are in the cafeteria. There are two main goals. The first goal is to display the estimated waiting time to get a meal to the students. Secondly the amount of available seats will be tracked and displayed to the students. Next to this some additional information will be gathered. The temperature, air-quality and sound level will be monitored to give the student a general idea about the conditions in the cafeteria. This way the student can gauge if the cafeteria is suitable to study in at a certain moment. 
