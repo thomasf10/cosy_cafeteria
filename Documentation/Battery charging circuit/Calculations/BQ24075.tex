@@ -63,5 +63,9 @@ Connect a 10 k$\Omega$ resistor from TS to VSS to set the TS voltage at a valid 
 \subsection{Selecting IN, OUT, and BAT Pin Capacitors}
 In most applications, all that is needed is a high-frequency decoupling capacitor (ceramic) on the power pin, input, output and battery pins. Using the values shown on the application diagram, is recommended. After evaluation of these voltage signals with real system operational conditions, one can determine if capacitance values can be adjusted toward the minimum recommended values (DC load application) or higher values for fast high amplitude pulsed load applications. Note if designed high input voltage sources (bad adaptors or wrong adaptors), the capacitor needs to be rated appropriately. Ceramic capacitors are tested to 2x their rated values so a 16-V capacitor may be adequate for a 30-V transient (verify tested rating with capacitor manufacturer).
 
+\subsection{Selecting MOSFETs}
+Discharge Overcurrent Detection (OCD) voltage = 100 mV. $R_{DSON} = 30 m\Omega @ V_{GS} = 4.5 V$
+Maximum operating discharge current = $\frac{100 mV}{2*30 m\Omega} = 1.67 A$
+
 \end{document}
 
