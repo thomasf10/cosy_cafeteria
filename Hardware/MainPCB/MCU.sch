@@ -1,0 +1,137 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Power_Management:TPS22917DBV U4
+U 1 1 5E605F7A
+P 5450 4000
+F 0 "U4" H 5450 4367 50  0000 C CNN
+F 1 "TPS22919" H 5450 4276 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 5450 4500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tps22917.pdf" H 5500 3300 50  0001 C CNN
+	1    5450 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR031
+U 1 1 5E6074EA
+P 5450 4350
+F 0 "#PWR031" H 5450 4100 50  0001 C CNN
+F 1 "GND" H 5455 4177 50  0000 C CNN
+F 2 "" H 5450 4350 50  0001 C CNN
+F 3 "" H 5450 4350 50  0001 C CNN
+	1    5450 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4350 5450 4300
+$Comp
+L Device:R R?
+U 1 1 5E608101
+P 6100 4100
+F 0 "R?" H 6170 4146 50  0000 L CNN
+F 1 "680" H 6170 4055 50  0000 L CNN
+F 2 "" V 6030 4100 50  0001 C CNN
+F 3 "~" H 6100 4100 50  0001 C CNN
+	1    6100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 3900 6100 3900
+Wire Wire Line
+	6100 3900 6100 3950
+Wire Wire Line
+	6100 4250 6100 4300
+Wire Wire Line
+	6100 4300 5950 4300
+Wire Wire Line
+	5950 4300 5950 4000
+Wire Wire Line
+	5950 4000 5850 4000
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E60BCC8
+P 4550 3800
+AR Path="/5E60BCC8" Ref="#PWR?"  Part="1" 
+AR Path="/5E6059B5/5E60BCC8" Ref="#PWR029"  Part="1" 
+F 0 "#PWR029" H 4550 3650 50  0001 C CNN
+F 1 "+3.3V" H 4565 3973 50  0000 C CNN
+F 2 "" H 4550 3800 50  0001 C CNN
+F 3 "" H 4550 3800 50  0001 C CNN
+	1    4550 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3800 4550 3900
+$Comp
+L Device:CP C10
+U 1 1 5E60C590
+P 4550 4100
+F 0 "C10" H 4668 4146 50  0000 L CNN
+F 1 "1u" H 4668 4055 50  0000 L CNN
+F 2 "" H 4588 3950 50  0001 C CNN
+F 3 "~" H 4550 4100 50  0001 C CNN
+	1    4550 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR030
+U 1 1 5E60D5F3
+P 4550 4350
+F 0 "#PWR030" H 4550 4100 50  0001 C CNN
+F 1 "GND" H 4555 4177 50  0000 C CNN
+F 2 "" H 4550 4350 50  0001 C CNN
+F 3 "" H 4550 4350 50  0001 C CNN
+	1    4550 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4350 4550 4250
+Wire Wire Line
+	4550 3950 4550 3900
+Connection ~ 4550 3900
+$Comp
+L Device:CP C?
+U 1 1 5E6BFE15
+P 6500 4150
+F 0 "C?" H 6618 4196 50  0000 L CNN
+F 1 "10u" H 6618 4105 50  0000 L CNN
+F 2 "" H 6538 4000 50  0001 C CNN
+F 3 "~" H 6500 4150 50  0001 C CNN
+	1    6500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E6C0589
+P 6500 4350
+F 0 "#PWR?" H 6500 4100 50  0001 C CNN
+F 1 "GND" H 6505 4177 50  0000 C CNN
+F 2 "" H 6500 4350 50  0001 C CNN
+F 3 "" H 6500 4350 50  0001 C CNN
+	1    6500 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4350 6500 4300
+Wire Wire Line
+	6100 3900 6500 3900
+Wire Wire Line
+	6500 3900 6500 4000
+Connection ~ 6100 3900
+Wire Wire Line
+	4550 3900 5050 3900
+NoConn ~ 5050 4000
+$EndSCHEMATC
