@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AMG8833
+D IR Array Sensor Grid-EYE,3.3V,High gain Panasonic AMG8833 Grid-EYE Proximity Sensor Infrared Array Sensor, 7m, Maximum of 3.3 V dc 14-Pin
+K
+F https://industrial.panasonic.com/cdbs/www-data/pdf/ADI8000/ADI8000C53.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,1 +1,0 @@
-Plaats de PCB voor de sensoren, verwijder gerust. Deze file was nodig voor het aanmaken van de map.

@@ -1,0 +1,910 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr User 11988 8268
+encoding utf-8
+Sheet 1 1
+Title "Sensor board"
+Date "2020-02-14"
+Rev "00"
+Comp "Cossy Cafeteria"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 3850 1150 0    70   ~ 0
+SDA
+Wire Wire Line
+	3750 650  3750 550 
+Text Label 3750 650  0    10   ~ 0
+3.3V
+Wire Wire Line
+	3550 650  3550 550 
+Text Label 3550 650  0    10   ~ 0
+3.3V
+Wire Wire Line
+	5900 1150 6000 1150
+Wire Wire Line
+	6000 1150 6000 550 
+Text Label 5900 1150 0    10   ~ 0
+3.3V
+Wire Wire Line
+	5900 1550 6100 1550
+Wire Wire Line
+	6100 1550 6400 1550
+Wire Wire Line
+	6400 1550 6400 1650
+Wire Wire Line
+	6400 1550 6400 950 
+Wire Wire Line
+	6100 1650 6100 1550
+Connection ~ 6400 1550
+Connection ~ 6100 1550
+Text Label 5900 1550 0    10   ~ 0
+3.3V
+Text Label 3850 1250 0    70   ~ 0
+SCL
+Wire Wire Line
+	3750 1350 3750 1050
+Text Label 3850 1350 0    70   ~ 0
+INT_AMG8833
+Wire Wire Line
+	3550 1450 3550 1050
+Connection ~ 3550 1450
+Wire Wire Line
+	4700 1550 4600 1550
+Wire Wire Line
+	4600 1550 4600 2050
+Text Label 4700 1550 0    10   ~ 0
+GND
+Wire Wire Line
+	6400 1950 6400 2050
+Text Label 6400 1950 0    10   ~ 0
+GND
+Wire Wire Line
+	6700 2450 6700 2500
+Text Label 6700 2450 0    10   ~ 0
+GND
+Wire Wire Line
+	7000 1950 7000 2050
+Text Label 7000 1950 0    10   ~ 0
+GND
+Wire Wire Line
+	6100 2050 6100 1950
+Text Label 6100 2050 0    10   ~ 0
+GND
+Wire Wire Line
+	5900 1450 6700 1450
+Wire Wire Line
+	6700 1450 6700 1650
+Wire Wire Line
+	6700 1950 6700 2050
+Wire Wire Line
+	5900 1250 7000 1250
+Wire Wire Line
+	7000 1250 7000 1650
+Text Label 2350 2000 2    70   ~ 0
+SDA
+Text Label 2350 2100 2    70   ~ 0
+SCL
+$Comp
+L SesnorBoard-eagle-import:FRAME_A4 #FRAME1
+U 1 1 CC96BE83
+P 1900 7100
+F 0 "#FRAME1" H 1900 7100 50  0001 C CNN
+F 1 "FRAME_A4" H 1900 7100 50  0001 C CNN
+F 2 "" H 1900 7100 50  0001 C CNN
+F 3 "" H 1900 7100 50  0001 C CNN
+	1    1900 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:AMG8833 U1
+U 1 1 6A1E14AE
+P 5300 1350
+F 0 "U1" H 4800 1900 59  0000 L BNN
+F 1 "AMG8833" H 4800 750 59  0000 L BNN
+F 2 "SesnorBoard:AMG8833" H 5300 1350 50  0001 C CNN
+F 3 "" H 5300 1350 50  0001 C CNN
+	1    5300 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$03
+U 1 1 6E1B97F5
+P 3750 450
+F 0 "#U$03" H 3750 450 50  0001 C CNN
+F 1 "3.3V" H 3690 490 42  0000 L BNN
+F 2 "" H 3750 450 50  0001 C CNN
+F 3 "" H 3750 450 50  0001 C CNN
+	1    3750 450 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$04
+U 1 1 649D799B
+P 3550 450
+F 0 "#U$04" H 3550 450 50  0001 C CNN
+F 1 "3.3V" H 3490 490 42  0000 L BNN
+F 2 "" H 3550 450 50  0001 C CNN
+F 3 "" H 3550 450 50  0001 C CNN
+	1    3550 450 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #U$05
+U 1 1 BCE09641
+P 3550 2150
+F 0 "#U$05" H 3550 2150 50  0001 C CNN
+F 1 "GND" H 3490 2050 42  0000 L BNN
+F 2 "" H 3550 2150 50  0001 C CNN
+F 3 "" H 3550 2150 50  0001 C CNN
+	1    3550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #U$06
+U 1 1 CE08125E
+P 4600 2150
+F 0 "#U$06" H 4600 2150 50  0001 C CNN
+F 1 "GND" H 4540 2050 42  0000 L BNN
+F 2 "" H 4600 2150 50  0001 C CNN
+F 3 "" H 4600 2150 50  0001 C CNN
+	1    4600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:CAP_CERAMIC0805-NOOUTLINE C1
+U 1 1 E7D47EA7
+P 6400 1850
+F 0 "C1" V 6310 1899 50  0000 C CNN
+F 1 "10uF" V 6490 1899 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6400 1850 50  0001 C CNN
+F 3 "" H 6400 1850 50  0001 C CNN
+	1    6400 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:CAP_CERAMIC0805-NOOUTLINE C2
+U 1 1 AC671DB5
+P 6700 1850
+F 0 "C2" V 6610 1899 50  0000 C CNN
+F 1 "1uF" V 6790 1899 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6700 1850 50  0001 C CNN
+F 3 "" H 6700 1850 50  0001 C CNN
+	1    6700 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:CAP_CERAMIC0805-NOOUTLINE C3
+U 1 1 4017C25B
+P 7000 1850
+F 0 "C3" V 6910 1899 50  0000 C CNN
+F 1 "2.2uF" V 7090 1899 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7000 1850 50  0001 C CNN
+F 3 "" H 7000 1850 50  0001 C CNN
+	1    7000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R2
+U 1 1 5A764C0D
+P 6700 2250
+F 0 "R2" H 6700 2350 50  0000 C CNN
+F 1 "22" H 6700 2250 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6700 2250 50  0001 C CNN
+F 3 "" H 6700 2250 50  0001 C CNN
+	1    6700 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #U$07
+U 1 1 63C62AE7
+P 6700 2600
+F 0 "#U$07" H 6700 2600 50  0001 C CNN
+F 1 "GND" H 6640 2500 42  0000 L BNN
+F 2 "" H 6700 2600 50  0001 C CNN
+F 3 "" H 6700 2600 50  0001 C CNN
+	1    6700 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #U$08
+U 1 1 59F585D1
+P 6400 2150
+F 0 "#U$08" H 6400 2150 50  0001 C CNN
+F 1 "GND" H 6340 2050 42  0000 L BNN
+F 2 "" H 6400 2150 50  0001 C CNN
+F 3 "" H 6400 2150 50  0001 C CNN
+	1    6400 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #U$09
+U 1 1 9E0009A5
+P 7000 2150
+F 0 "#U$09" H 7000 2150 50  0001 C CNN
+F 1 "GND" H 6940 2050 42  0000 L BNN
+F 2 "" H 7000 2150 50  0001 C CNN
+F 3 "" H 7000 2150 50  0001 C CNN
+	1    7000 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$010
+U 1 1 2B263A79
+P 6000 450
+F 0 "#U$010" H 6000 450 50  0001 C CNN
+F 1 "3.3V" H 5940 490 42  0000 L BNN
+F 2 "" H 6000 450 50  0001 C CNN
+F 3 "" H 6000 450 50  0001 C CNN
+	1    6000 450 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R1
+U 1 1 DE04AF3C
+P 3750 850
+F 0 "R1" H 3750 950 50  0000 C CNN
+F 1 "10K" H 3750 850 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3750 850 50  0001 C CNN
+F 3 "" H 3750 850 50  0001 C CNN
+	1    3750 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R5
+U 1 1 40871C63
+P 3550 850
+F 0 "R5" H 3550 950 50  0000 C CNN
+F 1 "10K" H 3550 850 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3550 850 50  0001 C CNN
+F 3 "" H 3550 850 50  0001 C CNN
+	1    3550 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:FIDUCIAL_1MM FID2
+U 1 1 A421EEC8
+P 11250 6350
+F 0 "FID2" H 11250 6350 50  0001 C CNN
+F 1 "FIDUCIAL_1MM" H 11250 6350 50  0001 C CNN
+F 2 "SesnorBoard:FIDUCIAL_1MM" H 11250 6350 50  0001 C CNN
+F 3 "" H 11250 6350 50  0001 C CNN
+	1    11250 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:FIDUCIAL_1MM FID3
+U 1 1 CF99048F
+P 11350 6350
+F 0 "FID3" H 11350 6350 50  0001 C CNN
+F 1 "FIDUCIAL_1MM" H 11350 6350 50  0001 C CNN
+F 2 "SesnorBoard:FIDUCIAL_1MM" H 11350 6350 50  0001 C CNN
+F 3 "" H 11350 6350 50  0001 C CNN
+	1    11350 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:MOUNTINGHOLE2.5 U$16
+U 1 1 44B01CF5
+P 11850 6600
+F 0 "U$16" H 11850 6600 50  0001 C CNN
+F 1 "MOUNTINGHOLE2.5" H 11850 6600 50  0001 C CNN
+F 2 "SesnorBoard:MOUNTINGHOLE_2.5_PLATED" H 11850 6600 50  0001 C CNN
+F 3 "" H 11850 6600 50  0001 C CNN
+	1    11850 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:MOUNTINGHOLE2.5 U$17
+U 1 1 29AF302F
+P 11650 6600
+F 0 "U$17" H 11650 6600 50  0001 C CNN
+F 1 "MOUNTINGHOLE2.5" H 11650 6600 50  0001 C CNN
+F 2 "SesnorBoard:MOUNTINGHOLE_2.5_PLATED" H 11650 6600 50  0001 C CNN
+F 3 "" H 11650 6600 50  0001 C CNN
+	1    11650 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:MOUNTINGHOLE2.5 U$18
+U 1 1 5210CFB4
+P 11450 6600
+F 0 "U$18" H 11450 6600 50  0001 C CNN
+F 1 "MOUNTINGHOLE2.5" H 11450 6600 50  0001 C CNN
+F 2 "SesnorBoard:MOUNTINGHOLE_2.5_PLATED" H 11450 6600 50  0001 C CNN
+F 3 "" H 11450 6600 50  0001 C CNN
+	1    11450 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:MOUNTINGHOLE2.5 U$19
+U 1 1 1DEA58DA
+P 11250 6600
+F 0 "U$19" H 11250 6600 50  0001 C CNN
+F 1 "MOUNTINGHOLE2.5" H 11250 6600 50  0001 C CNN
+F 2 "SesnorBoard:MOUNTINGHOLE_2.5_PLATED" H 11250 6600 50  0001 C CNN
+F 3 "" H 11250 6600 50  0001 C CNN
+	1    11250 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$022
+U 1 1 585CEF8C
+P 6400 850
+F 0 "#U$022" H 6400 850 50  0001 C CNN
+F 1 "3.3V" H 6340 890 42  0000 L BNN
+F 2 "" H 6400 850 50  0001 C CNN
+F 3 "" H 6400 850 50  0001 C CNN
+	1    6400 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:CAP_CERAMIC0805-NOOUTLINE C6
+U 1 1 8451312A
+P 6100 1850
+F 0 "C6" V 6010 1899 50  0000 C CNN
+F 1 "0.1uF" V 6190 1899 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6100 1850 50  0001 C CNN
+F 3 "" H 6100 1850 50  0001 C CNN
+	1    6100 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #U$026
+U 1 1 61545C92
+P 6100 2150
+F 0 "#U$026" H 6100 2150 50  0001 C CNN
+F 1 "GND" H 6040 2050 42  0000 L BNN
+F 2 "" H 6100 2150 50  0001 C CNN
+F 3 "" H 6100 2150 50  0001 C CNN
+	1    6100 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Gas:CCS811 U2
+U 1 1 5E59C18B
+P 7800 4400
+F 0 "U2" H 7050 3900 50  0000 C CNN
+F 1 "CCS811" H 7150 3800 50  0000 C CNN
+F 2 "Package_LGA:AMS_LGA-10-1EP_2.7x4mm_P0.6mm" H 7800 3800 50  0001 C CNN
+F 3 "http://ams.com/eng/Products/Environmental-Sensors/Air-Quality-Sensors/CCS811" H 7800 4200 50  0001 C CNN
+	1    7800 4400
+	1    0    0    -1  
+$EndComp
+Text Label 6900 4300 0    50   ~ 0
+SDA
+Text Label 6900 4400 0    50   ~ 0
+SCL
+$Comp
+L SesnorBoard-eagle-import:GND #0101
+U 1 1 5E5BAE95
+P 7800 5200
+F 0 "#0101" H 7850 5250 50  0001 C CNN
+F 1 "GND" H 7750 5150 42  0000 L CNN
+F 2 "" H 7800 5200 50  0001 C CNN
+F 3 "" H 7800 5200 50  0001 C CNN
+	1    7800 5200
+	1    0    0    -1  
+$EndComp
+Text Label 6900 4200 0    50   ~ 0
+nINT
+Wire Wire Line
+	6900 4300 7400 4300
+Wire Wire Line
+	6900 4400 7400 4400
+Wire Wire Line
+	3550 1450 3550 2050
+Wire Wire Line
+	3850 1150 4700 1150
+Wire Wire Line
+	3850 1250 4700 1250
+Wire Wire Line
+	3750 1350 4700 1350
+Wire Wire Line
+	3550 1450 4700 1450
+Wire Wire Line
+	8750 4800 9050 4800
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5E5F41E8
+P 9250 4300
+F 0 "#PWR0101" H 9250 4150 50  0001 C CNN
+F 1 "+3.3V" H 9265 4473 50  0000 C CNN
+F 2 "" H 9250 4300 50  0001 C CNN
+F 3 "" H 9250 4300 50  0001 C CNN
+	1    9250 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #0102
+U 1 1 5E5F4D6B
+P 9250 5100
+F 0 "#0102" H 9300 5150 50  0001 C CNN
+F 1 "GND" H 9200 5050 42  0000 L CNN
+F 2 "" H 9250 5100 50  0001 C CNN
+F 3 "" H 9250 5100 50  0001 C CNN
+	1    9250 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5E5F6456
+P 7800 3750
+F 0 "#PWR0102" H 7800 3600 50  0001 C CNN
+F 1 "+3.3V" H 7815 3923 50  0000 C CNN
+F 2 "" H 7800 3750 50  0001 C CNN
+F 3 "" H 7800 3750 50  0001 C CNN
+	1    7800 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #U$015
+U 1 1 0C3EC839
+P 2350 2350
+F 0 "#U$015" H 2350 2350 50  0001 C CNN
+F 1 "GND" H 2290 2250 42  0000 L BNN
+F 2 "" H 2350 2350 50  0001 C CNN
+F 3 "" H 2350 2350 50  0001 C CNN
+	1    2350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$014
+U 1 1 0B5D2212
+P 2350 1700
+F 0 "#U$014" H 2350 1700 50  0001 C CNN
+F 1 "3.3V" H 2290 1740 42  0000 L BNN
+F 2 "" H 2350 1700 50  0001 C CNN
+F 3 "" H 2350 1700 50  0001 C CNN
+	1    2350 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1900 2350 1800
+Wire Wire Line
+	2350 2200 2350 2250
+Text Label 2200 2300 2    50   ~ 0
+INT_AMG8833
+Text Label 2200 2400 2    50   ~ 0
+nINT_CCS811
+Wire Wire Line
+	1400 2300 2200 2300
+Wire Wire Line
+	2200 2400 1400 2400
+Text Label 10150 4800 2    50   ~ 0
+INT_CSS811
+$Comp
+L 74xGxx:NC7SVU04P5X U3
+U 1 1 5E5F224B
+P 9250 4800
+F 0 "U3" H 9450 4700 50  0000 L CNN
+F 1 "NC7SVU04P5X" H 9450 4600 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-353_SC-70-5" H 9250 4550 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/NC7SVU04-D.pdf" H 9250 4800 50  0001 C CNN
+	1    9250 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 4800 9600 4800
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R16
+U 1 1 5E628D64
+P 9600 4550
+F 0 "R16" H 9600 4650 50  0000 C CNN
+F 1 "10K" H 9600 4550 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 9600 4550 50  0001 C CNN
+F 3 "" H 9600 4550 50  0001 C CNN
+	1    9600 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9600 4750 9600 4800
+Connection ~ 9600 4800
+Wire Wire Line
+	9600 4350 9250 4350
+Wire Wire Line
+	9250 4350 9250 4300
+Wire Wire Line
+	9250 4350 9250 4600
+Connection ~ 9250 4350
+Text Label 2200 2500 2    50   ~ 0
+nWAKE
+Wire Wire Line
+	2200 2500 1400 2500
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5E634EC4
+P 6600 4500
+F 0 "#PWR0103" H 6600 4350 50  0001 C CNN
+F 1 "+3.3V" H 6615 4673 50  0000 C CNN
+F 2 "" H 6600 4500 50  0001 C CNN
+F 3 "" H 6600 4500 50  0001 C CNN
+	1    6600 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4500 6600 4600
+Text Label 6150 4700 0    50   ~ 0
+nWAKE
+Wire Wire Line
+	6150 4700 6600 4700
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R11
+U 1 1 5E639501
+P 7100 4600
+F 0 "R11" H 7100 4700 50  0000 C CNN
+F 1 "4k7" H 7100 4600 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7100 4600 50  0001 C CNN
+F 3 "" H 7100 4600 50  0001 C CNN
+	1    7100 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4600 7400 4600
+Wire Wire Line
+	6600 4600 6900 4600
+Text Label 2200 2600 2    50   ~ 0
+AUX
+Wire Wire Line
+	2200 2600 1400 2600
+Wire Wire Line
+	9600 4800 10150 4800
+Text Notes 7000 5150 0    50   ~ 0
+I²C-address 0x5B
+Text Notes 4800 2050 0    50   ~ 0
+I²C- address 0x69
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R13
+U 1 1 5E65E6DF
+P 7400 3800
+F 0 "R13" H 7400 3900 50  0000 C CNN
+F 1 "100K" H 7400 3800 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7400 3800 50  0001 C CNN
+F 3 "" H 7400 3800 50  0001 C CNN
+	1    7400 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R14
+U 1 1 5E6606AE
+P 6850 3800
+F 0 "R14" H 6850 3900 50  0000 C CNN
+F 1 "100k" H 6850 3800 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6850 3800 50  0001 C CNN
+F 3 "" H 6850 3800 50  0001 C CNN
+	1    6850 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3750 7800 3800
+Wire Wire Line
+	7050 3800 7150 3800
+$Comp
+L SesnorBoard-eagle-import:GND #0103
+U 1 1 5E664638
+P 6600 3950
+F 0 "#0103" H 6650 4000 50  0001 C CNN
+F 1 "GND" H 6550 3900 42  0000 L CNN
+F 2 "" H 6600 3950 50  0001 C CNN
+F 3 "" H 6600 3950 50  0001 C CNN
+	1    6600 3950
+	1    0    0    -1  
+$EndComp
+Connection ~ 7150 3800
+Wire Wire Line
+	7150 3800 7200 3800
+Wire Wire Line
+	7150 4100 7400 4100
+Wire Wire Line
+	6600 3850 6600 3800
+Wire Wire Line
+	6600 3800 6650 3800
+Wire Wire Line
+	7150 4100 7150 3800
+Wire Wire Line
+	6900 4200 7400 4200
+Wire Wire Line
+	7800 3800 7600 3800
+Connection ~ 7800 3800
+Wire Wire Line
+	7800 3800 7800 3900
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R15
+U 1 1 5E581DA6
+P 6600 5000
+F 0 "R15" H 6600 5100 50  0000 C CNN
+F 1 "10k" H 6600 5000 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 6600 5000 50  0001 C CNN
+F 3 "" H 6600 5000 50  0001 C CNN
+	1    6600 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:GND #U0101
+U 1 1 5E58240A
+P 6600 5450
+F 0 "#U0101" H 6650 5500 50  0001 C CNN
+F 1 "GND" H 6550 5400 42  0000 L CNN
+F 2 "" H 6600 5450 50  0001 C CNN
+F 3 "" H 6600 5450 50  0001 C CNN
+	1    6600 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5350 6600 5200
+Wire Wire Line
+	6600 4800 6600 4700
+Text Label 8750 4800 0    50   ~ 0
+nINT
+$Comp
+L Device:Thermistor_NTC TH1
+U 1 1 5E5AB03A
+P 8500 4200
+F 0 "TH1" H 8598 4246 50  0000 L CNN
+F 1 "100K" H 8598 4155 50  0000 L CNN
+F 2 "" H 8500 4250 50  0001 C CNN
+F 3 "~" H 8500 4250 50  0001 C CNN
+	1    8500 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7400 4700 6600 4700
+Connection ~ 6600 4700
+$Comp
+L SesnorBoard-eagle-import:FRAME_A4 #FRAME1
+U 2 1 CC96BE8F
+P 7200 8350
+F 0 "#FRAME1" H 7200 8350 50  0001 C CNN
+F 1 "FRAME_A4" H 7200 8350 50  0001 C CNN
+F 2 "" H 7200 8350 50  0001 C CNN
+F 3 "" H 7200 8350 50  0001 C CNN
+	2    7200 8350
+	1    0    0    -1  
+$EndComp
+Text Label 2200 2700 2    50   ~ 0
+DETECTOR_OUT
+Wire Wire Line
+	2200 2700 1400 2700
+$Comp
+L Connector_Generic:Conn_01x09 J1
+U 1 1 5E5DEA34
+P 1200 2300
+F 0 "J1" H 1118 1675 50  0000 C CNN
+F 1 "Mainboard connection" H 1118 1766 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x09_P1.00mm_Vertical" H 1200 2300 50  0001 C CNN
+F 3 "~" H 1200 2300 50  0001 C CNN
+	1    1200 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1400 1900 2350 1900
+Wire Wire Line
+	1400 2000 2350 2000
+Wire Wire Line
+	1400 2100 2350 2100
+Wire Wire Line
+	1400 2200 2350 2200
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5E5FBFAE
+P 1950 3900
+F 0 "J2" H 1868 3575 50  0000 C CNN
+F 1 "microphoon connection" H 1868 3666 50  0000 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical" H 1950 3900 50  0001 C CNN
+F 3 "~" H 1950 3900 50  0001 C CNN
+	1    1950 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$0101
+U 1 1 5E5FD8D4
+P 2950 3550
+F 0 "#U$0101" H 2950 3550 50  0001 C CNN
+F 1 "3.3V" H 2890 3590 42  0000 L BNN
+F 2 "" H 2950 3550 50  0001 C CNN
+F 3 "" H 2950 3550 50  0001 C CNN
+	1    2950 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3650 2950 3800
+Wire Wire Line
+	2950 3800 2150 3800
+$Comp
+L SesnorBoard-eagle-import:GND #U$0102
+U 1 1 5E5FFBAE
+P 2950 4000
+F 0 "#U$0102" H 2950 4000 50  0001 C CNN
+F 1 "GND" H 2890 3900 42  0000 L BNN
+F 2 "" H 2950 4000 50  0001 C CNN
+F 3 "" H 2950 4000 50  0001 C CNN
+	1    2950 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3900 2150 3900
+Text Label 2700 4000 2    50   ~ 0
+AUDIO_OUT
+Wire Wire Line
+	2700 4000 2150 4000
+$Comp
+L Diode:PMEG4050EP D1
+U 1 1 5E607A7B
+P 2850 4600
+F 0 "D1" H 2850 4384 50  0000 C CNN
+F 1 "RB081LAM-20" H 2850 4475 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-128" H 2850 4425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PMEG4050EP.pdf" H 2850 4600 50  0001 C CNN
+	1    2850 4600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3000 4600 3100 4600
+Wire Wire Line
+	3100 4600 3300 4600
+Connection ~ 3100 4600
+Wire Wire Line
+	3100 5100 3300 5100
+$Comp
+L SesnorBoard-eagle-import:GND #U$0103
+U 1 1 5E61156D
+P 3100 5250
+F 0 "#U$0103" H 3100 5250 50  0001 C CNN
+F 1 "GND" H 3040 5150 42  0000 L BNN
+F 2 "" H 3100 5250 50  0001 C CNN
+F 3 "" H 3100 5250 50  0001 C CNN
+	1    3100 5250
+	1    0    0    -1  
+$EndComp
+Connection ~ 3100 5100
+Text Label 2150 4600 0    50   ~ 0
+AUDIO_OUT
+Text Label 3950 4600 2    50   ~ 0
+DETECTOR-OUT
+Wire Wire Line
+	3950 4600 3300 4600
+Wire Wire Line
+	2700 4600 2150 4600
+Connection ~ 3300 4600
+Wire Wire Line
+	7800 4900 7800 5100
+Wire Wire Line
+	8200 4300 8300 4300
+Wire Wire Line
+	8300 4300 8300 4200
+Wire Wire Line
+	8300 4200 8200 4200
+Wire Wire Line
+	8350 4200 8300 4200
+Connection ~ 8300 4200
+Wire Wire Line
+	8800 4200 8800 4500
+Wire Wire Line
+	8800 4500 8200 4500
+$Comp
+L SesnorBoard-eagle-import:CAP_CERAMIC0805-NOOUTLINE C21
+U 1 1 5E60868F
+P 3100 4900
+F 0 "C21" V 3010 4949 50  0000 C CNN
+F 1 "0.1uF" V 3190 4949 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3100 4900 50  0001 C CNN
+F 3 "" H 3100 4900 50  0001 C CNN
+	1    3100 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 4600 3100 4700
+Text Notes 2500 5050 0    50   ~ 0
+Tau = 1 ms
+Wire Notes Line
+	4200 5650 4200 3300
+Wire Notes Line
+	4200 3300 1500 3300
+Wire Notes Line
+	5100 3500 5100 5700
+Wire Notes Line
+	5100 5700 10300 5700
+Wire Notes Line
+	10300 5700 10300 3500
+Wire Notes Line
+	10300 3450 5100 3450
+Wire Notes Line
+	7400 2750 3050 2750
+Wire Notes Line
+	3050 2750 3050 250 
+Wire Notes Line
+	3050 250  7400 250 
+Wire Notes Line
+	7400 250  7400 2750
+Text Notes 6750 2900 0    50   ~ 0
+IR-sensor cricuit
+Text Notes 9650 5900 0    50   ~ 0
+CCS-811 circuit
+Text Notes 3650 5800 0    50   ~ 0
+Audio detector
+$Comp
+L SesnorBoard-eagle-import:CAP_CERAMIC0805-NOOUTLINE C11
+U 1 1 5E64425F
+P 5350 3950
+F 0 "C11" V 5260 3999 50  0000 C CNN
+F 1 "4.7µF" V 5440 3999 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5350 3950 50  0001 C CNN
+F 3 "" H 5350 3950 50  0001 C CNN
+	1    5350 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 4200 8650 4200
+Wire Wire Line
+	8250 3800 7800 3800
+Wire Wire Line
+	8800 3800 8800 4200
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R12
+U 1 1 5E62DEF9
+P 8450 3800
+F 0 "R12" H 8450 3900 50  0000 C CNN
+F 1 "100k" H 8450 3800 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 8450 3800 50  0001 C CNN
+F 3 "" H 8450 3800 50  0001 C CNN
+	1    8450 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8800 3800 8650 3800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E6554CB
+P 5350 3700
+F 0 "#PWR?" H 5350 3550 50  0001 C CNN
+F 1 "+3.3V" H 5365 3873 50  0000 C CNN
+F 2 "" H 5350 3700 50  0001 C CNN
+F 3 "" H 5350 3700 50  0001 C CNN
+	1    5350 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3700 5350 3750
+$Comp
+L SesnorBoard-eagle-import:GND #?
+U 1 1 5E65802F
+P 5350 4250
+F 0 "#?" H 5400 4300 50  0001 C CNN
+F 1 "GND" H 5300 4200 42  0000 L CNN
+F 2 "" H 5350 4250 50  0001 C CNN
+F 3 "" H 5350 4250 50  0001 C CNN
+	1    5350 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4150 5350 4050
+Connection ~ 8800 4200
+Text Notes 5450 4200 0    30   ~ 0
+Place C11 as close as possible \nto the supply pin VDD (6)
+$Comp
+L SesnorBoard-eagle-import:RESISTOR0805_NOOUTLINE R21
+U 1 1 5E6052B8
+P 3300 4850
+F 0 "R21" H 3300 4950 50  0000 C CNN
+F 1 "100k" H 3300 4850 40  0000 C CNB
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3300 4850 50  0001 C CNN
+F 3 "" H 3300 4850 50  0001 C CNN
+	1    3300 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 4600 3300 4650
+Wire Wire Line
+	3100 5150 3100 5100
+Wire Wire Line
+	3300 5050 3300 5100
+Wire Wire Line
+	3100 5000 3100 5100
+Wire Notes Line
+	1500 3300 1500 5650
+Wire Notes Line
+	1500 5650 4200 5650
+$EndSCHEMATC
