@@ -686,4 +686,36 @@ Wire Notes Line
 	8900 2250 6050 2250
 Text Notes 6050 2200 0    50   ~ 0
 Load switches
+Text GLabel 3850 4050 2    50   Input ~ 0
+PowerS1
+Text GLabel 3850 4150 2    50   Input ~ 0
+PowerS2
+Text GLabel 3850 4250 2    50   Input ~ 0
+PowerS3
+Wire Wire Line
+	3600 4250 3850 4250
+Wire Wire Line
+	3850 4150 3600 4150
+Wire Wire Line
+	3600 4050 3850 4050
+Text Notes 3850 4000 0    39   ~ 0
+Verplaats gerust als je deze GPIO pinnen zou nodig hebben.\n
+Text GLabel 6600 3050 3    50   Input ~ 0
+PowerS1
+Wire Wire Line
+	6600 3050 6600 2900
+Wire Wire Line
+	6600 2900 6800 2900
+Text GLabel 6600 4200 3    50   Input ~ 0
+PowerS2
+Wire Wire Line
+	6600 4200 6600 4050
+Wire Wire Line
+	6600 4050 6800 4050
+Text GLabel 6650 5350 3    50   Input ~ 0
+PowerS3
+Wire Wire Line
+	6650 5350 6650 5200
+Wire Wire Line
+	6650 5200 6800 5200
 $EndSCHEMATC
