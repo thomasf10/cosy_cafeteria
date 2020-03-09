@@ -373,8 +373,6 @@ Text GLabel 1350 4500 2    50   Input ~ 0
 Int_CCSB11
 Text GLabel 1350 4600 2    50   Input ~ 0
 nWake
-Text GLabel 1350 4700 2    50   Input ~ 0
-AUX
 Text GLabel 1350 4800 2    50   Input ~ 0
 Detector_out
 $Comp
@@ -396,8 +394,6 @@ Text GLabel 3600 5150 2    50   Input ~ 0
 nWake
 Text GLabel 3600 5250 2    50   Input ~ 0
 Detector_out
-Text GLabel 3600 5350 2    50   Input ~ 0
-AUX
 $Comp
 L Device:CP C12
 U 1 1 5E6C1EE9
