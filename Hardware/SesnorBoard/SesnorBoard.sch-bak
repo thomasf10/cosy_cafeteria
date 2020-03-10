@@ -100,17 +100,6 @@ F 3 "" H 1900 7100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SesnorBoard-eagle-import:AMG8833 U1
-U 1 1 6A1E14AE
-P 5300 1350
-F 0 "U1" H 4800 1900 59  0000 L BNN
-F 1 "AMG8833" H 4800 750 59  0000 L BNN
-F 2 "SesnorBoard:AMG8833" H 5300 1350 50  0001 C CNN
-F 3 "" H 5300 1350 50  0001 C CNN
-	1    5300 1350
-	1    0    0    -1  
-$EndComp
-$Comp
 L SesnorBoard-eagle-import:3.3V #U$03
 U 1 1 6E1B97F5
 P 3750 450
@@ -398,26 +387,15 @@ Wire Wire Line
 Wire Wire Line
 	3550 1450 3550 2050
 Wire Wire Line
-	3850 1150 4700 1150
+	3850 1150 4200 1150
 Wire Wire Line
-	3850 1250 4700 1250
+	3850 1250 4400 1250
 Wire Wire Line
 	3750 1350 4700 1350
 Wire Wire Line
 	3550 1450 4700 1450
 Wire Wire Line
 	8750 4800 9050 4800
-$Comp
-L power:+3.3V #PWR0101
-U 1 1 5E5F41E8
-P 9250 4300
-F 0 "#PWR0101" H 9250 4150 50  0001 C CNN
-F 1 "+3.3V" H 9265 4473 50  0000 C CNN
-F 2 "" H 9250 4300 50  0001 C CNN
-F 3 "" H 9250 4300 50  0001 C CNN
-	1    9250 4300
-	1    0    0    -1  
-$EndComp
 $Comp
 L SesnorBoard-eagle-import:GND #0102
 U 1 1 5E5F4D6B
@@ -430,25 +408,14 @@ F 3 "" H 9250 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0102
-U 1 1 5E5F6456
-P 7800 3750
-F 0 "#PWR0102" H 7800 3600 50  0001 C CNN
-F 1 "+3.3V" H 7815 3923 50  0000 C CNN
-F 2 "" H 7800 3750 50  0001 C CNN
-F 3 "" H 7800 3750 50  0001 C CNN
-	1    7800 3750
-	1    0    0    -1  
-$EndComp
-$Comp
 L SesnorBoard-eagle-import:GND #U$015
 U 1 1 0C3EC839
-P 2350 2350
-F 0 "#U$015" H 2350 2350 50  0001 C CNN
-F 1 "GND" H 2290 2250 42  0000 L BNN
-F 2 "" H 2350 2350 50  0001 C CNN
-F 3 "" H 2350 2350 50  0001 C CNN
-	1    2350 2350
+P 2350 2400
+F 0 "#U$015" H 2350 2400 50  0001 C CNN
+F 1 "GND" H 2290 2300 42  0000 L BNN
+F 2 "" H 2350 2400 50  0001 C CNN
+F 3 "" H 2350 2400 50  0001 C CNN
+	1    2350 2400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -464,18 +431,14 @@ F 3 "" H 2350 1700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2350 1900 2350 1800
-Wire Wire Line
-	2350 2200 2350 2250
-Text Label 2200 2300 2    50   ~ 0
+Text Label 2200 2200 2    50   ~ 0
 INT_AMG8833
 Text Label 2200 2400 2    50   ~ 0
 nINT_CCS811
 Wire Wire Line
-	1400 2300 2200 2300
-Wire Wire Line
 	2200 2400 1400 2400
 Text Label 10150 4800 2    50   ~ 0
-INT_CSS811
+nINT_CCS811
 $Comp
 L 74xGxx:NC7SVU04P5X U3
 U 1 1 5E5F224B
@@ -514,17 +477,6 @@ Text Label 2200 2500 2    50   ~ 0
 nWAKE
 Wire Wire Line
 	2200 2500 1400 2500
-$Comp
-L power:+3.3V #PWR0103
-U 1 1 5E634EC4
-P 6600 4500
-F 0 "#PWR0103" H 6600 4350 50  0001 C CNN
-F 1 "+3.3V" H 6615 4673 50  0000 C CNN
-F 2 "" H 6600 4500 50  0001 C CNN
-F 3 "" H 6600 4500 50  0001 C CNN
-	1    6600 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6600 4500 6600 4600
 Text Label 6150 4700 0    50   ~ 0
@@ -641,7 +593,7 @@ U 1 1 5E5AB03A
 P 8500 4200
 F 0 "TH1" H 8598 4246 50  0000 L CNN
 F 1 "100K" H 8598 4155 50  0000 L CNN
-F 2 "" H 8500 4250 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 8500 4250 50  0001 C CNN
 F 3 "~" H 8500 4250 50  0001 C CNN
 	1    8500 4200
 	0    -1   -1   0   
@@ -670,7 +622,7 @@ U 1 1 5E5DEA34
 P 1200 2300
 F 0 "J1" H 1118 1675 50  0000 C CNN
 F 1 "Mainboard connection" H 1118 1766 50  0000 C CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x09_P1.00mm_Vertical" H 1200 2300 50  0001 C CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x08_P1.00mm_Vertical" H 1200 2300 50  0001 C CNN
 F 3 "~" H 1200 2300 50  0001 C CNN
 	1    1200 2300
 	-1   0    0    1   
@@ -681,8 +633,6 @@ Wire Wire Line
 	1400 2000 2350 2000
 Wire Wire Line
 	1400 2100 2350 2100
-Wire Wire Line
-	1400 2200 2350 2200
 $Comp
 L Connector_Generic:Conn_01x03 J2
 U 1 1 5E5FBFAE
@@ -759,7 +709,7 @@ Connection ~ 3100 5100
 Text Label 2150 4600 0    50   ~ 0
 AUDIO_OUT
 Text Label 3950 4600 2    50   ~ 0
-DETECTOR-OUT
+DETECTOR_OUT
 Wire Wire Line
 	3950 4600 3300 4600
 Wire Wire Line
@@ -852,19 +802,6 @@ $EndComp
 Wire Wire Line
 	8800 3800 8650 3800
 $Comp
-L power:+3.3V #PWR0104
-U 1 1 5E6554CB
-P 5350 3700
-F 0 "#PWR0104" H 5350 3550 50  0001 C CNN
-F 1 "+3.3V" H 5365 3873 50  0000 C CNN
-F 2 "" H 5350 3700 50  0001 C CNN
-F 3 "" H 5350 3700 50  0001 C CNN
-	1    5350 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5350 3700 5350 3750
-$Comp
 L SesnorBoard-eagle-import:GND #0104
 U 1 1 5E65802F
 P 5350 4250
@@ -903,4 +840,123 @@ Wire Notes Line
 	1500 3300 1500 5650
 Wire Notes Line
 	1500 5650 4200 5650
+$Comp
+L SesnorBoard-eagle-import:AMG8833 U1
+U 1 1 6A1E14AE
+P 5300 1350
+F 0 "U1" H 4800 1900 59  0000 L BNN
+F 1 "AMG8833" H 4800 750 59  0000 L BNN
+F 2 "AMG8833_REV-B:AMG8833" H 5300 1350 50  0001 C CNN
+F 3 "" H 5300 1350 50  0001 C CNN
+	1    5300 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$0104
+U 1 1 5E69F37D
+P 4200 450
+F 0 "#U$0104" H 4200 450 50  0001 C CNN
+F 1 "3.3V" H 4140 490 42  0000 L BNN
+F 2 "" H 4200 450 50  0001 C CNN
+F 3 "" H 4200 450 50  0001 C CNN
+	1    4200 450 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$0105
+U 1 1 5E69F6DA
+P 4400 450
+F 0 "#U$0105" H 4400 450 50  0001 C CNN
+F 1 "3.3V" H 4340 490 42  0000 L BNN
+F 2 "" H 4400 450 50  0001 C CNN
+F 3 "" H 4400 450 50  0001 C CNN
+	1    4400 450 
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:RESISTOR_1206 R3
+U 1 1 5E69F7FF
+P 4200 850
+F 0 "R3" H 4200 950 50  0000 C CNN
+F 1 "2k2" H 4200 850 40  0000 C CNB
+F 2 "Resistor_SMD:R_1206_3216Metric" H 4200 850 50  0001 C CNN
+F 3 "" H 4200 850 50  0001 C CNN
+	1    4200 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:RESISTOR_1206 R4
+U 1 1 5E69FBAF
+P 4400 850
+F 0 "R4" H 4400 950 50  0000 C CNN
+F 1 "2k2" H 4400 850 40  0000 C CNB
+F 2 "Resistor_SMD:R_1206_3216Metric" H 4400 850 50  0001 C CNN
+F 3 "" H 4400 850 50  0001 C CNN
+	1    4400 850 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4200 550  4200 650 
+Wire Wire Line
+	4400 550  4400 650 
+Wire Wire Line
+	4400 1050 4400 1250
+Connection ~ 4400 1250
+Wire Wire Line
+	4400 1250 4700 1250
+Wire Wire Line
+	4200 1050 4200 1150
+Connection ~ 4200 1150
+Wire Wire Line
+	4200 1150 4700 1150
+Wire Wire Line
+	1400 2300 2350 2300
+Wire Wire Line
+	2200 2200 1400 2200
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$0106
+U 1 1 5E72D28B
+P 5350 3550
+F 0 "#U$0106" H 5350 3550 50  0001 C CNN
+F 1 "3.3V" H 5290 3590 42  0000 L BNN
+F 2 "" H 5350 3550 50  0001 C CNN
+F 3 "" H 5350 3550 50  0001 C CNN
+	1    5350 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3650 5350 3750
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$0107
+U 1 1 5E731022
+P 7800 3650
+F 0 "#U$0107" H 7800 3650 50  0001 C CNN
+F 1 "3.3V" H 7740 3690 42  0000 L BNN
+F 2 "" H 7800 3650 50  0001 C CNN
+F 3 "" H 7800 3650 50  0001 C CNN
+	1    7800 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$0108
+U 1 1 5E7314BB
+P 6600 4400
+F 0 "#U$0108" H 6600 4400 50  0001 C CNN
+F 1 "3.3V" H 6540 4440 42  0000 L BNN
+F 2 "" H 6600 4400 50  0001 C CNN
+F 3 "" H 6600 4400 50  0001 C CNN
+	1    6600 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L SesnorBoard-eagle-import:3.3V #U$0109
+U 1 1 5E732CAF
+P 9250 4200
+F 0 "#U$0109" H 9250 4200 50  0001 C CNN
+F 1 "3.3V" H 9190 4240 42  0000 L BNN
+F 2 "" H 9250 4200 50  0001 C CNN
+F 3 "" H 9250 4200 50  0001 C CNN
+	1    9250 4200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
