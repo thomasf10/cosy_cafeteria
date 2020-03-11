@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.25)  5 MAR 2020 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.25)  6 MAR 2020 18:38
 entering extended mode
 **./BQ24075.tex
 (BQ24075.tex
@@ -161,7 +161,14 @@ Package pdftex.def Info: ./fig/Charge_cycle.png  used on input line 21.
  [1
 
 {C:/Users/tobia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./fig/Charg
-e_cycle.png>] [2] [3] [4] (BQ24075.aux) ) 
+e_cycle.png>] [2] [3]
+Overfull \hbox (21.84842pt too wide) in paragraph at lines 67--69
+\OT1/cmr/m/n/10 Discharge Over-cur-rent De-tec-tion (OCD) volt-age = 100 mV. $\
+OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = 30\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 
+@\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 =
+ []
+
+[4] (BQ24075.aux) ) 
 Here is how much of TeX's memory you used:
  1542 strings out of 492450
  23209 string characters out of 3120004
@@ -170,21 +177,20 @@ Here is how much of TeX's memory you used:
  7587 words of font info for 27 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,32p,780b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/tobia/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tobia/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/to
-bia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi7.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tobia/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/tobia/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/tobia/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Use
-rs/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb>
-Output written on BQ24075.pdf (4 pages, 159195 bytes).
+<C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tobia/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tobia/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users
+/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/tobia/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/tobia/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tobia/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on BQ24075.pdf (4 pages, 159198 bytes).
 PDF statistics:
  62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

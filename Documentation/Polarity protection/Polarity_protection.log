@@ -1,0 +1,21 @@
+Circuit: * C:\Users\tobia\Documents\GitHub\cosy_cafeteria\Documentation\Polarity protection\Polarity_protection.asc
+
+.OP point found by inspection.
+
+Date: Fri Mar  6 14:55:03 2020
+Total elapsed time: 0.028 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2391
+traniter = 2391
+tranpoints = 1116
+accept = 1105
+rejected = 11
+matrix size = 16
+fillins = 5
+solver = Normal
+Matrix Compiler1: 1.09 KB object code size  0.4/0.2/[0.1]
+Matrix Compiler2: 1.30 KB object code size  0.2/0.2/[0.1]
+

@@ -1,0 +1,37 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model AMG8833
+#/366396/230814/2.45/14/4/Undefined or Miscellaneous
+DEF AMG8833 U 0 30 Y Y 1 F N
+F0 "U" 1350 300 50 H V L CNN
+F1 "AMG8833" 1350 200 50 H V L CNN
+F2 "AMG8851" 1350 100 50 H I L CNN
+F3 "https://industrial.panasonic.com/cdbs/www-data/pdf/ADI8000/ADI8000C53.pdf" 1350 0 50 H I L CNN
+F4 "IR Array Sensor Grid-EYE,3.3V,High gain Panasonic AMG8833 Grid-EYE Proximity Sensor Infrared Array Sensor, 7m, Maximum of 3.3 V dc 14-Pin" 1350 -100 50 H I L CNN "Description"
+F5 "" 1350 -200 50 H I L CNN "Height"
+F6 "Panasonic" 1350 -300 50 H I L CNN "Manufacturer_Name"
+F7 "AMG8833" 1350 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "667-AMG8833" 1350 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=667-AMG8833" 1350 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "1229750" 1350 -700 50 H I L CNN "RS Part Number"
+F11 "http://uk.rs-online.com/web/p/products/1229750" 1350 -800 50 H I L CNN "RS Price/Stock"
+DRAW
+X NC_1 1 0 0 200 R 50 50 0 0 U
+X SDA 2 0 -100 200 R 50 50 0 0 U
+X SCL 3 0 -200 200 R 50 50 0 0 U
+X INT 4 0 -300 200 R 50 50 0 0 U
+X AD_SELECT 5 0 -400 200 R 50 50 0 0 U
+X GND 6 0 -500 200 R 50 50 0 0 U
+X NC_2 7 0 -600 200 R 50 50 0 0 U
+X NC_3 8 1500 0 200 L 50 50 0 0 U
+X VDD 9 1500 -100 200 L 50 50 0 0 U
+X AVDD-PC 10 1500 -200 200 L 50 50 0 0 U
+X NC_4 11 1500 -300 200 L 50 50 0 0 U
+X DVDD-PC 12 1500 -400 200 L 50 50 0 0 U
+X VPP 13 1500 -500 200 L 50 50 0 0 U
+X NC_5 14 1500 -600 200 L 50 50 0 0 U
+P 5 0 1 6 200 100 1300 100 1300 -700 200 -700 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

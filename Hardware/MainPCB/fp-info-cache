@@ -1,4 +1,4 @@
-16937896547907390
+16939480069250214
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -73891,6 +73891,13 @@ test point THT pad
 0
 1
 1
+Tobias_KiCad_Lib
+Wire
+
+
+0
+2
+2
 Transformer_SMD
 Pulse_P0926NL
 SMT Gate Drive Transformer, 1:1:1, 8.0x6.3x5.3mm (https://productfinder.pulseeng.com/products/datasheets/SPM2007_61.pdf)
