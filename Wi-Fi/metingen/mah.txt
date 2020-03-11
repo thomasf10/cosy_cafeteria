@@ -1,0 +1,5 @@
+meting 1: 0.06880587485560462 mAh
+meting 2: 0.1120100364229111 mAh
+meting 3: nvt
+meting 4: 0.06389901444444451 mAh
+ 

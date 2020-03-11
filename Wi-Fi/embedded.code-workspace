@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "code\\powertest"
+		},
+		{
+			"name": "WiFi_to_PC_enterprise",
+			"path": "code\\WiFi_to_PC_enterprise"
+		}
+	],
+	"settings": {}
+}
