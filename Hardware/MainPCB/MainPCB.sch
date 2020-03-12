@@ -663,7 +663,7 @@ $EndComp
 Wire Wire Line
 	4250 900  3950 900 
 $Comp
-L Tobias_KiCad_Lib:VDD1 #PWR019
+L MainPCB-rescue:VDD1-Tobias_KiCad_Lib #PWR019
 U 1 1 5E638978
 P 5550 850
 F 0 "#PWR019" H 5550 700 50  0001 C CNN
@@ -674,7 +674,7 @@ F 3 "" H 5550 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Tobias_KiCad_Lib:VDD1 #PWR014
+L MainPCB-rescue:VDD1-Tobias_KiCad_Lib #PWR014
 U 1 1 5E63EDBA
 P 3750 3900
 F 0 "#PWR014" H 3750 3750 50  0001 C CNN
@@ -685,7 +685,7 @@ F 3 "" H 3750 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Tobias_KiCad_Lib:VDD1 #PWR017
+L MainPCB-rescue:VDD1-Tobias_KiCad_Lib #PWR017
 U 1 1 5E63F63E
 P 5500 3000
 F 0 "#PWR017" H 5500 2850 50  0001 C CNN
@@ -735,7 +735,7 @@ Connection ~ 4950 900
 Text Notes 4000 600  0    50   ~ 0
 Reverse polarity protection\n
 $Comp
-L Tobias_KiCad_Lib:VDD2 #PWR011
+L MainPCB-rescue:VDD2-Tobias_KiCad_Lib #PWR011
 U 1 1 5E67E45E
 P 3450 3400
 F 0 "#PWR011" H 3450 3250 50  0001 C CNN
@@ -746,7 +746,7 @@ F 3 "" H 3450 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Tobias_KiCad_Lib:VDD2 #PWR024
+L MainPCB-rescue:VDD2-Tobias_KiCad_Lib #PWR024
 U 1 1 5E67EF36
 P 8950 3200
 F 0 "#PWR024" H 8950 3050 50  0001 C CNN
@@ -757,7 +757,7 @@ F 3 "" H 8950 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Tobias_KiCad_Lib:VDD2 #PWR02
+L MainPCB-rescue:VDD2-Tobias_KiCad_Lib #PWR02
 U 1 1 5E680F74
 P 1250 4050
 F 0 "#PWR02" H 1250 3900 50  0001 C CNN
@@ -768,7 +768,7 @@ F 3 "" H 1250 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Tobias_KiCad_Lib:VDD2 #PWR016
+L MainPCB-rescue:VDD2-Tobias_KiCad_Lib #PWR016
 U 1 1 5E68189B
 P 4500 3650
 F 0 "#PWR016" H 4500 3500 50  0001 C CNN
