@@ -333,9 +333,9 @@ Text GLabel 3800 4650 2    50   Input ~ 0
 SCL
 Text GLabel 3800 4550 2    50   Input ~ 0
 SDA
-Text GLabel 1150 4000 2    50   Input ~ 0
-SDA
 Text GLabel 1150 4100 2    50   Input ~ 0
+SDA
+Text GLabel 1150 4000 2    50   Input ~ 0
 SCL
 Wire Wire Line
 	3600 4550 3800 4550
@@ -365,11 +365,11 @@ F 3 "" H 1650 4700 50  0001 C CNN
 $EndComp
 Text GLabel 1150 4200 2    50   Input ~ 0
 Int_AMG8833
-Text GLabel 1150 4400 2    50   Input ~ 0
-Int_CCSB11
-Text GLabel 1150 4500 2    50   Input ~ 0
-nWake
 Text GLabel 1150 4600 2    50   Input ~ 0
+Int_CCSB11
+Text GLabel 1150 4400 2    50   Input ~ 0
+nWake
+Text GLabel 1150 4500 2    50   Input ~ 0
 Detector_out
 Text GLabel 3600 4950 2    50   Input ~ 0
 Int_AMG8833
