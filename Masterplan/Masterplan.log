@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.25)  4 MAR 2020 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.25)  14 MAR 2020 14:18
 entering extended mode
-**./Masterplan.tex
+**Masterplan.tex input
 (Masterplan.tex
 LaTeX2e <2019-10-01> patch level 3
 ("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
@@ -724,7 +724,7 @@ Package: scrlfile 2020/01/24 v3.29 KOMA-Script package (loading files)
 ("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\shellesc.sty
 "
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
 ("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimspa
 ces.sty"
@@ -733,7 +733,15 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \svg@box=\box63
 \c@svg@param@lastpage=\count313
 \c@svg@param@currpage=\count314
-)
+
+("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifplatform\ifplatf
+orm.sty"
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\catchfi
+le.sty"
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+)))
 ("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -798,11 +806,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks35
 \@floatcapt=\box67
 )
-(Masterplan.aux
-
-LaTeX Warning: Label `fig:situation' multiply defined.
-
-)
+(Masterplan.aux)
 \openout1 = `Masterplan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -821,7 +825,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
- ("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
+
+("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
 File: ts1enc.dfu 2019/07/11 v1.2j UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -990,7 +995,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
 
 [3]
-<situation.pdf, id=113, 467.82779pt x 147.67169pt>
+<situation.pdf, id=115, 467.82779pt x 147.67169pt>
 File: situation.pdf Graphic file (type pdf)
 <use situation.pdf>
 Package pdftex.def Info: situation.pdf  used on input line 62.
@@ -1006,7 +1011,7 @@ l.66 	\newpage
 pdfTeX warning: pdflatex.exe (file ./situation.pdf): PDF inclusion: invalid oth
 er resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<fig/architecture.pdf, id=139, 395.55779pt x 363.27718pt>
+<fig/architecture.pdf, id=141, 395.55779pt x 363.27718pt>
 File: fig/architecture.pdf Graphic file (type pdf)
 <use fig/architecture.pdf>
 Package pdftex.def Info: fig/architecture.pdf  used on input line 70.
@@ -1030,20 +1035,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `Masterplan.out' has not changed.
 (rerunfilecheck)             Checksum: 4A2E2290EF1209BB4FE886728F0C2093;1102.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 26353 strings out of 492450
- 503057 string characters out of 3120004
- 627284 words of memory out of 3000000
- 30369 multiletter control sequences out of 15000+200000
+ 26430 strings out of 492450
+ 504468 string characters out of 3120004
+ 628362 words of memory out of 3000000
+ 30438 multiletter control sequences out of 15000+200000
  540708 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 51i,6n,67p,1998b,836s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 51i,6n,67p,2002b,836s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/f
@@ -1053,9 +1054,9 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/tobia
 /AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
 :/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/eurosym/feym
 r10.pfb>
-Output written on Masterplan.pdf (7 pages, 296942 bytes).
+Output written on Masterplan.pdf (7 pages, 297279 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
+ 212 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
  155 words of extra memory for PDF output out of 10000 (max. 10000000)
 

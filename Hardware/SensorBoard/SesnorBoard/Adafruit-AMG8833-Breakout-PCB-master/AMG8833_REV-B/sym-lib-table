@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name AMG8833_REV-B-eagle-import)(type Legacy)(uri ${KIPRJMOD}/AMG8833_REV-B-eagle-import.lib)(options "")(descr ""))
-)

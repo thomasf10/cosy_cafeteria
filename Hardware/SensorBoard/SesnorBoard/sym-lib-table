@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name SesnorBoard-eagle-import)(type Legacy)(uri ${KIPRJMOD}/SesnorBoard-eagle-import.lib)(options "")(descr ""))
-)
