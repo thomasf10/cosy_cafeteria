@@ -1,0 +1,13 @@
+afmetingen print moet kleiner zijn dan 100x100mm
+
+Inhoud verslag:
+ - wat gaat uw systeem juist doen
+ - functionaliteit
+ - opgebouwd
+ - bespreking
+ - energiebeheer - autonomiteit
+ - manier om aan te tonen dat het werkt - metingen
+ - url's github
+ - financiële schatting
+
+Tonen dat je hebt nagedacht over dimensionering componenten.
