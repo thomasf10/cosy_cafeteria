@@ -13,10 +13,13 @@
 
 
 
-//WiFiClientSecure client;
+// declare appstate
+static volatile APP_State_t appState = SENDDATA;
+
 void setup() {
   wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
   esp_wifi_init(&cfg);
+
 // for enterprise wifi
 /*  
   WiFi.mode(WIFI_STA); //init wifi mode
@@ -40,11 +43,32 @@ void setup() {
 
 }
 void loop() {
-  uint8_t data[10];
-  for(int i=0; i<10;i++){
-    data[i] = i;
-  }
-  sendMessage(data,10);
-  goToDeepSleep(10);
 
+  switch (appState)
+  {
+  case SENDDATA:{
+    appState = SLEEP;
+    uint8_t data[10];
+    for(int i=0; i<10;i++){
+      data[i] = i;
+    }
+    while(true){
+      if(sendMessage(data,10)){
+        break;
+      }
+    }
+  } break;
+   
+  case SLEEP:{
+    goToDeepSleep(5);
+  }break;
+  
+  case READSENSORS:{
+
+  }break;
+  
+  case IDLE:{
+
+  }break;
+  }
 }

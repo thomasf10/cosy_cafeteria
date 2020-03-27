@@ -32,45 +32,46 @@ void goToDeepSleep(int sec)
   esp_deep_sleep_start();
 }
 
-void sendMessage(uint8_t* data, int length){
+bool sendMessage(uint8_t* data, int length){
 
   volatile bool retry = false;
   volatile bool succes = false;
-
-  while(!succes){
-    WiFi.disconnect(true);  //disconnect form wifi to set new wifi connection
-    WiFi.mode(WIFI_STA);
-    WiFi.begin(ssidhome,pwd); // no arguments for enterprise wifi
-    
-    //todo: retry functie werkt niet!!!
-    int counter = 0;
-    Serial.println("connecting to network");
-    while (WiFi.status() != WL_CONNECTED && retry == false) {
-        delay(500);
-        Serial.print(".");
-        counter++;
-        if(counter>=10){ //after 5 seconds timeout - reset board
-            Serial.println("connection failed");
-            break;
-        }
-    }
-
-    if(WiFi.status() == WL_CONNECTED){
-        Serial.println("");
-        Serial.println("WiFi connected");
-        Serial.println("IP address set: ");
-        Serial.println(WiFi.localIP()); //print LAN IP
-        WiFiClient client;
-        if (!client.connect(host,port)) {
-            Serial.println("Connection to server failed");
-        }else{
-            Serial.println("Connected to server successful!");
-            client.write(data, length);
-            Serial.println("Disconnecting...");
-            client.stop();
-            WiFi.disconnect();
-            succes = true;
-        }
-    }
+  WiFi.disconnect(true);  //disconnect form wifi to set new wifi connection
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssidhome,pwd); // no arguments for enterprise wifi
+  
+  //todo: retry functie werkt niet!!!
+  int counter = 0;
+  Serial.println("connecting to network");
+  while (WiFi.status() != WL_CONNECTED && retry == false) {
+      delay(500);
+      Serial.print(".");
+      counter++;
+      if(counter>=10){ //after 5 seconds timeout - reset board
+          Serial.println("connection failed");
+          break;
+      }
   }
+
+  if(WiFi.status() == WL_CONNECTED){
+      Serial.println("");
+      Serial.println("WiFi connected");
+      Serial.println("IP address set: ");
+      Serial.println(WiFi.localIP()); //print LAN IP
+      WiFiClient client;
+      if (!client.connect(host,port)) {
+          Serial.println("Connection to server failed");
+          delay(1000);
+          client.stop();
+          return false;
+      }else{
+          Serial.println("Connected to server successful!");
+          client.write(data, length);
+          Serial.println("Disconnecting...");
+          client.stop();
+          WiFi.disconnect();
+          return true;
+      }
+  }
+  
 }

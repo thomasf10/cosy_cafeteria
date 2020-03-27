@@ -7,9 +7,17 @@
 #include "driver/adc.h"
 #include <esp_bt.h>
 
+/* define the differente states of the program */
+typedef enum app_states{
+  SENDDATA,
+  SLEEP,
+  READSENSORS,
+  IDLE
+} APP_State_t;
+
 
 // functions
 void goToDeepSleep(int sec); // disables wifi and adc
-void sendMessage(uint8_t* data, int length);
+bool sendMessage(uint8_t* data, int length);
 
 #endif 
