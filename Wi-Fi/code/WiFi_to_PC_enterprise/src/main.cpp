@@ -7,14 +7,17 @@
 #include <esp_wifi.h>
 #include <esp_bt.h>
 #include "_util.h"
+#include <PriUint64.h>
+#include "time.h"
 
-
-
+RTC_DATA_ATTR int bootCount = 0; // to store data in rtc memory when entering deepsleep
 
 
 
 // declare appstate
-static volatile APP_State_t appState = SENDDATA;
+RTC_DATA_ATTR static volatile APP_State_t appState = NTPSYNC;
+
+
 
 void setup() {
   wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
@@ -41,26 +44,56 @@ void setup() {
   //start serial monitor
   Serial.begin(115200);
 
+  //Print the wakeup reason for ESP32
+	print_wakeup_reason();
+
 }
+
+
 void loop() {
 
   switch (appState)
   {
   case SENDDATA:{
-    appState = SLEEP;
-    uint8_t data[10];
+    appState = SLEEP;// set next appstate
+    Serial.print("bootcount: ");
+    Serial.println(bootCount);
+    bootCount++;
+    uint8_t data[10]; 
     for(int i=0; i<10;i++){
       data[i] = i;
     }
-    while(true){
+
+    int ctr = 0;
+    while(true){  
       if(sendMessage(data,10)){
         break;
       }
+      ctr++;
+      if(ctr>3){// timeout after 3 tries
+        Serial.print("Data transmission failed!");
+        break;
+      }
     }
+
   } break;
    
   case SLEEP:{
     goToDeepSleep(5);
+  }break;
+
+  case NTPSYNC:{
+    Serial.println("IN SYNC");
+     ntp_sync();
+     appState = PRINTTIME;
+     goToDeepSleep(10);
+  }break;
+
+  case PRINTTIME:{
+    Serial.println("IN PRINT");
+    printLocalTime();
+    checkhour();
+    goToDeepSleep(10);
   }break;
   
   case READSENSORS:{
@@ -68,7 +101,7 @@ void loop() {
   }break;
   
   case IDLE:{
-
+    delay(500);
   }break;
   }
 }
