@@ -42,7 +42,14 @@ ofwel in intro vermelden?
 \subsection{Microcontroller}
 \subsection{Sensorboard}
 
-\section{Dimensioning components}
+% ============ Geofrey wil zien dat we hebben nagedacht over de dimensionering van de componenten !!! ============
+\section{Selection battery}
+
+\section{Selection battery charger components}
+There are many manufacturers who produce charging IC's  bla bla bla ...
+
+We considerd many chips from different kind of manufacturers. Eventualy we went with the BQ24075 IC from Texas Instruments. It's a great chose because it's made to charge a single cell Li-Ion battery (that's all we need), and it's perfectly fit to charge using a USB port because the IC has a selectable 100 mA and 500 mA maximum input current \textbf{TO DO: VERWIJZEN NAAR USB TABEL}. \textbf{OOK NOG ZEGGEN DAT DE OPLAADSTROOM OVEREENKOMT MET DIE VAN DE BATTERY}. In the subsections below you'll find the calculations.
+
 \subsection{Charging}
 Set $\overline{CE}$ low to initiate battery charging. The battery is charged in three phases: 
 \begin{enumerate}
