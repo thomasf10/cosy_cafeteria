@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{siunitx} % si eenheden
+\usepackage{hyperref}					% maak PDF van de thesis navigeerbaar
+\usepackage{url}
+\usepackage[toc,acronym,xindy]{glossaries}%voor afkortingen
+\usepackage{amsmath}
+\usepackage[official]{eurosym} % om euro symbool te kunnen gebruiken
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage[final]{pdfpages}
+
+% =========== BELANGRIJK VR IN HET VERSLAG: Tonen dat je hebt nagedacht over dimensionering componenten! ===========
+
+% MFA: zet zoekpad voor figure
+\graphicspath{{fig/}}
+\usepackage{float}                      % De optie H voor de plaatsing van figuren op de plaats waar je ze invoegt. bvb. \begin{figure}[H]
+
+\begin{document}
+\title{Embedded systems 2\\
+	\Huge Report Cosy Cafeteria
+}
+\author{Robin Van de Poel\and Arthur Van den Storme\and Tobias Cromheecke\and Thomas Feys}
+\date{\today}
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Intro}
+- url's github
+- wat gaat uw systeem juist doen
+
+\section{Functionality}
+ofwel in intro vermelden?
+
+\section{Hardware design}
+\subsection{Power management}
+\subsubsection{Battery charging circuit}
+\subsubsection{Battry protection circuit}
+\subsubsection{Polarity protection}
+\subsection{Microcontroller}
+\subsection{Sensorboard}
+
+\section{Energy management - autonomy}
+Berekeningen voor levensduur komen hier.
+
+\section{Wireless connectivity}
+@Thomas ik zou voorstellen hier de wifi dingen te vermelden?
+
+\section{Financial estimate}
+Kostprijs van het project opstellen.
+
+\section{Validation and measurements}
+Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
+
+\end{document}
