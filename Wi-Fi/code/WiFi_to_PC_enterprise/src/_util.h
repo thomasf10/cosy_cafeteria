@@ -6,12 +6,15 @@
 #include <WiFi.h>
 #include "driver/adc.h"
 #include <esp_bt.h>
+#include "time.h"
 
 /* define the differente states of the program */
 typedef enum app_states{
   SENDDATA,
   SLEEP,
   READSENSORS,
+  NTPSYNC,
+  PRINTTIME,
   IDLE
 } APP_State_t;
 
@@ -19,5 +22,9 @@ typedef enum app_states{
 // functions
 void goToDeepSleep(int sec); // disables wifi and adc
 bool sendMessage(uint8_t* data, int length);
+void print_wakeup_reason();
+void ntp_sync();
+void printLocalTime();
+void checkhour();
 
 #endif 
