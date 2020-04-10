@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cossy Cafetaria</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    
+    <body>
+
+        <a href="">Busy</a>
+        <a href="">Noise level</a>
+        <a href="">Temperature</a>
+
+        <div class="wrapper" >
+            <div class="heatmap">
+                
+            </div>
+        </div>
+        <script src="heatmap.js\build\heatmap.min.js"></script>
+        
+        <script>
+            window.onload = function(){
+
+
+                
+                // // now read the wanted data from the database
+                var points = [];
+                var max = 100;
+
+                var ajax = new XMLHttpRequest();
+                var methode = "GET";
+                var url = "database.php";
+                var asynchronous = true;
+
+                ajax.open(methode, url, asynchronous);
+
+                ajax.send();
+
+                ajax.onreadystatechange = function(){
+                    if (this.readyState == 4 && this.status == 200) {
+                        
+                        var data = JSON.parse(this.responseText)
+                        console.log(data);
+                        
+                        for (let index = 0; index < data.length; index++) {      
+                            var point = {
+                                x: parseInt(data[index].x),
+                                y: parseInt(data[index].y),
+                                value: parseInt(data[index].infraredreading)
+                            };
+                            points.push(point);
+                        }
+                    }
+                    console.log(points);
+
+                    // minimal heatmap instance configuration
+                    var heatmapInstance = h337.create({
+                    // only container is required, the rest will be defaults
+                    container: document.querySelector('.heatmap')
+                    });
+
+                    // heatmap data format
+                    var heatmapData = {
+                        max: max,
+                        data: points
+                    };
+                    
+                    console.log(heatmapData);
+
+                    // if you have a set of datapoints always use setData instead of addData
+                    // for data initialization
+                    heatmapInstance.setData(heatmapData);
+                }   
+            }                       
+        </script>
+    </body>
+</html>
