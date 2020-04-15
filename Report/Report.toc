@@ -8,18 +8,18 @@
 \contentsline {subsection}{\numberline {3.2}Microcontroller}{3}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Sensorboard}{3}{subsection.3.3}%
 \contentsline {section}{\numberline {4}Selection battery}{3}{section.4}%
-\contentsline {section}{\numberline {5}Selection battery charger components}{3}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Charging}{3}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Charge Current Translator}{5}{subsubsection.5.1.1}%
+\contentsline {section}{\numberline {5}Selection battery charger components}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Charging}{4}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Charge Current Translator}{4}{subsubsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.2}System enable input}{5}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Calculations}{5}{subsection.5.3}%
 \contentsline {subsubsection}{\numberline {5.3.1}Program the Fast Charge Current $I_{CHG}$}{5}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Program the Input Current Limit $I_{LIM}$}{5}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2}Program the Input Current Limit $I_{LIM}$}{6}{subsubsection.5.3.2}%
 \contentsline {subsubsection}{\numberline {5.3.3}Fast-Charge Safety Timer (TMR)}{6}{subsubsection.5.3.3}%
 \contentsline {subsubsection}{\numberline {5.3.4}TS function}{6}{subsubsection.5.3.4}%
-\contentsline {subsubsection}{\numberline {5.3.5}Selecting IN, OUT, and BAT Pin Capacitors}{6}{subsubsection.5.3.5}%
-\contentsline {subsubsection}{\numberline {5.3.6}Selecting MOSFETs}{6}{subsubsection.5.3.6}%
-\contentsline {section}{\numberline {6}Energy management - autonomy}{6}{section.6}%
+\contentsline {subsubsection}{\numberline {5.3.5}Selecting IN, OUT, and BAT Pin Capacitors}{7}{subsubsection.5.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.6}Selecting MOSFETs}{7}{subsubsection.5.3.6}%
+\contentsline {section}{\numberline {6}Energy management - autonomy}{7}{section.6}%
 \contentsline {section}{\numberline {7}Wireless connectivity}{7}{section.7}%
 \contentsline {section}{\numberline {8}Financial estimate}{7}{section.8}%
 \contentsline {section}{\numberline {9}Validation and measurements}{7}{section.9}%
