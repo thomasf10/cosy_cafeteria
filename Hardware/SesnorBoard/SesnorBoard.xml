@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\gebruikersnaam\Documents\Opleidingen\Industiele ingenieur\Opleiding elektronica\Master jaar\embedded system design 2\labo (project cosy cafeteria)\SesnorBoard\SesnorBoard.sch</source>
-    <date>28/02/2020 14:17:00</date>
+    <source>C:\Users\gebruikersnaam\Documents\GitHub\cosy_cafeteria\Hardware\SesnorBoard\SesnorBoard.sch</source>
+    <date>16/04/2020 20:57:49</date>
     <tool>Eeschema (5.1.5)-3</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -19,52 +19,45 @@
     </sheet>
   </design>
   <components>
-    <comp ref="U1">
-      <value>AMG8833</value>
-      <footprint>SesnorBoard:AMG8833</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="AMG8833" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6A1E14AE</tstamp>
-    </comp>
     <comp ref="C1">
       <value>10uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE" description=""/>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>E7D47EA7</tstamp>
     </comp>
     <comp ref="C2">
       <value>1uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE" description=""/>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>AC671DB5</tstamp>
     </comp>
     <comp ref="C3">
       <value>2.2uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE" description=""/>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>4017C25B</tstamp>
     </comp>
     <comp ref="R2">
       <value>22</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5A764C0D</tstamp>
     </comp>
     <comp ref="R1">
       <value>10K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>DE04AF3C</tstamp>
     </comp>
     <comp ref="R5">
       <value>10K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>40871C63</tstamp>
     </comp>
@@ -112,8 +105,8 @@
     </comp>
     <comp ref="C6">
       <value>0.1uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE" description=""/>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>8451312A</tstamp>
     </comp>
@@ -125,20 +118,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E59C18B</tstamp>
     </comp>
-    <comp ref="JP1">
-      <value>HEADER POWER &amp; INTERFACE</value>
-      <footprint>Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Horizontal</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="HEADER-1X670MIL" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>0B60073D</tstamp>
-    </comp>
-    <comp ref="JP2">
-      <value>HEADER-CONTROL</value>
-      <footprint>Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Horizontal</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="HEADER-1X670MIL" description=""/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E614D64</tstamp>
-    </comp>
     <comp ref="U3">
       <value>NC7SVU04P5X</value>
       <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
@@ -147,111 +126,121 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E5F224B</tstamp>
     </comp>
-    <comp ref="R12">
+    <comp ref="R16">
       <value>10K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E628D64</tstamp>
     </comp>
     <comp ref="R11">
       <value>4k7</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E639501</tstamp>
     </comp>
     <comp ref="R13">
       <value>100K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E65E6DF</tstamp>
     </comp>
     <comp ref="R14">
       <value>100k</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E6606AE</tstamp>
     </comp>
     <comp ref="R15">
       <value>10k</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E581DA6</tstamp>
     </comp>
     <comp ref="TH1">
-      <value>Thermistor_NTC</value>
+      <value>100K</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="Thermistor_NTC" description="Temperature dependent resistor, negative temperature coefficient"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E5AB03A</tstamp>
     </comp>
-    <comp ref="U4">
-      <value>LM324</value>
-      <footprint>Package_SO:MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/lm2902-n.pdf</datasheet>
-      <libsource lib="Amplifier_Operational" part="LM324" description="Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E586329</tstamp>
-    </comp>
-    <comp ref="MK1">
-      <value>Microphone_Crystal</value>
+    <comp ref="J2">
+      <value>microphoon connection</value>
+      <footprint>Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Device" part="Microphone_Crystal" description="Crystal microphone"/>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E5957A7</tstamp>
+      <tstamp>5E5FBFAE</tstamp>
     </comp>
-    <comp ref="R21">
-      <value>2.2K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+    <comp ref="D1">
+      <value>RB081LAM-20</value>
+      <footprint>Diode_SMD:D_SOD-128</footprint>
+      <datasheet>https://assets.nexperia.com/documents/data-sheet/PMEG4050EP.pdf</datasheet>
+      <libsource lib="Diode" part="PMEG4050EP" description="40V 5.0A Schottky Diode, SOD-128"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E59B87B</tstamp>
+      <tstamp>5E607A7B</tstamp>
     </comp>
     <comp ref="C21">
-      <value>10uF</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE" description=""/>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E5A2776</tstamp>
+      <tstamp>5E60868F</tstamp>
     </comp>
-    <comp ref="R22">
-      <value>1K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+    <comp ref="C11">
+      <value>4.7µF</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="CAP_CERAMIC_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E5A3E01</tstamp>
+      <tstamp>5E64425F</tstamp>
     </comp>
-    <comp ref="R25">
-      <value>100K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+    <comp ref="R12">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E5A44E5</tstamp>
+      <tstamp>5E62DEF9</tstamp>
     </comp>
-    <comp ref="R24">
-      <value>10K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+    <comp ref="R21">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E5A4D55</tstamp>
+      <tstamp>5E6052B8</tstamp>
     </comp>
-    <comp ref="R23">
-      <value>10K</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+    <comp ref="U1">
+      <value>AMG8833</value>
+      <footprint>AMG8833_REV-B:AMG8833</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="AMG8833" description=""/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E5A5567</tstamp>
+      <tstamp>6A1E14AE</tstamp>
     </comp>
-    <comp ref="R26">
-      <value>100</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
-      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE" description=""/>
+    <comp ref="R3">
+      <value>2k2</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5E5EDE96</tstamp>
+      <tstamp>5E69F7FF</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>2k2</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <libsource lib="SesnorBoard-eagle-import" part="RESISTOR_1206" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E69FBAF</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Mainboard connection</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x11_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x11" description="Generic connector, single row, 01x11, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E5DEA34</tstamp>
     </comp>
   </components>
   <libparts>
@@ -274,75 +263,44 @@
         <pin num="5" name="VCC" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="Amplifier_Operational" part="LM2902">
-      <aliases>
-        <alias>LM324</alias>
-        <alias>TLC274</alias>
-        <alias>TLC279</alias>
-        <alias>TL074</alias>
-        <alias>LM324A</alias>
-        <alias>MCP6004</alias>
-        <alias>TL084</alias>
-        <alias>TL064</alias>
-        <alias>LMV324</alias>
-        <alias>LMC6484</alias>
-        <alias>MCP604</alias>
-        <alias>MC33079</alias>
-        <alias>MC33174</alias>
-        <alias>MC33179</alias>
-        <alias>OPA1604</alias>
-        <alias>OPA1679</alias>
-        <alias>OPA4134</alias>
-        <alias>OPA4340UA</alias>
-        <alias>OPA4376</alias>
-        <alias>MCP6L94</alias>
-        <alias>TSV914</alias>
-        <alias>ADA4807-4</alias>
-        <alias>TSV994</alias>
-      </aliases>
-      <description>Low-Power, Quad-Operational Amplifiers, DIP-14/SOIC-14/SSOP-14</description>
-      <docs>http://www.ti.com/lit/ds/symlink/lm2902-n.pdf</docs>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
       <footprints>
-        <fp>SOIC*3.9x8.7mm*P1.27mm*</fp>
-        <fp>DIP*W7.62mm*</fp>
-        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
-        <fp>SSOP*5.3x6.2mm*P0.65mm*</fp>
-        <fp>MSOP*3x3mm*P0.5mm*</fp>
+        <fp>Connector*:*_1x??_*</fp>
       </footprints>
       <fields>
-        <field name="Reference">U</field>
-        <field name="Value">LM2902</field>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
       </fields>
       <pins>
-        <pin num="1" name="~" type="output"/>
-        <pin num="2" name="-" type="input"/>
-        <pin num="3" name="+" type="input"/>
-        <pin num="4" name="V+" type="power_in"/>
-        <pin num="5" name="+" type="input"/>
-        <pin num="6" name="-" type="input"/>
-        <pin num="7" name="~" type="output"/>
-        <pin num="8" name="~" type="output"/>
-        <pin num="9" name="-" type="input"/>
-        <pin num="10" name="+" type="input"/>
-        <pin num="11" name="V-" type="power_in"/>
-        <pin num="12" name="+" type="input"/>
-        <pin num="13" name="-" type="input"/>
-        <pin num="14" name="~" type="output"/>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="Microphone_Crystal">
-      <aliases>
-        <alias>Microphone_Ultrasound</alias>
-      </aliases>
-      <description>Crystal microphone</description>
+    <libpart lib="Connector_Generic" part="Conn_01x11">
+      <description>Generic connector, single row, 01x11, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
       <fields>
-        <field name="Reference">MK</field>
-        <field name="Value">Microphone_Crystal</field>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x11</field>
       </fields>
       <pins>
-        <pin num="1" name="-" type="passive"/>
-        <pin num="2" name="+" type="passive"/>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="Thermistor_NTC">
@@ -362,6 +320,22 @@
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="PMEG4050EP">
+      <description>40V 5.0A Schottky Diode, SOD-128</description>
+      <docs>https://assets.nexperia.com/documents/data-sheet/PMEG4050EP.pdf</docs>
+      <footprints>
+        <fp>D*SOD?128*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">PMEG4050EP</field>
+        <field name="Footprint">Diode_SMD:D_SOD-128</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Sensor_Gas" part="CCS811">
@@ -407,10 +381,10 @@
         <pin num="13" name="VPP" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="SesnorBoard-eagle-import" part="CAP_CERAMIC0805-NOOUTLINE">
+    <libpart lib="SesnorBoard-eagle-import" part="CAP_CERAMIC_1206">
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">CAP_CERAMIC0805-NOOUTLINE</field>
+        <field name="Value">CAP_CERAMIC_1206</field>
       </fields>
       <pins>
         <pin num="1" name="1" type="passive"/>
@@ -423,29 +397,15 @@
         <field name="Value">FIDUCIAL_1MM</field>
       </fields>
     </libpart>
-    <libpart lib="SesnorBoard-eagle-import" part="HEADER-1X670MIL">
-      <fields>
-        <field name="Reference">JP</field>
-        <field name="Value">HEADER-1X670MIL</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
-        <pin num="5" name="5" type="passive"/>
-        <pin num="6" name="6" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="SesnorBoard-eagle-import" part="MOUNTINGHOLE2.5">
       <fields>
         <field name="Value">MOUNTINGHOLE2.5</field>
       </fields>
     </libpart>
-    <libpart lib="SesnorBoard-eagle-import" part="RESISTOR0805_NOOUTLINE">
+    <libpart lib="SesnorBoard-eagle-import" part="RESISTOR_1206">
       <fields>
         <field name="Reference">R</field>
-        <field name="Value">RESISTOR0805_NOOUTLINE</field>
+        <field name="Value">RESISTOR_1206</field>
       </fields>
       <pins>
         <pin num="1" name="1" type="passive"/>
@@ -457,162 +417,146 @@
     <library logical="74xGxx">
       <uri>C:\Program Files\KiCad\share\kicad\library/74xGxx.lib</uri>
     </library>
-    <library logical="Amplifier_Operational">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Amplifier_Operational.lib</uri>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
     </library>
     <library logical="Device">
       <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Diode.lib</uri>
     </library>
     <library logical="Sensor_Gas">
       <uri>C:\Program Files\KiCad\share\kicad\library/Sensor_Gas.lib</uri>
     </library>
     <library logical="SesnorBoard-eagle-import">
-      <uri>C:\Users\gebruikersnaam\Documents\Opleidingen\Industiele ingenieur\Opleiding elektronica\Master jaar\embedded system design 2\labo (project cosy cafeteria)\SesnorBoard/SesnorBoard-eagle-import.lib</uri>
+      <uri>C:\Users\gebruikersnaam\Documents\GitHub\cosy_cafeteria\Hardware\SesnorBoard/SesnorBoard-eagle-import.lib</uri>
     </library>
   </libraries>
   <nets>
     <net code="1" name="GND">
-      <node ref="U1" pin="6"/>
+      <node ref="C6" pin="2"/>
+      <node ref="U2" pin="11"/>
+      <node ref="R5" pin="1"/>
       <node ref="C1" pin="2"/>
       <node ref="C3" pin="2"/>
       <node ref="R2" pin="1"/>
-      <node ref="U1" pin="5"/>
-      <node ref="R24" pin="1"/>
-      <node ref="MK1" pin="1"/>
-      <node ref="U4" pin="11"/>
-      <node ref="U2" pin="11"/>
-      <node ref="R5" pin="1"/>
-      <node ref="C6" pin="2"/>
-      <node ref="JP1" pin="4"/>
-      <node ref="TH1" pin="2"/>
+      <node ref="J1" pin="7"/>
       <node ref="U3" pin="3"/>
       <node ref="R15" pin="2"/>
       <node ref="R14" pin="1"/>
+      <node ref="C21" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="U1" pin="5"/>
+      <node ref="R21" pin="2"/>
+      <node ref="U1" pin="6"/>
+      <node ref="J2" pin="2"/>
     </net>
-    <net code="2" name="Net-(R13-Pad1)">
-      <node ref="R14" pin="2"/>
-      <node ref="R13" pin="1"/>
-      <node ref="U2" pin="1"/>
-    </net>
-    <net code="3" name="/nINT_CSS811">
-      <node ref="U3" pin="4"/>
+    <net code="2" name="Net-(R12-Pad1)">
+      <node ref="U2" pin="8"/>
+      <node ref="TH1" pin="2"/>
       <node ref="R12" pin="1"/>
     </net>
-    <net code="4" name="/AUX">
-      <node ref="JP2" pin="4"/>
-    </net>
-    <net code="5" name="Net-(TH1-Pad1)">
-      <node ref="TH1" pin="1"/>
-      <node ref="U2" pin="8"/>
-    </net>
-    <net code="6" name="/nWAKE">
-      <node ref="JP2" pin="3"/>
-      <node ref="R15" pin="1"/>
-      <node ref="U2" pin="7"/>
-    </net>
-    <net code="7" name="+3V3">
-      <node ref="U3" pin="5"/>
-      <node ref="U2" pin="6"/>
-      <node ref="R13" pin="2"/>
-      <node ref="R12" pin="2"/>
-      <node ref="R11" pin="1"/>
-    </net>
-    <net code="8" name="/nINT">
-      <node ref="U3" pin="2"/>
-      <node ref="U2" pin="3"/>
-    </net>
-    <net code="9" name="Net-(U3-Pad1)">
-      <node ref="U3" pin="1"/>
-    </net>
-    <net code="10" name="/nINT_CCS811">
-      <node ref="JP2" pin="2"/>
-    </net>
-    <net code="11" name="/INT_AMG8833">
-      <node ref="R1" pin="1"/>
-      <node ref="U1" pin="4"/>
-      <node ref="JP2" pin="1"/>
-    </net>
-    <net code="12" name="Net-(JP2-Pad6)">
-      <node ref="JP2" pin="6"/>
-    </net>
-    <net code="13" name="Net-(R11-Pad2)">
-      <node ref="U2" pin="2"/>
-      <node ref="R11" pin="2"/>
-    </net>
-    <net code="14" name="Net-(U2-Pad4)">
-      <node ref="U2" pin="4"/>
-      <node ref="U2" pin="5"/>
-    </net>
-    <net code="15" name="3.3V">
-      <node ref="JP1" pin="1"/>
-      <node ref="R23" pin="2"/>
-      <node ref="U1" pin="13"/>
-      <node ref="U1" pin="9"/>
-      <node ref="R1" pin="2"/>
-      <node ref="R5" pin="2"/>
-      <node ref="C6" pin="1"/>
-      <node ref="R21" pin="2"/>
-      <node ref="U4" pin="4"/>
-      <node ref="C1" pin="1"/>
-    </net>
-    <net code="16" name="Net-(R25-Pad2)">
-      <node ref="U4" pin="1"/>
-      <node ref="R25" pin="2"/>
-      <node ref="R26" pin="1"/>
-    </net>
-    <net code="17" name="Net-(R22-Pad2)">
-      <node ref="R25" pin="1"/>
-      <node ref="R22" pin="2"/>
-      <node ref="U4" pin="3"/>
-    </net>
-    <net code="18" name="Net-(C21-Pad1)">
-      <node ref="R22" pin="1"/>
-      <node ref="C21" pin="1"/>
-    </net>
-    <net code="19" name="/AUDIO_OUT">
-      <node ref="R26" pin="2"/>
-      <node ref="JP2" pin="5"/>
-    </net>
-    <net code="20" name="Net-(C21-Pad2)">
-      <node ref="C21" pin="2"/>
-      <node ref="MK1" pin="2"/>
-      <node ref="R21" pin="1"/>
-    </net>
-    <net code="21" name="Net-(R23-Pad1)">
-      <node ref="R23" pin="1"/>
-      <node ref="U4" pin="2"/>
-      <node ref="R24" pin="2"/>
-    </net>
-    <net code="22" name="Net-(U1-Pad11)">
+    <net code="3" name="Net-(U1-Pad11)">
       <node ref="U1" pin="11"/>
     </net>
-    <net code="23" name="/SCL">
-      <node ref="U1" pin="3"/>
-      <node ref="U2" pin="10"/>
-      <node ref="JP1" pin="3"/>
-    </net>
-    <net code="24" name="/SDA">
-      <node ref="U2" pin="9"/>
-      <node ref="JP1" pin="2"/>
-      <node ref="U1" pin="2"/>
-    </net>
-    <net code="25" name="Net-(C3-Pad1)">
-      <node ref="U1" pin="12"/>
-      <node ref="C3" pin="1"/>
-    </net>
-    <net code="26" name="Net-(C2-Pad2)">
-      <node ref="C2" pin="2"/>
-      <node ref="R2" pin="2"/>
-    </net>
-    <net code="27" name="Net-(C2-Pad1)">
+    <net code="4" name="Net-(C2-Pad1)">
       <node ref="U1" pin="10"/>
       <node ref="C2" pin="1"/>
     </net>
-    <net code="28" name="Net-(JP1-Pad6)">
-      <node ref="JP1" pin="6"/>
+    <net code="5" name="/AUDIO_OUT">
+      <node ref="D1" pin="2"/>
+      <node ref="J2" pin="1"/>
     </net>
-    <net code="29" name="Net-(JP1-Pad5)">
-      <node ref="JP1" pin="5"/>
+    <net code="6" name="/nINT">
+      <node ref="U2" pin="3"/>
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="7" name="/DETECTOR_OUT">
+      <node ref="R21" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="J1" pin="4"/>
+      <node ref="C21" pin="1"/>
+    </net>
+    <net code="8" name="Net-(TH1-Pad1)">
+      <node ref="U2" pin="4"/>
+      <node ref="U2" pin="5"/>
+      <node ref="TH1" pin="1"/>
+    </net>
+    <net code="9" name="/SDA">
+      <node ref="U2" pin="9"/>
+      <node ref="R3" pin="1"/>
+      <node ref="J1" pin="10"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="10" name="/SCL">
+      <node ref="U2" pin="10"/>
+      <node ref="J1" pin="9"/>
+      <node ref="U1" pin="3"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="11" name="/INT_AMG8833">
+      <node ref="U1" pin="4"/>
+      <node ref="R1" pin="1"/>
+      <node ref="J1" pin="8"/>
+    </net>
+    <net code="12" name="/nINT_CCS811">
+      <node ref="J1" pin="6"/>
+      <node ref="R16" pin="1"/>
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="13" name="/nWAKE">
+      <node ref="R15" pin="1"/>
+      <node ref="J1" pin="5"/>
+      <node ref="U2" pin="7"/>
+    </net>
+    <net code="14" name="3.3V">
+      <node ref="R3" pin="2"/>
+      <node ref="R11" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="J1" pin="3"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="15" name="/AUDIO_3V3">
+      <node ref="J1" pin="2"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="16" name="Net-(C3-Pad1)">
+      <node ref="U1" pin="12"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="17" name="Net-(C2-Pad2)">
+      <node ref="C2" pin="2"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="18" name="Net-(R13-Pad1)">
+      <node ref="R14" pin="2"/>
+      <node ref="U2" pin="1"/>
+      <node ref="R13" pin="1"/>
+    </net>
+    <net code="19" name="/AMG8833_3V3">
+      <node ref="C1" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="U1" pin="13"/>
+      <node ref="J1" pin="1"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="20" name="Net-(R11-Pad2)">
+      <node ref="R11" pin="2"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="21" name="/CCS811_3V3">
+      <node ref="C11" pin="1"/>
+      <node ref="U3" pin="5"/>
+      <node ref="R12" pin="2"/>
+      <node ref="R13" pin="2"/>
+      <node ref="R16" pin="2"/>
+      <node ref="U2" pin="6"/>
+      <node ref="J1" pin="11"/>
+    </net>
+    <net code="22" name="Net-(U3-Pad1)">
+      <node ref="U3" pin="1"/>
     </net>
   </nets>
 </export>
