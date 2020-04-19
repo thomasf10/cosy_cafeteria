@@ -8,8 +8,8 @@
             "includePath": [
                 "c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Wi-Fi/code/WiFi_to_PC_enterprise/include",
                 "c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Wi-Fi/code/WiFi_to_PC_enterprise/src",
-                "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
+                "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                 "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config",
                 "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_trace",
@@ -100,8 +100,8 @@
                 "path": [
                     "c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Wi-Fi/code/WiFi_to_PC_enterprise/include",
                     "c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Wi-Fi/code/WiFi_to_PC_enterprise/src",
-                    "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/libraries/WiFiClientSecure/src",
+                    "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src",
                     "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/config",
                     "C:/Users/thoma/.platformio/packages/framework-arduinoespressif32/tools/sdk/include/app_trace",

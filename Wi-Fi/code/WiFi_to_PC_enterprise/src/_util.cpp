@@ -42,7 +42,7 @@ void goToDeepSleep(int sec)
 }
 
 bool sendMessage(uint8_t* data, int length){
-    uint64_t start = micros();
+    //uint64_t start = micros();
         // it wil set the static IP address to 192, 168, 10, 47
     IPAddress local_IP(192, 168, 0, 22);
     //it wil set the gateway static IP address to 192, 168, 2,2
@@ -76,9 +76,9 @@ bool sendMessage(uint8_t* data, int length){
             break;
         }
     }
-    uint64_t einde = micros();
-     Serial.print("wifi tijd: ");
-    Serial.println(PriUint64<DEC>(einde-start));
+    //uint64_t einde = micros();
+    //Serial.print("wifi tijd: ");
+    //Serial.println(PriUint64<DEC>(einde-start));
     if(WiFi.status() == WL_CONNECTED){
         Serial.println("");
         Serial.println("WiFi connected");
@@ -93,9 +93,9 @@ bool sendMessage(uint8_t* data, int length){
         }else{
             Serial.println("Connected to server successful!");
             client.write(data, length);
-            Serial.println("Disconnecting...");
             client.stop();
             WiFi.disconnect();
+            Serial.println("Disconnecting...");
             return true;
         }
     }
@@ -173,5 +173,4 @@ void checkhour(){
     int hour = timeinfo.tm_hour;
     Serial.println("hour");
     Serial.println(hour);
- //Serial.println(&timeinfo, "%A, %B %d %Y %H:%M:%S");
 }
