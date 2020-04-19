@@ -1,0 +1,63 @@
+Source,C:\Users\tobia\Documents\GitHub\cosy_cafeteria\Hardware\MainPCB\MainPCB.sch
+Kicad Rev,Eeschema (5.1.5)-3
+Generated Date,16/04/2020 22:51:37
+
+Title,Not Set
+Company,Not Set
+Revision,Not Set
+Date Issue,Not Set
+
+Reference,Value,Library,Library Ref
+U2,BQ29700,Battery_Management,BQ297xy
+Q2,FDS9926A,Transistor_FET,FDS9926A
+R3,680,Device,R
+R6,1.5k,Device,R
+R5,1.5k,Device,R
+U1,BQ24075,Battery_Management,BQ24075
+D1,TLHG44K1L2,Device,LED
+D2,TLHB44K2M1,Device,LED
+BT1,Li-ion,Device,Battery_Cell
+R1,1.1k,Device,R
+R4,10k,Device,R
+C3,1u,Device,C
+C8,0.1u,Device,C
+R7,330,Device,R
+C5,4.7u,Device,C
+C4,4.7u,Device,C
+C1,1u,Device,C
+R8,2.2k,Device,R
+U3,TLV75533PDBV,MainPCB-rescue,TLV75533PDBV-Regulator_Linear
+C10,47u/10V,Device,C
+C9,1u,Device,C
+BT2,Li-ion,Device,Battery_Cell
+C2,47u/16V,Device,CP
+R9,5 Meg,Device,R
+R10,5 Meg,Device,R
+J1,USB_B_Micro,Connector,USB_B_Micro
+Q1,NTR2101P,Transistor_FET,NTR2101P
+C6,1u,Device,C
+C7,47u/16V,Device,CP
+R2,47k,Device,R
+JP1,Stroommeetdraad,Device,Jumper
+U5,TPS22919,Power_Management,TPS22917DBV
+R12,680,Device,R
+C14,3.3u/16V,Device,CP
+C15,10u/16V,Device,CP
+U4,ESP32-WROOM-32D,RF_Module,ESP32-WROOM-32D
+C13,0.1u,Device,C
+C11,0.1u,Device,C
+R11,10k,Device,R
+EN1,SW_DIP_x01,Switch,SW_DIP_x01
+BOOT1,SW_DIP_x01,Switch,SW_DIP_x01
+J3,UART,Connector,Conn_01x03_Female
+C12,10u/16V,Device,CP
+U6,TPS22919,Power_Management,TPS22917DBV
+R13,680,Device,R
+C16,3.3u/16V,Device,CP
+C18,10u/16V,Device,CP
+U7,TPS22919,Power_Management,TPS22917DBV
+R14,680,Device,R
+C17,3.3u/16V,Device,CP
+C19,10u/16V,Device,CP
+J2,Conn_01x11,Connector_Generic,Conn_01x11
+C20,0.1u,Device,C
