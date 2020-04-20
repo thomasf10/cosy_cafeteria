@@ -41,7 +41,7 @@ void goToDeepSleep(int sec)
     esp_deep_sleep_start();
 }
 
-bool sendMessage(uint8_t* data, int length){
+bool sendMessage(float* data, int length){
 /*     //uint64_t start = micros();
         // it wil set the static IP address to 192, 168, 10, 47
     IPAddress local_IP(192, 168, 0, 22);
@@ -92,7 +92,9 @@ bool sendMessage(uint8_t* data, int length){
             return false;
         }else{
             Serial.println("Connected to server successful!");
-            client.write(data, length);
+            for(int i=0;i<length/4;i++){
+                client.write((const uint8_t *) & data[i], 4);
+            }
             client.stop();
             WiFi.disconnect();
             Serial.println("Disconnecting...");

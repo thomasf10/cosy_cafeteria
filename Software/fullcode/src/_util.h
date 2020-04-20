@@ -21,7 +21,7 @@ typedef enum app_states{
 
 // functions
 void goToDeepSleep(int sec); // disables wifi and adc
-bool sendMessage(uint8_t* data, int length);
+bool sendMessage(float* data, int length);
 void print_wakeup_reason();
 void ntp_sync();
 void printLocalTime();

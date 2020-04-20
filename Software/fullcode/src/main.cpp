@@ -56,17 +56,18 @@ void loop() {
   {
   case SENDDATA:{
     appState = SLEEP;// set next appstate
-    Serial.print("bootcount: ");
-    Serial.println(bootCount);
-    bootCount++;
-    uint8_t data[64]; 
+     float data[64]; 
     for(int i=0; i<64;i++){
-      data[i] = i;
+      data[i] = i+20.25;
+      Serial.println(data[i]);
     }
 
+    int length = sizeof(data);
+    Serial.print("lengte: ");
+    Serial.println(length);
     int ctr = 0;
     while(true){  
-      if(sendMessage(data,64)){
+      if(sendMessage(data,length)){
         break;
       }
       ctr++;
