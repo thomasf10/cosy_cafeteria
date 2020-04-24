@@ -12,7 +12,7 @@ body{
     width:1322px; 
     height:882px; 
     margin:auto; 
-    background-image: url('../cafetaria.jpg'); 
+    background-image: url('../img/cafetaria.jpg'); 
     background-size: contain; 
     background-repeat: no-repeat; 
 }
@@ -20,4 +20,68 @@ body{
 .heatmap { 
     width:100%; 
     height:100%;
+}
+
+/* styling logo */
+
+h1.logo {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    color: #2b2b2b;
+    margin-bottom: 15px;
+}
+
+div.logo{
+    display: block;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+/* styling menu */
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.menu li{
+    float: none;    
+    display: inline-block;
+}
+
+.menu a{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: #2b2b2b;
+    padding: 12px 8px;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    color: #686868;
+}
+
+.menu a.active{
+    color: #2b2b2b;
+    border-bottom: 2px solid currentColor;
+    display: inline-block;
+    line-height: 0.3;
+    text-shadow:
+        2px 2px white,
+        2px -2px white,
+        -2px 2px white,
+        -2px -2px white;
+}
+
+.menu{
+    margin: 0 auto;
+    margin-bottom: 25px;
 }
