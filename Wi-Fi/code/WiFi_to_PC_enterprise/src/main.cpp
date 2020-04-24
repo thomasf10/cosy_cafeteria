@@ -15,7 +15,7 @@ RTC_DATA_ATTR int bootCount = 0; // to store data in rtc memory when entering de
 
 
 // declare appstate
-RTC_DATA_ATTR static volatile APP_State_t appState = NTPSYNC;
+RTC_DATA_ATTR static volatile APP_State_t appState = SENDDATA;
 
 
 
@@ -59,14 +59,14 @@ void loop() {
     Serial.print("bootcount: ");
     Serial.println(bootCount);
     bootCount++;
-    uint8_t data[10]; 
-    for(int i=0; i<10;i++){
+    uint8_t data[64]; 
+    for(int i=0; i<64;i++){
       data[i] = i;
     }
 
     int ctr = 0;
     while(true){  
-      if(sendMessage(data,10)){
+      if(sendMessage(data,64)){
         break;
       }
       ctr++;
@@ -79,6 +79,7 @@ void loop() {
   } break;
    
   case SLEEP:{
+    appState = SENDDATA;
     goToDeepSleep(5);
   }break;
 

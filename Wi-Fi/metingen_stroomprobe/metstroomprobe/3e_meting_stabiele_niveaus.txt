@@ -1,0 +1,4 @@
+10 Mhz: 14.5 mA
+20 Mhz: 15.5 mA
+40 Mhz: 18   mA
+80/160 Mhz: 27 mA
