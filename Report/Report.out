@@ -1,25 +1,29 @@
 \BOOKMARK [1][-]{section.1}{Intro}{}% 1
 \BOOKMARK [1][-]{section.2}{Functionality}{}% 2
-\BOOKMARK [1][-]{section.3}{Hardware design}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Power management}{section.3}% 4
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Battery charging circuit}{subsection.3.1}% 5
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Battry protection circuit}{subsection.3.1}% 6
-\BOOKMARK [3][-]{subsubsection.3.1.3}{Polarity protection}{subsection.3.1}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Microcontroller}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.3}{Sensorboard}{section.3}% 9
-\BOOKMARK [1][-]{section.4}{Selection battery}{}% 10
-\BOOKMARK [1][-]{section.5}{Selection battery charger components}{}% 11
-\BOOKMARK [2][-]{subsection.5.1}{Charging}{section.5}% 12
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Charge Current Translator}{subsection.5.1}% 13
-\BOOKMARK [2][-]{subsection.5.2}{System enable input}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.3}{Calculations}{section.5}% 15
-\BOOKMARK [3][-]{subsubsection.5.3.1}{Program the Fast Charge Current ICHG}{subsection.5.3}% 16
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Program the Input Current Limit ILIM}{subsection.5.3}% 17
-\BOOKMARK [3][-]{subsubsection.5.3.3}{Fast-Charge Safety Timer \(TMR\)}{subsection.5.3}% 18
-\BOOKMARK [3][-]{subsubsection.5.3.4}{TS function}{subsection.5.3}% 19
-\BOOKMARK [3][-]{subsubsection.5.3.5}{Selecting IN, OUT, and BAT Pin Capacitors}{subsection.5.3}% 20
-\BOOKMARK [3][-]{subsubsection.5.3.6}{Selecting MOSFETs}{subsection.5.3}% 21
-\BOOKMARK [1][-]{section.6}{Energy management - autonomy}{}% 22
-\BOOKMARK [1][-]{section.7}{Wireless connectivity}{}% 23
-\BOOKMARK [1][-]{section.8}{Financial estimate}{}% 24
-\BOOKMARK [1][-]{section.9}{Validation and measurements}{}% 25
+\BOOKMARK [1][-]{section.3}{System architecture}{}% 3
+\BOOKMARK [1][-]{section.4}{Power management}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Battery}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Battery charging circuit}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Battry protection circuit}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Polarity protection}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{Microcontroller}{}% 9
+\BOOKMARK [1][-]{section.6}{Sensorboard}{}% 10
+\BOOKMARK [1][-]{section.7}{Selection battery charger components}{}% 11
+\BOOKMARK [2][-]{subsection.7.1}{Charging}{section.7}% 12
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Charge Current Translator}{subsection.7.1}% 13
+\BOOKMARK [2][-]{subsection.7.2}{System enable input}{section.7}% 14
+\BOOKMARK [2][-]{subsection.7.3}{Calculations}{section.7}% 15
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Program the Fast Charge Current ICHG}{subsection.7.3}% 16
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Program the Input Current Limit ILIM}{subsection.7.3}% 17
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Fast-Charge Safety Timer \(TMR\)}{subsection.7.3}% 18
+\BOOKMARK [3][-]{subsubsection.7.3.4}{TS function}{subsection.7.3}% 19
+\BOOKMARK [3][-]{subsubsection.7.3.5}{Selecting IN, OUT, and BAT Pin Capacitors}{subsection.7.3}% 20
+\BOOKMARK [3][-]{subsubsection.7.3.6}{Selecting MOSFETs}{subsection.7.3}% 21
+\BOOKMARK [1][-]{section.8}{Wireless connectivity}{}% 22
+\BOOKMARK [2][-]{subsection.8.1}{Wi-Fi connection}{section.8}% 23
+\BOOKMARK [2][-]{subsection.8.2}{Power consumption}{section.8}% 24
+\BOOKMARK [1][-]{section.9}{Software design}{}% 25
+\BOOKMARK [1][-]{section.10}{Energy management - autonomy}{}% 26
+\BOOKMARK [1][-]{section.11}{Website}{}% 27
+\BOOKMARK [1][-]{section.12}{Financial estimate}{}% 28
+\BOOKMARK [1][-]{section.13}{Validation and measurements}{}% 29

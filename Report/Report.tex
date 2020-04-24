@@ -28,11 +28,41 @@
 \newpage
 
 \section{Intro}
-- url's github
-- wat gaat uw systeem juist doen
-\[ ESR \cdot C \]
+To improve the experience of the students in the cafeteria, an embedded system will be developed to gather a variety of data. This data will then be display to the students through an online medium such as a website. The main focus will be to gather information about the amount off people that are in the cafeteria. There are two main goals. The first goal is to display the estimated waiting time to get a meal to the students. Secondly the amount of available seats will be tracked and displayed to the students. Next to this some additional information will be gathered. The temperature, air-quality and sound level will be monitored to give the student a general idea about the conditions in the cafeteria. This way the student can gauge if the cafeteria is suitable to study in at a certain moment. An overview of the envisioned system is displayed in figure~\ref{fig:system}. Al the developed hardware and software is displayed at: \url{https://github.com/thomasf10/cosy_cafeteria}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{situation.pdf}
+	\caption{Situation sketch}
+	\label{fig:system}
+\end{figure}
+
+
 \section{Functionality}
-ofwel in intro vermelden?
+%- wat gaat uw systeem juist doen
+
+The developed system uses three sensors: 
+\begin{itemize}
+	\item AMG8833: IR grid sensor
+	\item CSS811: air quality sensors
+	\item Sparkfun sound detector: microphone
+\end{itemize}
+By incorporating these sensors in to the system, a variety of sensor data is gathered, namely: ambient temperature [\SI{}{\celsius}], $CO_2$-level [ppm], TVOC-level (total volatile organic compounds) [ppb] and sound level [db]. Next to this the AMG8833 captures the temperature af a two dimensional area in 8 by 8 pixels. \\
+
+The 'brain' of the system is an ESP32, this microcontroller has an integrated Wi-Fi module, which will be used to transmit the data. The gathered data is sent to a server, which stores the received data in a database. \\
+
+Alongside the reception of data from the ESP32, the server hosts a website which is used to display the data to the students. The website uses the pixel data to generate a heatmap of the cafeteria, this allows the students to see how many people are present in the cafeteria. Unfortunately one module cannot cover the entire cafeteria, to generate the heatmap. In order to do this, several modules have to be deployed in the cafeteria. In this project only one module will be constructed as a proof of concept. Next to the heatmap, the other sensor data is displayed on the website this includes: ambient temperature, $CO_2$-level, TVOC-level and the sound-level. Based on these parameters the students can gauge if the cafeteria is currently suitable as a study-location.
+
+\section{System architecture}
+systeem wat uitleggen \dots
+\textbf{EENS CHECKEN OF DE ARCHITECTUUR IN GROTE LIJNEN KLOPT}
+An overview of the full system is displayed in figure~\ref{fig:architecture}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{architecture.pdf}
+	\caption{System architecture}
+	\label{fig:architecture}
+\end{figure}
+
 
 \section{Power management}
 \subsection{Battery}
@@ -119,12 +149,39 @@ In most applications, all that is needed is a high-frequency decoupling capacito
 Discharge Overcurrent Detection (OCD) voltage = 100 mV. $R_{DSON} = 30 m\Omega @ V_{GS} = 4.5 V$
 Maximum operating discharge current = $\frac{100 mV}{2*30 m\Omega} = 1.67 A$
 
+\section{Wireless connectivity}
+\subsection{Wi-Fi connection}
+In order to transmit the sensor data to the server, the Wi-Fi connectivity of the ESP32 is used. The transmission is provided by a TCP connection that is established between the ESP32 and the python server. At the initialisation of the python server, a socket is opened, this socket is used to receive the data. In this manner, the server is always listening on the socket, until a message is received. The ESP32 sends the data in the following order: pixeldata (64 floats), temperature (1 float), audio level (1 float), $CO_2$-level (1 unint16) and TVOC-level (1 unint64). The received data is processed by order to determine which data is represented by the received values. The data is parsed into different variable, these variables are then used to update the values in the database. 
+
+\subsection{Power consumption}
+To determine the power that is consumed when the sensor data is transmitted once, a measurement is performed. The current consumption is measured, the result is displayed in figure~\ref{fig:wifi_pwr}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{wifi_pwr.pdf}
+	\caption{Power consumption of one Wi-Fi transmission}
+	\label{fig:wifi_pwr}
+\end{figure}
+In order to interpret the current consumption, the used capacity is displayed in [mAh]. This results in 0.041 mAh of capacity that is used in order to transmit the sensor data once. With this knowledge, we can calculate the amount of Wi-Fi transmissions that are possible with the 6400 mAh battery:
+
+\begin{gather*}
+	\frac{6400}{0.041} \approx 156097
+\end{gather*}
+
+156097 transmissions are possible, if there are 6 transmissions per hour and the system is active for 7 hours a day, this leads to a battery life off 3716 days.  However, this calculation only accounts for the Wi-Fi transmission other power consumption such as stand-by power, CPU power and sensor power are not accounted for in the calculation. 
+
+\section{Software design}
+\textbf{todo}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\linewidth]{statendiagram.pdf}
+	\caption{State diagram}
+	\label{fig:statediagram}
+\end{figure}
 
 \section{Energy management - autonomy}
 Berekeningen voor levensduur komen hier.
 
-\section{Wireless connectivity}
-@Thomas ik zou voorstellen hier de wifi dingen te vermelden?
+\section{Website}
 
 \section{Financial estimate}
 Kostprijs van het project opstellen.
