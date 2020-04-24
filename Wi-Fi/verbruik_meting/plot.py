@@ -40,7 +40,7 @@ x=[]
 y=[]
 
 #open csv file with the data
-with open('static_ip_64ints.csv', 'r') as csvfile:
+with open('meting_all_sensorvalues_3.csv', 'r') as csvfile:
     line_count = 0
     plots = csv.reader(csvfile, delimiter=',')
     for row in plots:
@@ -68,7 +68,7 @@ ax1.set_ylabel('mA', color=color)
 ax1.plot(x, y, color=color)
 ax1.tick_params(axis='y', labelcolor=color)
 #select range
-plt.axis([-2,1,0,500]) #enter range of the plot
+plt.axis([-1.5,1,0,500]) #enter range of the plot
 ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
 
 color = 'tab:red'
@@ -86,11 +86,11 @@ plt.xlabel('tijd [s]') # x axis
 
 
 tekst1 = "Verbruik = %.3f mAh" % (verb)
-plt.text(-0.35,0.045,tekst1, bbox=dict(facecolor='white', alpha=0.15))
+plt.text(0.28,0.041,tekst1, bbox=dict(facecolor='white', alpha=0.2))
 #plt.ylabel('Verbruik [mA]') # y axis
 
 #save fig
 
-plt.savefig('static_ip_64ints.pdf', bbox_inches='tight')
+plt.savefig('meting_alle_sensorwaarden.pdf', bbox_inches='tight')
 print("done")
 

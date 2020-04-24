@@ -16,8 +16,6 @@ def processdata(data):
     co2_level = 0 # in ppm
     TVOC_level = 0 #in ppb (tvoc = total volatile organic compounds)
 
-    #todo: receive other sensor data and save it
-
     #proces amg pixels
     for idx in range(64):
         #convert uint8's to float
@@ -40,7 +38,8 @@ def processdata(data):
     raw_unit8_data = np.array([data[4*66+2], data[4*66+3]], dtype='uint8')
     TVOC_level = raw_unit8_data.view('uint16')
 
-    #todo proces co2
+    #print data
+    #todo update data in sql data base instead of printing the data
     for pixel in amgpixels:
         print(pixel)
     print("amgtemp: ")
@@ -77,7 +76,6 @@ def listen():
     print("Closing connection")
     client.close()
 
-#raw_unit8_data = np.array([0, 0, 162, 65], dtype='uint8')
 
 while True:
     listen()

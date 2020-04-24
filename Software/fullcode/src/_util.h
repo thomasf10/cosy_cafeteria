@@ -15,8 +15,9 @@ typedef enum app_states{
   WAKESENSORS,
   READSENSORS,
   NTPSYNC,
-  PRINTTIME,
-  IDLE
+  CHECKTIME,
+  NIGHTSLEEP,
+  WAKEFROMNIGHTSLEEP
 } APP_State_t;
 
 
@@ -27,6 +28,6 @@ bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, in
 void print_wakeup_reason();
 void ntp_sync();
 void printLocalTime();
-void checkhour();
+int checkhour();
 
 #endif 

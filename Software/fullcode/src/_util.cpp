@@ -162,13 +162,13 @@ void ntp_sync(){
     Serial.println(" CONNECTED");
     
     if(WiFi.status() == WL_CONNECTED){
-    //init and get the time
-    configTime(0, 0, ntpServer);
-    // corrects timezones
-    setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
-    tzset(); // save the TZ variable
-   // delay(100);
-    printLocalTime();
+        //init and get the time
+        configTime(0, 0, ntpServer);
+        // corrects timezones
+        setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
+        tzset(); // save the TZ variable
+    // delay(100);
+        printLocalTime();
     }else{
         Serial.println("sync failed");
     }
@@ -193,16 +193,17 @@ tzset(); // save the TZ variable
 }
 
 
-void checkhour(){
+int checkhour(){
     // corrects timezones
     setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
     tzset(); // save the TZ variable
      struct tm timeinfo;
       if(!getLocalTime(&timeinfo)){
     Serial.println("Failed to obtain time");
-    return;
+    return -1;
   }
     int hour = timeinfo.tm_hour;
     Serial.println("hour");
     Serial.println(hour);
+    return hour;
 }
