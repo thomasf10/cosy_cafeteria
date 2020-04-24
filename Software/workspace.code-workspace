@@ -6,6 +6,10 @@
 		{
 			"name": "powertest",
 			"path": "powertest"
+		},
+		{
+			"name": "testproject",
+			"path": "testproject"
 		}
 	],
 	"settings": {}

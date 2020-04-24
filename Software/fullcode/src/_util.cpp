@@ -41,7 +41,25 @@ void goToDeepSleep(int sec)
     esp_deep_sleep_start();
 }
 
-bool sendMessage(float* data, int length){
+void goToDeepSleep_ms(int ms)
+{
+    Serial.println("Going to sleep...");
+    WiFi.disconnect(true);
+    WiFi.mode(WIFI_OFF);
+    btStop();
+
+    adc_power_off();
+    esp_wifi_stop();
+    esp_bt_controller_disable();
+
+    // Configure the timer to wake us up!
+    esp_sleep_enable_timer_wakeup(ms * 1000);
+
+    // Go to sleep! Zzzz
+    esp_deep_sleep_start();
+}
+
+bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, int length){
 /*     //uint64_t start = micros();
         // it wil set the static IP address to 192, 168, 10, 47
     IPAddress local_IP(192, 168, 0, 22);
@@ -92,9 +110,21 @@ bool sendMessage(float* data, int length){
             return false;
         }else{
             Serial.println("Connected to server successful!");
+            // send amg pixels
             for(int i=0;i<length/4;i++){
                 client.write((const uint8_t *) & data[i], 4);
             }
+
+            // send amg temp
+                client.write((const uint8_t *) & amgtemp, 4);
+
+            // send audio voltage
+                client.write((const uint8_t *) & audio, 4);
+
+            // send css811 data
+                client.write((const uint8_t *) & css_data[0], 2);
+                client.write((const uint8_t *) & css_data[1], 2);
+                
             client.stop();
             WiFi.disconnect();
             Serial.println("Disconnecting...");
