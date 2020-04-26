@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{svg}
 \usepackage[final]{pdfpages}
+\usepackage[square,numbers]{natbib} 
+\bibliographystyle{IEEEtran}
 
 % =========== BELANGRIJK VR IN HET VERSLAG: Tonen dat je hebt nagedacht over dimensionering componenten! ===========
 
@@ -28,8 +30,8 @@
 \newpage
 
 \section{Intro}
-To improve the experience of the students in the cafeteria, an embedded system will be developed to gather a variety of data. This data will then be display to the students through an online medium such as a website. The main focus will be to gather information about the amount off people that are in the cafeteria. There are two main goals. The first goal is to display the estimated waiting time to get a meal to the students. Secondly the amount of available seats will be tracked and displayed to the students. Next to this some additional information will be gathered. The temperature, air-quality and sound level will be monitored to give the student a general idea about the conditions in the cafeteria. This way the student can gauge if the cafeteria is suitable to study in at a certain moment. An overview of the envisioned system is displayed in figure~\ref{fig:system}. Al the developed hardware and software is displayed at: \url{https://github.com/thomasf10/cosy_cafeteria}.
-\begin{figure}[!ht]
+To improve the experience of the students in the cafeteria, an embedded system will be developed to gather a variety of data. This data will then be display to the students through an online medium such as a website. The main focus will be to gather information about the amount off people that are in the cafeteria. There are two main goals. The first goal is to display the estimated waiting time to get a meal to the students. Secondly the amount of available seats will be tracked and displayed to the students. Next to this some additional information will be gathered. The temperature, air-quality and sound level will be monitored to give the student a general idea about the conditions in the cafeteria. This way the student can gauge if the cafeteria is suitable to study in at a certain moment. An overview of the envisioned system is displayed in figure~\ref{fig:system}. All the developed hardware and software is displayed at: \url{https://github.com/thomasf10/cosy_cafeteria}.
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{situation.pdf}
 	\caption{Situation sketch}
@@ -56,7 +58,7 @@ Alongside the reception of data from the ESP32, the server hosts a website which
 systeem wat uitleggen \dots
 \textbf{EENS CHECKEN OF DE ARCHITECTUUR IN GROTE LIJNEN KLOPT}
 An overview of the full system is displayed in figure~\ref{fig:architecture}.
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{architecture.pdf}
 	\caption{System architecture}
@@ -64,23 +66,68 @@ An overview of the full system is displayed in figure~\ref{fig:architecture}.
 \end{figure}
 
 
-\section{Power management}
-\subsection{Battery}
-Specifications:
+\section{Design power management}
+This section explains the different trade-off's which were made in designing the power management part of the system. The first part in designing the power management is choosing a way to supply the circuit. In our case, the device needs to be deployed at the ceiling of a cafeteria. You can't just tap off the electricity cable at any point here, so our device will need a battery to supply the power. Our first aim was to supply the device as long as one semester. Another aspect was the ability to recharge the battery for environmental reasons. This excludes standard cell batteries that have a much lower energy density and are not rechargeable. Our choice was quickly made for the type of battery, namely a Lithium-Ion (Li-Ion) battery which will be discussed in section \ref{sec:liIon}.
+
+\subsection{Lithium-Ion battery}\label{sec:liIon}
+Lithium-Ion batteries are now a commonly used battery in consumer electronics. Li-Ion batteries is the most commonly used battery in phones, MP3 players and other portable equipment. The voltage of a single Li-Ion battery cell is usually fixed at 3.6 V or 3.7 V. We call this the nominal voltage. However, the actual voltage during use can vary from 2.4 V to 4.2 V. When the voltage drops below 2.4 V, the cell is discharged too deeply and damaged beyond repair. Therefore, a safety voltage of 3 V is often maintained. If the cell is discharged to this voltage, nothing is wrong. Charging a Li-Ion battery usually takes 3 hours. Don't be blinded by fast chargers for these batteries, practical tests have shown that it takes 3 hours until a battery is fully charged \cite{LiIon_ledscherp}. A few benefits of a Li-Ion battery are:
 \begin{itemize}
+	\item Very high energy density
+	\item Minor self-discharge
+	\item No memory effect
+	\item High power, long service life
+\end{itemize}
+Some disadvantages are:
+\begin{itemize}
+	\item Relatively expensive to purchase
+	\item Dangerous if used incorrectly, can explode/combust
+	\item Need a protection circuit to not drop below the 2.4 V threshold value
+	\item Charging and discharging process needed 
+\end{itemize}
+The most common Li-Ion battery is the 18650 cylindrical cell which is 18mm wide, 65mm long and the '0' stands for its cylindrical shape. Another common type of Lithium-Ion battery is the Lithium-Ion Polymer Battery (LiPo).
+%Li-Po's are:
+%\begin{itemize}
+%	\item Lighter
+%	\item Faster recharge
+%	\item Higher power: it's easy to produce batteries that can discharge 10C, 20C\footnote{\url{https://batteryuniversity.com/learn/article/what_is_the_c_rate}}.
+%	\item Safer: less ability to explode/combust
+%	\item Flexible: can bent (up to $90^\circ$) and deform + can be made in a variety of shapes
+%	\item More expensive
+%\end{itemize}
+LiPo's are preferred over standard Li-Ion batteries in application where weight reduction is important, fast charge opportunity is needed and which need a very high current during discharge time. LiPo's are more used for drones (where lightweight is a requirement) and electric cars (fast charging requirement). LiPo's are also less likely to combust or explode and are more expensive. Therefor a LiPo would be overkill in our application \cite{LiIonVsLiPo_Ovonic,LiIon_Wiki,LiPo_Wiki}. 
+
+\subsubsection{Selected battery}
+The reason we chose a single cell Li-Ion battery was:
+\begin{itemize}
+	\item Voltage range: our microcontroller needs 3.3 V supply voltage, which is only a low dropout voltage of 0.4 V in comparison with the 3.7 V nominal voltage of a single cell Li-Ion battery. This results in less power dissipation in the voltage regulator. 
+	\item Rechargeable: for environmental aspects
+	\item High capacity: around 3000 mAh, to last a semester
+\end{itemize}
+The specifications of the chosen NCR18650B are:
+\begin{itemize}
+	\item Size/package: 18650
 	\item Rated capacity: 3200 mAh
-	\item Nominal voltage: 3.7 V
+	\item Nominal voltage: 3.6 V
 	\item Maximum voltage: 4.2 V
 	\item Maximum charge current: 1625 mA
-	\item Maximum discharge current: 6400 mA\footnote{Maximum discharge rate is 2C. This means discharging the battery capacity in 0.5 hours $\frac{3200 mAh}{0.5 h} = 6400 mA$ .}
+	\item Maximum discharge current: 6400 mA\footnote{Maximum discharge rate is 2C. This means discharging the battery capacity in 0.5 hours $\frac{3200 mAh}{0.5 h} = 6400 mA$ .} % https://batteryuniversity.com/learn/article/what_is_the_c_rate
 	\item Maximum discharge voltage: 2.5 V
 	\item Charge time: 4 hours
 	\item No protection circuit
 \end{itemize}
+
+\subsection{Battery protection circuit}
+Due the battery we selected doesn't has an integrated protection circuit on it, we also needed to consider such a circuit in our design.
+
 \subsection{Battery charging circuit}
-\subsection{Battry protection circuit}
+
 \subsection{Polarity protection}
+Spice simulaties toevoegen!
+
+\subsection{Voltage regulator}
+
 \section{Microcontroller}
+
 \section{Sensorboard}
 
 % ============ Geofrey wil zien dat we hebben nagedacht over de dimensionering van de componenten !!! ============
@@ -98,7 +145,7 @@ Set $\overline{CE}$ low to initiate battery charging. The battery is charged in 
 	\item Constant current fast charge (current regulation) 
 	\item Constant voltage tapering (voltage regulation)
 \end{enumerate}
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{Charge_cycle}
 	\caption{Charge cycle}
@@ -155,7 +202,7 @@ In order to transmit the sensor data to the server, the Wi-Fi connectivity of th
 
 \subsection{Power consumption}
 To determine the power that is consumed when the sensor data is transmitted once, a measurement is performed. The current consumption is measured, the result is displayed in figure~\ref{fig:wifi_pwr}.
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{wifi_pwr.pdf}
 	\caption{Power consumption of one Wi-Fi transmission}
@@ -171,15 +218,15 @@ In order to interpret the current consumption, the used capacity is displayed in
 
 \section{Software design}
 \textbf{todo}
-\begin{figure}[!ht]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{statendiagram.pdf}
 	\caption{State diagram}
 	\label{fig:statediagram}
 \end{figure}
 
-\section{Energy management - autonomy}
-Berekeningen voor levensduur komen hier.
+\section{Autonomy}
+Calculations for lifetime.
 
 \section{Website}
 
@@ -188,5 +235,15 @@ Kostprijs van het project opstellen.
 
 \section{Validation and measurements}
 Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
+
+% bibliografie toevoegen
+\newpage
+\bibliography{bibliography}	
+
+%----------------------------------------------------------------------------------------
+%	Bijlagen
+%----------------------------------------------------------------------------------------
+\newpage
+\appendix
 
 \end{document}

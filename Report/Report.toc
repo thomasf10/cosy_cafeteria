@@ -1,29 +1,31 @@
-\contentsline {section}{\numberline {1}Intro}{3}{section.1}% 
-\contentsline {section}{\numberline {2}Functionality}{3}{section.2}% 
-\contentsline {section}{\numberline {3}System architecture}{4}{section.3}% 
-\contentsline {section}{\numberline {4}Power management}{4}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Battery}{4}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Battery charging circuit}{5}{subsection.4.2}% 
-\contentsline {subsection}{\numberline {4.3}Battry protection circuit}{5}{subsection.4.3}% 
-\contentsline {subsection}{\numberline {4.4}Polarity protection}{5}{subsection.4.4}% 
-\contentsline {section}{\numberline {5}Microcontroller}{5}{section.5}% 
-\contentsline {section}{\numberline {6}Sensorboard}{5}{section.6}% 
-\contentsline {section}{\numberline {7}Selection battery charger components}{5}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Charging}{6}{subsection.7.1}% 
-\contentsline {subsubsection}{\numberline {7.1.1}Charge Current Translator}{7}{subsubsection.7.1.1}% 
-\contentsline {subsection}{\numberline {7.2}System enable input}{7}{subsection.7.2}% 
-\contentsline {subsection}{\numberline {7.3}Calculations}{7}{subsection.7.3}% 
-\contentsline {subsubsection}{\numberline {7.3.1}Program the Fast Charge Current $I_{CHG}$}{7}{subsubsection.7.3.1}% 
-\contentsline {subsubsection}{\numberline {7.3.2}Program the Input Current Limit $I_{LIM}$}{8}{subsubsection.7.3.2}% 
-\contentsline {subsubsection}{\numberline {7.3.3}Fast-Charge Safety Timer (TMR)}{8}{subsubsection.7.3.3}% 
-\contentsline {subsubsection}{\numberline {7.3.4}TS function}{8}{subsubsection.7.3.4}% 
-\contentsline {subsubsection}{\numberline {7.3.5}Selecting IN, OUT, and BAT Pin Capacitors}{8}{subsubsection.7.3.5}% 
-\contentsline {subsubsection}{\numberline {7.3.6}Selecting MOSFETs}{9}{subsubsection.7.3.6}% 
-\contentsline {section}{\numberline {8}Wireless connectivity}{9}{section.8}% 
-\contentsline {subsection}{\numberline {8.1}Wi-Fi connection}{9}{subsection.8.1}% 
-\contentsline {subsection}{\numberline {8.2}Power consumption}{9}{subsection.8.2}% 
-\contentsline {section}{\numberline {9}Software design}{10}{section.9}% 
-\contentsline {section}{\numberline {10}Energy management - autonomy}{10}{section.10}% 
-\contentsline {section}{\numberline {11}Website}{10}{section.11}% 
-\contentsline {section}{\numberline {12}Financial estimate}{10}{section.12}% 
-\contentsline {section}{\numberline {13}Validation and measurements}{11}{section.13}% 
+\contentsline {section}{\numberline {1}Intro}{3}{section.1}%
+\contentsline {section}{\numberline {2}Functionality}{3}{section.2}%
+\contentsline {section}{\numberline {3}System architecture}{4}{section.3}%
+\contentsline {section}{\numberline {4}Design power management}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Lithium-Ion battery}{6}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Requirements}{6}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Selected battery}{7}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Battery charging circuit}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Battry protection circuit}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Polarity protection}{7}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Microcontroller}{7}{section.5}%
+\contentsline {section}{\numberline {6}Sensorboard}{7}{section.6}%
+\contentsline {section}{\numberline {7}Selection battery charger components}{7}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Charging}{8}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Charge Current Translator}{9}{subsubsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.2}System enable input}{9}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Calculations}{9}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Program the Fast Charge Current $I_{CHG}$}{9}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Program the Input Current Limit $I_{LIM}$}{10}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}Fast-Charge Safety Timer (TMR)}{10}{subsubsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.4}TS function}{10}{subsubsection.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.5}Selecting IN, OUT, and BAT Pin Capacitors}{10}{subsubsection.7.3.5}%
+\contentsline {subsubsection}{\numberline {7.3.6}Selecting MOSFETs}{11}{subsubsection.7.3.6}%
+\contentsline {section}{\numberline {8}Wireless connectivity}{11}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Wi-Fi connection}{11}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Power consumption}{11}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Software design}{12}{section.9}%
+\contentsline {section}{\numberline {10}Autonomy}{13}{section.10}%
+\contentsline {section}{\numberline {11}Website}{14}{section.11}%
+\contentsline {section}{\numberline {12}Financial estimate}{14}{section.12}%
+\contentsline {section}{\numberline {13}Validation and measurements}{14}{section.13}%
