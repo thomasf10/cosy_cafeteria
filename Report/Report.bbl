@@ -25,16 +25,17 @@
 ``Wat je moet weten over lithium ion accu's,''
   \url{https://www.ledscherp.nl/blog/blog/wat-je-moet-weten-over-lithium-ion-accus}.
 
-\bibitem{LiIonVsLiPo_Ovonic}
-``Li-po vs li-ion battery,what are the difference between them?''
-  \url{https://www.ovonicshop.com/blogs/how-to/li-po-vs-li-ion-battery-what-are-the-difference-between-them}.
-
 \bibitem{LiIon_Wiki}
 Wikipedia, ``Lithium-ion battery,''
   \url{https://en.wikipedia.org/wiki/Lithium-ion_battery}.
 
-\bibitem{LiPo_Wiki}
-------, ``Lithium polymer battery,''
-  \url{https://en.wikipedia.org/wiki/Lithium_polymer_battery}.
+\bibitem{bib:BQ29700}
+\emph{BQ297xx Cost-Effective Voltage and Current Protection Integrated Circuit
+  for Single-Cell Li-Ion and Li-Polymer Batteries}, Texas Instruments, March
+  2014, datasheet.
+
+\bibitem{bib:FDS9926A}
+\emph{Dual N-channel 2.5 V specified PowerTrench MOSFET}, Fairchild, July 2003,
+  datasheet.
 
 \end{thebibliography}

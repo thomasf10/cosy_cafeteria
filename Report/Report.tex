@@ -10,6 +10,7 @@
 \usepackage[final]{pdfpages}
 \usepackage[square,numbers]{natbib} 
 \bibliographystyle{IEEEtran}
+\usepackage{tabularx}
 
 % =========== BELANGRIJK VR IN HET VERSLAG: Tonen dat je hebt nagedacht over dimensionering componenten! ===========
 
@@ -38,6 +39,8 @@ To improve the experience of the students in the cafeteria, an embedded system w
 	\label{fig:system}
 \end{figure}
 
+\section{Specifications}
+Zoals we geleerd hebben in dit vak? eerst specs opstellen
 
 \section{Functionality}
 %- wat gaat uw systeem juist doen
@@ -48,10 +51,10 @@ The developed system uses three sensors:
 	\item CSS811: air quality sensors
 	\item Sparkfun sound detector: microphone
 \end{itemize}
-By incorporating these sensors in to the system, a variety of sensor data is gathered, namely: ambient temperature [\SI{}{\celsius}], $CO_2$-level [ppm], TVOC-level (total volatile organic compounds) [ppb] and sound level [db]. Next to this the AMG8833 captures the temperature af a two dimensional area in 8 by 8 pixels. \\
-
-The 'brain' of the system is an ESP32, this microcontroller has an integrated Wi-Fi module, which will be used to transmit the data. The gathered data is sent to a server, which stores the received data in a database. \\
-
+By incorporating these sensors in to the system, a variety of sensor data is gathered, namely: ambient temperature [\SI{}{\celsius}], $CO_2$-level [ppm], TVOC-level (total volatile organic compounds) [ppb] and sound level [db]. Next to this the AMG8833 captures the temperature af a two dimensional area in 8 by 8 pixels. 
+\\ \\
+The 'brain' of the system is an ESP32, this microcontroller has an integrated Wi-Fi module, which will be used to transmit the data. The gathered data is sent to a server, which stores the received data in a database. 
+\\ \\
 Alongside the reception of data from the ESP32, the server hosts a website which is used to display the data to the students. The website uses the pixel data to generate a heatmap of the cafeteria, this allows the students to see how many people are present in the cafeteria. Unfortunately one module cannot cover the entire cafeteria, to generate the heatmap. In order to do this, several modules have to be deployed in the cafeteria. In this project only one module will be constructed as a proof of concept. Next to the heatmap, the other sensor data is displayed on the website this includes: ambient temperature, $CO_2$-level, TVOC-level and the sound-level. Based on these parameters the students can gauge if the cafeteria is currently suitable as a study-location.
 
 \section{System architecture}
@@ -65,8 +68,7 @@ An overview of the full system is displayed in figure~\ref{fig:architecture}.
 	\label{fig:architecture}
 \end{figure}
 
-
-\section{Design power management}
+\section{Power management design}
 This section explains the different trade-off's which were made in designing the power management part of the system. The first part in designing the power management is choosing a way to supply the circuit. In our case, the device needs to be deployed at the ceiling of a cafeteria. You can't just tap off the electricity cable at any point here, so our device will need a battery to supply the power. Our first aim was to supply the device as long as one semester. Another aspect was the ability to recharge the battery for environmental reasons. This excludes standard cell batteries that have a much lower energy density and are not rechargeable. Our choice was quickly made for the type of battery, namely a Lithium-Ion (Li-Ion) battery which will be discussed in section \ref{sec:liIon}.
 
 \subsection{Lithium-Ion battery}\label{sec:liIon}
@@ -84,7 +86,7 @@ Some disadvantages are:
 	\item Need a protection circuit to not drop below the 2.4 V threshold value
 	\item Charging and discharging process needed 
 \end{itemize}
-The most common Li-Ion battery is the 18650 cylindrical cell which is 18mm wide, 65mm long and the '0' stands for its cylindrical shape. Another common type of Lithium-Ion battery is the Lithium-Ion Polymer Battery (LiPo).
+The most common Li-Ion battery is the 18650 cylindrical cell which is 18mm wide, 65mm long and the '0' stands for its cylindrical shape. Another common type of Lithium-Ion battery is the Lithium-Ion Polymer (Li-Po) battery.
 %Li-Po's are:
 %\begin{itemize}
 %	\item Lighter
@@ -94,9 +96,9 @@ The most common Li-Ion battery is the 18650 cylindrical cell which is 18mm wide,
 %	\item Flexible: can bent (up to $90^\circ$) and deform + can be made in a variety of shapes
 %	\item More expensive
 %\end{itemize}
-LiPo's are preferred over standard Li-Ion batteries in application where weight reduction is important, fast charge opportunity is needed and which need a very high current during discharge time. LiPo's are more used for drones (where lightweight is a requirement) and electric cars (fast charging requirement). LiPo's are also less likely to combust or explode and are more expensive. Therefor a LiPo would be overkill in our application \cite{LiIonVsLiPo_Ovonic,LiIon_Wiki,LiPo_Wiki}. 
+Li-Po's are preferred over standard Li-Ion batteries in application where weight reduction is important, fast charge opportunity is needed and which need a very high current during discharge time. Li-Po's are more used for drones (where lightweight is a requirement) and electric cars (fast charging requirement). Li-Po's are also less likely to combust or explode and are more expensive. Therefor a Li-Po would be overkill in our application \cite{LiIonVsLi-Po_Ovonic,LiIon_Wiki,Li-Po_Wiki}. 
 
-\subsubsection{Selected battery}
+\subsubsection{Selected battery}\label{sec:selected_battery}
 The reason we chose a single cell Li-Ion battery was:
 \begin{itemize}
 	\item Voltage range: our microcontroller needs 3.3 V supply voltage, which is only a low dropout voltage of 0.4 V in comparison with the 3.7 V nominal voltage of a single cell Li-Ion battery. This results in less power dissipation in the voltage regulator. 
@@ -115,13 +117,55 @@ The specifications of the chosen NCR18650B are:
 	\item Charge time: 4 hours
 	\item No protection circuit
 \end{itemize}
-
-\subsection{Battery protection circuit}
-Due the battery we selected doesn't has an integrated protection circuit on it, we also needed to consider such a circuit in our design.
+To charge the Li-Ion we had to include a charge circuit in our design. We found a high frequently used breakout board to charge a single cell Li-Ion battery via USB with battery protection \href{http://acoptex.com/project/9446/basics-project-082a-lithum-battery-charger-tp4056-at-acoptexcom/#sthash.3qJ5RSCy.AsMaJFMH.dpbs}{here}. Such a charge circuit would be perfect for our application. Due the reason we couldn't use a breakout board we had to integrate the components on one PCB. Unfortunately the components which were used on the breakout board were not available on the websites we're using to order components like Mouser, Digi-Key, Farnell, etc. After some research and a recommendation of a fellow student who had experience with battery charging applications in his master thesis, he advised to go for Texas Instruments IC's for charging Li-Ion batteries. The charger IC didn't had a protection circuit on it, so we also needed a circuit for this. Eventually we also went for a protection IC and voltage regulator of Texas Instruments. For reverse polarity of the battery protection we also included an own-designed circuit which was first evaluated in LT Spice. All named components will be discussed in the following sections.
 
 \subsection{Battery charging circuit}
 
-\subsection{Polarity protection}
+\subsection{Battery protection circuit}
+Due the battery we selected doesn't has an integrated protection circuit, we also needed to consider a battery protection circuit in our design. As discussed in section \ref{sec:liIon} it could lead to battery defect when the voltage of the battery drops below 2.4 V threshold value. A Li-Ion is also likely to explode/combust when charging too high in voltage or current. Therefor a protection circuit is always needed. We went for the BQ29700 which is a battery cell protection IC that provides an accurate monitor and trigger threshold for overcurrent protection during high discharge/charge current operation or battery overcharge conditions. The BQ29700 provides the protection functions for Li-Ion/Li-Po cells, and monitors across the external power FETs for protection due to high charge or discharge currents. Figure \ref{fig:bq29700_principeschema} shows the simplified schematic of the BQ29700 IC. In normal mode FETs Charge FET (CHG) and Discharge FET (DSG) are closed, however in one of the following conditions the FETs will open to stop the current flow from/to the battery:
+%The system is operating in NORMAL mode when the battery voltage range is between the over-discharge detection threshold (VUVP) and the overcharge detection threshold (VOVP), and the V– pin voltage is within the range for charge overcurrent threshold (VOCC) to over-discharge current threshold (VOCD) when measured with respect to VSS. If these conditions are satisfied, the device turns ON the drive for COUT and DOUT FET control.
+\begin{enumerate}
+	\item \textbf{Overcharge detection (OVP):} When the cell exceeds the overcharge detection threshold voltage $V_{OVP}$ during charge, the safety circuit will interrupt the flow of current into the cell.% by opening CHG.
+	When the overcharge voltage is exceeded, a delay of up to $t_{OVP}$ will occur before the FETs open the circuit.
+	\item \textbf{Over-discharge detection (UVP):} When the cell exceeds the over-discharge detection threshold voltage $V_{UVP}$ during discharge, the safety circuit will interrupt the flow of current out of the cell.% by opening DSG. 
+	When the over-discharge voltage is reached, a delay $t_{UVP}$ will occur before the FETs open the circuit.
+	\item \textbf{Charge overcurrent detection (OCC):} When the pack output current the charge overcurrent detection threshold voltage $V_{OCC}$ during charge, the safety circuit will interrupt the flow of current out of the pack. When the charge overcurrent threshold voltage is exceeded, a delay of up to $t_{OCC}$ will occur before the FETs open the circuit.
+	\item \textbf{Discharge overcurrent detection (OCD):} When the pack output current the discharge overcurrent detection threshold voltage $V_{OCD}$ during discharge, the safety circuit will interrupt the flow of current out of the pack. When the discharge overcurrent threshold voltage is exceeded, a delay of up to $t_{OCD}$ will occur before the FETs open the circuit.
+	\item \textbf{Load short-circuit detection (SCD):} Similar to overcurrent threshold values, except a short circuit will result in a much higher current, thus a higher sense voltage. The short-circuit detection threshold voltage is indicated as $V_{SCD}$ with delay $t_{SCD}$.
+\end{enumerate}
+Specifications of the BQ29700 IC are \cite{bib:BQ29700}:
+\begin{itemize}
+	\item $V_{OVP}$ = 4.275 V
+	\item $t_{OVP}$ = 1.25 s
+	\item $V_{UVP}$ = 2.8 V
+	\item $t_{UVP}$ = 144 ms
+	\item $V_{OCC}$ = –0.1 V
+	\item $t_{OCC}$ = 8 ms
+	\item $V_{OCD}$ = 0.1 V
+	\item $t_{OCD}$ = 20 ms
+	\item $V_{SCD}$ = 0.5 V
+	\item $t_{SCD}$ = 250 $\mu s$
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{bq29700_principeschema.png}
+	\caption{Simplified schematic BQ29700}
+	\label{fig:bq29700_principeschema}
+\end{figure}
+
+\subsubsection{Dimensioning}
+Figure \ref{fig:bq29700_toegepast} shows the implemented BQ29700 IC in our design. An RC filter is required on the BAT-pin for noise, and enables the device to operate during sharp negative transients. The 330 $\Omega$ resistor also limits the current during a reverse connection on the system. TI recommends placing a high impedance 5 M$\Omega$ across the gate source of each external FET to deplete any charge on the gate-source capacitance. The voltage sense node $V_-$ is a sense node used for measuring several fault detection conditions, such as overcurrent charging or
+overcurrent discharging configured as Vds sensing for protection. This input, in conjunction with VSS, forms the differential measurement for the stated fault detection conditions. A 2.2 k$\Omega$ resistor is connected between this input pin and Pack– terminal of the system in the application.
+\\ \\
+\textbf{FET Selection:} These should be power MOSFETs (range 1-2A, because of limitation of battery charge current of 1625mA and \textbf{!!aanvulle: oplaadstroom USB!!}) who operate at relativly low voltages (2.8-4.2V battery cell). Due the current is measured by the voltage drop across the FETs, it's $R_{DSON}$ value is also an important value by choosing the right MOSFET. We chose FDS9926A, as it's a dual N-channel MOSFET IC. So both charge and discharge MOSFETs are integrated in one IC. Each FET's $R_{DSON}$ = 35 m$\Omega$ at Tj = 25 $^\circ$C and Vgs = 3.7 V (nominal battery voltage) \cite{bib:FDS9926A}. Because both discharge and charge overcurrent detection levels are the same (100 mV), the discharge and charge current are limited to approximately $\frac{100 mV}{2 \cdot 35m\Omega}$ = 1.43 A \cite{bib:BQ29700, bib:FDS9926A}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{bq29700_toegepast.png}
+	\caption{BQ29700 in our design}  %% AANPASSEN!!!
+	\label{fig:bq29700_toegepast}
+\end{figure}
+
+\subsection{Reverse polarity protection}
 Spice simulaties toevoegen!
 
 \subsection{Voltage regulator}
@@ -194,7 +238,7 @@ In most applications, all that is needed is a high-frequency decoupling capacito
 
 \subsubsection{Selecting MOSFETs}
 Discharge Overcurrent Detection (OCD) voltage = 100 mV. $R_{DSON} = 30 m\Omega @ V_{GS} = 4.5 V$
-Maximum operating discharge current = $\frac{100 mV}{2*30 m\Omega} = 1.67 A$
+Maximum operating discharge current = $\frac{100 mV}{2 \cdot 30 m\Omega} = 1.67 A$
 
 \section{Wireless connectivity}
 \subsection{Wi-Fi connection}
@@ -245,5 +289,13 @@ Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
 %----------------------------------------------------------------------------------------
 \newpage
 \appendix
+\section{MainPCB schematic}\label{app:mainpcb_schematic}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\linewidth]{MainPCB_schematic.pdf}
+%\end{figure}
+\includepdf{fig/MainPCB_schematic.pdf}
+
+\newpage
 
 \end{document}

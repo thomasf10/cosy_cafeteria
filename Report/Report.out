@@ -1,31 +1,34 @@
 \BOOKMARK [1][-]{section.1}{Intro}{}% 1
-\BOOKMARK [1][-]{section.2}{Functionality}{}% 2
-\BOOKMARK [1][-]{section.3}{System architecture}{}% 3
-\BOOKMARK [1][-]{section.4}{Design power management}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Lithium-Ion battery}{section.4}% 5
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Requirements}{subsection.4.1}% 6
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Selected battery}{subsection.4.1}% 7
-\BOOKMARK [2][-]{subsection.4.2}{Battery charging circuit}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.3}{Battry protection circuit}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.4}{Polarity protection}{section.4}% 10
-\BOOKMARK [1][-]{section.5}{Microcontroller}{}% 11
-\BOOKMARK [1][-]{section.6}{Sensorboard}{}% 12
-\BOOKMARK [1][-]{section.7}{Selection battery charger components}{}% 13
-\BOOKMARK [2][-]{subsection.7.1}{Charging}{section.7}% 14
-\BOOKMARK [3][-]{subsubsection.7.1.1}{Charge Current Translator}{subsection.7.1}% 15
-\BOOKMARK [2][-]{subsection.7.2}{System enable input}{section.7}% 16
-\BOOKMARK [2][-]{subsection.7.3}{Calculations}{section.7}% 17
-\BOOKMARK [3][-]{subsubsection.7.3.1}{Program the Fast Charge Current ICHG}{subsection.7.3}% 18
-\BOOKMARK [3][-]{subsubsection.7.3.2}{Program the Input Current Limit ILIM}{subsection.7.3}% 19
-\BOOKMARK [3][-]{subsubsection.7.3.3}{Fast-Charge Safety Timer \(TMR\)}{subsection.7.3}% 20
-\BOOKMARK [3][-]{subsubsection.7.3.4}{TS function}{subsection.7.3}% 21
-\BOOKMARK [3][-]{subsubsection.7.3.5}{Selecting IN, OUT, and BAT Pin Capacitors}{subsection.7.3}% 22
-\BOOKMARK [3][-]{subsubsection.7.3.6}{Selecting MOSFETs}{subsection.7.3}% 23
-\BOOKMARK [1][-]{section.8}{Wireless connectivity}{}% 24
-\BOOKMARK [2][-]{subsection.8.1}{Wi-Fi connection}{section.8}% 25
-\BOOKMARK [2][-]{subsection.8.2}{Power consumption}{section.8}% 26
-\BOOKMARK [1][-]{section.9}{Software design}{}% 27
-\BOOKMARK [1][-]{section.10}{Autonomy}{}% 28
-\BOOKMARK [1][-]{section.11}{Website}{}% 29
-\BOOKMARK [1][-]{section.12}{Financial estimate}{}% 30
-\BOOKMARK [1][-]{section.13}{Validation and measurements}{}% 31
+\BOOKMARK [1][-]{section.2}{Specifications}{}% 2
+\BOOKMARK [1][-]{section.3}{Functionality}{}% 3
+\BOOKMARK [1][-]{section.4}{System architecture}{}% 4
+\BOOKMARK [1][-]{section.5}{Power management design}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Lithium-Ion battery}{section.5}% 6
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Selected battery}{subsection.5.1}% 7
+\BOOKMARK [2][-]{subsection.5.2}{Battery charging circuit}{section.5}% 8
+\BOOKMARK [2][-]{subsection.5.3}{Battery protection circuit}{section.5}% 9
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Dimensioning}{subsection.5.3}% 10
+\BOOKMARK [2][-]{subsection.5.4}{Reverse polarity protection}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.5}{Voltage regulator}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Microcontroller}{}% 13
+\BOOKMARK [1][-]{section.7}{Sensorboard}{}% 14
+\BOOKMARK [1][-]{section.8}{Selection battery charger components}{}% 15
+\BOOKMARK [2][-]{subsection.8.1}{Charging}{section.8}% 16
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Charge Current Translator}{subsection.8.1}% 17
+\BOOKMARK [2][-]{subsection.8.2}{System enable input}{section.8}% 18
+\BOOKMARK [2][-]{subsection.8.3}{Calculations}{section.8}% 19
+\BOOKMARK [3][-]{subsubsection.8.3.1}{Program the Fast Charge Current ICHG}{subsection.8.3}% 20
+\BOOKMARK [3][-]{subsubsection.8.3.2}{Program the Input Current Limit ILIM}{subsection.8.3}% 21
+\BOOKMARK [3][-]{subsubsection.8.3.3}{Fast-Charge Safety Timer \(TMR\)}{subsection.8.3}% 22
+\BOOKMARK [3][-]{subsubsection.8.3.4}{TS function}{subsection.8.3}% 23
+\BOOKMARK [3][-]{subsubsection.8.3.5}{Selecting IN, OUT, and BAT Pin Capacitors}{subsection.8.3}% 24
+\BOOKMARK [3][-]{subsubsection.8.3.6}{Selecting MOSFETs}{subsection.8.3}% 25
+\BOOKMARK [1][-]{section.9}{Wireless connectivity}{}% 26
+\BOOKMARK [2][-]{subsection.9.1}{Wi-Fi connection}{section.9}% 27
+\BOOKMARK [2][-]{subsection.9.2}{Power consumption}{section.9}% 28
+\BOOKMARK [1][-]{section.10}{Software design}{}% 29
+\BOOKMARK [1][-]{section.11}{Autonomy}{}% 30
+\BOOKMARK [1][-]{section.12}{Website}{}% 31
+\BOOKMARK [1][-]{section.13}{Financial estimate}{}% 32
+\BOOKMARK [1][-]{section.14}{Validation and measurements}{}% 33
+\BOOKMARK [1][-]{appendix.A}{MainPCB schematic}{}% 34
