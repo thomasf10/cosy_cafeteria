@@ -1,0 +1,2 @@
+ESP32-SOLO-1 heeft 1 core voor minder verbruik.
+De WROOM is gelijkaardige package, maar met 2 cores?
