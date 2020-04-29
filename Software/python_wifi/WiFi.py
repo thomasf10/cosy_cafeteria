@@ -2,10 +2,22 @@ import socket
 import schedule
 import time
 import numpy as np
+import mysql.connector #pip3 install mysql-connector
+import json
 
 s = socket.socket()
 s.bind(('0.0.0.0', 8091))
 s.listen(0)
+
+#mseting up data base connection
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="pi",
+    passwd="raspberry",
+    database="cossycafetaria"
+)
+
+mycursor = mydb.cursor()
 
 def processdata(data):
     '''Todo: update data in the sql database'''
@@ -38,10 +50,17 @@ def processdata(data):
     raw_unit8_data = np.array([data[4*66+2], data[4*66+3]], dtype='uint8')
     TVOC_level = raw_unit8_data.view('uint16')
 
+    # #making dummy data
+    # for i in range(64):
+    #     amgpixels.append(i+20.25)
+    # amgtemp = 21.55
+    # audio = 0.84
+    # co2_level = 33
+    # TVOC_level = 44
+
     #print data
-    #todo update data in sql data base instead of printing the data
     for pixel in amgpixels:
-        print(pixel)
+        print([pixel])
     print("amgtemp: ")
     print(amgtemp)
     print("audio ")
@@ -50,6 +69,18 @@ def processdata(data):
     print(co2_level)
     print("TVOC level: ")
     print(TVOC_level)
+
+    #writing away the data to the database:
+    #the query used to insert the data
+    sqlInsertReading="INSERT INTO readings (date, amgtemp, co2_level, TVOC_level, audio, infraredreading, sensor_id) VALUES (NOW(), %s, %s, %s, %s, %s, %s)" 
+
+    #filling in the query, converting the list with pixels into a json object
+    val = (amgtemp, co2_level, TVOC_level, audio, json.dumps(amgpixels), 1)
+    
+    #executing and commiting to finallise the pushing to the db
+    mycursor.execute(sqlInsertReading, val)
+    mydb.commit()
+
 
 
 def listen():
@@ -75,7 +106,6 @@ def listen():
         print('timeout')
     print("Closing connection")
     client.close()
-
 
 while True:
     listen()
