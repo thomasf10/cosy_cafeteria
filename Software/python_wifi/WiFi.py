@@ -12,8 +12,8 @@ s.listen(0)
 #mseting up data base connection
 mydb = mysql.connector.connect(
     host="localhost",
-    user="pi",
-    passwd="raspberry",
+    user="root",
+    passwd="",
     database="cossycafetaria"
 )
 
@@ -27,6 +27,7 @@ def processdata(data):
     audio = 0 # in volts, maybe convert to db
     co2_level = 0 # in ppm
     TVOC_level = 0 #in ppb (tvoc = total volatile organic compounds)
+    sensor_id = 0 #the id of the sensor
 
     #proces amg pixels
     for idx in range(64):
@@ -49,6 +50,10 @@ def processdata(data):
     #proces co2 level
     raw_unit8_data = np.array([data[4*66+2], data[4*66+3]], dtype='uint8')
     TVOC_level = raw_unit8_data.view('uint16')
+
+    #proces sensor_id
+    raw_unit8_data = np.array([data[4*65], data[4*65+1], data[4*65+2], data[4*65+3]], dtype='uint8')
+    sensor_id = raw_unit8_data.view('uint32')
 
     # #making dummy data
     # for i in range(64):
@@ -75,7 +80,7 @@ def processdata(data):
     sqlInsertReading="INSERT INTO readings (date, amgtemp, co2_level, TVOC_level, audio, infraredreading, sensor_id) VALUES (NOW(), %s, %s, %s, %s, %s, %s)" 
 
     #filling in the query, converting the list with pixels into a json object
-    val = (amgtemp, co2_level, TVOC_level, audio, json.dumps(amgpixels), 1)
+    val = (amgtemp, co2_level, TVOC_level, audio, json.dumps(amgpixels), sensor_id)
     
     #executing and commiting to finallise the pushing to the db
     mycursor.execute(sqlInsertReading, val)
