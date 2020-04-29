@@ -356,11 +356,11 @@ overcurrent discharging configured as Vds sensing for protection. This input, in
 \subsection{Voltage regulator}
 A few important points to consider when selecting the voltage regulator are:
 \begin{enumerate}
-	\item Low quiescent current $I_Q$ to reduce power losses for extended battery lifetime.
+	\item Low quiescent current\footnote{Current which is flowing though the converter when no load is applied.} $I_Q$ to reduce power losses for extended battery lifetime.
 	\item Low dropout voltage\footnote{The Dropout Voltage of a regulator is the amount of voltage that a regulator needs to be fed above its rated output voltage to maintain the output voltage.} $V_{DO}$ due to the small difference between the 3.7 V nominal voltage of the battery and 3.3 V supply voltage for the ESP32 microcontroller.
 	\item At least 500 mA maximum output current $I_{OUT,MAX}$ needed for ESP32 spikes \cite{bib:ESP32-SOLO-1}.
 \end{enumerate}
-A linear regulator is preferred over a switching regulator, because of the low dropout voltage and low quiescent current. This results in a low power dissipation in the linear regulator due Power = Voltage x Current. Another reason to chose a linear regulator over a switched regulator due the fact most inductor based switching converters struggle at very low loads \cite{LDOvsSwitch:1, LDOvsSwitch:2}
+In low power applications a linear regulator is preferred over a switching regulator due the fact switching converters are inefficient at very low loads, and power dissipation in the linear regulator is also low when combined with a low dropout voltage ($P^{\downarrow\downarrow} = U_{DO}^\downarrow\cdot I^\downarrow$). Linear regulators also have much lower quiescent currents in comparison to switching regulators \cite{LDOvsSwitch:1, LDOvsSwitch:2}
 
 \subsubsection{Selected regulator}
 As shown in figure \ref{fig:TLV75533_toegepast} we chose TLV75533 from Texas Instruments, with following parameters:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.25)  29 APR 2020 09:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.25)  29 APR 2020 19:11
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -1225,7 +1225,7 @@ Overfull \hbox (1.23529pt too wide) in paragraph at lines 361--362
 10.95 I[]$ \OT1/cmr/m/n/10.95 needed for ESP32
  []
 
-<fig/TLV75533_toegepast.png, id=530, 576.65437pt x 282.30469pt>
+<fig/TLV75533_toegepast.png, id=531, 576.65437pt x 282.30469pt>
 File: fig/TLV75533_toegepast.png Graphic file (type png)
 <use fig/TLV75533_toegepast.png>
 Package pdftex.def Info: fig/TLV75533_toegepast.png  used on input line 379.
@@ -1241,7 +1241,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 372--382
  []
 
 [21] [22 <./fig/TLV75533_toegepast.png>]
-<fig/TPS22919_toegepast.png, id=559, 338.01282pt x 423.83344pt>
+<fig/TPS22919_toegepast.png, id=561, 338.01282pt x 423.83344pt>
 File: fig/TPS22919_toegepast.png Graphic file (type png)
 <use fig/TPS22919_toegepast.png>
 Package pdftex.def Info: fig/TPS22919_toegepast.png  used on input line 416.
@@ -1252,19 +1252,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--419
  []
 
 [23]
-<fig/ESP32_toegepast.png, id=568, 561.59813pt x 439.6425pt>
+<fig/ESP32_toegepast.png, id=570, 561.59813pt x 439.6425pt>
 File: fig/ESP32_toegepast.png Graphic file (type png)
 <use fig/ESP32_toegepast.png>
 Package pdftex.def Info: fig/ESP32_toegepast.png  used on input line 425.
 (pdftex.def)             Requested size: 360.0pt x 281.81969pt.
  [24 <./fig/TPS22919_toegepast.png>]
-<fig/wifi_pwr.pdf, id=576, 450.63155pt x 327.1472pt>
+<fig/wifi_pwr.pdf, id=578, 450.63155pt x 327.1472pt>
 File: fig/wifi_pwr.pdf Graphic file (type pdf)
 <use fig/wifi_pwr.pdf>
 Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 443.
 (pdftex.def)             Requested size: 360.0pt x 261.3537pt.
  [25 <./fig/ESP32_toegepast.png>]
-<fig/statendiagram.pdf, id=584, 345.20969pt x 608.2725pt>
+<fig/statendiagram.pdf, id=586, 345.20969pt x 608.2725pt>
 File: fig/statendiagram.pdf Graphic file (type pdf)
 <use fig/statendiagram.pdf>
 Package pdftex.def Info: fig/statendiagram.pdf  used on input line 459.
@@ -1325,7 +1325,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--73
  []
 
 ) [29]
-<fig/MainPCB_schematic.pdf, id=660, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=662, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 489.
@@ -1334,7 +1334,7 @@ File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 489.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<fig/MainPCB_schematic.pdf, id=663, page=1, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=665, page=1, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 4
@@ -1362,7 +1362,7 @@ Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 4
 89.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
  [31 <./fig/MainPCB_schematic.pdf>]
-<fig/MainPCB_schematic.pdf, id=678, page=2, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=680, page=2, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 2>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 4
@@ -1392,8 +1392,8 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 493.
  ) 
 Here is how much of TeX's memory you used:
- 28182 strings out of 492450
- 535025 string characters out of 3120004
+ 28183 strings out of 492450
+ 535036 string characters out of 3120004
  658989 words of memory out of 3000000
  32046 multiletter control sequences out of 15000+200000
  543667 words of font info for 66 fonts, out of 3000000 for 9000
@@ -1420,9 +1420,9 @@ ic/amsfonts/cm/cmti10.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tobia/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/tobia/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on Report.pdf (32 pages, 886213 bytes).
+Output written on Report.pdf (32 pages, 889122 bytes).
 PDF statistics:
- 766 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
+ 769 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
  402 words of extra memory for PDF output out of 10000 (max. 10000000)
 
