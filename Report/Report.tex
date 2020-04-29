@@ -34,7 +34,7 @@
 \newpage
 
 \section{Intro}
-To improve the experience of the students in the cafeteria, an embedded system will be developed to gather a variety of data. This data will then be display to the students through an online medium such as a website. The main focus will be to gather information about the amount off people that are in the cafeteria. There are two main goals. The first goal is to display the estimated waiting time to get a meal to the students. Secondly the amount of available seats will be tracked and displayed to the students. Next to this some additional information will be gathered. The temperature, air-quality and sound level will be monitored to give the student a general idea about the conditions in the cafeteria. This way the student can gauge if the cafeteria is suitable to study in at a certain moment. An overview of the envisioned system is displayed in figure~\ref{fig:system}. All the developed hardware and software is displayed at: \url{https://github.com/thomasf10/cosy_cafeteria}.
+To improve the experience of the students in the cafeteria, an embedded system will be developed to gather a variety of data. This data will then be display to the students through an online medium such as a website. The main focus will be to gather information about the amount of people that are in the cafeteria. There are two main goals. The first goal is to display the estimated waiting time to get a meal to the students. Secondly the amount of available seats will be tracked and displayed to the students. Next to this some additional information will be gathered. The temperature, air-quality and sound level will be monitored to give the student a general idea about the conditions in the cafeteria. This way the student can gauge if the cafeteria is suitable to study in at a certain moment. An overview of the envisioned system is displayed in figure~\ref{fig:system}. All the developed hardware and software is displayed at: \url{https://github.com/thomasf10/cosy_cafeteria}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{situation.pdf}
@@ -43,17 +43,47 @@ To improve the experience of the students in the cafeteria, an embedded system w
 \end{figure}
 
 \section{Specifications}
-Zoals we geleerd hebben in dit vak? eerst specs opstellen
-\\ \\
-Hierbij moet de keuze's vermeld worden over:
+%Zoals we geleerd hebben in dit vak? eerst specs opstellen
+%Hierbij moet de keuze's vermeld worden over:
+% - Dimensions
+% - Microcontroller 
+\subsection{Functional specifications}
 \begin{itemize}
-	\item Dimensions
-	\item Microcontroller 
+	\item Monitor the available seats
+	\item Monitor the queue to get a meal
+	\item Display the data to the students
+	\item Energy provision for 1 semester (4-5 months)
+	\item Wireless coverage over the entire campus
+	\item Measure new data every 10 minutes
+	\item Send the data to the online medium every hour 
+	\item If the data changes with a large amount (needs to be specified) update the online medium sooner
 \end{itemize}
 
-\section{Functionality}
-%- wat gaat uw systeem juist doen
+\subsection{Other technical specifications}
+\begin{itemize}
+	\item Enclosure: 10 x \SI{10}{\centi\meter}
+	\item Easy deployment: the node must be easy to attach and detach from the sealing
+	\item Must be easy to recharge (Wireless or via USB)
+	\item Light weight: \SI{300}{\gram} (so it wont detach from the sealing)
+\end{itemize}
 
+\subsection{Non-technical specifications}
+\begin{itemize}
+	\item Cost: \euro{??}
+	\item The data should be easy accessible to the students
+\end{itemize}
+
+
+\section{System architecture}
+systeem wat uitleggen \dots
+\textbf{!!EENS CHECKEN OF DE ARCHITECTUUR IN GROTE LIJNEN KLOPT}
+An overview of the full system is displayed in figure~\ref{fig:architecture}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{architecture.pdf}
+	\caption{System architecture}
+	\label{fig:architecture}
+\end{figure}
 The developed system uses three sensors: 
 \begin{itemize}
 	\item AMG8833: IR grid sensor
@@ -66,16 +96,6 @@ The 'brain' of the system is an ESP32, this microcontroller has an integrated Wi
 \\ \\
 Alongside the reception of data from the ESP32, the server hosts a website which is used to display the data to the students. The website uses the pixel data to generate a heatmap of the cafeteria, this allows the students to see how many people are present in the cafeteria. Unfortunately one module cannot cover the entire cafeteria, to generate the heatmap. In order to do this, several modules have to be deployed in the cafeteria. In this project only one module will be constructed as a proof of concept. Next to the heatmap, the other sensor data is displayed on the website this includes: ambient temperature, $CO_2$-level, TVOC-level and the sound-level. Based on these parameters the students can gauge if the cafeteria is currently suitable as a study-location.
 
-\section{System architecture}
-systeem wat uitleggen \dots
-\textbf{EENS CHECKEN OF DE ARCHITECTUUR IN GROTE LIJNEN KLOPT}
-An overview of the full system is displayed in figure~\ref{fig:architecture}.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.0\linewidth]{architecture.pdf}
-	\caption{System architecture}
-	\label{fig:architecture}
-\end{figure}
 
 \section{Power management design}
 This section explains the different trade-off's which were made in designing the power management part of the system. The first part in designing the power management is choosing a way to supply the circuit. In our case, the device needs to be deployed at the ceiling of a cafeteria. You can't just tap off the electricity cable at any point here, so our device will need a battery to supply the power. Our first aim was to supply the device as long as one semester. Another aspect was the ability to recharge the battery for environmental reasons. This excludes standard cell batteries that have a much lower energy density and are not rechargeable. Our choice was quickly made for the type of battery, namely a Lithium-Ion (Li-Ion) battery which will be discussed in section \ref{sec:liIon}.
@@ -390,7 +410,7 @@ The TPS22919 device is a small, single channel load switch with controlled slew 
 \end{itemize}
 The switch ON state is controlled by a digital input that is capable of interfacing directly with low-voltage control signals. When power is first applied, a Smart Pull Down is used to keep the ON pin from floating until system sequencing is complete. Once the pin is deliberately driven High ($> V_{IH}$), the Smart Pull Down will be disconnected to prevent unnecessary power loss. The TPS22919 load switch is also self-protected, meaning that it will protect itself from short circuit events on the output of the device. It also has thermal shutdown to prevent any damage from overheating.
 \\ \\
-Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 sensors. Resistor between $V_{OUT}$ and $Q_{OD}$ pin is a quick discharge resistor to discharge the output capacitor when the enable pin goes low. For both in- and output capacitors, and the resistor, we used the recommended value as given in the datasheet \cite{bib:TPS22919}.
+Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 sensors. The resistor between VOUT and QOD pin is a quick discharge resistor to discharge the output capacitor when the enable pin goes low. For both in- and output capacitors, and the resistor, we used the recommended value as given in the datasheet \cite{bib:TPS22919}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{TPS22919_toegepast.png}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.25)  28 APR 2020 21:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.25)  29 APR 2020 09:54
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -1026,65 +1026,62 @@ Package caption Info: End \AtBeginDocument code.
 \openout4 = `Report.toc'.
 
  [3]
-<fig/situation.pdf, id=201, 467.82779pt x 147.67169pt>
+<fig/situation.pdf, id=211, 467.82779pt x 147.67169pt>
 File: fig/situation.pdf Graphic file (type pdf)
 <use fig/situation.pdf>
 Package pdftex.def Info: fig/situation.pdf  used on input line 40.
 (pdftex.def)             Requested size: 360.0pt x 113.6377pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--49
-
- []
-
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
-0.
+2.
+
 ("C:\Users\tobia\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--68
-
- []
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
 
 [4 <./fig/situation.pdf
 
 pdfTeX warning: pdflatex.exe (file ./fig/situation.pdf): PDF inclusion: invalid
  other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<fig/architecture.pdf, id=229, 395.55779pt x 363.27718pt>
+<fig/architecture.pdf, id=239, 395.55779pt x 363.27718pt>
 File: fig/architecture.pdf Graphic file (type pdf)
 <use fig/architecture.pdf>
-Package pdftex.def Info: fig/architecture.pdf  used on input line 75.
+Package pdftex.def Info: fig/architecture.pdf  used on input line 83.
 (pdftex.def)             Requested size: 360.0pt x 330.63818pt.
- [5] [6 <./fig/architecture.pdf
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 93--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--98
+
+ []
+
+[6 <./fig/architecture.pdf
 
 pdfTeX warning: pdflatex.exe (file ./fig/architecture.pdf): PDF inclusion: inva
 lid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->]
+>] [7]
 
-Package natbib Warning: Citation `LiIonVsLi-Po_Ovonic' on page 7 undefined on i
-nput line 108.
+Package natbib Warning: Citation `LiIonVsLi-Po_Ovonic' on page 8 undefined on i
+nput line 128.
 
 
-Package natbib Warning: Citation `Li-Po_Wiki' on page 7 undefined on input line
- 108.
+Package natbib Warning: Citation `Li-Po_Wiki' on page 8 undefined on input line
+ 128.
 
-[7]
-<fig/reverse_polarity_protection_simulation.png, id=300, 506.6428pt x 381.67593
+[8]
+<fig/reverse_polarity_protection_simulation.png, id=320, 506.6428pt x 381.67593
 pt>
 File: fig/reverse_polarity_protection_simulation.png Graphic file (type png)
 <use fig/reverse_polarity_protection_simulation.png>
 Package pdftex.def Info: fig/reverse_polarity_protection_simulation.png  used o
-n input line 139.
+n input line 159.
 (pdftex.def)             Requested size: 288.0011pt x 216.96933pt.
- [8]
+ [9]
 Package epstopdf Info: Source file: <fig/Transient_response_negative_input_puls
 e.eps>
 (epstopdf)                    date: 2020-04-28 11:07:18
@@ -1096,22 +1093,21 @@ e-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=fig/Transient_response_nega
 tive_input_pulse-eps-converted-to.pdf fig/Transient_response_negative_input_pul
 se.eps>
-(epstopdf)             \includegraphics on input line 146.
+(epstopdf)             \includegraphics on input line 166.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./fig/Transient_response_negative_input_puls
 e-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<fig/Transient_response_negative_input_pulse-eps-converted-to.pdf, id=312, 462.
+<fig/Transient_response_negative_input_pulse-eps-converted-to.pdf, id=329, 462.
 72874pt x 346.29375pt>
 File: fig/Transient_response_negative_input_pulse-eps-converted-to.pdf Graphic 
 file (type pdf)
 <use fig/Transient_response_negative_input_pulse-eps-converted-to.pdf>
 Package pdftex.def Info: fig/Transient_response_negative_input_pulse-eps-conver
-ted-to.pdf  used on input line 146.
+ted-to.pdf  used on input line 166.
 (pdftex.def)             Requested size: 288.0011pt x 215.53477pt.
-[9 <./fig/reverse_polarity_protection_simulation.png>]
 Package epstopdf Info: Source file: <fig/Transient_response_positive_input_puls
 e.eps>
 (epstopdf)                    date: 2020-04-28 11:08:53
@@ -1123,161 +1119,162 @@ e-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=fig/Transient_response_posi
 tive_input_pulse-eps-converted-to.pdf fig/Transient_response_positive_input_pul
 se.eps>
-(epstopdf)             \includegraphics on input line 153.
+(epstopdf)             \includegraphics on input line 173.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./fig/Transient_response_positive_input_puls
 e-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
 rsion <1.5> allowed
-<fig/Transient_response_positive_input_pulse-eps-converted-to.pdf, id=323, 462.
+<fig/Transient_response_positive_input_pulse-eps-converted-to.pdf, id=332, 462.
 72874pt x 346.29375pt>
 File: fig/Transient_response_positive_input_pulse-eps-converted-to.pdf Graphic 
 file (type pdf)
 <use fig/Transient_response_positive_input_pulse-eps-converted-to.pdf>
 Package pdftex.def Info: fig/Transient_response_positive_input_pulse-eps-conver
-ted-to.pdf  used on input line 153.
+ted-to.pdf  used on input line 173.
 (pdftex.def)             Requested size: 288.0011pt x 215.53477pt.
-<fig/reverse_polarity_protection.png, id=324, 622.57594pt x 422.32782pt>
+[10 <./fig/reverse_polarity_protection_simulation.png> <./fig/Transient_respons
+e_negative_input_pulse-eps-converted-to.pdf>]
+<fig/reverse_polarity_protection.png, id=373, 622.57594pt x 422.32782pt>
 File: fig/reverse_polarity_protection.png Graphic file (type png)
 <use fig/reverse_polarity_protection.png>
 Package pdftex.def Info: fig/reverse_polarity_protection.png  used on input lin
-e 162.
+e 182.
 (pdftex.def)             Requested size: 288.0011pt x 195.36867pt.
-[10 <./fig/Transient_response_negative_input_pulse-eps-converted-to.pdf> <./fig
-/Transient_response_positive_input_pulse-eps-converted-to.pdf>]
-<fig/microUSBinput.png, id=395, 484.81125pt x 331.99031pt>
+ [11 <./fig/Transient_response_positive_input_pulse-eps-converted-to.pdf>]
+<fig/microUSBinput.png, id=410, 484.81125pt x 331.99031pt>
 File: fig/microUSBinput.png Graphic file (type png)
 <use fig/microUSBinput.png>
-Package pdftex.def Info: fig/microUSBinput.png  used on input line 171.
+Package pdftex.def Info: fig/microUSBinput.png  used on input line 191.
 (pdftex.def)             Requested size: 288.0011pt x 197.22513pt.
- [11 <./fig/reverse_polarity_protection.png>]
-<fig/bq24075_toegepast.png, id=409, 468.24937pt x 300.3722pt>
+ [12 <./fig/reverse_polarity_protection.png> <./fig/microUSBinput.png>]
+<fig/bq24075_toegepast.png, id=425, 468.24937pt x 300.3722pt>
 File: fig/bq24075_toegepast.png Graphic file (type png)
 <use fig/bq24075_toegepast.png>
-Package pdftex.def Info: fig/bq24075_toegepast.png  used on input line 186.
+Package pdftex.def Info: fig/bq24075_toegepast.png  used on input line 206.
 (pdftex.def)             Requested size: 323.9978pt x 207.84827pt.
- [12 <./fig/microUSBinput.png>]
-<fig/Charge_cycle.png, id=421, 572.1375pt x 425.33907pt>
+ [13]
+<fig/Charge_cycle.png, id=438, 572.1375pt x 425.33907pt>
 File: fig/Charge_cycle.png Graphic file (type png)
 <use fig/Charge_cycle.png>
-Package pdftex.def Info: fig/Charge_cycle.png  used on input line 201.
+Package pdftex.def Info: fig/Charge_cycle.png  used on input line 221.
 (pdftex.def)             Requested size: 360.0pt x 267.63402pt.
- [13 <./fig/bq24075_toegepast.png>]
+ [14 <./fig/bq24075_toegepast.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 207.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 207.
+(hyperref)                removing `math shift' on input line 227.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 207.
+(hyperref)                removing `subscript' on input line 227.
 
 
-Overfull \hbox (3.56664pt too wide) in paragraph at lines 218--226
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 227.
+
+
+Overfull \hbox (3.56664pt too wide) in paragraph at lines 238--246
 [][] 
  []
 
-[14 <./fig/Charge_cycle.png>] [15]
+[15 <./fig/Charge_cycle.png>] [16]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 260.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 260.
+(hyperref)                removing `math shift' on input line 280.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 260.
+(hyperref)                removing `subscript' on input line 280.
 
-[16]
-Overfull \hbox (1.7865pt too wide) in paragraph at lines 297--299
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 280.
+
+[17]
+Overfull \hbox (1.7865pt too wide) in paragraph at lines 317--319
 \OT1/cmr/m/n/10.95 discharge de-tec-tion thresh-old volt-age $\OML/cmm/m/it/10.
 95 V[]$ \OT1/cmr/m/n/10.95 dur-ing dis-charge, the safety
  []
 
-[17]
-Overfull \hbox (1.66985pt too wide) in paragraph at lines 301--302
+[18]
+Overfull \hbox (1.66985pt too wide) in paragraph at lines 321--322
 []\OT1/cmr/bx/n/10.95 Load short-circuit de-tec-tion (SCD): \OT1/cmr/m/n/10.95 
 Sim-i-lar to over-cur-rent thresh-
  []
 
-<fig/bq29700_principeschema.png, id=486, 843.15pt x 372.64218pt>
+<fig/bq29700_principeschema.png, id=501, 843.15pt x 372.64218pt>
 File: fig/bq29700_principeschema.png Graphic file (type png)
 <use fig/bq29700_principeschema.png>
-Package pdftex.def Info: fig/bq29700_principeschema.png  used on input line 318
+Package pdftex.def Info: fig/bq29700_principeschema.png  used on input line 338
 .
 (pdftex.def)             Requested size: 323.9978pt x 143.19759pt.
-<fig/bq29700_toegepast.png, id=494, 511.15968pt x 337.26pt>
+<fig/bq29700_toegepast.png, id=509, 511.15968pt x 337.26pt>
 File: fig/bq29700_toegepast.png Graphic file (type png)
 <use fig/bq29700_toegepast.png>
-Package pdftex.def Info: fig/bq29700_toegepast.png  used on input line 330.
+Package pdftex.def Info: fig/bq29700_toegepast.png  used on input line 350.
 (pdftex.def)             Requested size: 323.9978pt x 213.77174pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--333
+Underfull \hbox (badness 10000) in paragraph at lines 344--353
 
  []
 
-[18 <./fig/bq29700_principeschema.png>] [19 <./fig/bq29700_toegepast.png>]
-Overfull \hbox (1.23529pt too wide) in paragraph at lines 341--342
+[19 <./fig/bq29700_principeschema.png>] [20 <./fig/bq29700_toegepast.png>]
+Overfull \hbox (1.23529pt too wide) in paragraph at lines 361--362
 []\OT1/cmr/m/n/10.95 At least 500 mA max-i-mum out-put cur-rent $\OML/cmm/m/it/
 10.95 I[]$ \OT1/cmr/m/n/10.95 needed for ESP32
  []
 
-<fig/TLV75533_toegepast.png, id=515, 576.65437pt x 282.30469pt>
+<fig/TLV75533_toegepast.png, id=530, 576.65437pt x 282.30469pt>
 File: fig/TLV75533_toegepast.png Graphic file (type png)
 <use fig/TLV75533_toegepast.png>
-Package pdftex.def Info: fig/TLV75533_toegepast.png  used on input line 359.
+Package pdftex.def Info: fig/TLV75533_toegepast.png  used on input line 379.
 (pdftex.def)             Requested size: 323.9978pt x 158.61937pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--362
+Underfull \hbox (badness 10000) in paragraph at lines 372--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--362
+Underfull \hbox (badness 10000) in paragraph at lines 372--382
 
  []
 
-[20] [21 <./fig/TLV75533_toegepast.png>]
-<fig/TPS22919_toegepast.png, id=544, 338.01282pt x 423.83344pt>
+[21] [22 <./fig/TLV75533_toegepast.png>]
+<fig/TPS22919_toegepast.png, id=559, 338.01282pt x 423.83344pt>
 File: fig/TPS22919_toegepast.png Graphic file (type png)
 <use fig/TPS22919_toegepast.png>
-Package pdftex.def Info: fig/TPS22919_toegepast.png  used on input line 396.
+Package pdftex.def Info: fig/TPS22919_toegepast.png  used on input line 416.
 (pdftex.def)             Requested size: 288.0011pt x 361.13318pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--399
+Underfull \hbox (badness 10000) in paragraph at lines 411--419
 
  []
 
-[22]
-<fig/ESP32_toegepast.png, id=553, 561.59813pt x 439.6425pt>
+[23]
+<fig/ESP32_toegepast.png, id=568, 561.59813pt x 439.6425pt>
 File: fig/ESP32_toegepast.png Graphic file (type png)
 <use fig/ESP32_toegepast.png>
-Package pdftex.def Info: fig/ESP32_toegepast.png  used on input line 405.
+Package pdftex.def Info: fig/ESP32_toegepast.png  used on input line 425.
 (pdftex.def)             Requested size: 360.0pt x 281.81969pt.
- [23 <./fig/TPS22919_toegepast.png>]
-<fig/wifi_pwr.pdf, id=561, 450.63155pt x 327.1472pt>
+ [24 <./fig/TPS22919_toegepast.png>]
+<fig/wifi_pwr.pdf, id=576, 450.63155pt x 327.1472pt>
 File: fig/wifi_pwr.pdf Graphic file (type pdf)
 <use fig/wifi_pwr.pdf>
-Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 423.
+Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 443.
 (pdftex.def)             Requested size: 360.0pt x 261.3537pt.
- [24 <./fig/ESP32_toegepast.png>]
-<fig/statendiagram.pdf, id=568, 345.20969pt x 608.2725pt>
+ [25 <./fig/ESP32_toegepast.png>]
+<fig/statendiagram.pdf, id=584, 345.20969pt x 608.2725pt>
 File: fig/statendiagram.pdf Graphic file (type pdf)
 <use fig/statendiagram.pdf>
-Package pdftex.def Info: fig/statendiagram.pdf  used on input line 439.
+Package pdftex.def Info: fig/statendiagram.pdf  used on input line 459.
 (pdftex.def)             Requested size: 288.0011pt x 507.49272pt.
 
-[25 <./fig/wifi_pwr.pdf>] [26 <./fig/statendiagram.pdf
+[26 <./fig/wifi_pwr.pdf>] [27 <./fig/statendiagram.pdf
 
 pdfTeX warning: pdflatex.exe (file ./fig/statendiagram.pdf): PDF inclusion: inv
 alid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] [27] (Report.bbl
+>] [28] (Report.bbl
 Underfull \hbox (badness 4303) in paragraph at lines 29--31
 []\OT1/cmr/m/n/10.95 Wikipedia, ``Lithium-ion bat-tery,'' []$https : / / en . w
 ikipedia . org / wiki /
@@ -1327,79 +1324,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--73
 5596 /
  []
 
-) [28]
-<fig/MainPCB_schematic.pdf, id=645, 845.1575pt x 598.235pt>
+) [29]
+<fig/MainPCB_schematic.pdf, id=660, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 469.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 489.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 469.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 489.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<fig/MainPCB_schematic.pdf, id=648, page=1, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=663, page=1, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 4
-69.
+89.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 4
-69.
+89.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
- [29]
+ [30]
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 4
-69.
-(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
-File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
-<use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 4
-69.
+89.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 4
-69.
-(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
- [30 <./fig/MainPCB_schematic.pdf>]
-<fig/MainPCB_schematic.pdf, id=662, page=2, 845.1575pt x 598.235pt>
-File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
-<use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 4
-69.
+89.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
-<use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 4
-69.
-(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
-File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
-<use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 4
-69.
+<use fig/MainPCB_schematic.pdf, page 1>
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 4
+89.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
  [31 <./fig/MainPCB_schematic.pdf>]
+<fig/MainPCB_schematic.pdf, id=678, page=2, 845.1575pt x 598.235pt>
+File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
+<use fig/MainPCB_schematic.pdf, page 2>
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 4
+89.
+(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
+File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
+<use fig/MainPCB_schematic.pdf, page 2>
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 4
+89.
+(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
+File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
+<use fig/MainPCB_schematic.pdf, page 2>
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 4
+89.
+(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
+ [32 <./fig/MainPCB_schematic.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 473.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 473.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 493.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 493.
 (Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 473.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 473.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 493.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 493.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: D4BFFB2867CF937EFF23A325CEAD5927;2306.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 473.
+(rerunfilecheck)             Checksum: FA4A961516236911E6E140AB5DB261DC;2489.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 493.
  ) 
 Here is how much of TeX's memory you used:
- 28175 strings out of 492450
- 534924 string characters out of 3120004
- 658985 words of memory out of 3000000
- 32043 multiletter control sequences out of 15000+200000
- 543550 words of font info for 65 fonts, out of 3000000 for 9000
+ 28182 strings out of 492450
+ 535025 string characters out of 3120004
+ 658989 words of memory out of 3000000
+ 32046 multiletter control sequences out of 15000+200000
+ 543667 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,106p,1994b,890s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
@@ -1421,10 +1418,11 @@ bia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 cm/cmsy8.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><C:/Users/tobia/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/tobia/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Report.pdf (31 pages, 876370 bytes).
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/tobia/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb>
+Output written on Report.pdf (32 pages, 886213 bytes).
 PDF statistics:
- 748 PDF objects out of 1000 (max. 8388607)
- 135 named destinations out of 1000 (max. 500000)
- 386 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 766 PDF objects out of 1000 (max. 8388607)
+ 138 named destinations out of 1000 (max. 500000)
+ 402 words of extra memory for PDF output out of 10000 (max. 10000000)
 
