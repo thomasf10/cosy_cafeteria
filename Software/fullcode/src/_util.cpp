@@ -16,7 +16,8 @@ const char* pwd = "PVFse1RKYrMT";
 
 // socket
 const uint16_t port = 8091;
-const char * host = "192.168.0.107"; // ip of host (ip of laptop/raspy)
+//const char * host = "192.168.0.107"; // ip python server (ip of laptop)
+const char * host = "81.244.156.25"; // ip python server (ip of raspberry pi)
 
 // ntp server
 const char* ntpServer = "europe.pool.ntp.org";

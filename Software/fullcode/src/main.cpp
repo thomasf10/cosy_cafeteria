@@ -18,7 +18,9 @@
 // data stored in RTC memory when entering deepsleep
 RTC_DATA_ATTR int bootCount = 0; 
 RTC_DATA_ATTR bool sensorsinit = false;
-RTC_DATA_ATTR static volatile APP_State_t appState = NTPSYNC;
+//todo
+//juiste appstate zetten om te starten in final programma = ntpsync
+RTC_DATA_ATTR static volatile APP_State_t appState = SENDDATA; //final program = NTPSYNC
 RTC_DATA_ATTR int days_since_sync = 0;
 
 // for sensor data
@@ -94,7 +96,7 @@ void loop() {
     audio_voltage = (3.3 * audio) / 4095;
 
     // read AMG sensor data
-    get_measurements_AMG8833(pixeltemperature,&tempAMG);
+    get_measurements_AMG8833(pixeltemperature, &tempAMG);
 
     // read CCSS811 sensor data
     get_measurements_CCS811(data_CCS811);
@@ -133,7 +135,9 @@ void loop() {
   }break;
 
   case SENDDATA:{
-    appState = SLEEP;// set next appstate
+    //todo
+    //uncommenten in final programma,  is om te testen
+    //appState = SLEEP;// set next appstate
 
     // create dummy data
     for(int i=0; i<64;i++){
@@ -156,6 +160,8 @@ void loop() {
         break;
       }
     }
+//todo
+    goToDeepSleep(15); //wegdoen in final programma, is om te testen
   } break;
    
   case SLEEP:{
