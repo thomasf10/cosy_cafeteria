@@ -88,7 +88,7 @@ def processdata(data):
     sqlInsertReading="INSERT INTO readings (date, amgtemp, co2_level, TVOC_level, audio, infraredreading, sensor_id) VALUES (NOW(), %s, %s, %s, %s, %s, %s)" 
 
     #filling in the query, converting the list with pixels into a json object
-    val = (float(amgtemp[0]), float(co2_level[0]), float(TVOC_level[0]), float(audio[0]), json.dumps(amgpixels4JSON), sensor_id)
+    val = (float(amgtemp[0]), float(co2_level[0]), float(TVOC_level[0]), float(audio[0]), json.dumps(amgpixels4JSON), int(sensor_id))
     
     #executing and commiting to finallise the pushing to the db
     mycursor.execute(sqlInsertReading, val)
