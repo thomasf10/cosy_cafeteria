@@ -10,6 +10,14 @@
 		{
 			"name": "testproject",
 			"path": "testproject"
+		},
+		{
+			"name": "Sensors_test",
+			"path": "Sensors_test"
+		},
+		{
+			"name": "Sensors",
+			"path": "..\\Sensors\\code\\Sensors"
 		}
 	],
 	"settings": {}

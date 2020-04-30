@@ -11,27 +11,26 @@
 #include "time.h"
 #include "sensors.h"
 
-#define ID 255 // id of the node
+#define ID 1 // id of the node
 #define ccs881_pwr_pin 15
 #define audio_pwr_pin 16
 #define amg_pwr_pin 17
+#define css_nwake    32
 
 // data stored in RTC memory when entering deepsleep
 RTC_DATA_ATTR int bootCount = 0; 
 RTC_DATA_ATTR bool sensorsinit = false;
-//todo
-//juiste appstate zetten om te starten in final programma = ntpsync
-RTC_DATA_ATTR static volatile APP_State_t appState = SENDDATA; //final program = NTPSYNC
+//todo 
+//set state to NTPSYNC
+RTC_DATA_ATTR static volatile APP_State_t appState = NTPSYNC; 
 RTC_DATA_ATTR int days_since_sync = 0;
 
-// for sensor data
+RTC_DATA_ATTR bool sleepp = false;
+// variables for sensor data
 float audio_voltage = 0;
 float pixeltemperature[64];
 float tempAMG = 0;
 uint16_t data_CCS811[2];
-
-
-
 
 
 void setup() {
@@ -66,15 +65,11 @@ void setup() {
   pinMode(ccs881_pwr_pin,OUTPUT);
   pinMode(audio_pwr_pin,OUTPUT);
   pinMode(amg_pwr_pin, OUTPUT);
-
-  //
+  pinMode(css_nwake, OUTPUT);
+  
+  //enable i2c
   Wire.begin();
 
-  //init sensors
-  if(!sensorsinit){
-    //init_sensors();
-    sensorsinit = true;
-  }
 }
 
 
@@ -84,12 +79,16 @@ void loop() {
   {
 
   case WAKESENSORS:{
+    Serial.println("IN WAKESENSORS");
+    init_sensors();
     wake_sensors();
     appState = READSENSORS;
     goToDeepSleep_ms(105);// sleep until sensors are ready
   }break;
 
   case READSENSORS:{
+    Serial.println("IN READSENSORS");
+    init_sensors();
     
     // read audio level
     int audio = 0;
@@ -126,28 +125,24 @@ void loop() {
     // for now: always send the data
 
     // set next appstate 
-    appState = CHECKTIME; 
-    
-/*     // for testing the sensors:
-    // go to deepsleep for 10 seconds, then read the sensors again
-    appState = WAKESENSORS;
-    goToDeepSleep(10); */
+    //moet checktime zijn!!!!!!!
+    appState = CHECKTIME;
 
   }break;
 
   case SENDDATA:{
-    //todo
-    //uncommenten in final programma,  is om te testen
-    //appState = SLEEP;// set next appstate
+    Serial.println("IN SENDDATA");
 
-    // create dummy data
+    appState = SLEEP;// set next appstate
+
+    /* // create dummy data
     for(int i=0; i<64;i++){
       pixeltemperature[i] = i+20.25;
     }
     tempAMG = 21.55;
     audio_voltage = 0.84;
     data_CCS811[0] = 33;
-    data_CCS811[1] = 44;
+    data_CCS811[1] = 44; */
 
     int length = sizeof(pixeltemperature);
     int ctr = 0;
@@ -156,20 +151,19 @@ void loop() {
         break;
       }
       ctr++;
-      if(ctr>3){// timeout after 3 tries
+      if(ctr>=2){// timeout after 2 tries
         Serial.print("Data transmission failed!");
         break;
       }
     }
-//todo
-    goToDeepSleep(15); //wegdoen in final programma, is om te testen
   } break;
    
   case SLEEP:{
+    Serial.println("IN SLEEP");
     appState = WAKESENSORS;
     //todo
-    // change time to 10 minutes instead of seconds
-    goToDeepSleep(10);
+    // change time to 10 minutes instead of 60 seconds
+    goToDeepSleep(20);
   }break;
 
   case CHECKTIME:{
@@ -195,12 +189,12 @@ void loop() {
   case NTPSYNC:{
     Serial.println("IN SYNC");
      ntp_sync();
+     days_since_sync = 0;
      appState = WAKESENSORS;
-     goToDeepSleep(10);
   }break;
   
   case NIGHTSLEEP:{
-
+    Serial.println("NIGHTSLEEP");
     appState = WAKEFROMNIGHTSLEEP;
     
     // disable pwr to sensors
@@ -220,7 +214,7 @@ void loop() {
     
     // sleep until morning
     Serial.println("nightnight");
-    goToDeepSleep(60);
+    goToDeepSleep(10);
     
   }break;
 
@@ -229,7 +223,8 @@ void loop() {
      appState = WAKESENSORS;
 
      days_since_sync++;
-     
+     Serial.print("Days since sync: ");
+     Serial.println(days_since_sync);
      // sync clock if necessary
      if(days_since_sync > 14){ 
        appState = NTPSYNC;

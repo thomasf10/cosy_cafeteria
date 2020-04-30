@@ -1,0 +1,68 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:8896
+load:0x40080400,len:5828
+entry 0x400806ac
+Wakeup was not caused by deep sleep
+E (133) gpio: gpio_set_intr_type(102): GPIO interrupt type error
+IN SYNC
+Connecting to telenet-F0116 .. CONNECTED
+Thursday, April 30 2020 15:02:56
+IN WAKESENSORS
+Try to initialize CCS811
+Going to sleep...
+ets Jun  8 2016 00:22:57
+
+rst:0x5 (DEEPSLEEP_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:8896
+load:0x40080400,len:5828
+entry 0x400806ac
+Wakeup caused by timer
+E (133) gpio: gpio_set_intr_type(102): GPIO interrupt type error
+IN READSENSORS
+Try to initialize CCS811
+audio voltage: 0.04
+AMG pixels: 
+20.25 : 21.00 : 19.75 : 20.25 : 20.25 : 20.50 : 20.25 : 20.50 : 19.75 : 21.25 : 22.50 : 22.00 : 21.00 : 19.75 : 20.25 : 20.50 : 19.25 : 19.75 : 19.50 : 20.50 : 21.50 : 20.25 : 19.75 : 19.50 : 20.25 : 19.75 : 19.50 : 19.75 : 19.75 : 20.25 : 19.75 : 19.25 : 23.00 : 21.50 : 19.75 : 20.00 : 20.00 : 19.75 : 20.00 : 19.50 : 23.25 : 22.25 : 19.50 : 19.75 : 19.50 : 19.25 : 19.25 : 18.50 : 22.50 : 22.25 : 20.25 : 19.50 : 19.50 : 19.00 : 19.75 : 18.50 : 22.50 : 22.50 : 20.25 : 19.00 : 19.00 : 18.50 : 19.25 : 19.00 :  
+ AMG temp: 25.06
+CO2: 0
+TVOC: 400
+IN CHECK time
+Thursday, April 30 2020 15:02:58
+hour
+15
+IN SENDDATA
+connecting to network
+...
+WiFi connected
+IP address set: 
+192.168.0.186
+[E][WiFiClient.cpp:258] connect(): socket error on fd 54, errno: 104, "Connection reset by peer"
+Connection to server failed
+connecting to network
+..
+WiFi connected
+IP address set: 
+192.168.0.186
+[E][WiFiClient.cpp:258] connect(): socket error on fd 55, errno: 104, "Connection reset by peer"
+Connection to server failed
+connecting to network
+...
+WiFi connected
+IP address set: 
+192.168.0.186
+[E][WiFiClient.cpp:258] connect(): socket error on fd 56, errno: 104, "Connection reset by peer"
+Connection to server failed
+Data transmission failed!IN SLEEP
+Going to sleep...

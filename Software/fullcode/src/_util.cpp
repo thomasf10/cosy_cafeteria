@@ -51,7 +51,7 @@ void goToDeepSleep_ms(int ms)
 
     adc_power_off();
     esp_wifi_stop();
-    esp_bt_controller_disable();
+    esp_bt_controller_disable(); 
 
     // Configure the timer to wake us up!
     esp_sleep_enable_timer_wakeup(ms * 1000);
@@ -159,9 +159,15 @@ void ntp_sync(){
        //connect to WiFi
     Serial.printf("Connecting to %s ", ssidhome);
     WiFi.begin(ssidhome, pwd);
+    int counter = 0;
     while (WiFi.status() != WL_CONNECTED) {
         delay(500);
         Serial.print(".");
+         counter++;
+        if(counter>=10){ //after 5 seconds timeout - reset board
+            Serial.println("connection failed");
+            break;
+        }
     }
     Serial.println(" CONNECTED");
     
