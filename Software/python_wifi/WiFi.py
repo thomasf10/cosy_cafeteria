@@ -64,7 +64,7 @@ def processdata(data):
 
     #print data
     for pixel in amgpixels:
-        print([pixel])
+        print(pixel)
     print("amgtemp: ")
     print(amgtemp)
     print("audio ")
