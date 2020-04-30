@@ -77,8 +77,9 @@ def processdata(data):
     print("sensor id: ")
     print(sensor_id)
 
-
-
+    amgpixels4JSON = []
+    for pixel in amgpixels:
+        amgpixels4JSON.append(pixel)
     #writing away the data to the database:
     #the query used to insert the data
     sqlInsertReading="INSERT INTO readings (date, amgtemp, co2_level, TVOC_level, audio, infraredreading, sensor_id) VALUES (NOW(), %s, %s, %s, %s, %s, %s)" 
