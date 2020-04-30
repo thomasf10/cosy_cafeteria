@@ -79,7 +79,9 @@ def processdata(data):
 
     amgpixels4JSON = []
     for pixel in amgpixels:
-        amgpixels4JSON.append(pixel)
+        amgpixels4JSON.append(pixel.tolist())
+
+    print(amgpixels4JSON)
     
     #writing away the data to the database:
     #the query used to insert the data
