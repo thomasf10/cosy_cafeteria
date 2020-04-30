@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 30 apr 2020 om 14:55
+-- Gegenereerd op: 30 apr 2020 om 15:13
 -- Serverversie: 10.4.11-MariaDB
 -- PHP-versie: 7.4.4
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -20,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `cossycafetaria`
 --
-CREATE DATABASE IF NOT EXISTS `cossycafetaria` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `cossycafetaria`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +28,6 @@ USE `cossycafetaria`;
 -- Tabelstructuur voor tabel `location`
 --
 
-DROP TABLE IF EXISTS `location`;
 CREATE TABLE `location` (
   `id` int(11) NOT NULL,
   `x` int(11) NOT NULL,
@@ -42,7 +40,6 @@ CREATE TABLE `location` (
 -- Tabelstructuur voor tabel `readings`
 --
 
-DROP TABLE IF EXISTS `readings`;
 CREATE TABLE `readings` (
   `id` int(11) NOT NULL,
   `date` datetime NOT NULL,
@@ -60,7 +57,6 @@ CREATE TABLE `readings` (
 -- Tabelstructuur voor tabel `sensor`
 --
 
-DROP TABLE IF EXISTS `sensor`;
 CREATE TABLE `sensor` (
   `id` int(11) NOT NULL,
   `location_id` int(11) NOT NULL
@@ -128,6 +124,7 @@ ALTER TABLE `readings`
 --
 ALTER TABLE `sensor`
   ADD CONSTRAINT `sensor_ibfk_1` FOREIGN KEY (`location_id`) REFERENCES `location` (`id`);
+SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
