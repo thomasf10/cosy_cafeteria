@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 10 apr 2020 om 12:50
+-- Gegenereerd op: 30 apr 2020 om 14:55
 -- Serverversie: 10.4.11-MariaDB
 -- PHP-versie: 7.4.4
 
@@ -29,19 +29,12 @@ USE `cossycafetaria`;
 -- Tabelstructuur voor tabel `location`
 --
 
+DROP TABLE IF EXISTS `location`;
 CREATE TABLE `location` (
   `id` int(11) NOT NULL,
   `x` int(11) NOT NULL,
   `y` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Gegevens worden geëxporteerd voor tabel `location`
---
-
-INSERT INTO `location` (`id`, `x`, `y`) VALUES
-(1, 150, 700),
-(2, 300, 500);
 
 -- --------------------------------------------------------
 
@@ -49,23 +42,17 @@ INSERT INTO `location` (`id`, `x`, `y`) VALUES
 -- Tabelstructuur voor tabel `readings`
 --
 
+DROP TABLE IF EXISTS `readings`;
 CREATE TABLE `readings` (
   `id` int(11) NOT NULL,
   `date` datetime NOT NULL,
-  `temperature` int(11) NOT NULL,
-  `airquality` int(11) NOT NULL,
-  `noiselevel` int(11) NOT NULL,
-  `infraredreading` int(11) NOT NULL,
+  `amgtemp` float NOT NULL,
+  `co2_level` float NOT NULL,
+  `TVOC_level` float NOT NULL,
+  `audio` float NOT NULL,
+  `infraredreading` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`infraredreading`)),
   `sensor_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Gegevens worden geëxporteerd voor tabel `readings`
---
-
-INSERT INTO `readings` (`id`, `date`, `temperature`, `airquality`, `noiselevel`, `infraredreading`, `sensor_id`) VALUES
-(3, '2020-04-10 11:38:47', 25, 20, 40, 88, 1),
-(4, '2020-04-10 11:38:47', 23, 60, 80, 10, 2);
 
 -- --------------------------------------------------------
 
@@ -73,20 +60,11 @@ INSERT INTO `readings` (`id`, `date`, `temperature`, `airquality`, `noiselevel`,
 -- Tabelstructuur voor tabel `sensor`
 --
 
+DROP TABLE IF EXISTS `sensor`;
 CREATE TABLE `sensor` (
   `id` int(11) NOT NULL,
   `location_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Gegevens worden geëxporteerd voor tabel `sensor`
---
-
-INSERT INTO `sensor` (`id`, `location_id`) VALUES
-(1, 1),
-(3, 1),
-(2, 2),
-(4, 2);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -121,19 +99,19 @@ ALTER TABLE `sensor`
 -- AUTO_INCREMENT voor een tabel `location`
 --
 ALTER TABLE `location`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT voor een tabel `readings`
 --
 ALTER TABLE `readings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT voor een tabel `sensor`
 --
 ALTER TABLE `sensor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Beperkingen voor geëxporteerde tabellen
