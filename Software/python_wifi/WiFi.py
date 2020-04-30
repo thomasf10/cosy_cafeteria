@@ -12,9 +12,9 @@ s.listen(0)
 #mseting up data base connection
 mydb = mysql.connector.connect(
     host="localhost",
-    user="pi",
-    passwd="raspberry",
-    database="cossycafetaria"
+    user="root",
+    passwd="root",
+    database="cosycafetaria"
 )
 
 mycursor = mydb.cursor()
@@ -27,7 +27,7 @@ def processdata(data):
     audio = 0 # in volts, maybe convert to db
     co2_level = 0 # in ppm
     TVOC_level = 0 #in ppb (tvoc = total volatile organic compounds)
-    ID = 0
+    sensor_id = 0 #the id of the sensor
 
     #proces amg pixels
     for idx in range(64):
@@ -51,9 +51,8 @@ def processdata(data):
     raw_unit8_data = np.array([data[4*66+2], data[4*66+3]], dtype='uint8')
     TVOC_level = raw_unit8_data.view('uint16')
 
-    #proces ID
-    ID = data[4*66+4]
-
+    #proces sensor_id
+    sensor_id = data[4*66+4]
 
     # #making dummy data
     # for i in range(64):
@@ -64,25 +63,35 @@ def processdata(data):
     # TVOC_level = 44
 
     #print data
+    print(amgpixels)
     for pixel in amgpixels:
-        print([pixel])
+        print(pixel)
     print("amgtemp: ")
-    print(amgtemp)
+    print(amgtemp[0])
     print("audio ")
-    print(audio)
+    print(audio[0])
     print("co2 level: ")
-    print(co2_level)
+    print(co2_level[0])
     print("TVOC level: ")
-    print(TVOC_level)
-    print("ID: ")
-    print(ID)
+    print(TVOC_level[0])
+    print("sensor id: ")
+    print(sensor_id)
 
+    amgpixels4JSON = []
+    for pixel in amgpixels:
+        amgpixels4JSON.append(pixel.tolist()[0])
+
+    print(amgpixels4JSON)
+    
     #writing away the data to the database:
     #the query used to insert the data
-    sqlInsertReading="INSERT INTO readings (date, amgtemp, co2_level, TVOC_level, audio, infraredreading, sensor_id) VALUES (NOW(), %s, %s, %s, %s, %s, %s)"
+    sqlInsertReading="INSERT INTO readings (date, amgtemp, co2_level, TVOC_level, audio, infraredreading, sensor_id) VALUES (NOW(), %s, %s, %s, %s, %s, %s)" 
 
     #filling in the query, converting the list with pixels into a json object
-    val = (amgtemp, co2_level, TVOC_level, audio, json.dumps(amgpixels), 1)
+    print("sensor_id as int: ")
+    print(int(sensor_id))
+
+    val = (float(amgtemp[0]), float(co2_level[0]), float(TVOC_level[0]), float(audio[0]), json.dumps(amgpixels4JSON), int(sensor_id))
     
     #executing and commiting to finallise the pushing to the db
     mycursor.execute(sqlInsertReading, val)

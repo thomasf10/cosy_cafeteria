@@ -147,7 +147,7 @@ void loop() {
     int length = sizeof(pixeltemperature);
     int ctr = 0;
     while(true){  
-      if(sendMessage(pixeltemperature, tempAMG, audio_voltage, data_CCS811, ID, length)){
+      if(sendMessage(pixeltemperature, tempAMG, audio_voltage, data_CCS811, length)){
         break;
       }
       ctr++;
