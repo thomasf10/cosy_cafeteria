@@ -6,8 +6,8 @@
 
 
 //for enterprise network wifi connection:
-#define EAP_IDENTITY "thomas.feys@student.odisee.be" //if connecting from another corporation, use identity@organisation.domain in Eduroam
-#define EAP_PASSWORD "Sk8ter_sk8ter" //your Eduroam password
+#define EAP_IDENTITY "name.lastname@student.odisee.be" //if connecting from another corporation, use identity@organisation.domain in Eduroam
+#define EAP_PASSWORD "************" //your Eduroam password
 const char* ssid = "ODISEE"; // Eduroam SSID
 
 // for home network wifi connection:
@@ -60,7 +60,7 @@ void goToDeepSleep_ms(int ms)
     esp_deep_sleep_start();
 }
 
-bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, int length){
+bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, uint8_t id, int length){
 /*     //uint64_t start = micros();
         // it wil set the static IP address to 192, 168, 10, 47
     IPAddress local_IP(192, 168, 0, 22);
@@ -125,6 +125,9 @@ bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, in
             // send css811 data
                 client.write((const uint8_t *) & css_data[0], 2);
                 client.write((const uint8_t *) & css_data[1], 2);
+
+            // send node id
+                client.write(id);    
                 
             client.stop();
             WiFi.disconnect();

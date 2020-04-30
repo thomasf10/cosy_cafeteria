@@ -27,6 +27,7 @@ def processdata(data):
     audio = 0 # in volts, maybe convert to db
     co2_level = 0 # in ppm
     TVOC_level = 0 #in ppb (tvoc = total volatile organic compounds)
+    ID = 0
 
     #proces amg pixels
     for idx in range(64):
@@ -50,6 +51,10 @@ def processdata(data):
     raw_unit8_data = np.array([data[4*66+2], data[4*66+3]], dtype='uint8')
     TVOC_level = raw_unit8_data.view('uint16')
 
+    #proces ID
+    ID = data[4*66+4]
+
+
     # #making dummy data
     # for i in range(64):
     #     amgpixels.append(i+20.25)
@@ -69,10 +74,12 @@ def processdata(data):
     print(co2_level)
     print("TVOC level: ")
     print(TVOC_level)
+    print("ID: ")
+    print(ID)
 
     #writing away the data to the database:
     #the query used to insert the data
-    sqlInsertReading="INSERT INTO readings (date, amgtemp, co2_level, TVOC_level, audio, infraredreading, sensor_id) VALUES (NOW(), %s, %s, %s, %s, %s, %s)" 
+    sqlInsertReading="INSERT INTO readings (date, amgtemp, co2_level, TVOC_level, audio, infraredreading, sensor_id) VALUES (NOW(), %s, %s, %s, %s, %s, %s)"
 
     #filling in the query, converting the list with pixels into a json object
     val = (amgtemp, co2_level, TVOC_level, audio, json.dumps(amgpixels), 1)

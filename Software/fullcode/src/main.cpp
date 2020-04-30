@@ -11,6 +11,7 @@
 #include "time.h"
 #include "sensors.h"
 
+#define ID 255 // id of the node
 #define ccs881_pwr_pin 15
 #define audio_pwr_pin 16
 #define amg_pwr_pin 17
@@ -151,7 +152,7 @@ void loop() {
     int length = sizeof(pixeltemperature);
     int ctr = 0;
     while(true){  
-      if(sendMessage(pixeltemperature, tempAMG, audio_voltage, data_CCS811, length)){
+      if(sendMessage(pixeltemperature, tempAMG, audio_voltage, data_CCS811, ID, length)){
         break;
       }
       ctr++;
