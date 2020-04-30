@@ -67,19 +67,19 @@ def processdata(data):
     for pixel in amgpixels:
         print(pixel)
     print("amgtemp: ")
-    print(amgtemp[1])
+    print(amgtemp[0])
     print("audio ")
-    print(audio[1])
+    print(audio[0])
     print("co2 level: ")
-    print(co2_level[1])
+    print(co2_level[0])
     print("TVOC level: ")
-    print(TVOC_level[1])
+    print(TVOC_level[0])
     print("sensor id: ")
     print(sensor_id)
 
     amgpixels4JSON = []
     for pixel in amgpixels:
-        amgpixels4JSON.append(pixel.tolist()[1])
+        amgpixels4JSON.append(pixel.tolist()[0])
 
     print(amgpixels4JSON)
     
