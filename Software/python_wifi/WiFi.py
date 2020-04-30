@@ -52,8 +52,7 @@ def processdata(data):
     TVOC_level = raw_unit8_data.view('uint16')
 
     #proces sensor_id
-    raw_unit8_data = np.array([data[4*65], data[4*65+1], data[4*65+2], data[4*65+3]], dtype='uint8')
-    sensor_id = raw_unit8_data.view('uint32')
+    sensor_id = data[4*66+4]
 
     # #making dummy data
     # for i in range(64):
@@ -74,6 +73,8 @@ def processdata(data):
     print(co2_level)
     print("TVOC level: ")
     print(TVOC_level)
+    print("sensor id: ")
+    print(sensor_id)
 
     #writing away the data to the database:
     #the query used to insert the data
