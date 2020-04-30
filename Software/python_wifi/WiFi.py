@@ -13,7 +13,7 @@ s.listen(0)
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="",
+    passwd="root",
     database="cossycafetaria"
 )
 
