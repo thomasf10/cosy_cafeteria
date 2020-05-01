@@ -169,7 +169,7 @@ void loop() {
       goToDeepSleep(5*60); // sleep for 5 min
     }else{
       sync_failed_count = 0;
-      if(hour > 16 || hour < 9){
+      if(hour >= 16 || hour <= 9){
         appState = NIGHTSLEEP;
       }
     }
