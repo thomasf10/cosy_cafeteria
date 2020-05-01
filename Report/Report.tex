@@ -14,6 +14,12 @@
 \usepackage[small,bf,hang]{caption} % verbetering captions
 \captionsetup[table]{singlelinecheck=off} % caption van tabellen links uitlijnen
 
+\usepackage{titlesec} 					% voor mooiere paragraph
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex} % nog steeds voor paragraph
+
 
 % =========== BELANGRIJK VR IN HET VERSLAG: Tonen dat je hebt nagedacht over dimensionering componenten! ===========
 
@@ -453,13 +459,45 @@ In order to interpret the current consumption, the used capacity is displayed in
 156097 transmissions are possible, if there are 6 transmissions per hour and the system is active for 7 hours a day, this leads to a battery life off 3716 days.  However, this calculation only accounts for the Wi-Fi transmission other power consumption such as stand-by power, CPU power and sensor power are not accounted for in the calculation. 
 
 \section{Software design}
-\textbf{todo}
-\begin{figure}[H]
+\paragraph{Functionality}
+\begin{itemize}
+	\item Pull sensors from sleep state every 10 minutes and read sensor values
+	\item Send sensor data to server, over Wi-Fi
+	\item Perform periodic synchronisations to get time information
+	\item Use time information to disable power to sensors and put CPU in deepsleep during the night
+\end{itemize}
+\paragraph{Overview}
+The software is based on a number of states these states are: NTPsync, checktime, nightsleep, wakefromnightsleep, wakesensors, readsensors, senddata and sleep. An overview of the complete software and the transitions between the states is illustrated in figure~\ref{fig:statediagram}. The states are discussed further below. 
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.8\linewidth]{statendiagram.pdf}
+	\includegraphics[width=1\linewidth]{statendiagram.pdf}
 	\caption{State diagram}
 	\label{fig:statediagram}
 \end{figure}
+\paragraph{NTP-sync}
+In this state an NTP synchronisation is performed. This provides time information which is stored in the RTC memory and maintained by the RTC clock. The time information allows the system to know when it is night time. During the night the sensors can be disabled, using the load switches, and the microcontroller can go in to deepsleep until the morning. This way the sensors only receive power between 9 AM and 4 PM. 
+
+\paragraph{Check time}
+This state has two functionalities. Firstly the current time of day is retrieved from the RTC clock. If this time info is not available, the NTP synchronisation was not successful. When this is the case the microcontroller goes in to deepsleep for five minutes and the next state will be the NTP sync to retry the synchronisation. If the synchronisation fails three times, the system is rebooted. Next to this, when the synchronisation was successful, the time information will be available. This time information is then used to check the current time. If the time is between 9 AM and 4 PM the system remains active, thus the next state is set to wakesensors. If the time is after 4 PM and before 9 AM, the system has to go to sleep, thus the next state is set to nightsleep.
+
+\paragraph{Night sleep}
+This state is entered when it is past 4 PM and before 9 AM. During this time the sensors are disabled and the microcontroller goes in deepsleep. The sensors are disabled by raising the GPIO pins which control the load switches. When the GPIO pins are high, the load switches cut off the power to the sensors. Before entering deepsleep, the next state is set to wakefromnightsleep. During the night, no sensor data has to be collected and transmitted because the campus is closed. So by cutting off the power to the sensors and putting the microcontroller in deepsleep during the night the power consumption is drastically reduced. 
+
+\paragraph{Wake from night sleep}
+When the system wakes up at 9 AM, the power to the sensors has to be enabled. This is done by lowering the GPIO pins which control the load switches. Next to this, the system checks when the last synchronisation was performed. Because the RTC clock is derived from an internal RC oscillator with a frequency of \SI{150}{\kilo\hertz} and an accuracy of +/-5\% the clock time will drift away from the actual time. In order to prevent this, an NTP synchronisation has to be performed periodically. In order to retain an accurate clock, the synchronisation is performed every 14 days. Thus if the last synchronisation was performed 14 days ago, the next state is set to NTPsync. If the last synchronisation was more recent, the next state is set to checktime. 
+
+\paragraph{Wake sensors}
+In the wake sensors state, the sensors are taken out of their sleep state and put in active mode. When the sensors wake from their sleep state the sensor values can not be read immediately. A waiting period of 105 milliseconds is necessary in order to have stable sensor values. During these 105 milliseconds the sensors remain active but the microcontroller is put into deepsleep mode. Before entering deepsleep, the next state is set to readsensors. 
+
+\paragraph{Read sensors}
+In this state the sensor values are read out. Once the data is acquired, the sensors are put back in to their sleep state and the next state is set to senddata.
+
+\paragraph{Send data}
+In this state, the sensor data is transmitted to the python server which is running on a raspberry pi. Once the transmission is successful or the connection has timed-out the next state is set to sleep.
+
+\paragraph{Sleep}
+Once the sensor data has been transmitted to the server, the sleep state is entered. In this state, the microcontroller is put into deepsleep for 10 minutes. Before entering deepsleep, the next state is set to check time.
+
 
 \section{Autonomy}
 Calculations for lifetime.

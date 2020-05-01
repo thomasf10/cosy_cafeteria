@@ -6,28 +6,9 @@
 #include "Adafruit_CCS811.h"
 #include "SparkFun_GridEYE_Arduino_Library.h"
 
-
-
-#define GPIO_INPUT_IO_AUDIO    33
-#define GPIO_INPUT_PIN_SEL  (1ULL<<GPIO_INPUT_IO_AUDIO)
-#define ESP_INTR_FLAG_DEFAULT 0
-
-
  Adafruit_CCS811 sensor_CCS811;
  GridEYE sensor_AMG88;
 
-
-/*
-bool status;
- uint16_t data_CCS811[2];
- double temperature_CCS811=0;
- double* tempCCS = &temperature_CCS811;
- float pixeltemperature[64];
- float temperature_AMG8833=0;
- float* tempAMG = &temperature_AMG8833;
- int audio_level=0;
- int* audio = &audio_level;
-*/
 /**
  * This function will initialize the CCC811-sensor
  * No input needed and no output will be returned  
@@ -42,7 +23,7 @@ void init_CCS811(){
   
 
   bool status = false;
-   do{
+  do{
     Serial.println("Try to initialize CCS811");
     status = sensor_CCS811.begin();
   }
@@ -90,7 +71,7 @@ void wake_sensors(){
  *  & pointer a double for the temperature
  * Output: None will be returned but the result will be set in the array and pointer 
  **/
-void get_measurements_CCS811(uint16_t data[2]){ // double* temperature_CCS811 removed
+void get_measurements_CCS811(uint16_t data[2]){ 
   //Check is the data avaiable, wait for every check 10ms
   bool status = false;
   do {
@@ -109,7 +90,7 @@ void get_measurements_CCS811(uint16_t data[2]){ // double* temperature_CCS811 re
   data[0]= sensor_CCS811.getTVOC();
 
   sensor_CCS811.setDriveMode(CCS811_DRIVE_MODE_IDLE);
-  
+
   // After getting the measurements put the sensor immediatly back to sleep, raise nWake
   gpio_hold_dis(GPIO_NUM_32); // disable lock
   digitalWrite(32,HIGH);
@@ -160,36 +141,8 @@ void get_audio_level(int* level){
  * This is a call function. This will call all the initial function for the seperate parts
  * Input & Output: None
  **/
-
 void init_sensors(){
   init_CCS811();
   init_AMG8833();
-  //init_audio(); 
 }
 
-/*
- * Setup of the program
- 
-void setup() {
-    // Enable I²C serial for printing (serial for debug)
-  Wire.begin();
-  Serial.begin(115200);
-  //Initialize the ADC GPIO 33, CCS811 and AMG8833
-  init_sensors();
-  
-}
-
-void loop() {
-  //After choosen time may be more then several hours wake the sensors
-  wake_sensors();
-  //Audio level first avaiable koppeld to ESP32, or the settle time of the detector audiolevel
-  get_audio_level(audio);
-  //After 105ms the result of the AMG is fully avaiable
-  delay(105);
-  // Get result AMG after this is read out, the data of CCS811 is avaiable. After data was retrieve sensor will be put into sleep imemdiatly
-  get_measurements_AMG8833(pixeltemperature,tempAMG);
-  get_measurements_CCS811(data_CCS811,tempCCS);
-  //Delay time following run
- delay(5000);
-}
- */

@@ -6,8 +6,8 @@
 
 
 //for enterprise network wifi connection:
-#define EAP_IDENTITY "thomas.feys@student.odisee.be" //if connecting from another corporation, use identity@organisation.domain in Eduroam
-#define EAP_PASSWORD "Sk8ter_sk8ter" //your Eduroam password
+#define EAP_IDENTITY "firstname.lastname@student.odisee.be" //if connecting from another corporation, use identity@organisation.domain in Eduroam
+#define EAP_PASSWORD "**************" //your Eduroam password
 const char* ssid = "ODISEE"; // Eduroam SSID
 
 // for home network wifi connection:
@@ -38,7 +38,7 @@ void goToDeepSleep(int sec)
     // Configure the timer to wake us up!
     esp_sleep_enable_timer_wakeup(sec * 1000000);
 
-    // Go to sleep! Zzzz
+    // Go to sleep! 
     esp_deep_sleep_start();
 }
 
@@ -56,33 +56,14 @@ void goToDeepSleep_ms(int ms)
     // Configure the timer to wake us up!
     esp_sleep_enable_timer_wakeup(ms * 1000);
 
-    // Go to sleep! Zzzz
+    // Go to sleep! 
     esp_deep_sleep_start();
 }
 
-bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, int length){
-/*     //uint64_t start = micros();
-        // it wil set the static IP address to 192, 168, 10, 47
-    IPAddress local_IP(192, 168, 0, 22);
-    //it wil set the gateway static IP address to 192, 168, 2,2
-    IPAddress gateway(192, 168, 0 ,107);// has to be the same as the host adress of the rasberry pi!
-    // Following three settings are optional    
-    IPAddress subnet(255, 255, 255, 0);
-    IPAddress primaryDNS(8, 8, 8, 8); 
-    IPAddress secondaryDNS(8, 8, 4, 4); */
-
+bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, uint8_t id, int length){
     WiFi.disconnect(true);  //disconnect form wifi to set new wifi connection
     WiFi.mode(WIFI_STA);
-    // todo test this
-  //  WiFi.setTxPower(WIFI_POWER_MINUS_1dBm); // set max wifi power
-    
-/*     // Try to create static IP address
-    if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) 
-
-    {
-    Serial.println("STA Failed to configure");
-    } */
-    WiFi.begin(ssidhome,pwd); // no arguments for enterprise wifi
+    WiFi.begin(ssidhome,pwd); // no arguments if enterprise wifi is used
         
     int counter = 0;
     Serial.println("connecting to network");
@@ -90,14 +71,12 @@ bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, in
         delay(500);
         Serial.print(".");
         counter++;
-        if(counter>=10){ //after 5 seconds timeout - reset board
+        if(counter>=10){ //after 5 seconds timeout 
             Serial.println("connection failed");
             break;
         }
     }
-    //uint64_t einde = micros();
-    //Serial.print("wifi tijd: ");
-    //Serial.println(PriUint64<DEC>(einde-start));
+   
     if(WiFi.status() == WL_CONNECTED){
         Serial.println("");
         Serial.println("WiFi connected");
@@ -111,6 +90,7 @@ bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, in
             return false;
         }else{
             Serial.println("Connected to server successful!");
+
             // send amg pixels
             for(int i=0;i<length/4;i++){
                 client.write((const uint8_t *) & data[i], 4);
@@ -125,6 +105,9 @@ bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, in
             // send css811 data
                 client.write((const uint8_t *) & css_data[0], 2);
                 client.write((const uint8_t *) & css_data[1], 2);
+
+            // send id
+                client.write(id);    
                 
             client.stop();
             WiFi.disconnect();
@@ -132,7 +115,6 @@ bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, in
             return true;
         }
     }
-   
 }
 
 //Function that prints the reason by which ESP32 has been awaken from sleep
@@ -141,7 +123,6 @@ void print_wakeup_reason(){
 	wakeup_reason = esp_sleep_get_wakeup_cause();
 	switch(wakeup_reason)
 	{
-
 		case ESP_SLEEP_WAKEUP_EXT0  : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
 		case ESP_SLEEP_WAKEUP_EXT1  : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
 		case ESP_SLEEP_WAKEUP_TIMER  : Serial.println("Wakeup caused by timer"); break;
@@ -151,9 +132,8 @@ void print_wakeup_reason(){
 	}
 }
 
-//todo resync if failed to obtain time
 void ntp_sync(){
-       //connect to WiFi
+    //connect to WiFi
     Serial.printf("Connecting to %s ", ssidhome);
     WiFi.begin(ssidhome, pwd);
     int counter = 0;
@@ -161,7 +141,7 @@ void ntp_sync(){
         delay(500);
         Serial.print(".");
          counter++;
-        if(counter>=10){ //after 5 seconds timeout - reset board
+        if(counter>=10){ //after 5 seconds timeout 
             Serial.println("connection failed");
             break;
         }
@@ -174,12 +154,11 @@ void ntp_sync(){
         // corrects timezones
         setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
         tzset(); // save the TZ variable
-    // delay(100);
+
         printLocalTime();
     }else{
         Serial.println("sync failed");
     }
-    
 
     //disconnect WiFi as it's no longer needed
     WiFi.disconnect(true);
@@ -189,14 +168,15 @@ void ntp_sync(){
 void printLocalTime()
 {
     // corrects timezones
-setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
-tzset(); // save the TZ variable
-  struct tm timeinfo;
-  if(!getLocalTime(&timeinfo)){
-    Serial.println("Failed to obtain time");
-    return;
-  }
-  Serial.println(&timeinfo, "%A, %B %d %Y %H:%M:%S");
+    setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
+    tzset(); // save the TZ variable
+
+    struct tm timeinfo;
+    if(!getLocalTime(&timeinfo)){
+        Serial.println("Failed to obtain time");
+        return;
+    }
+    Serial.println(&timeinfo, "%A, %B %d %Y %H:%M:%S");
 }
 
 
@@ -204,11 +184,13 @@ int checkhour(){
     // corrects timezones
     setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
     tzset(); // save the TZ variable
-     struct tm timeinfo;
-      if(!getLocalTime(&timeinfo)){
+
+    struct tm timeinfo;
+    if(!getLocalTime(&timeinfo)){
     Serial.println("Failed to obtain time");
     return -1;
-  }
+    }
+    // get hour
     int hour = timeinfo.tm_hour;
     Serial.println("hour");
     Serial.println(hour);
