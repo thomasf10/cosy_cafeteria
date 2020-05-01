@@ -36,9 +36,17 @@ void init_CCS811(){
  * No input needed and no output will be returned  
  **/
 void init_audio(){
-    adc_power_on();
-    adc1_config_width(ADC_WIDTH_BIT_12);
-    adc1_config_channel_atten(ADC1_CHANNEL_5,ADC_ATTEN_DB_0);   
+        
+  //enable power to audio sensor
+  gpio_hold_dis(GPIO_NUM_16); // disable lock
+  digitalWrite(16, LOW); 
+  gpio_hold_en(GPIO_NUM_16); // lock state 
+  gpio_deep_sleep_hold_en(); // to hold state during deepsleep
+
+  adc_power_on();
+  adc1_config_width(ADC_WIDTH_BIT_12);
+  adc1_config_channel_atten(ADC1_CHANNEL_5,ADC_ATTEN_DB_0);   
+
 }
 
 /**
@@ -135,6 +143,11 @@ void get_measurements_AMG8833(float* pixeltemperature, float* temperature_AMG883
 void get_audio_level(int* level){
   init_audio();
   *level = adc1_get_raw(ADC1_CHANNEL_5);
+   //disable power to audio sensor
+  gpio_hold_dis(GPIO_NUM_16); // disable lock
+  digitalWrite(16, HIGH); 
+  gpio_hold_en(GPIO_NUM_16); // lock state 
+  gpio_deep_sleep_hold_en(); // to hold state during deepsleep
 }  
 
 /**

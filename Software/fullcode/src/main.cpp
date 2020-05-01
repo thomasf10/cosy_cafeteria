@@ -67,6 +67,12 @@ void setup() {
   //enable i2c
   Wire.begin();
 
+    
+  //disable power to audio sensor
+  gpio_hold_dis(GPIO_NUM_16); // disable lock
+  digitalWrite(audio_pwr_pin, HIGH); 
+  gpio_hold_en(GPIO_NUM_16); // lock state 
+  gpio_deep_sleep_hold_en(); // to hold state during deepsleep
 }
 
 
@@ -169,7 +175,7 @@ void loop() {
       goToDeepSleep(5*60); // sleep for 5 min
     }else{
       sync_failed_count = 0;
-      if(hour >= 16 || hour <= 9){
+      if(hour >= 20 || hour <= 9){
         appState = NIGHTSLEEP;
       }
     }

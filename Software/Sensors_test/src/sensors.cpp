@@ -60,7 +60,7 @@ void init_CCS811(){
     status = sensor_CCS811.begin();
   }
   while(status == false) ;
-  sensor_CCS811.setDriveMode(CCS811_DRIVE_MODE_250MS);
+  sensor_CCS811.setDriveMode(CCS811_DRIVE_MODE_1SEC);
   // raise nWake to go to sleep
   gpio_hold_dis(GPIO_NUM_32); // disable lock
   gpio_set_level(GPIO_NUM_32, 1);
@@ -127,6 +127,8 @@ void get_measurements_CCS811(uint16_t data[2]){ // double* temperature_CCS811 re
   sensor_CCS811.readData();
   data[1]= sensor_CCS811.geteCO2();
   data[0]= sensor_CCS811.getTVOC();
+
+  sensor_CCS811.setDriveMode(CCS811_DRIVE_MODE_IDLE);
 
 
   // After getting the measurements put the sensor immediatly back to sleep, raise nWake

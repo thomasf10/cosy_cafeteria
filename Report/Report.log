@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.26)  1 MAY 2020 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.26)  1 MAY 2020 19:48
 entering extended mode
 **c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Report/Report.tex
 (c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Report/Report.tex
@@ -1049,7 +1049,11 @@ File: fig/sync_pwr.pdf Graphic file (type pdf)
 <use fig/sync_pwr.pdf>
 Package pdftex.def Info: fig/sync_pwr.pdf  used on input line 542.
 (pdftex.def)             Requested size: 360.0pt x 261.3537pt.
- [31 <./fig/sensor_pwr.pdf>] [32 <./fig/sync_pwr.pdf>] [33] [34] (Report.bbl
+ [31 <./fig/sensor_pwr.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 552.
+ ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [32 <./fig/sync_pwr.pdf>] [33] [34] (Report.bbl
 Underfull \hbox (badness 4303) in paragraph at lines 29--31
 []\OT1/cmr/m/n/10.95 Wikipedia, ``Lithium-ion bat-tery,'' []$https : / / en . wikipedia . org / wiki /
  []
@@ -1095,7 +1099,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--73
  []
 
 ) [35]
-<fig/MainPCB_schematic.pdf, id=757, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=762, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 629.
@@ -1104,7 +1108,7 @@ File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 629.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<fig/MainPCB_schematic.pdf, id=760, page=1, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=765, page=1, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 629.
@@ -1127,7 +1131,7 @@ File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 629.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
  [37 <./fig/MainPCB_schematic.pdf>]
-<fig/MainPCB_schematic.pdf, id=775, page=2, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=780, page=2, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 2>
 Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 629.
@@ -1154,14 +1158,14 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 633.
  ) 
 Here is how much of TeX's memory you used:
- 27602 strings out of 492942
- 519655 string characters out of 3126093
+ 27633 strings out of 492942
+ 520684 string characters out of 3126093
  641068 words of memory out of 3000000
- 31026 multiletter control sequences out of 15000+200000
- 544026 words of font info for 67 fonts, out of 3000000 for 9000
+ 31049 multiletter control sequences out of 15000+200000
+ 545042 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,100p,2046b,889s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+{C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 
 pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb): glyph `' undefined
 ><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
@@ -1194,10 +1198,10 @@ pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/
 ><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 
 pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb): glyph `' undefined
-><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on Report.pdf (38 pages, 964910 bytes).
+><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb>
+Output written on Report.pdf (38 pages, 979763 bytes).
 PDF statistics:
- 871 PDF objects out of 1000 (max. 8388607)
- 150 named destinations out of 1000 (max. 500000)
+ 881 PDF objects out of 1000 (max. 8388607)
+ 152 named destinations out of 1000 (max. 500000)
  428 words of extra memory for PDF output out of 10000 (max. 10000000)
 

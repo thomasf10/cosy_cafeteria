@@ -442,23 +442,23 @@ Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 
 
 \section{Wireless connectivity}
 \subsection{Wi-Fi connection}
-In order to transmit the sensor data to the server, the Wi-Fi connectivity of the ESP32 is used. The transmission is provided by a TCP connection that is established between the ESP32 and the python server. At the initialisation of the python server, a socket is opened, this socket is used to receive the data. In this manner, the server is always listening on the socket, until a message is received. The ESP32 sends the data in the following order: pixeldata (64 floats), temperature (1 float), audio level (1 float), $CO_2$-level (1 unint16) and TVOC-level (1 unint64). The received data is processed by order to determine which data is represented by the received values. The data is parsed into different variable, these variables are then used to update the values in the database. 
+In order to transmit the sensor data to the server, the Wi-Fi connectivity of the ESP32 is used. The transmission is provided by a TCP connection that is established between the ESP32 and the python server. At the initialisation of the python server, a socket is opened, this socket is used to receive the data. In this manner the server is always listening on the socket, until a message is received. The ESP32 sends the data in the following order: pixeldata (64 floats), temperature (1 float), audio level (1 float), $CO_2$-level (1 unint16), TVOC-level (1 unint64) and an ID (1 uint8). The received data is processed by order to determine which data is represented by the received values. The data is parsed into different variable, these variables are then used to update the values in the database. 
 
 \subsection{Power consumption}
-To determine the power that is consumed when the sensor data is transmitted once, a measurement is performed. The current consumption is measured, the result is displayed in figure~\ref{fig:wifi_pwr}.
+To determine the power that is consumed when the sensor data is transmitted once, a measurement is performed. The result is displayed in figure~\ref{fig:wifi_pwr}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{wifi_pwr.pdf}
 	\caption{Power consumption of one Wi-Fi transmission}
 	\label{fig:wifi_pwr}
 \end{figure}
-In order to interpret the current consumption, the used capacity is displayed in [mAh]. This results in 0.041 mAh of capacity that is used in order to transmit the sensor data once. With this knowledge, we can calculate the amount of Wi-Fi transmissions that are possible with the 6400 mAh battery:
+In order to interpret the current consumption, the used charge is displayed in [mAh]. This results in 0.041 mAh of charge that is used in order to transmit the sensor data once. With this knowledge, we can calculate the amount of Wi-Fi transmissions that are possible with the 6400 mAh battery:
 
 \begin{gather*}
-	\frac{6400}{0.041} \approx 156097
+	\frac{6400}{0.041} \approx 156097 \text{transmissions}
 \end{gather*}
 
-156097 transmissions are possible, if there are 6 transmissions per hour and the system is active for 7 hours a day, this leads to a battery life off 3716 days.  However, this calculation only accounts for the Wi-Fi transmission other power consumption such as stand-by power, CPU power and sensor power are not accounted for in the calculation. 
+If there are 6 transmissions per hour and the system is active for 7 hours a day, this leads to a battery life off 3716 days.  However, this calculation only accounts for the Wi-Fi transmission, other power consumption such as stand-by power, CPU power and sensor power are not accounted for in this calculation. 
 
 \section{Software design}
 \paragraph{Functionality}
@@ -549,26 +549,26 @@ The charge that is used for one synchronisation is 0.08 mAh. However, this synch
 	\frac{1}{14} \cdot 0.08 = 0.0057 \text{ mAh/day}
 \end{gather*}
 
-\paragraph{Standby daytime}
-Between 9 AM and 4 PM the system is 'active', this means that the sensors receive power. However when the sensors are not being read out they will be put in their respective sleep modes. The theoretical consumption that are gathered from the datasheets is listed below:
+\paragraph{Standby daytime}\footnote{No measurement were performed to determine the stand-by power, this has two reasons. 1: the development board to test the software has an onboard LED which increases the power consumption so the gathered measurements wouldn't be representative. 2: to measure the power consumption a \SI{1}{\ohm} resistor was inserted between the power source and the development board. This resistor is used as a sense resistor but can not provide accurate \SI{}{\micro\ampere} measurements due to the noice that is introduced. }
+Between 9 AM and 4 PM the system is 'active', this means that the sensors receive power. However when the sensors are not being read out they will be put in their respective sleep modes. The theoretical consumption that is gathered from the datasheets is listed below:
 \begin{itemize}
 	\item AMG8833 sleep mode: 0.2 mA
 	\item CCS811 sleep mode: with $V_{dd}$ = \SI{1.8}{\volt}: 19 $\mu$A \\$\Rightarrow$ with $V_{dd}$ = \SI{3.3}{\volt}: $\frac{19}{1.8}\cdot 3.3 = 34.83 \text{ }\mu\text{A}$
 	\item microphone: the power to the microphone is only enabled just before the measurement because of this the microphone has no stand-by/sleep consumption. 
 \end{itemize}
-Next to the consumption of the sensors, there is the sleep consumption of the microcontroller. If the microcontroller is not active, it is put in deepsleep. In deepsleep there is a consumption of 10 $\mu$Ah. Next to this consumption, two GPIO pins have to remain high during deepsleep: one to keep the CCS811 in sleep (nWake) and on to control the load switch to disable the power to the microphone. The GPIO pins use an internal pull-up resistor of \SI{45}{\kilo\ohm} this leads to the following consumption for one GPIO pin: 
+Next to the consumption of the sensors, there is the sleep consumption of the microcontroller. If the microcontroller is not active, it is put in deepsleep. In deepsleep there is a consumption of 10 $\mu$A. Next to this consumption, two GPIO pins have to remain high during deepsleep: one to keep the CCS811 in sleep (nWake) and on to drive the load switch to disable the power to the microphone. The GPIO pins use an internal pull-up resistor of \SI{45}{\kilo\ohm} this leads to the following consumption for one GPIO pin: 
 \begin{gather*}
 	\frac{3.3 \text{V}}{45000\Omega} = 73.33 \text{ } \mu\text{A} 
 \end{gather*}
-For both GPIO pins this results in a consumption of 146.67 $\mu$A
+For both GPIO pins this results in a consumption of 146.67 $\mu$A.
 \\
-During the 7 hours a day the system is in active mode, this results in a charge consumption of:
+For 7 hours a day the system is in active mode, this results in a charge consumption of:
 \begin{gather*}
 	7 \cdot (0.2 + 0.03483 + 0.01 + 0.1467) = 2.74\text{ mAh/day}
 \end{gather*}
 
-\paragraph{Standby nighttime}
-Between 4 PM and 9 AM the system goes in to sleep mode. In sleep mode no sensor measurements are performed and no data is transferred via Wi-Fi. To reduce the power, the power to the sensors is cut-off by using the load switches. The remaining stand-by/sleep consumption originates from the CPU consumption in deepsleep and the GPIO three pins that are kept high to drive the load switches. This leads to the following consumption:
+\paragraph{Standby nighttime}\footnote{No measurement were performed to determine the stand-by power, this has two reasons. 1: the development board to test the software has an onboard LED which increases the power consumption so the gathered measurements wouldn't be representative. 2: to measure the power consumption a \SI{1}{\ohm} resistor was inserted between the power source and the development board. This resistor is used as a sense resistor but can not provide accurate \SI{}{\micro\ampere} measurements due to the noice that is introduced. }
+Between 4 PM and 9 AM the system goes in to sleep mode. In sleep mode no sensor measurements are performed and no data is transferred via Wi-Fi. To reduce the power, the power to the sensors is cut-off by using the load switches. The remaining stand-by/sleep consumption originates from the CPU consumption in deepsleep and the three GPIO pins that are kept high to drive the load switches. This leads to the following consumption:
 \begin{gather*}
 	10 \text{ }\mu\text{A} + 3\cdot 73.33\text{ }\mu\text{A} = 230\text{ }\mu\text{A}
 \end{gather*}

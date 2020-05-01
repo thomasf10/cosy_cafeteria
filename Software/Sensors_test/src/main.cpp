@@ -78,7 +78,7 @@ void setup() {
 	print_wakeup_reason();
   
   //Initialize the ADC GPIO 33, CCS811 and AMG8833
-  init_sensors();
+  //init_sensors();
   
 }
 
@@ -86,6 +86,7 @@ void setup() {
  * Measurement loop
  **/
 void loop() {
+  /*
   //After choosen time may be more then several hours wake the sensors
   wake_sensors();
   //Audio level first avaiable koppeld to ESP32, or the settle time of the detector audiolevel
@@ -115,7 +116,8 @@ void loop() {
     Serial.println(data_CCS811[0]);
     Serial.print("TVOC: ");
     Serial.println(data_CCS811[1]);
-
+*/
+Serial.println("tesst");
     //Delay time following run
     goToDeepSleep_ms(5000);
    
