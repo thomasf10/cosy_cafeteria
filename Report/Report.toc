@@ -41,7 +41,14 @@
 \contentsline {paragraph}{Send data}{29}{figure.caption.17}% 
 \contentsline {paragraph}{Sleep}{29}{figure.caption.17}% 
 \contentsline {section}{\numberline {9}Autonomy}{29}{section.9}% 
-\contentsline {section}{\numberline {10}Website}{29}{section.10}% 
-\contentsline {section}{\numberline {11}Financial estimate}{29}{section.11}% 
-\contentsline {section}{\numberline {12}Validation and measurements}{29}{section.12}% 
-\contentsline {section}{\numberline {A}MainPCB schematic}{31}{appendix.A}% 
+\contentsline {subsection}{\numberline {9.1}Consumption sources}{29}{subsection.9.1}% 
+\contentsline {paragraph}{Wi-Fi communication}{29}{subsection.9.1}% 
+\contentsline {paragraph}{Sensors}{30}{figure.caption.18}% 
+\contentsline {paragraph}{NTP synchronisation}{31}{figure.caption.19}% 
+\contentsline {paragraph}{Standby daytime}{32}{figure.caption.20}% 
+\contentsline {paragraph}{Standby nighttime}{33}{figure.caption.20}% 
+\contentsline {subsection}{\numberline {9.2}Total power consumption}{33}{subsection.9.2}% 
+\contentsline {section}{\numberline {10}Website}{34}{section.10}% 
+\contentsline {section}{\numberline {11}Financial estimate}{34}{section.11}% 
+\contentsline {section}{\numberline {12}Validation and measurements}{34}{section.12}% 
+\contentsline {section}{\numberline {A}MainPCB schematic}{36}{appendix.A}% 

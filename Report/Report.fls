@@ -194,6 +194,8 @@ INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltcaption.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltcaption.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty
@@ -361,9 +363,20 @@ INPUT fig\statendiagram.pdf
 INPUT .\fig\statendiagram.pdf
 INPUT .\fig\statendiagram.pdf
 INPUT .\fig\statendiagram.pdf
-INPUT Report.bbl
-INPUT Report.bbl
+INPUT fig\wifi_pwr.pdf
+INPUT .\fig\wifi_pwr.pdf
+INPUT fig\sensor_pwr.pdf
+INPUT .\fig\sensor_pwr.pdf
+INPUT .\fig\sensor_pwr.pdf
+INPUT .\fig\sensor_pwr.pdf
+INPUT fig\sync_pwr.pdf
+INPUT .\fig\sync_pwr.pdf
+INPUT .\fig\sync_pwr.pdf
+INPUT .\fig\sync_pwr.pdf
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT Report.bbl
+INPUT Report.bbl
 INPUT fig\MainPCB_schematic.pdf
 INPUT fig\MainPCB_schematic.pdf
 INPUT .\fig\MainPCB_schematic.pdf
@@ -402,6 +415,8 @@ INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfon
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
+INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb

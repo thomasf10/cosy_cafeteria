@@ -13,6 +13,8 @@
 \usepackage{tabularx}  % betere tabellen
 \usepackage[small,bf,hang]{caption} % verbetering captions
 \captionsetup[table]{singlelinecheck=off} % caption van tabellen links uitlijnen
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
 
 \usepackage{titlesec} 					% voor mooiere paragraph
 \titleformat{\paragraph}
@@ -500,7 +502,107 @@ Once the sensor data has been transmitted to the server, the sleep state is ente
 
 
 \section{Autonomy}
-Calculations for lifetime.
+
+\subsection{Consumption sources}
+In this section the different sources that consume power will be discussed.
+
+\paragraph{Wi-Fi communication}
+The system transmits the sensor data to the server over a Wi-Fi connection. This data transfer happens every 10 minutes. Because the sensors are disabled between 4 PM and 9 AM, no Wi-Fi connection is needed during that time. With a wake time of seven hours and 6 transmissions per day, this leads to 42 transmissions per day. A measurement of the typical power consumption for one Wi-Fi transmission is illustrates in figure~\ref{fig:wifipwr}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{wifi_pwr.pdf}
+	\caption{Power consumption of one Wi-Fi transmission}
+	\label{fig:wifipwr}
+\end{figure}
+The charge that is used for one transmission is 0.041 mAh. This leads to the following consumption per day:
+\begin{gather*}
+42 \cdot 0.041 = 1.722 \text{ mAh/day}
+\end{gather*}
+
+\paragraph{Sensors}
+The sensors are read out every ten minutes. With a wake time of 7 hours\footnote{Only awake between 9 AM and 4 PM}, this leads to 42 sensor measurements per day. The power consumption to read out the sensors once is illustrates in figure~\ref{fig:sens_pwr}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{sensor_pwr.pdf}
+	\caption{Power consumption of one sensor measurement}
+	\label{fig:sens_pwr}
+\end{figure}
+
+The charge that is used to read out the sensors once is 0.035 mAh. This leads to the following consumption per day:
+\begin{gather*}
+	42 \cdot 0.035 = 1.47\text{ mAh/day}
+\end{gather*}
+
+\paragraph{NTP synchronisation}
+In order to synchronise the RTC clock an NTP synchronisation has to be performed periodically. This synchronisation is performed once every 14 days. The power consumption for one synchronisation is illustrates in figure~\ref{fig:ntp_pwr}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{sync_pwr.pdf}
+	\caption{Power consumption of one NTP synchronisation}
+	\label{fig:ntp_pwr}
+\end{figure}
+
+The charge that is used for one synchronisation is 0.08 mAh. However, this synchronisation only happens once very 14 days, this leads to the following consumption per day:
+\begin{gather*}
+	\frac{1}{14} \cdot 0.08 = 0.0057 \text{ mAh/day}
+\end{gather*}
+
+\paragraph{Standby daytime}
+Between 9 AM and 4 PM the system is 'active', this means that the sensors receive power. However when the sensors are not being read out they will be put in their respective sleep modes. The theoretical consumption that are gathered from the datasheets is listed below:
+\begin{itemize}
+	\item AMG8833 sleep mode: 0.2 mA
+	\item CCS811 sleep mode: with $V_{dd}$ = \SI{1.8}{\volt}: 19 $\mu$A \\$\Rightarrow$ with $V_{dd}$ = \SI{3.3}{\volt}: $\frac{19}{1.8}\cdot 3.3 = 34.83 \text{ }\mu\text{A}$
+	\item microphone: the power to the microphone is only enabled just before the measurement because of this the microphone has no stand-by/sleep consumption. 
+\end{itemize}
+Next to the consumption of the sensors, there is the sleep consumption of the microcontroller. If the microcontroller is not active, it is put in deepsleep. In deepsleep there is a consumption of 10 $\mu$Ah. Next to this consumption, two GPIO pins have to remain high during deepsleep: one to keep the CCS811 in sleep (nWake) and on to control the load switch to disable the power to the microphone. The GPIO pins use an internal pull-up resistor of \SI{45}{\kilo\ohm} this leads to the following consumption for one GPIO pin: 
+\begin{gather*}
+	\frac{3.3 \text{V}}{45000\Omega} = 73.33 \text{ } \mu\text{A} 
+\end{gather*}
+For both GPIO pins this results in a consumption of 146.67 $\mu$A
+\\
+During the 7 hours a day the system is in active mode, this results in a charge consumption of:
+\begin{gather*}
+	7 \cdot (0.2 + 0.03483 + 0.01 + 0.1467) = 2.74\text{ mAh/day}
+\end{gather*}
+
+\paragraph{Standby nighttime}
+Between 4 PM and 9 AM the system goes in to sleep mode. In sleep mode no sensor measurements are performed and no data is transferred via Wi-Fi. To reduce the power, the power to the sensors is cut-off by using the load switches. The remaining stand-by/sleep consumption originates from the CPU consumption in deepsleep and the GPIO three pins that are kept high to drive the load switches. This leads to the following consumption:
+\begin{gather*}
+	10 \text{ }\mu\text{A} + 3\cdot 73.33\text{ }\mu\text{A} = 230\text{ }\mu\text{A}
+\end{gather*}
+The system remains in sleep mode for 17 hours a day this leads to the following consumption per day:
+\begin{gather*}
+	17 \cdot 230\text{ }\mu\text{A}= 3.91\text{ mAh}
+\end{gather*}
+
+\subsection{Total power consumption}
+In the previous section all the different sources that consume power were discussed an overview is given in table~\ref{tab:pwr}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textit{\textbf{Source}} & \textbf{Charge per day {[}mAh/day{]}} \\ \hline
+	Wi-Fi                    & 1.722 mAh/day                         \\ \hline
+	Sensors                  & 1.47 mAh/day                          \\ \hline
+	NTP sync                 & 0.0057 mAh/day                        \\ \hline
+	Standby daytime          & 2.74 mAh/day                          \\ \hline
+	Standby nighttime        & 3.91 mAh/day                          \\ \hline
+	\rowcolor{Gray}
+	Total                    & 9.85 mAh/day  						 \\ \hline
+	\end{tabular}
+	\captionsetup{justification=centering}
+	\caption{Overview of the power consumption per day}
+	\label{tab:pwr}
+\end{table}
+
+There are two Li-Ion cells that are used to power the system, they both have a capacity of 3200 mAh which results in a total capacity of 6400 mAh. This leads to the following battery life:
+\begin{gather*}
+	\frac{6400}{9.85}=649 \text{ days}
+\end{gather*}
+
 
 \section{Website}
 

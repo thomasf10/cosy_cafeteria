@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.26)  1 MAY 2020 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.26)  1 MAY 2020 15:16
 entering extended mode
 **c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Report/Report.tex
 (c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Report/Report.tex
@@ -646,41 +646,45 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
+) ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colortbl.sty"
+Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
+\everycr=\toks35
+\minrowclearance=\skip77
 ) ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty"
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box65
-\beforetitleunit=\skip77
-\aftertitleunit=\skip78
+\beforetitleunit=\skip78
+\aftertitleunit=\skip79
 \ttl@plus=\dimen192
 \ttl@minus=\dimen193
-\ttl@toksa=\toks35
+\ttl@toksa=\toks36
 \titlewidth=\dimen194
 \titlewidthlast=\dimen195
 \titlewidthfirst=\dimen196
 ) ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count321
-\float@exts=\toks36
+\float@exts=\toks37
 \float@box=\box66
-\@float@everytoks=\toks37
+\@float@everytoks=\toks38
 \@floatcapt=\box67
 ) (Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
  ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
@@ -761,7 +765,7 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 \AtBeginShipoutBox=\box68
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 32.
  ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
@@ -769,9 +773,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count322
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
  (Report.out) (Report.out)
 \@outlinefile=\write3
 \openout3 = `Report.out'.
@@ -783,12 +787,12 @@ LaTeX Info: Redefining \nameref on input line 30.
 \scratchbox=\box69
 \nofMPsegments=\count324
 \nofMParguments=\count325
-\everyMPshowfont=\toks38
+\everyMPshowfont=\toks39
 \MPscratchCnt=\count326
 \MPscratchDim=\dimen198
 \MPnumerator=\count327
 \makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks39
+\everyMPtoPDFconversion=\toks40
 ) ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
@@ -815,33 +819,33 @@ Package caption Info: End \AtBeginDocument code.
 \openout4 = `Report.toc'.
 
  [3]
-<fig/situation.pdf, id=210, 467.82779pt x 147.67169pt>
+<fig/situation.pdf, id=220, 467.82779pt x 147.67169pt>
 File: fig/situation.pdf Graphic file (type pdf)
 <use fig/situation.pdf>
-Package pdftex.def Info: fig/situation.pdf  used on input line 46.
+Package pdftex.def Info: fig/situation.pdf  used on input line 48.
 (pdftex.def)             Requested size: 360.0pt x 113.6377pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 58.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 60.
  ("C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
  [4 <./fig/situation.pdf
 
 pdfTeX warning: pdflatex (file ./fig/situation.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<fig/architecture.pdf, id=238, 395.55779pt x 363.27718pt>
+<fig/architecture.pdf, id=248, 395.55779pt x 363.27718pt>
 File: fig/architecture.pdf Graphic file (type pdf)
 <use fig/architecture.pdf>
-Package pdftex.def Info: fig/architecture.pdf  used on input line 89.
+Package pdftex.def Info: fig/architecture.pdf  used on input line 91.
 (pdftex.def)             Requested size: 360.0pt x 330.63818pt.
  [5]
-Underfull \hbox (badness 10000) in paragraph at lines 99--104
+Underfull \hbox (badness 10000) in paragraph at lines 101--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--104
+Underfull \hbox (badness 10000) in paragraph at lines 101--106
 
  []
 
@@ -850,16 +854,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--104
 pdfTeX warning: pdflatex (file ./fig/architecture.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >] [7]
 
-Package natbib Warning: Citation `LiIonVsLi-Po_Ovonic' on page 8 undefined on input line 134.
+Package natbib Warning: Citation `LiIonVsLi-Po_Ovonic' on page 8 undefined on input line 136.
 
 
-Package natbib Warning: Citation `Li-Po_Wiki' on page 8 undefined on input line 134.
+Package natbib Warning: Citation `Li-Po_Wiki' on page 8 undefined on input line 136.
 
 [8]
-<fig/reverse_polarity_protection_simulation.png, id=319, 506.6428pt x 381.67593pt>
+<fig/reverse_polarity_protection_simulation.png, id=329, 506.6428pt x 381.67593pt>
 File: fig/reverse_polarity_protection_simulation.png Graphic file (type png)
 <use fig/reverse_polarity_protection_simulation.png>
-Package pdftex.def Info: fig/reverse_polarity_protection_simulation.png  used on input line 165.
+Package pdftex.def Info: fig/reverse_polarity_protection_simulation.png  used on input line 167.
 (pdftex.def)             Requested size: 288.0011pt x 216.96933pt.
  [9]
 Package epstopdf Info: Source file: <fig/Transient_response_negative_input_pulse.eps>
@@ -869,15 +873,15 @@ Package epstopdf Info: Source file: <fig/Transient_response_negative_input_pulse
 (epstopdf)                    date: 2020-04-29 19:24:38
 (epstopdf)                    size: 13166 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/Transient_response_negative_input_pulse-eps-converted-to.pdf fig/Transient_response_negative_input_pulse.eps>
-(epstopdf)             \includegraphics on input line 172.
+(epstopdf)             \includegraphics on input line 174.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./fig/Transient_response_negative_input_pulse-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig/Transient_response_negative_input_pulse-eps-converted-to.pdf, id=328, 462.72874pt x 346.29375pt>
+<fig/Transient_response_negative_input_pulse-eps-converted-to.pdf, id=338, 462.72874pt x 346.29375pt>
 File: fig/Transient_response_negative_input_pulse-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/Transient_response_negative_input_pulse-eps-converted-to.pdf>
-Package pdftex.def Info: fig/Transient_response_negative_input_pulse-eps-converted-to.pdf  used on input line 172.
+Package pdftex.def Info: fig/Transient_response_negative_input_pulse-eps-converted-to.pdf  used on input line 174.
 (pdftex.def)             Requested size: 288.0011pt x 215.53477pt.
 Package epstopdf Info: Source file: <fig/Transient_response_positive_input_pulse.eps>
 (epstopdf)                    date: 2020-04-29 19:24:38
@@ -886,149 +890,166 @@ Package epstopdf Info: Source file: <fig/Transient_response_positive_input_pulse
 (epstopdf)                    date: 2020-04-29 19:24:38
 (epstopdf)                    size: 12718 bytes
 (epstopdf)             Command: <epstopdf --outfile=fig/Transient_response_positive_input_pulse-eps-converted-to.pdf fig/Transient_response_positive_input_pulse.eps>
-(epstopdf)             \includegraphics on input line 179.
+(epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./fig/Transient_response_positive_input_pulse-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig/Transient_response_positive_input_pulse-eps-converted-to.pdf, id=331, 462.72874pt x 346.29375pt>
+<fig/Transient_response_positive_input_pulse-eps-converted-to.pdf, id=341, 462.72874pt x 346.29375pt>
 File: fig/Transient_response_positive_input_pulse-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/Transient_response_positive_input_pulse-eps-converted-to.pdf>
-Package pdftex.def Info: fig/Transient_response_positive_input_pulse-eps-converted-to.pdf  used on input line 179.
+Package pdftex.def Info: fig/Transient_response_positive_input_pulse-eps-converted-to.pdf  used on input line 181.
 (pdftex.def)             Requested size: 288.0011pt x 215.53477pt.
 [10 <./fig/reverse_polarity_protection_simulation.png> <./fig/Transient_response_negative_input_pulse-eps-converted-to.pdf>]
-<fig/reverse_polarity_protection.png, id=372, 622.57594pt x 422.32782pt>
+<fig/reverse_polarity_protection.png, id=382, 622.57594pt x 422.32782pt>
 File: fig/reverse_polarity_protection.png Graphic file (type png)
 <use fig/reverse_polarity_protection.png>
-Package pdftex.def Info: fig/reverse_polarity_protection.png  used on input line 188.
+Package pdftex.def Info: fig/reverse_polarity_protection.png  used on input line 190.
 (pdftex.def)             Requested size: 288.0011pt x 195.36867pt.
  [11 <./fig/Transient_response_positive_input_pulse-eps-converted-to.pdf>]
-<fig/microUSBinput.png, id=409, 484.81125pt x 331.99031pt>
+<fig/microUSBinput.png, id=419, 484.81125pt x 331.99031pt>
 File: fig/microUSBinput.png Graphic file (type png)
 <use fig/microUSBinput.png>
-Package pdftex.def Info: fig/microUSBinput.png  used on input line 197.
+Package pdftex.def Info: fig/microUSBinput.png  used on input line 199.
 (pdftex.def)             Requested size: 288.0011pt x 197.22513pt.
  [12 <./fig/reverse_polarity_protection.png> <./fig/microUSBinput.png>]
-<fig/bq24075_toegepast.png, id=424, 468.24937pt x 300.3722pt>
+<fig/bq24075_toegepast.png, id=434, 468.24937pt x 300.3722pt>
 File: fig/bq24075_toegepast.png Graphic file (type png)
 <use fig/bq24075_toegepast.png>
-Package pdftex.def Info: fig/bq24075_toegepast.png  used on input line 212.
+Package pdftex.def Info: fig/bq24075_toegepast.png  used on input line 214.
 (pdftex.def)             Requested size: 323.9978pt x 207.84827pt.
  [13]
-<fig/Charge_cycle.png, id=437, 572.1375pt x 425.33907pt>
+<fig/Charge_cycle.png, id=447, 572.1375pt x 425.33907pt>
 File: fig/Charge_cycle.png Graphic file (type png)
 <use fig/Charge_cycle.png>
-Package pdftex.def Info: fig/Charge_cycle.png  used on input line 227.
+Package pdftex.def Info: fig/Charge_cycle.png  used on input line 229.
 (pdftex.def)             Requested size: 360.0pt x 267.63402pt.
  [14 <./fig/bq24075_toegepast.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 233.
+(hyperref)                removing `math shift' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 233.
+(hyperref)                removing `subscript' on input line 235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 233.
+(hyperref)                removing `math shift' on input line 235.
 
 
-Overfull \hbox (3.56664pt too wide) in paragraph at lines 244--252
+Overfull \hbox (3.56659pt too wide) in paragraph at lines 246--254
 [][] 
  []
 
 [15 <./fig/Charge_cycle.png>] [16]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 286.
+(hyperref)                removing `math shift' on input line 288.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 286.
+(hyperref)                removing `subscript' on input line 288.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 286.
+(hyperref)                removing `math shift' on input line 288.
 
 [17]
-Overfull \hbox (1.7865pt too wide) in paragraph at lines 323--325
+Overfull \hbox (1.7865pt too wide) in paragraph at lines 325--327
 \OT1/cmr/m/n/10.95 discharge de-tec-tion thresh-old volt-age $\OML/cmm/m/it/10.95 V[]$ \OT1/cmr/m/n/10.95 dur-ing dis-charge, the safety
  []
 
 [18]
-Overfull \hbox (1.66985pt too wide) in paragraph at lines 327--328
+Overfull \hbox (1.66985pt too wide) in paragraph at lines 329--330
 []\OT1/cmr/bx/n/10.95 Load short-circuit de-tec-tion (SCD): \OT1/cmr/m/n/10.95 Sim-i-lar to over-cur-rent thresh-
  []
 
-<fig/bq29700_principeschema.png, id=500, 843.15pt x 372.64218pt>
+<fig/bq29700_principeschema.png, id=510, 843.15pt x 372.64218pt>
 File: fig/bq29700_principeschema.png Graphic file (type png)
 <use fig/bq29700_principeschema.png>
-Package pdftex.def Info: fig/bq29700_principeschema.png  used on input line 344.
+Package pdftex.def Info: fig/bq29700_principeschema.png  used on input line 346.
 (pdftex.def)             Requested size: 323.9978pt x 143.19759pt.
-<fig/bq29700_toegepast.png, id=508, 511.15968pt x 337.26pt>
+<fig/bq29700_toegepast.png, id=518, 511.15968pt x 337.26pt>
 File: fig/bq29700_toegepast.png Graphic file (type png)
 <use fig/bq29700_toegepast.png>
-Package pdftex.def Info: fig/bq29700_toegepast.png  used on input line 356.
+Package pdftex.def Info: fig/bq29700_toegepast.png  used on input line 358.
 (pdftex.def)             Requested size: 323.9978pt x 213.77174pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--359
+Underfull \hbox (badness 10000) in paragraph at lines 352--361
 
  []
 
 [19 <./fig/bq29700_principeschema.png>] [20 <./fig/bq29700_toegepast.png>]
-Overfull \hbox (1.23529pt too wide) in paragraph at lines 367--368
+Overfull \hbox (1.23529pt too wide) in paragraph at lines 369--370
 []\OT1/cmr/m/n/10.95 At least 500 mA max-i-mum out-put cur-rent $\OML/cmm/m/it/10.95 I[]$ \OT1/cmr/m/n/10.95 needed for ESP32
  []
 
-<fig/TLV75533_toegepast.png, id=530, 576.65437pt x 282.30469pt>
+<fig/TLV75533_toegepast.png, id=540, 576.65437pt x 282.30469pt>
 File: fig/TLV75533_toegepast.png Graphic file (type png)
 <use fig/TLV75533_toegepast.png>
-Package pdftex.def Info: fig/TLV75533_toegepast.png  used on input line 385.
+Package pdftex.def Info: fig/TLV75533_toegepast.png  used on input line 387.
 (pdftex.def)             Requested size: 323.9978pt x 158.61937pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--388
+Underfull \hbox (badness 10000) in paragraph at lines 380--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--388
+Underfull \hbox (badness 10000) in paragraph at lines 380--390
 
  []
 
 [21] [22 <./fig/TLV75533_toegepast.png>]
-<fig/TPS22919_toegepast.png, id=560, 338.01282pt x 423.83344pt>
+<fig/TPS22919_toegepast.png, id=570, 338.01282pt x 423.83344pt>
 File: fig/TPS22919_toegepast.png Graphic file (type png)
 <use fig/TPS22919_toegepast.png>
-Package pdftex.def Info: fig/TPS22919_toegepast.png  used on input line 422.
+Package pdftex.def Info: fig/TPS22919_toegepast.png  used on input line 424.
 (pdftex.def)             Requested size: 288.0011pt x 361.13318pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--425
+Underfull \hbox (badness 10000) in paragraph at lines 419--427
 
  []
 
 [23]
-<fig/ESP32_toegepast.png, id=569, 561.59813pt x 439.6425pt>
+<fig/ESP32_toegepast.png, id=579, 561.59813pt x 439.6425pt>
 File: fig/ESP32_toegepast.png Graphic file (type png)
 <use fig/ESP32_toegepast.png>
-Package pdftex.def Info: fig/ESP32_toegepast.png  used on input line 431.
+Package pdftex.def Info: fig/ESP32_toegepast.png  used on input line 433.
 (pdftex.def)             Requested size: 360.0pt x 281.81969pt.
  [24 <./fig/TPS22919_toegepast.png>]
-<fig/wifi_pwr.pdf, id=577, 450.63155pt x 327.1472pt>
+<fig/wifi_pwr.pdf, id=587, 450.63155pt x 327.1472pt>
 File: fig/wifi_pwr.pdf Graphic file (type pdf)
 <use fig/wifi_pwr.pdf>
-Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 449.
+Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 451.
 (pdftex.def)             Requested size: 360.0pt x 261.3537pt.
  [25 <./fig/ESP32_toegepast.png>] [26 <./fig/wifi_pwr.pdf>]
-<fig/statendiagram.pdf, id=621, 467.82779pt x 396.52138pt>
+<fig/statendiagram.pdf, id=631, 467.82779pt x 396.52138pt>
 File: fig/statendiagram.pdf Graphic file (type pdf)
 <use fig/statendiagram.pdf>
-Package pdftex.def Info: fig/statendiagram.pdf  used on input line 473.
+Package pdftex.def Info: fig/statendiagram.pdf  used on input line 475.
 (pdftex.def)             Requested size: 360.0pt x 305.13483pt.
  [27 <./fig/statendiagram.pdf
 
 pdfTeX warning: pdflatex (file ./fig/statendiagram.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] [28] [29] (Report.bbl
+>] [28]
+File: fig/wifi_pwr.pdf Graphic file (type pdf)
+<use fig/wifi_pwr.pdf>
+Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 513.
+(pdftex.def)             Requested size: 360.0pt x 261.3537pt.
+ [29]
+<fig/sensor_pwr.pdf, id=660, 450.63155pt x 327.1472pt>
+File: fig/sensor_pwr.pdf Graphic file (type pdf)
+<use fig/sensor_pwr.pdf>
+Package pdftex.def Info: fig/sensor_pwr.pdf  used on input line 527.
+(pdftex.def)             Requested size: 360.0pt x 261.3537pt.
+ [30]
+<fig/sync_pwr.pdf, id=668, 450.63155pt x 327.1472pt>
+File: fig/sync_pwr.pdf Graphic file (type pdf)
+<use fig/sync_pwr.pdf>
+Package pdftex.def Info: fig/sync_pwr.pdf  used on input line 542.
+(pdftex.def)             Requested size: 360.0pt x 261.3537pt.
+ [31 <./fig/sensor_pwr.pdf>] [32 <./fig/sync_pwr.pdf>] [33] [34] (Report.bbl
 Underfull \hbox (badness 4303) in paragraph at lines 29--31
 []\OT1/cmr/m/n/10.95 Wikipedia, ``Lithium-ion bat-tery,'' []$https : / / en . wikipedia . org / wiki /
  []
@@ -1073,79 +1094,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--73
 \OT1/cmr/m/n/10.95 electronicdesign . com / power-[]management / article / 21805596 /
  []
 
-) [30]
-<fig/MainPCB_schematic.pdf, id=665, 845.1575pt x 598.235pt>
+) [35]
+<fig/MainPCB_schematic.pdf, id=757, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 527.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 629.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 527.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 629.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<fig/MainPCB_schematic.pdf, id=668, page=1, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=760, page=1, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 527.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 629.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 527.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 629.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
- [31]
+ [36]
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 527.
-(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
-File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
-<use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 527.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 629.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 527.
-(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
- [32 <./fig/MainPCB_schematic.pdf>]
-<fig/MainPCB_schematic.pdf, id=683, page=2, 845.1575pt x 598.235pt>
-File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
-<use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 527.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 629.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
+<use fig/MainPCB_schematic.pdf, page 1>
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 629.
+(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
+ [37 <./fig/MainPCB_schematic.pdf>]
+<fig/MainPCB_schematic.pdf, id=775, page=2, 845.1575pt x 598.235pt>
+File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 527.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 629.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 527.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 629.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
- [33 <./fig/MainPCB_schematic.pdf>]
+File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
+<use fig/MainPCB_schematic.pdf, page 2>
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 629.
+(pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
+ [38 <./fig/MainPCB_schematic.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 531.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 531.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 633.
 (Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 531.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 531.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 633.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 633.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 8B6D483DA919422C09C28F94192A5A67;2526.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 531.
+(rerunfilecheck)             Checksum: 71C1A8B15D3FDC0CF60963696E2B97DA;2670.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 633.
  ) 
 Here is how much of TeX's memory you used:
- 27522 strings out of 492942
- 518433 string characters out of 3126093
- 639432 words of memory out of 3000000
- 30965 multiletter control sequences out of 15000+200000
- 543667 words of font info for 66 fonts, out of 3000000 for 9000
+ 27602 strings out of 492942
+ 519655 string characters out of 3126093
+ 641068 words of memory out of 3000000
+ 31026 multiletter control sequences out of 15000+200000
+ 544026 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,100p,2046b,889s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+<C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 
 pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb): glyph `' undefined
 ><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 
 pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb): glyph `' undefined
+
+
+pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb): glyph `eight ' undefined
 
 
 pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb): glyph `five ' undefined
@@ -1157,6 +1181,12 @@ pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/
 pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb): glyph `one ' undefined
 
 
+pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb): glyph `seven ' undefined
+
+
+pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb): glyph `six ' undefined
+
+
 pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb): glyph `three ' undefined
 
 
@@ -1165,9 +1195,9 @@ pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/
 
 pdfTeX warning: pdflatex (file C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb): glyph `' undefined
 ><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on Report.pdf (33 pages, 893186 bytes).
+Output written on Report.pdf (38 pages, 964910 bytes).
 PDF statistics:
- 771 PDF objects out of 1000 (max. 8388607)
- 138 named destinations out of 1000 (max. 500000)
- 402 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 871 PDF objects out of 1000 (max. 8388607)
+ 150 named destinations out of 1000 (max. 500000)
+ 428 words of extra memory for PDF output out of 10000 (max. 10000000)
 

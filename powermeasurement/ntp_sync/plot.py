@@ -40,7 +40,7 @@ x=[]
 y=[]
 
 #open csv file with the data
-with open('sensor_reading.csv', 'r') as csvfile:
+with open('sync_2.csv', 'r') as csvfile:
     line_count = 0
     plots = csv.reader(csvfile, delimiter=',')
     for row in plots:
@@ -49,7 +49,7 @@ with open('sensor_reading.csv', 'r') as csvfile:
             line_count += 1
         else:
             x.append(float(row[0]))
-            y.append(float(row[3])*1000)
+            y.append(float(row[1])*1000)
 
 y_int = (integrate.cumtrapz(y, x, initial=0)/3600)
 '''
@@ -86,11 +86,11 @@ plt.xlabel('Time [s]') # x axis
 
 
 tekst1 = "Charge = %.3f mAh" % (verb)
-plt.text(-4,0.033,tekst1, bbox=dict(facecolor='white', alpha=0.2))
+plt.text(-2.8,0.076,tekst1, bbox=dict(facecolor='white', alpha=0.2))
 #plt.ylabel('Verbruik [mA]') # y axis
 
 #save fig
 
-plt.savefig('sensor_pwr.pdf', bbox_inches='tight')
+plt.savefig('sync_pwr_2.pdf', bbox_inches='tight')
 print("done")
 
