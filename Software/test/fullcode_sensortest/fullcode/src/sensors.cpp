@@ -7,8 +7,9 @@
 #include "SparkFun_GridEYE_Arduino_Library.h"
 
 
-
+#define GPIO_OUTPUT_IO_CCS811    32
 #define GPIO_INPUT_IO_AUDIO    33
+#define GPIO_OUTPUT_PIN_SEL  (1ULL<<GPIO_OUTPUT_IO_CCS811)
 #define GPIO_INPUT_PIN_SEL  (1ULL<<GPIO_INPUT_IO_AUDIO)
 #define ESP_INTR_FLAG_DEFAULT 0
 
@@ -33,7 +34,19 @@ bool status;
  * No input needed and no output will be returned  
  **/
 void init_CCS811(){
-
+    
+  //INIT the GPIO pins for the sensors
+  gpio_config_t io_conf;
+  
+  io_conf.mode = GPIO_MODE_OUTPUT;
+  //bit mask of the pin that you want to set as output,GPIO32 =>nWake_CCS811
+  io_conf.pin_bit_mask = GPIO_OUTPUT_PIN_SEL;
+  //configure GPIO with the given settings
+  gpio_config(&io_conf);
+  
+  gpio_pad_select_gpio(GPIO_NUM_32);
+    /* Set the GPIO as a push/pull output */
+  gpio_set_direction(GPIO_NUM_32, GPIO_MODE_OUTPUT);
   // Pin IO32 is for the CCS811_nWake 
   gpio_hold_dis(GPIO_NUM_32); // disable lock
   gpio_set_level(GPIO_NUM_32, 0);
@@ -48,6 +61,12 @@ void init_CCS811(){
   }
   while(status == false) ;
   sensor_CCS811.setDriveMode(CCS811_DRIVE_MODE_250MS);
+  // raise nWake to go to sleep
+  gpio_hold_dis(GPIO_NUM_32); // disable lock
+  gpio_set_level(GPIO_NUM_32, 1);
+  gpio_hold_en(GPIO_NUM_32); // lock state 
+  gpio_deep_sleep_hold_en(); // to hold state during deepsleep
+  
 }
 
 /**
@@ -66,6 +85,7 @@ void init_audio(){
  **/
 void init_AMG8833(){
   sensor_AMG88.begin();
+  sensor_AMG88.sleep(); // toegevoegd door thomas
 }
 
 
@@ -76,7 +96,7 @@ void init_AMG8833(){
 void wake_sensors(){
   // Wake CCS811 
   gpio_hold_dis(GPIO_NUM_32); // disable lock
-  digitalWrite(32,LOW);
+  gpio_set_level(GPIO_NUM_32, 0);
   gpio_hold_en(GPIO_NUM_32); // lock state 
   gpio_deep_sleep_hold_en(); // to hold state during deepsleep
   // Wake AMG8833 
@@ -108,11 +128,9 @@ void get_measurements_CCS811(uint16_t data[2]){ // double* temperature_CCS811 re
   data[1]= sensor_CCS811.geteCO2();
   data[0]= sensor_CCS811.getTVOC();
 
-  sensor_CCS811.setDriveMode(CCS811_DRIVE_MODE_IDLE);
-  
   // After getting the measurements put the sensor immediatly back to sleep, raise nWake
   gpio_hold_dis(GPIO_NUM_32); // disable lock
-  digitalWrite(32,HIGH);
+  gpio_set_level(GPIO_NUM_32, 1);
   gpio_hold_en(GPIO_NUM_32); // lock state 
   gpio_deep_sleep_hold_en(); // to hold state during deepsleep
 }

@@ -40,7 +40,7 @@ x=[]
 y=[]
 
 #open csv file with the data
-with open('meting_all_sensorvalues_3.csv', 'r') as csvfile:
+with open('sensor_reading.csv', 'r') as csvfile:
     line_count = 0
     plots = csv.reader(csvfile, delimiter=',')
     for row in plots:
@@ -49,7 +49,7 @@ with open('meting_all_sensorvalues_3.csv', 'r') as csvfile:
             line_count += 1
         else:
             x.append(float(row[0]))
-            y.append(float(row[1])*1000)
+            y.append(float(row[3])*1000)
 
 y_int = (integrate.cumtrapz(y, x, initial=0)/3600)
 '''
@@ -68,7 +68,7 @@ ax1.set_ylabel('mA', color=color)
 ax1.plot(x, y, color=color)
 ax1.tick_params(axis='y', labelcolor=color)
 #select range
-plt.axis([-1.5,1,0,500]) #enter range of the plot
+#plt.axis([-1.5,1,0,500]) #enter range of the plot
 ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
 
 color = 'tab:red'
@@ -81,16 +81,16 @@ ax2.tick_params(axis='y', labelcolor=color)
 
 
 #add labels/title
-plt.title('Verbruik') # title
-plt.xlabel('tijd [s]') # x axis
+plt.title('Power consumption') # title
+plt.xlabel('Time [s]') # x axis
 
 
-tekst1 = "Verbruik = %.3f mAh" % (verb)
-plt.text(0.28,0.041,tekst1, bbox=dict(facecolor='white', alpha=0.2))
+tekst1 = "Charge = %.3f mAh" % (verb)
+plt.text(-4,0.033,tekst1, bbox=dict(facecolor='white', alpha=0.2))
 #plt.ylabel('Verbruik [mA]') # y axis
 
 #save fig
 
-plt.savefig('meting_alle_sensorwaarden.pdf', bbox_inches='tight')
+plt.savefig('sensor_pwr.pdf', bbox_inches='tight')
 print("done")
 

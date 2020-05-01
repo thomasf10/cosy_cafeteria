@@ -16,8 +16,7 @@ const char* pwd = "PVFse1RKYrMT";
 
 // socket
 const uint16_t port = 8091;
-//const char * host = "192.168.0.107"; // ip python server (ip of laptop)
-const char * host = "81.244.156.25"; // ip python server (ip of raspberry pi)
+const char * host = "192.168.0.107"; // ip of host (ip of laptop/raspy)
 
 // ntp server
 const char* ntpServer = "europe.pool.ntp.org";
@@ -51,7 +50,7 @@ void goToDeepSleep_ms(int ms)
 
     adc_power_off();
     esp_wifi_stop();
-    esp_bt_controller_disable(); 
+    esp_bt_controller_disable();
 
     // Configure the timer to wake us up!
     esp_sleep_enable_timer_wakeup(ms * 1000);
@@ -60,7 +59,7 @@ void goToDeepSleep_ms(int ms)
     esp_deep_sleep_start();
 }
 
-bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, int length){
+bool sendMessage(float* data, int length){
 /*     //uint64_t start = micros();
         // it wil set the static IP address to 192, 168, 10, 47
     IPAddress local_IP(192, 168, 0, 22);
@@ -111,21 +110,9 @@ bool sendMessage(float* data, float amgtemp, float audio, uint16_t* css_data, in
             return false;
         }else{
             Serial.println("Connected to server successful!");
-            // send amg pixels
             for(int i=0;i<length/4;i++){
                 client.write((const uint8_t *) & data[i], 4);
             }
-
-            // send amg temp
-                client.write((const uint8_t *) & amgtemp, 4);
-
-            // send audio voltage
-                client.write((const uint8_t *) & audio, 4);
-
-            // send css811 data
-                client.write((const uint8_t *) & css_data[0], 2);
-                client.write((const uint8_t *) & css_data[1], 2);
-                
             client.stop();
             WiFi.disconnect();
             Serial.println("Disconnecting...");
@@ -156,26 +143,20 @@ void ntp_sync(){
        //connect to WiFi
     Serial.printf("Connecting to %s ", ssidhome);
     WiFi.begin(ssidhome, pwd);
-    int counter = 0;
     while (WiFi.status() != WL_CONNECTED) {
         delay(500);
         Serial.print(".");
-         counter++;
-        if(counter>=10){ //after 5 seconds timeout - reset board
-            Serial.println("connection failed");
-            break;
-        }
     }
     Serial.println(" CONNECTED");
     
     if(WiFi.status() == WL_CONNECTED){
-        //init and get the time
-        configTime(0, 0, ntpServer);
-        // corrects timezones
-        setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
-        tzset(); // save the TZ variable
-    // delay(100);
-        printLocalTime();
+    //init and get the time
+    configTime(0, 0, ntpServer);
+    // corrects timezones
+    setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
+    tzset(); // save the TZ variable
+   // delay(100);
+    printLocalTime();
     }else{
         Serial.println("sync failed");
     }
@@ -200,17 +181,16 @@ tzset(); // save the TZ variable
 }
 
 
-int checkhour(){
+void checkhour(){
     // corrects timezones
     setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", 1);
     tzset(); // save the TZ variable
      struct tm timeinfo;
       if(!getLocalTime(&timeinfo)){
     Serial.println("Failed to obtain time");
-    return -1;
+    return;
   }
     int hour = timeinfo.tm_hour;
     Serial.println("hour");
     Serial.println(hour);
-    return hour;
 }
