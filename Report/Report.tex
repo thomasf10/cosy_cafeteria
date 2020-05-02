@@ -13,6 +13,14 @@
 \usepackage{tabularx}  % betere tabellen
 \usepackage[small,bf,hang]{caption} % verbetering captions
 \captionsetup[table]{singlelinecheck=off} % caption van tabellen links uitlijnen
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+
+\usepackage{titlesec} 					% voor mooiere paragraph
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex} % nog steeds voor paragraph
 
 
 % =========== BELANGRIJK VR IN HET VERSLAG: Tonen dat je hebt nagedacht over dimensionering componenten! ===========
@@ -434,35 +442,167 @@ Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 
 
 \section{Wireless connectivity}
 \subsection{Wi-Fi connection}
-In order to transmit the sensor data to the server, the Wi-Fi connectivity of the ESP32 is used. The transmission is provided by a TCP connection that is established between the ESP32 and the python server. At the initialisation of the python server, a socket is opened, this socket is used to receive the data. In this manner, the server is always listening on the socket, until a message is received. The ESP32 sends the data in the following order: pixeldata (64 floats), temperature (1 float), audio level (1 float), $CO_2$-level (1 unint16) and TVOC-level (1 unint64). The received data is processed by order to determine which data is represented by the received values. The data is parsed into different variable, these variables are then used to update the values in the database. 
+In order to transmit the sensor data to the server, the Wi-Fi connectivity of the ESP32 is used. The transmission is provided by a TCP connection that is established between the ESP32 and the python server. At the initialisation of the python server, a socket is opened, this socket is used to receive the data. In this manner the server is always listening on the socket, until a message is received. The ESP32 sends the data in the following order: pixeldata (64 floats), temperature (1 float), audio level (1 float), $CO_2$-level (1 unint16), TVOC-level (1 unint64) and an ID (1 uint8). The received data is processed by order to determine which data is represented by the received values. The data is parsed into different variable, these variables are then used to update the values in the database. 
 
 \subsection{Power consumption}
-To determine the power that is consumed when the sensor data is transmitted once, a measurement is performed. The current consumption is measured, the result is displayed in figure~\ref{fig:wifi_pwr}.
+To determine the power that is consumed when the sensor data is transmitted once, a measurement is performed. The result is displayed in figure~\ref{fig:wifi_pwr}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{wifi_pwr.pdf}
 	\caption{Power consumption of one Wi-Fi transmission}
 	\label{fig:wifi_pwr}
 \end{figure}
-In order to interpret the current consumption, the used capacity is displayed in [mAh]. This results in 0.041 mAh of capacity that is used in order to transmit the sensor data once. With this knowledge, we can calculate the amount of Wi-Fi transmissions that are possible with the 6400 mAh battery:
+In order to interpret the current consumption, the used charge is displayed in [mAh]. This results in 0.041 mAh of charge that is used in order to transmit the sensor data once. With this knowledge, we can calculate the amount of Wi-Fi transmissions that are possible with the 6400 mAh battery:
 
 \begin{gather*}
-	\frac{6400}{0.041} \approx 156097
+	\frac{6400}{0.041} \approx 156097 \text{transmissions}
 \end{gather*}
 
-156097 transmissions are possible, if there are 6 transmissions per hour and the system is active for 7 hours a day, this leads to a battery life off 3716 days.  However, this calculation only accounts for the Wi-Fi transmission other power consumption such as stand-by power, CPU power and sensor power are not accounted for in the calculation. 
+If there are 6 transmissions per hour and the system is active for 7 hours a day, this leads to a battery life off 3716 days.  However, this calculation only accounts for the Wi-Fi transmission, other power consumption such as stand-by power, CPU power and sensor power are not accounted for in this calculation. 
 
 \section{Software design}
-\textbf{todo}
-\begin{figure}[H]
+\paragraph{Functionality}
+\begin{itemize}
+	\item Pull sensors from sleep state every 10 minutes and read sensor values
+	\item Send sensor data to server, over Wi-Fi
+	\item Perform periodic synchronisations to get time information
+	\item Use time information to disable power to sensors and put CPU in deepsleep during the night
+\end{itemize}
+\paragraph{Overview}
+The software is based on a number of states these states are: NTPsync, checktime, nightsleep, wakefromnightsleep, wakesensors, readsensors, senddata and sleep. An overview of the complete software and the transitions between the states is illustrated in figure~\ref{fig:statediagram}. The states are discussed further below. 
+\begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.8\linewidth]{statendiagram.pdf}
+	\includegraphics[width=1\linewidth]{statendiagram.pdf}
 	\caption{State diagram}
 	\label{fig:statediagram}
 \end{figure}
+\paragraph{NTP-sync}
+In this state an NTP synchronisation is performed. This provides time information which is stored in the RTC memory and maintained by the RTC clock. The time information allows the system to know when it is night time. During the night the sensors can be disabled, using the load switches, and the microcontroller can go in to deepsleep until the morning. This way the sensors only receive power between 9 AM and 4 PM. 
+
+\paragraph{Check time}
+This state has two functionalities. Firstly the current time of day is retrieved from the RTC clock. If this time info is not available, the NTP synchronisation was not successful. When this is the case the microcontroller goes in to deepsleep for five minutes and the next state will be the NTP sync to retry the synchronisation. If the synchronisation fails three times, the system is rebooted. Next to this, when the synchronisation was successful, the time information will be available. This time information is then used to check the current time. If the time is between 9 AM and 4 PM the system remains active, thus the next state is set to wakesensors. If the time is after 4 PM and before 9 AM, the system has to go to sleep, thus the next state is set to nightsleep.
+
+\paragraph{Night sleep}
+This state is entered when it is past 4 PM and before 9 AM. During this time the sensors are disabled and the microcontroller goes in deepsleep. The sensors are disabled by raising the GPIO pins which control the load switches. When the GPIO pins are high, the load switches cut off the power to the sensors. Before entering deepsleep, the next state is set to wakefromnightsleep. During the night, no sensor data has to be collected and transmitted because the campus is closed. So by cutting off the power to the sensors and putting the microcontroller in deepsleep during the night the power consumption is drastically reduced. 
+
+\paragraph{Wake from night sleep}
+When the system wakes up at 9 AM, the power to the sensors has to be enabled. This is done by lowering the GPIO pins which control the load switches. Next to this, the system checks when the last synchronisation was performed. Because the RTC clock is derived from an internal RC oscillator with a frequency of \SI{150}{\kilo\hertz} and an accuracy of +/-5\% the clock time will drift away from the actual time. In order to prevent this, an NTP synchronisation has to be performed periodically. In order to retain an accurate clock, the synchronisation is performed every 14 days. Thus if the last synchronisation was performed 14 days ago, the next state is set to NTPsync. If the last synchronisation was more recent, the next state is set to checktime. 
+
+\paragraph{Wake sensors}
+In the wake sensors state, the sensors are taken out of their sleep state and put in active mode. When the sensors wake from their sleep state the sensor values can not be read immediately. A waiting period of 105 milliseconds is necessary in order to have stable sensor values. During these 105 milliseconds the sensors remain active but the microcontroller is put into deepsleep mode. Before entering deepsleep, the next state is set to readsensors. 
+
+\paragraph{Read sensors}
+In this state the sensor values are read out. Once the data is acquired, the sensors are put back in to their sleep state and the next state is set to senddata.
+
+\paragraph{Send data}
+In this state, the sensor data is transmitted to the python server which is running on a raspberry pi. Once the transmission is successful or the connection has timed-out the next state is set to sleep.
+
+\paragraph{Sleep}
+Once the sensor data has been transmitted to the server, the sleep state is entered. In this state, the microcontroller is put into deepsleep for 10 minutes. Before entering deepsleep, the next state is set to check time.
+
 
 \section{Autonomy}
-Calculations for lifetime.
+
+\subsection{Consumption sources}
+In this section the different sources that consume power will be discussed.
+
+\paragraph{Wi-Fi communication}
+The system transmits the sensor data to the server over a Wi-Fi connection. This data transfer happens every 10 minutes. Because the sensors are disabled between 4 PM and 9 AM, no Wi-Fi connection is needed during that time. With a wake time of seven hours and 6 transmissions per day, this leads to 42 transmissions per day. A measurement of the typical power consumption for one Wi-Fi transmission is illustrates in figure~\ref{fig:wifipwr}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1.0\linewidth]{wifi_pwr.pdf}
+	\caption{Power consumption of one Wi-Fi transmission}
+	\label{fig:wifipwr}
+\end{figure}
+The charge that is used for one transmission is 0.041 mAh. This leads to the following consumption per day:
+\begin{gather*}
+42 \cdot 0.041 = 1.722 \text{ mAh/day}
+\end{gather*}
+
+\paragraph{Sensors}
+The sensors are read out every ten minutes. With a wake time of 7 hours\footnote{Only awake between 9 AM and 4 PM}, this leads to 42 sensor measurements per day. The power consumption to read out the sensors once is illustrates in figure~\ref{fig:sens_pwr}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{sensor_pwr.pdf}
+	\caption{Power consumption of one sensor measurement}
+	\label{fig:sens_pwr}
+\end{figure}
+
+The charge that is used to read out the sensors once is 0.035 mAh. This leads to the following consumption per day:
+\begin{gather*}
+	42 \cdot 0.035 = 1.47\text{ mAh/day}
+\end{gather*}
+
+\paragraph{NTP synchronisation}
+In order to synchronise the RTC clock an NTP synchronisation has to be performed periodically. This synchronisation is performed once every 14 days. The power consumption for one synchronisation is illustrates in figure~\ref{fig:ntp_pwr}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{sync_pwr.pdf}
+	\caption{Power consumption of one NTP synchronisation}
+	\label{fig:ntp_pwr}
+\end{figure}
+
+The charge that is used for one synchronisation is 0.08 mAh. However, this synchronisation only happens once very 14 days, this leads to the following consumption per day:
+\begin{gather*}
+	\frac{1}{14} \cdot 0.08 = 0.0057 \text{ mAh/day}
+\end{gather*}
+
+\paragraph{Standby daytime}\footnote{No measurement were performed to determine the stand-by power, this has two reasons. 1: the development board to test the software has an onboard LED which increases the power consumption so the gathered measurements wouldn't be representative. 2: to measure the power consumption a \SI{1}{\ohm} resistor was inserted between the power source and the development board. This resistor is used as a sense resistor but can not provide accurate \SI{}{\micro\ampere} measurements due to the noice that is introduced. }
+Between 9 AM and 4 PM the system is 'active', this means that the sensors receive power. However when the sensors are not being read out they will be put in their respective sleep modes. The theoretical consumption that is gathered from the datasheets is listed below:
+\begin{itemize}
+	\item AMG8833 sleep mode: 0.2 mA
+	\item CCS811 sleep mode: with $V_{dd}$ = \SI{1.8}{\volt}: 19 $\mu$A \\$\Rightarrow$ with $V_{dd}$ = \SI{3.3}{\volt}: $\frac{19}{1.8}\cdot 3.3 = 34.83 \text{ }\mu\text{A}$
+	\item microphone: the power to the microphone is only enabled just before the measurement because of this the microphone has no stand-by/sleep consumption. 
+\end{itemize}
+Next to the consumption of the sensors, there is the sleep consumption of the microcontroller. If the microcontroller is not active, it is put in deepsleep. In deepsleep there is a consumption of 10 $\mu$A. Next to this consumption, two GPIO pins have to remain high during deepsleep: one to keep the CCS811 in sleep (nWake) and on to drive the load switch to disable the power to the microphone. The GPIO pins use an internal pull-up resistor of \SI{45}{\kilo\ohm} this leads to the following consumption for one GPIO pin: 
+\begin{gather*}
+	\frac{3.3 \text{V}}{45000\Omega} = 73.33 \text{ } \mu\text{A} 
+\end{gather*}
+For both GPIO pins this results in a consumption of 146.67 $\mu$A.
+\\
+For 7 hours a day the system is in active mode, this results in a charge consumption of:
+\begin{gather*}
+	7 \cdot (0.2 + 0.03483 + 0.01 + 0.1467) = 2.74\text{ mAh/day}
+\end{gather*}
+
+\paragraph{Standby nighttime}\footnote{No measurement were performed to determine the stand-by power, this has two reasons. 1: the development board to test the software has an onboard LED which increases the power consumption so the gathered measurements wouldn't be representative. 2: to measure the power consumption a \SI{1}{\ohm} resistor was inserted between the power source and the development board. This resistor is used as a sense resistor but can not provide accurate \SI{}{\micro\ampere} measurements due to the noice that is introduced. }
+Between 4 PM and 9 AM the system goes in to sleep mode. In sleep mode no sensor measurements are performed and no data is transferred via Wi-Fi. To reduce the power, the power to the sensors is cut-off by using the load switches. The remaining stand-by/sleep consumption originates from the CPU consumption in deepsleep and the three GPIO pins that are kept high to drive the load switches. This leads to the following consumption:
+\begin{gather*}
+	10 \text{ }\mu\text{A} + 3\cdot 73.33\text{ }\mu\text{A} = 230\text{ }\mu\text{A}
+\end{gather*}
+The system remains in sleep mode for 17 hours a day this leads to the following consumption per day:
+\begin{gather*}
+	17 \cdot 230\text{ }\mu\text{A}= 3.91\text{ mAh}
+\end{gather*}
+
+\subsection{Total power consumption}
+In the previous section all the different sources that consume power were discussed an overview is given in table~\ref{tab:pwr}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+	\hline
+	\textit{\textbf{Source}} & \textbf{Charge per day {[}mAh/day{]}} \\ \hline
+	Wi-Fi                    & 1.722 mAh/day                         \\ \hline
+	Sensors                  & 1.47 mAh/day                          \\ \hline
+	NTP sync                 & 0.0057 mAh/day                        \\ \hline
+	Standby daytime          & 2.74 mAh/day                          \\ \hline
+	Standby nighttime        & 3.91 mAh/day                          \\ \hline
+	\rowcolor{Gray}
+	Total                    & 9.85 mAh/day  						 \\ \hline
+	\end{tabular}
+	\captionsetup{justification=centering}
+	\caption{Overview of the power consumption per day}
+	\label{tab:pwr}
+\end{table}
+
+There are two Li-Ion cells that are used to power the system, they both have a capacity of 3200 mAh which results in a total capacity of 6400 mAh. This leads to the following battery life:
+\begin{gather*}
+	\frac{6400}{9.85}=649 \text{ days}
+\end{gather*}
+
 
 \section{Website}
 

@@ -1,37 +1,54 @@
-\contentsline {section}{\numberline {1}Intro}{4}{section.1}%
-\contentsline {section}{\numberline {2}Specifications}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Functional specifications}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Other technical specifications}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Non-technical specifications}{5}{subsection.2.3}%
-\contentsline {section}{\numberline {3}System architecture}{5}{section.3}%
-\contentsline {section}{\numberline {4}Power management design}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Lithium-Ion battery}{7}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Selected battery}{8}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Reverse polarity protection}{9}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Simulation}{9}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Implementation}{11}{subsubsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.3}Charging choice}{12}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Battery charging circuit}{13}{subsection.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.1}Charging phases}{14}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Set input current limit $I_{LIM}$}{15}{subsubsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.3}Fast charge safety timer (TMR)}{16}{subsubsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.4}Set fast charge current $I_{CHG}$}{17}{subsubsection.4.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.5}TS function}{17}{subsubsection.4.4.5}%
-\contentsline {subsubsection}{\numberline {4.4.6}Selecting IN-, OUT-, and BAT-pin capacitors}{17}{subsubsection.4.4.6}%
-\contentsline {subsection}{\numberline {4.5}Battery protection circuit}{18}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Dimensioning}{20}{subsubsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.6}Voltage regulator}{21}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Selected regulator}{21}{subsubsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.7}Load switches}{22}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}Selected load switches}{23}{subsubsection.4.7.1}%
-\contentsline {section}{\numberline {5}Microcontroller}{25}{section.5}%
-\contentsline {section}{\numberline {6}Sensorboard}{25}{section.6}%
-\contentsline {section}{\numberline {7}Wireless connectivity}{25}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Wi-Fi connection}{25}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Power consumption}{26}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Software design}{27}{section.8}%
-\contentsline {section}{\numberline {9}Autonomy}{28}{section.9}%
-\contentsline {section}{\numberline {10}Website}{28}{section.10}%
-\contentsline {section}{\numberline {11}Financial estimate}{28}{section.11}%
-\contentsline {section}{\numberline {12}Validation and measurements}{28}{section.12}%
-\contentsline {section}{\numberline {A}MainPCB schematic}{30}{appendix.A}%
+\contentsline {section}{\numberline {1}Intro}{4}{section.1}% 
+\contentsline {section}{\numberline {2}Specifications}{4}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Functional specifications}{4}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Other technical specifications}{5}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}Non-technical specifications}{5}{subsection.2.3}% 
+\contentsline {section}{\numberline {3}System architecture}{5}{section.3}% 
+\contentsline {section}{\numberline {4}Power management design}{7}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Lithium-Ion battery}{7}{subsection.4.1}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Selected battery}{8}{subsubsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.2}Reverse polarity protection}{9}{subsection.4.2}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Simulation}{9}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Implementation}{11}{subsubsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.3}Charging choice}{12}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}Battery charging circuit}{13}{subsection.4.4}% 
+\contentsline {subsubsection}{\numberline {4.4.1}Charging phases}{14}{subsubsection.4.4.1}% 
+\contentsline {subsubsection}{\numberline {4.4.2}Set input current limit $I_{LIM}$}{15}{subsubsection.4.4.2}% 
+\contentsline {subsubsection}{\numberline {4.4.3}Fast charge safety timer (TMR)}{16}{subsubsection.4.4.3}% 
+\contentsline {subsubsection}{\numberline {4.4.4}Set fast charge current $I_{CHG}$}{17}{subsubsection.4.4.4}% 
+\contentsline {subsubsection}{\numberline {4.4.5}TS function}{17}{subsubsection.4.4.5}% 
+\contentsline {subsubsection}{\numberline {4.4.6}Selecting IN-, OUT-, and BAT-pin capacitors}{17}{subsubsection.4.4.6}% 
+\contentsline {subsection}{\numberline {4.5}Battery protection circuit}{18}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}Dimensioning}{20}{subsubsection.4.5.1}% 
+\contentsline {subsection}{\numberline {4.6}Voltage regulator}{21}{subsection.4.6}% 
+\contentsline {subsubsection}{\numberline {4.6.1}Selected regulator}{21}{subsubsection.4.6.1}% 
+\contentsline {subsection}{\numberline {4.7}Load switches}{22}{subsection.4.7}% 
+\contentsline {subsubsection}{\numberline {4.7.1}Selected load switches}{23}{subsubsection.4.7.1}% 
+\contentsline {section}{\numberline {5}Microcontroller}{25}{section.5}% 
+\contentsline {section}{\numberline {6}Sensorboard}{25}{section.6}% 
+\contentsline {section}{\numberline {7}Wireless connectivity}{25}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Wi-Fi connection}{25}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Power consumption}{26}{subsection.7.2}% 
+\contentsline {section}{\numberline {8}Software design}{27}{section.8}% 
+\contentsline {paragraph}{Functionality}{27}{section.8}% 
+\contentsline {paragraph}{Overview}{27}{section.8}% 
+\contentsline {paragraph}{NTP-sync}{28}{figure.caption.17}% 
+\contentsline {paragraph}{Check time}{28}{figure.caption.17}% 
+\contentsline {paragraph}{Night sleep}{28}{figure.caption.17}% 
+\contentsline {paragraph}{Wake from night sleep}{28}{figure.caption.17}% 
+\contentsline {paragraph}{Wake sensors}{29}{figure.caption.17}% 
+\contentsline {paragraph}{Read sensors}{29}{figure.caption.17}% 
+\contentsline {paragraph}{Send data}{29}{figure.caption.17}% 
+\contentsline {paragraph}{Sleep}{29}{figure.caption.17}% 
+\contentsline {section}{\numberline {9}Autonomy}{29}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}Consumption sources}{29}{subsection.9.1}% 
+\contentsline {paragraph}{Wi-Fi communication}{29}{subsection.9.1}% 
+\contentsline {paragraph}{Sensors}{30}{figure.caption.18}% 
+\contentsline {paragraph}{NTP synchronisation}{31}{figure.caption.19}% 
+\contentsline {paragraph}{Standby daytime}{32}{figure.caption.20}% 
+\contentsline {paragraph}{Standby nighttime}{33}{figure.caption.20}% 
+\contentsline {subsection}{\numberline {9.2}Total power consumption}{33}{subsection.9.2}% 
+\contentsline {section}{\numberline {10}Website}{34}{section.10}% 
+\contentsline {section}{\numberline {11}Financial estimate}{34}{section.11}% 
+\contentsline {section}{\numberline {12}Validation and measurements}{34}{section.12}% 
+\contentsline {section}{\numberline {A}MainPCB schematic}{36}{appendix.A}% 

@@ -31,7 +31,9 @@
 \BOOKMARK [2][-]{subsection.7.2}{Power consumption}{section.7}% 31
 \BOOKMARK [1][-]{section.8}{Software design}{}% 32
 \BOOKMARK [1][-]{section.9}{Autonomy}{}% 33
-\BOOKMARK [1][-]{section.10}{Website}{}% 34
-\BOOKMARK [1][-]{section.11}{Financial estimate}{}% 35
-\BOOKMARK [1][-]{section.12}{Validation and measurements}{}% 36
-\BOOKMARK [1][-]{appendix.A}{MainPCB schematic}{}% 37
+\BOOKMARK [2][-]{subsection.9.1}{Consumption sources}{section.9}% 34
+\BOOKMARK [2][-]{subsection.9.2}{Total power consumption}{section.9}% 35
+\BOOKMARK [1][-]{section.10}{Website}{}% 36
+\BOOKMARK [1][-]{section.11}{Financial estimate}{}% 37
+\BOOKMARK [1][-]{section.12}{Validation and measurements}{}% 38
+\BOOKMARK [1][-]{appendix.A}{MainPCB schematic}{}% 39

@@ -63,7 +63,7 @@ print(verb)
 fig, ax1 = plt.subplots()
 
 color = 'tab:blue'
-ax1.set_xlabel('Tijd (s)')
+ax1.set_xlabel('Time (s)')
 ax1.set_ylabel('mA', color=color)
 ax1.plot(x, y, color=color)
 ax1.tick_params(axis='y', labelcolor=color)
@@ -81,16 +81,16 @@ ax2.tick_params(axis='y', labelcolor=color)
 
 
 #add labels/title
-plt.title('Verbruik') # title
-plt.xlabel('tijd [s]') # x axis
+plt.title('Power consumption') # title
+plt.xlabel('Time [s]') # x axis
 
 
-tekst1 = "Verbruik = %.3f mAh" % (verb)
+tekst1 = "Charge = %.3f mAh" % (verb)
 plt.text(0.28,0.041,tekst1, bbox=dict(facecolor='white', alpha=0.2))
 #plt.ylabel('Verbruik [mA]') # y axis
 
 #save fig
 
-plt.savefig('meting_alle_sensorwaarden.pdf', bbox_inches='tight')
+plt.savefig('wifi_pwr.pdf', bbox_inches='tight')
 print("done")
 

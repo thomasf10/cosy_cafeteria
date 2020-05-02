@@ -121,7 +121,7 @@ void get_measurements_AMG8833(float* pixeltemperature, float* temperature_AMG883
   //Check if the sensor has his data ready (first and last measurement not 0)
    
   do{
-    tim++;
+    //tim++;
     data[1] = sensor_AMG88.getPixelTemperatureRaw(63);
     data[0] = sensor_AMG88.getPixelTemperatureRaw(0);
   }
@@ -184,6 +184,27 @@ void loop() {
   // Get result AMG after this is read out, the data of CCS811 is avaiable. After data was retrieve sensor will be put into sleep imemdiatly
   get_measurements_AMG8833(pixeltemperature,tempAMG);
   get_measurements_CCS811(data_CCS811,tempCCS);
+
+  
+      // print sensor data
+    
+    Serial.print("audio voltage: ");
+    Serial.println(*audio);
+
+    Serial.println("AMG pixels: ");
+    for(int i=0; i<64; i++){
+      Serial.print(pixeltemperature[i]);
+      Serial.print(" : ");
+    }
+    Serial.println(" ");
+
+    Serial.print(" AMG temp: ");
+    Serial.println(*tempAMG);
+
+    Serial.print("CO2: ");
+    Serial.println(data_CCS811[0]);
+    Serial.print("TVOC: ");
+    Serial.println(data_CCS811[1]);
   //Delay time following run
  delay(5000);
 }
