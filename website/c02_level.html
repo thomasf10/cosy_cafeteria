@@ -11,16 +11,17 @@
     </head>
     
     <body>
+
         <div class="logo">
             <a href="index.html"><h1 class="logo"> Cosy Cafetaria </h1></a>
         </div>
         <div class="menu">
             <ul>
                 <li><a href="index.html">Overview</a></li>
-                <li> <a href="infra.html" class="active">Activity</a></li>
+                <li> <a href="infra.html">Activity</a></li>
                 <li><a href="sound.html">Sound</a></li>
                 <li><a href="temperature.html">Temperature</a></li>
-                <li><a href="c02_level.html">Co2 level</a></li>
+                <li><a href="c02_level.html" class="active">Co2 level</a></li>
                 <li><a href="TVOC_level.html">TVOC level</a></li>
             </ul>          
         </div>
@@ -36,12 +37,11 @@
                 <img id="gradient" src="" style="width: 100%;">
             </div>
         </div>
-        
         <script src="heatmap.js\build\heatmap.js"></script>
         
         <script>
             window.onload = function(){
-                
+
                 // helper function
                 function $(id) {
                 return document.getElementById(id);
@@ -76,9 +76,9 @@
                 };
                 /* legend code end */
                 
-                // now read the wanted data from the database
+                // // now read the wanted data from the database
                 var points = [];
-                var max = 85;
+                var max = 50;
                 var min = 0;
 
                 var ajax = new XMLHttpRequest();
@@ -94,23 +94,14 @@
                     if (this.readyState == 4 && this.status == 200) {
                         
                         var data = JSON.parse(this.responseText)
-                        console.log(data);
                         
                         for (let index = 0; index < data.length; index++) {      
-                            
-                            var amgpixels = JSON.parse(data[index].infraredreading);          
-                            
-                            for (let y = 0; y < 8; y++) {
-                                for (let x = 0; x < 8; x++) {
-                                    var point = {
-                                        x: parseInt(data[index].x) + x*10,
-                                        y: parseInt(data[index].y) + y*10,
-                                        value: parseInt(amgpixels[((8*y)+x)])
-                                    };
-                                    console.log(point);
-                                    points.push(point);           
-                                }
-                            }  
+                            var point = {
+                                x: parseInt(data[index].x),
+                                y: parseInt(data[index].y),
+                                value: parseInt(data[index].co2_level)
+                            };
+                            points.push(point);
                         }
                     }
 
@@ -118,9 +109,6 @@
                     var heatmapInstance = h337.create({
                         // only container is required, the rest will be defaults
                         container: document.querySelector('.heatmap'),
-                        maxOpacity: .75,
-                        radius: 20,
-                        blur: 0.9,
                         // update the legend whenever there's an extrema change
                         onExtremaChange: function onExtremaChange(data) {
                             updateLegend(data);
@@ -129,7 +117,6 @@
 
                     // heatmap data format
                     var heatmapData = {
-                        min: min,
                         max: max,
                         data: points
                     };

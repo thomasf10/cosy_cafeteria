@@ -21,24 +21,38 @@
                 <li> <a href="infra.html">Activity</a></li>
                 <li><a href="sound.html">Sound</a></li>
                 <li><a href="temperature.html">Temperature</a></li>
-                <li><a href="air.html">Airquality</a></li>
+                <li><a href="c02_level.html">Co2 level</a></li>
+                <li><a href="TVOC_level.html">TVOC level</a></li>
             </ul>          
         </div>
         
-        <div class="wrapper" >
-            <div class="heatmap">
-                
-            </div>
+        <div>
+            <h2>Activity</h2>
+            <p id="infra">Bussyness: &nbsp;</p>
+
         </div>
+
+        <div>
+            <h2>Environment</h2>
+            <p id="co2">Co2 level:  &nbsp;</p> 
+            <p id="TVOC">TVOC level: &nbsp;</p>
+            <p id="Sound">Sound: &nbsp;</p>
+            <p id="Temperature">Temperature: &nbsp;</p>
+        </div>
+        
         <script src="heatmap.js\build\heatmap.min.js"></script>
         
         <script>
             window.onload = function(){
                 
-                // // now read the wanted data from the database
-                var points = [];
-                var max = 100;
+                var co2_level_avg = 0;
+                var TVOC_level_avg = 0;
+                var Sound_avg = 0;
+                var Temperature_avg = 0;
+                var Infrared_avg = 0;
 
+
+                //now read the wanted data from the database
                 var ajax = new XMLHttpRequest();
                 var methode = "GET";
                 var url = "php/database.php";
@@ -53,36 +67,26 @@
                         
                         var data = JSON.parse(this.responseText)
                         console.log(data);
-                        
+
                         for (let index = 0; index < data.length; index++) {      
-                            var point = {
-                                x: parseInt(data[index].x),
-                                y: parseInt(data[index].y),
-                                value: parseInt(data[index].infraredreading)
-                            };
-                            points.push(point);
+                            co2_level_avg += parseInt(data[index].co2_level);
+                            TVOC_level_avg += parseInt(data[index].TVOC_level);
+                            Sound_avg += parseInt(data[index].audio);
+                            Temperature_avg += parseInt(data[index].temperature)
+
+                            var amgpixels = JSON.parse(data[index].infraredreading);
+                            for (let x = 0; x < amgpixels.length; x++) {
+                                Infrared_avg += amgpixels[x];
+                                
+                            }                            
                         }
-                    }
-                    console.log(points);
-
-                    // minimal heatmap instance configuration
-                    var heatmapInstance = h337.create({
-                    // only container is required, the rest will be defaults
-                    container: document.querySelector('.heatmap')
-                    });
-
-                    // heatmap data format
-                    var heatmapData = {
-                        max: max,
-                        data: points
-                    };
-                    
-                    console.log(heatmapData);
-
-                    // if you have a set of datapoints always use setData instead of addData
-                    // for data initialization
-                    heatmapInstance.setData(heatmapData);
-                }   
+                        document.getElementById("infra").textContent += Infrared_avg/(data.length*64) + "°c";
+                        document.getElementById("co2").textContent += co2_level_avg/data.length + "ppm";
+                        document.getElementById("TVOC").textContent += TVOC_level_avg/data.length + "ppb";
+                        document.getElementById("Sound").textContent += Sound_avg/data.length + "dB";
+                        document.getElementById("Temperature").textContent += Temperature_avg/data.length + "°c";            
+                    }                  
+                } 
             }                       
         </script>
     </body>

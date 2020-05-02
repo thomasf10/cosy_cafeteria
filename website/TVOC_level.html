@@ -21,7 +21,8 @@
                 <li> <a href="infra.html">Activity</a></li>
                 <li><a href="sound.html">Sound</a></li>
                 <li><a href="temperature.html">Temperature</a></li>
-                <li><a href="air.html" class="active">Airquality</a></li>
+                <li><a href="c02_level.html">Co2 level</a></li>
+                <li><a href="TVOC_level.html" class="active">TVOC level</a></li>
             </ul>          
         </div>
         
@@ -29,15 +30,56 @@
             <div class="heatmap">
                 
             </div>
+            <div id="heatmapLegend">
+                <h2>Legend</h2>
+                <span id="min"></span>
+                <span id="max"></span>
+                <img id="gradient" src="" style="width: 100%;">
+            </div>
         </div>
-        <script src="heatmap.js\build\heatmap.min.js"></script>
+        <script src="heatmap.js\build\heatmap.js"></script>
         
         <script>
             window.onload = function(){
+
+                // helper function
+                function $(id) {
+                    return document.getElementById(id);
+                };
+
+                /*  legend code */
+                // we want to display the gradient, so we have to draw it
+                var legendCanvas = document.createElement('canvas');
+                legendCanvas.width = 100;
+                legendCanvas.height = 10;
+
+                var legendCtx = legendCanvas.getContext('2d');
+                var gradientCfg = {};
+
+                function updateLegend(data) {
+                // the onExtremaChange callback gives us min, max, and the gradientConfig
+                // so we can update the legend
+                $('min').innerHTML = data.min;
+                $('max').innerHTML = data.max;
+                // regenerate gradient image
+                if (data.gradient != gradientCfg) {
+                    gradientCfg = data.gradient;
+                    var gradient = legendCtx.createLinearGradient(0, 0, 100, 1);
+                    for (var key in gradientCfg) {
+                    gradient.addColorStop(key, gradientCfg[key]);
+                    }
+
+                    legendCtx.fillStyle = gradient;
+                    legendCtx.fillRect(0, 0, 100, 10);
+                    $('gradient').src = legendCanvas.toDataURL();
+                }
+                };
+                /* legend code end */
                 
                 // // now read the wanted data from the database
                 var points = [];
-                var max = 100;
+                var max = 1187; //max sensor can read ppb
+                var min = 0; //min that sensor can read
 
                 var ajax = new XMLHttpRequest();
                 var methode = "GET";
@@ -58,7 +100,7 @@
                             var point = {
                                 x: parseInt(data[index].x),
                                 y: parseInt(data[index].y),
-                                value: parseInt(data[index].airquality)
+                                value: parseInt(data[index].TVOC_level)
                             };
                             points.push(point);
                         }
@@ -67,13 +109,18 @@
 
                     // minimal heatmap instance configuration
                     var heatmapInstance = h337.create({
-                    // only container is required, the rest will be defaults
-                    container: document.querySelector('.heatmap')
+                        // only container is required, the rest will be defaults
+                        container: document.querySelector('.heatmap'),
+                        // update the legend whenever there's an extrema change
+                        onExtremaChange: function onExtremaChange(data) {
+                            updateLegend(data);
+                        }
                     });
 
                     // heatmap data format
                     var heatmapData = {
-                        max: max,
+                        min: min,
+                        max: max, 
                         data: points
                     };
                     
