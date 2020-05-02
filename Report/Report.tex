@@ -435,7 +435,67 @@ Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 
 	\label{fig:ESP32_toegepast}
 \end{figure}
 
+\newpage
 \section{Sensorboard}
+\subsection{Design considerations}
+For the sensorboard design, we have agreed to go for a seperated board from the main board. This gave us the possibillity to design it more freely. For the design, we have choosen to go for a two sided printed circuit board or PCB. All sensors will be put on the top side of the board for it will be plugged onto the CPU board. Then, we looked what sensors are needed for the design. The impulses that needed to be sense are the sound level, air quality, temperature and the the presences of people.
+With the known knowledge about sensors for these impulses, we have choosen to go for the following sensors:
+
+\begin{itemize}
+	\item AMG8833 IR-sensor
+	\item CCS811 air quality sensor
+	\item BOB-12758 microphone breakout board
+\end{itemize}
+
+
+The main focus for the sensor board was how can we make it so low power as possible. As already mentiond above we have foreseen load switches to cut off the power when the system will be non active for a longer period of time. Beside the load switches, we have looked at the sensors to optimize the measuring sequence.
+
+\subsection{AMG8833 IR-sensor}
+To detect human presence, we have decided to use infrared. The human body produces quite some body heat that will be emited. The AMG8833  is an 8x8-pixel IR- sensor what will give us a heat map according to the pixel value. This will help us when determing how many people are presence in a certain area. For example we can determine not only single persons but also a group of persons as a row.
+\\ \\
+One of the considarations we needed to investigate is the effect of distance, ambient temperature and the field of view of the sensor. This sensor has a total angle view of 60 ° for the horizontal and vertical axis of the pixelgrid. Depending on the height the area that the sensor cover will be different. The area will increase related to the heigth the sensor is installed. Not only the field of view will be influence by the height but also the result of the measurements. The further the heat source is away from the sensor, the less the sensor will detects the heat from it. 
+
+\newpage
+The sensor operates in the temperature range of 0 °C up to 50 °C for the full humidity range between the 15 \%RH and up to about 85 \%RH. Higer temperatures can be handles if the huimidity stays below a certain value. This is illustatrated below. Because, the system will be applied in the cafeteria, this should not be a problem. An other aspect about the ambient temperature is the difference in measuring the heat of a person and that of the surroundings. This will be tested and will be implemented in the software. 
+\\ \\
+The last important aspect for this sensor is the power consumption. We can find in its documentation that it has a typical current of 4,5 mA in normal operation mode. When the sensor is brought to sleep the current will drop to 0,2 mA. Our goal is to wake the sensor from sleep and when we have the measurement put in him as fast as possible back to sleep.
+
+\subsection{CCS811 air quality sensor}
+For the air quality in the cafeterie, we have choosen to go for the CCS811 air quality sensor. The CCS811 is an ultra low power gas sensor with propable algortime system for detecting gasses. It has  the ability for sensing TVOC and an equivalent $CO_{2}$ concentration.This sensor has different measure modes that can help to make the application more flexible but also suitable for mobile equipment and battery powered systems.
+\\ \\
+The following modes are possible:
+\begin{itemize}
+	\item Idle: sensor does not perform a measurement => low current mode
+	\item Mode 1: a measurement after every second  => constant power mode
+	\item Mode 2:  a measurement after every 10 seconds => Pulse heating mode
+	\item Mode 3:  a measurement after every 60 seconds => Low power pulse heating mode
+	\item Mode 4: a measurement after every 250 millisecond  => constant power mode
+\end{itemize}
+
+
+The Idle-mode has a second purpose when switching from one mode to another. There is a requirement when changing the mode fom one with a higher sample rate a lower one the sensor must be put in idle for at least 10 minutes. This is not interesting in our purpose if we want to handle more flexible the sample rate. When changing the mode from a lower to a higher sample rate this is not needed. In our application, we have choosen to search for one mode to operate in and always placing the sensor back to sleep after the measurement has been read out.
+\\ \\
+In the documentation, we could find the average current for a pulse cycle is 0,7 mA with a power supply of 1,8 V. If we put this in a calculation, we get the following result:
+\\ \\
+$P= U \cdot I=1,8 V \cdot 0,7 mA = 1,26 mW$
+\\ \\
+What is the power consumption of mode 3. And, if we compare it with the power consumption of mode 2 we can find:
+\\ \\
+$\frac{P_{pulse mode}}{P_{low pulse mode}}= \frac{7 mW}{1,26 mW}= 5.556$
+\\ \\
+This is not aspected, You can perform 6 times the measurements with a lower power consumption.
+\\ \\
+If we now perform the same comparison with mode 1 \& 4, we get the following result:
+\\ \\
+$\frac{P_{constant power}} {P_{low pulse power}}= \frac{46mW}{1.2 mW}= 38,333$
+\\ \\
+The power consumption of the constant power modes  is only a factor 38,333 bigger then it is in the low pulse power mode. While the amount of measurement is much higher in the constant power mode. This is a very interesting situation to make our application more low power.
+
+
+ 
+
+
+When looking more deeply on the spefications during measurement, we have found something interesting. Over every pulse cycle the average current was the same, also there is a mentioning of a current during measurement as a constant. 
 
 % ============ Geofrey wil zien dat we hebben nagedacht over de dimensionering van de componenten !!! ============
 
