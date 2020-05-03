@@ -548,7 +548,7 @@ U 1 1 5E5FBFAE
 P 1950 3900
 F 0 "J2" H 1868 3575 50  0000 C CNN
 F 1 "microphoon connection" H 1868 3666 50  0000 C CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 1950 3900 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1950 3900 50  0001 C CNN
 F 3 "~" H 1950 3900 50  0001 C CNN
 	1    1950 3900
 	-1   0    0    1   
@@ -602,14 +602,10 @@ F 3 "" H 3100 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3100 5100
-Text Label 2150 4600 0    50   ~ 0
-AUDIO_OUT
 Text Label 3950 4600 2    50   ~ 0
 DETECTOR_OUT
 Wire Wire Line
 	3950 4600 3300 4600
-Wire Wire Line
-	2700 4600 2150 4600
 Connection ~ 3300 4600
 Wire Wire Line
 	7800 4900 7800 5100
@@ -640,7 +636,7 @@ $EndComp
 Wire Wire Line
 	3100 4600 3100 4700
 Text Notes 2500 5050 0    50   ~ 0
-Tau = 1 ms
+Tau = 10 ms
 Wire Notes Line
 	4200 5650 4200 3300
 Wire Notes Line
@@ -718,7 +714,7 @@ L SesnorBoard-eagle-import:RESISTOR_1206 R21
 U 1 1 5E6052B8
 P 3300 4850
 F 0 "R21" H 3300 4950 50  0000 C CNN
-F 1 "100k" H 3300 4850 40  0000 C CNB
+F 1 "1M" H 3300 4850 40  0000 C CNB
 F 2 "Resistor_SMD:R_1206_3216Metric" H 3300 4850 50  0001 C CNN
 F 3 "" H 3300 4850 50  0001 C CNN
 	1    3300 4850
@@ -910,4 +906,8 @@ Wire Wire Line
 	1900 2650 1100 2650
 Wire Wire Line
 	1100 2550 2050 2550
+Text Label 2150 4600 0    50   ~ 0
+AUDIO_OUT
+Wire Wire Line
+	2700 4600 2150 4600
 $EndSCHEMATC
