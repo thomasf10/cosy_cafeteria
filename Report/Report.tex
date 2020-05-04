@@ -441,7 +441,7 @@ Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 
 
 
 \section{Wireless connectivity}
-\subsection{Wi-Fi connection}
+\subsection{Wi-Fi connection} \label{wifiCon}
 In order to transmit the sensor data to the server, the Wi-Fi connectivity of the ESP32 is used. The transmission is provided by a TCP connection that is established between the ESP32 and the python server. At the initialisation of the python server, a socket is opened, this socket is used to receive the data. In this manner the server is always listening on the socket, until a message is received. The ESP32 sends the data in the following order: pixeldata (64 floats), temperature (1 float), audio level (1 float), $CO_2$-level (1 unint16), TVOC-level (1 unint64) and an ID (1 uint8). The received data is processed by order to determine which data is represented by the received values. The data is parsed into different variable, these variables are then used to update the values in the database. 
 
 \subsection{Power consumption}
@@ -604,7 +604,56 @@ There are two Li-Ion cells that are used to power the system, they both have a c
 \end{gather*}
 
 
-\section{Website}
+\section{DashBoard}
+\paragraph{Functionality}
+\begin{itemize}
+	\item Recieve the data from the sensor
+	\item Store the data in a database
+	\item Display an overview with the avarages of every sensor
+	\item Display the data from each sensor on a heatmap
+\end{itemize}
+
+\paragraph{Overview}
+The intention of this dashboard is to display the data that the different sensors on all the devices in the cafeteria generate.
+It gives an overview of what's happening in the cafeteria in an airquality, temperature and sound perspective. 
+The infrared camera data which is an 8 by 8 pixel picture is drawn on a heatmap. 
+This gives a nice overview of the busy and the less busy area's in the cafeteria.  
+
+\subsection{Backend}
+The backend is what runs on our server, in this project a raspberry pi was chosen as it's an easy to use and small computer
+ that can easily be set up to be used as a webserver that hostes our dashboard and the database that is used to store the data.
+
+\paragraph{Recieve data}
+To recieve the data a python script (WiFi.py) is used that listens to the 8091 port, this is the port that the device sends his payload to.
+The protocol that is used to send data from the device to the raspberry pi is TCP. A more in depth explanation can be found in \nameref{wifiCon}.
+
+\paragraph{Store data}
+The recieved data is stored in a mysql database, this is also implemented in the WiFi.py script that is used to recieve the data.
+To use the database in the python script a mysql.connector is used.
+The database uses 3 tables: 
+\begin{itemize}
+	\item location: this table is used to store the location of the sensor. It has an x-, y-coordinate and the location id.
+	\item sensor: this table stores the sensor id  and has the location id as a foreign key.
+	\item readings: This is the table that stores all the sensor data with the date and time that it was recieved. 
+					All the data that isn't an array is stored as a float, the arrays with the 64 pixels from the infrared camera are stored as a json string.
+					The two other columms in this table are the reading id and the sensor id. 
+\end{itemize}
+A visual representation of the database descript above can be seen in figure~\ref{fig:db_des}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{databaseDesign.png}
+	\caption{Visual represntation of the database}
+	\label{fig:db_des}
+\end{figure}
+
+\paragraph{Serve data to dashboard}
+A php script is used to serve the data to the frontend of the dashboard. This php script is called database.php. 
+It's a simple script that connects to the database on the raspberry pi and gets the last recieved data from all the different devices.
+Then all this data is encoded as json and passed on to the website that is used as dashboard. 
+
+\subsection{Frontend}
+
 
 \section{Financial estimate}
 Kostprijs van het project opstellen.

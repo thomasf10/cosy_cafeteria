@@ -91,6 +91,7 @@ def processdata(data):
     print("sensor_id as int: ")
     print(int(sensor_id))
 
+    #selecting the first element of every array and converting it to a float to be used as values in the query
     val = (float(amgtemp[0]), float(co2_level[0]), float(TVOC_level[0]), float(audio[0]), json.dumps(amgpixels4JSON), int(sensor_id))
     
     #executing and commiting to finallise the pushing to the db
