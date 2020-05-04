@@ -26,36 +26,43 @@
 \contentsline {subsubsection}{\numberline {4.7.1}Selected load switches}{23}{subsubsection.4.7.1}%
 \contentsline {section}{\numberline {5}Microcontroller}{25}{section.5}%
 \contentsline {section}{\numberline {6}Sensorboard}{25}{section.6}%
-\contentsline {section}{\numberline {7}Wireless connectivity}{25}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Wi-Fi connection}{25}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Power consumption}{26}{subsection.7.2}%
-\contentsline {section}{\numberline {8}Software design}{27}{section.8}%
-\contentsline {paragraph}{Functionality}{27}{section.8}%
-\contentsline {paragraph}{Overview}{27}{section.8}%
-\contentsline {paragraph}{NTP-sync}{28}{figure.caption.17}%
-\contentsline {paragraph}{Check time}{28}{figure.caption.17}%
-\contentsline {paragraph}{Night sleep}{28}{figure.caption.17}%
-\contentsline {paragraph}{Wake from night sleep}{28}{figure.caption.17}%
-\contentsline {paragraph}{Wake sensors}{29}{figure.caption.17}%
-\contentsline {paragraph}{Read sensors}{29}{figure.caption.17}%
-\contentsline {paragraph}{Send data}{29}{figure.caption.17}%
-\contentsline {paragraph}{Sleep}{29}{figure.caption.17}%
-\contentsline {section}{\numberline {9}Autonomy}{29}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Consumption sources}{29}{subsection.9.1}%
-\contentsline {paragraph}{Wi-Fi communication}{29}{subsection.9.1}%
-\contentsline {paragraph}{Sensors}{30}{figure.caption.18}%
-\contentsline {paragraph}{NTP synchronisation}{31}{figure.caption.19}%
-\contentsline {paragraph}{Standby daytime}{32}{figure.caption.20}%
-\contentsline {paragraph}{Standby nighttime}{33}{figure.caption.20}%
-\contentsline {subsection}{\numberline {9.2}Total power consumption}{33}{subsection.9.2}%
-\contentsline {section}{\numberline {10}DashBoard}{34}{section.10}%
-\contentsline {paragraph}{Functionality}{34}{section.10}%
-\contentsline {paragraph}{Overview}{34}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Backend}{34}{subsection.10.1}%
-\contentsline {paragraph}{Recieve data}{35}{subsection.10.1}%
-\contentsline {paragraph}{Store data}{35}{subsection.10.1}%
-\contentsline {paragraph}{Serve data to dashboard}{35}{figure.caption.22}%
-\contentsline {subsection}{\numberline {10.2}Frontend}{36}{subsection.10.2}%
-\contentsline {section}{\numberline {11}Financial estimate}{36}{section.11}%
-\contentsline {section}{\numberline {12}Validation and measurements}{36}{section.12}%
-\contentsline {section}{\numberline {A}MainPCB schematic}{38}{appendix.A}%
+\contentsline {subsection}{\numberline {6.1}Design considerations}{25}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}AMG8833 IR-sensor}{26}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}CCS811 air quality sensor}{27}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}BOB-12758 microphone breakout board}{28}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Board design}{29}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Investigations}{30}{subsection.6.6}%
+\contentsline {paragraph}{Time needed for measurement is available}{30}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Wireless connectivity}{32}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Wi-Fi connection}{32}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Power consumption}{33}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Software design}{34}{section.8}%
+\contentsline {paragraph}{Functionality}{34}{section.8}%
+\contentsline {paragraph}{Overview}{34}{section.8}%
+\contentsline {paragraph}{NTP-sync}{35}{figure.caption.17}%
+\contentsline {paragraph}{Check time}{35}{figure.caption.17}%
+\contentsline {paragraph}{Night sleep}{35}{figure.caption.17}%
+\contentsline {paragraph}{Wake from night sleep}{35}{figure.caption.17}%
+\contentsline {paragraph}{Wake sensors}{36}{figure.caption.17}%
+\contentsline {paragraph}{Read sensors}{36}{figure.caption.17}%
+\contentsline {paragraph}{Send data}{36}{figure.caption.17}%
+\contentsline {paragraph}{Sleep}{36}{figure.caption.17}%
+\contentsline {section}{\numberline {9}Autonomy}{36}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Consumption sources}{36}{subsection.9.1}%
+\contentsline {paragraph}{Wi-Fi communication}{36}{subsection.9.1}%
+\contentsline {paragraph}{Sensors}{37}{figure.caption.18}%
+\contentsline {paragraph}{NTP synchronisation}{38}{figure.caption.19}%
+\contentsline {paragraph}{Standby daytime}{39}{figure.caption.20}%
+\contentsline {paragraph}{Standby nighttime}{40}{figure.caption.20}%
+\contentsline {subsection}{\numberline {9.2}Total power consumption}{40}{subsection.9.2}%
+\contentsline {section}{\numberline {10}DashBoard}{41}{section.10}%
+\contentsline {paragraph}{Functionality}{41}{section.10}%
+\contentsline {paragraph}{Overview}{41}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Backend}{41}{subsection.10.1}%
+\contentsline {paragraph}{Recieve data}{42}{subsection.10.1}%
+\contentsline {paragraph}{Store data}{42}{subsection.10.1}%
+\contentsline {paragraph}{Serve data to dashboard}{42}{figure.caption.22}%
+\contentsline {subsection}{\numberline {10.2}Frontend}{43}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Financial estimate}{43}{section.11}%
+\contentsline {section}{\numberline {12}Validation and measurements}{43}{section.12}%
+\contentsline {section}{\numberline {A}MainPCB schematic}{45}{appendix.A}%

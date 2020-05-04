@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Report"] 1588589989 "Report.aux" "Report.bbl" "Report" 1588589992
+["bibtex Report"] 1588590041 "Report.aux" "Report.bbl" "Report" 1588590120
   "D:/Programma's/MikTEX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "Report.aux" 1588589992 16492 18e2a4737c80c950d2faa89e53d8fbcf "pdflatex"
+  "Report.aux" 1588590120 17394 5c814a990f7e88fe163081419f763297 "pdflatex"
   "bibliography.bib" 1588203640 4486 27b4b2d2562d9fd5eafad79a87449be9 ""
   (generated)
   "Report.bbl"
   "Report.blg"
-["pdflatex"] 1588589989 "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.tex" "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.pdf" "Report" 1588589992
+["pdflatex"] 1588590117 "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.tex" "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.pdf" "Report" 1588590120
   "C:/Users/Arthur/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm0900.pk" 1588525084 10472 432d001200843dcae316bdb1b9c78b83 ""
   "C:/Users/Arthur/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1588525085 12668 87fe63a9846a0993363c1eb2800c61e5 ""
   "C:/Users/Arthur/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1586636182 9890309 09136f39513200b0ce8646b742d8d7c7 ""
@@ -175,13 +175,13 @@
   "D:/Programma's/MikTEX/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "D:/Programma's/MikTEX/tex/latex/xfor/xfor.sty" 1233853356 2689 44855b72da58344b1c1d9b3087bce6ca ""
   "D:/Programma's/MikTEX/tex/latex/xkeyval/xkeyval.sty" 1419274338 5114 9c1069474ff71dbc47d5006555e352d3 ""
-  "Report.aux" 1588589992 16492 18e2a4737c80c950d2faa89e53d8fbcf "pdflatex"
-  "Report.bbl" 1588589989 3069 edae4bf604c0c0086692f0cd38d1f6ca "bibtex Report"
-  "Report.out" 1588589992 2752 b4bf63e745a1ec1e823948489b1e10c2 "pdflatex"
-  "Report.tex" 1588589985 57016 4ca012973b0f2dae1496476a72cb5ef0 ""
-  "Report.toc" 1588589992 4765 8af397d2de739f9c0946bdaa73d6cf21 "pdflatex"
-  "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.aux" 1588589992 16492 18e2a4737c80c950d2faa89e53d8fbcf ""
-  "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.tex" 1588589985 57016 4ca012973b0f2dae1496476a72cb5ef0 ""
+  "Report.aux" 1588590120 17394 5c814a990f7e88fe163081419f763297 "pdflatex"
+  "Report.bbl" 1588590041 3069 edae4bf604c0c0086692f0cd38d1f6ca "bibtex Report"
+  "Report.out" 1588590120 3176 129a4cdf7d3fd3f8ff328db0e69f5102 "pdflatex"
+  "Report.tex" 1588590116 74541 560209017690710ce87c4397ee058f62 ""
+  "Report.toc" 1588590120 5380 6ae80b9fe70d8b7b8c61fcebc9907ca4 "pdflatex"
+  "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.aux" 1588590120 17394 5c814a990f7e88fe163081419f763297 ""
+  "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.tex" 1588590116 74541 560209017690710ce87c4397ee058f62 ""
   "fig/Charge_cycle.png" 1586515741 32626 359d3d51c988725562b68f05f70c531d ""
   "fig/ESP32_toegepast.png" 1588203640 42812 a29e32ee81759bb27a165ed931408ef2 ""
   "fig/MainPCB_schematic.pdf" 1588203640 86394 53752b30e3437e3b5ee799ae44564c1f ""
@@ -205,8 +205,8 @@
   (generated)
   "Report.toc"
   "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.log"
-  "Report.log"
-  "Report.aux"
-  "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.pdf"
-  "Report.pdf"
   "Report.out"
+  "Report.pdf"
+  "Report.log"
+  "c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.pdf"
+  "Report.aux"

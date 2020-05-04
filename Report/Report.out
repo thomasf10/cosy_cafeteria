@@ -26,16 +26,22 @@
 \BOOKMARK [3][-]{subsubsection.4.7.1}{Selected load switches}{subsection.4.7}% 26
 \BOOKMARK [1][-]{section.5}{Microcontroller}{}% 27
 \BOOKMARK [1][-]{section.6}{Sensorboard}{}% 28
-\BOOKMARK [1][-]{section.7}{Wireless connectivity}{}% 29
-\BOOKMARK [2][-]{subsection.7.1}{Wi-Fi connection}{section.7}% 30
-\BOOKMARK [2][-]{subsection.7.2}{Power consumption}{section.7}% 31
-\BOOKMARK [1][-]{section.8}{Software design}{}% 32
-\BOOKMARK [1][-]{section.9}{Autonomy}{}% 33
-\BOOKMARK [2][-]{subsection.9.1}{Consumption sources}{section.9}% 34
-\BOOKMARK [2][-]{subsection.9.2}{Total power consumption}{section.9}% 35
-\BOOKMARK [1][-]{section.10}{DashBoard}{}% 36
-\BOOKMARK [2][-]{subsection.10.1}{Backend}{section.10}% 37
-\BOOKMARK [2][-]{subsection.10.2}{Frontend}{section.10}% 38
-\BOOKMARK [1][-]{section.11}{Financial estimate}{}% 39
-\BOOKMARK [1][-]{section.12}{Validation and measurements}{}% 40
-\BOOKMARK [1][-]{appendix.A}{MainPCB schematic}{}% 41
+\BOOKMARK [2][-]{subsection.6.1}{Design considerations}{section.6}% 29
+\BOOKMARK [2][-]{subsection.6.2}{AMG8833 IR-sensor}{section.6}% 30
+\BOOKMARK [2][-]{subsection.6.3}{CCS811 air quality sensor}{section.6}% 31
+\BOOKMARK [2][-]{subsection.6.4}{BOB-12758 microphone breakout board}{section.6}% 32
+\BOOKMARK [2][-]{subsection.6.5}{Board design}{section.6}% 33
+\BOOKMARK [2][-]{subsection.6.6}{Investigations}{section.6}% 34
+\BOOKMARK [1][-]{section.7}{Wireless connectivity}{}% 35
+\BOOKMARK [2][-]{subsection.7.1}{Wi-Fi connection}{section.7}% 36
+\BOOKMARK [2][-]{subsection.7.2}{Power consumption}{section.7}% 37
+\BOOKMARK [1][-]{section.8}{Software design}{}% 38
+\BOOKMARK [1][-]{section.9}{Autonomy}{}% 39
+\BOOKMARK [2][-]{subsection.9.1}{Consumption sources}{section.9}% 40
+\BOOKMARK [2][-]{subsection.9.2}{Total power consumption}{section.9}% 41
+\BOOKMARK [1][-]{section.10}{DashBoard}{}% 42
+\BOOKMARK [2][-]{subsection.10.1}{Backend}{section.10}% 43
+\BOOKMARK [2][-]{subsection.10.2}{Frontend}{section.10}% 44
+\BOOKMARK [1][-]{section.11}{Financial estimate}{}% 45
+\BOOKMARK [1][-]{section.12}{Validation and measurements}{}% 46
+\BOOKMARK [1][-]{appendix.A}{MainPCB schematic}{}% 47
