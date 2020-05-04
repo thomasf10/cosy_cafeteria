@@ -1,6 +1,6 @@
 Source,C:\Users\gebruikersnaam\Documents\GitHub\cosy_cafeteria\Hardware\SesnorBoard\SesnorBoard.sch
 Kicad Rev,Eeschema (5.1.5)-3
-Generated Date,16/04/2020 20:57:49
+Generated Date,3/05/2020 23:01:03
 
 Title,Sensor board
 Company,Cossy Cafeteria
@@ -34,7 +34,7 @@ D1,RB081LAM-20,Diode,PMEG4050EP
 C21,0.1uF,SesnorBoard-eagle-import,CAP_CERAMIC_1206
 C11,4.7µF,SesnorBoard-eagle-import,CAP_CERAMIC_1206
 R12,100k,SesnorBoard-eagle-import,RESISTOR_1206
-R21,100k,SesnorBoard-eagle-import,RESISTOR_1206
+R21,1M,SesnorBoard-eagle-import,RESISTOR_1206
 U1,AMG8833,SesnorBoard-eagle-import,AMG8833
 R3,2k2,SesnorBoard-eagle-import,RESISTOR_1206
 R4,2k2,SesnorBoard-eagle-import,RESISTOR_1206
