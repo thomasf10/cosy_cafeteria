@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex Report"] 1588665955 "Report.aux" "Report.bbl" "Report" 1588670472
+["bibtex Report"] 1588677543 "Report.aux" "Report.bbl" "Report" 1588679478
   "C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "Report.aux" 1588670472 18809 728ca97a0de514569eac048fa9629e09 ""
+  "Report.aux" 1588679477 18807 cf8b70bdbc306b6814257a8fdfebac92 ""
   "bibliography.bib" 1588181078 4486 27b4b2d2562d9fd5eafad79a87449be9 ""
   (generated)
-  "Report.blg"
   "Report.bbl"
-["pdflatex"] 1588670467 "c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Report/Report.tex" "Report.pdf" "Report" 1588670472
+  "Report.blg"
+["pdflatex"] 1588679472 "c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Report/Report.tex" "Report.pdf" "Report" 1588679478
   "C:/Users/thoma/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1551174691 4204529 f50692c5c3b3b2c720a63d4759516355 ""
   "C:/Users/thoma/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1551044811 3282503 8e293353046b54d75ab9961a700f8743 ""
   "C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1001775420 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -170,12 +170,12 @@
   "C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xfor/xfor.sty" 1233853356 2689 44855b72da58344b1c1d9b3087bce6ca ""
   "C:/Users/thoma/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty" 1419274338 5114 9c1069474ff71dbc47d5006555e352d3 ""
-  "Report.aux" 1588670472 18809 728ca97a0de514569eac048fa9629e09 ""
-  "Report.bbl" 1588665955 3069 edae4bf604c0c0086692f0cd38d1f6ca "bibtex Report"
-  "Report.out" 1588670472 3346 ffc4ea8660ff2b2a59df840d2da0c6b0 ""
-  "Report.tex" 1588670465 84012 3ddbabd136e7b09650183458b92fa7e3 ""
-  "Report.toc" 1588670472 5967 3f75de3dd02f6f7ad6265e819f04e6cb ""
-  "c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Report/Report.tex" 1588670465 84012 3ddbabd136e7b09650183458b92fa7e3 ""
+  "Report.aux" 1588679477 18807 cf8b70bdbc306b6814257a8fdfebac92 ""
+  "Report.bbl" 1588677543 3069 edae4bf604c0c0086692f0cd38d1f6ca "bibtex Report"
+  "Report.out" 1588679477 3346 ffc4ea8660ff2b2a59df840d2da0c6b0 ""
+  "Report.tex" 1588679470 83934 c5c41ad39d6844653e660fa3a800f466 ""
+  "Report.toc" 1588679477 5967 6d968df6a69651bc59c49cb31b025df7 ""
+  "c:/Users/thoma/Documents/GitHub/cosy_cafeteria/Report/Report.tex" 1588679470 83934 c5c41ad39d6844653e660fa3a800f466 ""
   "fig/Charge_cycle.png" 1585930114 32626 359d3d51c988725562b68f05f70c531d ""
   "fig/ESP32_toegepast.png" 1588181078 42812 a29e32ee81759bb27a165ed931408ef2 ""
   "fig/MainPCB_schematic.pdf" 1588181078 86394 53752b30e3437e3b5ee799ae44564c1f ""
@@ -199,8 +199,8 @@
   "fig/sync_pwr.pdf" 1588332899 50829 7c69d286030b53b6ef5dbb3c34e1fee8 ""
   "fig/wifi_pwr.pdf" 1588273651 43953 b4ccab1fe1a95749ad41c3391985a1f4 ""
   (generated)
-  "Report.toc"
   "Report.log"
   "Report.out"
+  "Report.toc"
   "Report.aux"
   "Report.pdf"
