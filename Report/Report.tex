@@ -438,47 +438,45 @@ Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 
 
 \section{Sensorboard}
 \subsection{Design considerations}
-For the sensorboard design, we have agreed to go for a seperated board from the main board. This gave us the possibillity to design it more freely. For the design, we have choosen to go for a two sided printed circuit board or PCB. All sensors will be put on the top side of the board for it will be plugged onto the CPU board. Then, we looked what sensors are needed for the design. The impulses that needed to be sense are the sound level, air quality, temperature and the the presences of people.
-With the known knowledge about sensors for these impulses, we have choosen to go for the following sensors:
-
+For the sensorboard design, we have decided to go for a separated board from the main board. This gave us the possibility to design it more freely. For the design, we have chosen to go for a two sided printed circuit board or PCB. All sensors will be placed on the top side of the board for it will be plugged onto the CPU board. Then, we looked what sensors are needed for the design. The parameters that need to be sensed are the sound level, air quality, temperature and the the presences of people.
+With this in mind we have chosen the following sensors:
 \begin{itemize}
 	\item AMG8833 IR-sensor
 	\item CCS811 air quality sensor
 	\item BOB-12758 microphone breakout board
 \end{itemize}
-The main focus for the sensor board was how can we make it so low power as possible. As already mentiond above we have foreseen load switches to cut off the power when the system will be non active for a longer period of time. Beside the load switches, we have looked at the sensors to optimize the measuring sequence.
+The main goal for the sensor board was to make it as low power as possible. As already mentioned above we have foreseen load switches to cut off the power to the sensors, when the system is non-active for a long period of time. Beside the load switches, we have studied the sensors to optimize the measuring sequence.
 
 \subsection{AMG8833 IR-sensor}
-To detect human presence, we have decided to use infrared. The human body produces quite some body heat that will be emited. The AMG8833  is an 8x8-pixel IR- sensor what will give us a heat map according to the pixel value. This will help us when determing how many people are presence in a certain area. For example we can determine not only single persons but also a group of persons as a row. 
+To detect human presence, we have decided to use an infrared sensor. The human body produces quite some body heat that is emitted. The AMG8833 is an 8x8-pixel IR-sensor, that maps the heat per pixel. This allows us to determine how many people are presence in a certain area. For example we can determine if there is a single person present or a group of persons in a row.
 \\ \\
-One of the considarations we needed to investigate is the effect of distance, ambient temperature and the field of view of the sensor. This sensor has a total angle view of 60 ° for the horizontal and vertical axis of the pixelgrid. Depending on the height the area that the sensor cover will be different. The area will increase related to the heigth the sensor is installed. Not only the field of view will be influence by the height but also the result of the measurements. The further the heat source is away from the sensor, the less the sensor will detects the heat from it. 
+One of the considerations that has to be studied is the effect of distance, ambient temperature and the field of view of the sensor. The sensor has a total angle view of \SI{60}{\degree} for the horizontal and vertical axis of the pixel grid. Depending on the height, the area that the sensor covers, changes. If the height increases, the area also increases. Not only the field of view is influenced by the height but also the result of the measurements. The further the heat source is from the sensor, the lower the measured temperature will be.
 \\ \\
-The sensor operates in the temperature range of 0 °C up to 50 °C for the full humidity range between the 15 \%RH and up to about 85 \%RH. Higer temperatures can be handles if the huimidity stays below a certain value. This is illustatrated below. Because, the system will be applied in the cafeteria, this should not be a problem. An other aspect about the ambient temperature is the difference in measuring the heat of a person and that of the surroundings. This will be tested and will be implemented in the software. 
+The sensor operates in a temperature range of \SI{0}{\celsius} up to \SI{50}{\celsius} for the full humidity range between the 15 \%RH and up to about 85 \%RH. Heigher temperatures can be handles if the humidity stays below a certain value. This is illustrated below. Because, the system will be deployed in the cafeteria, this should not be a problem. An other aspect is the ambient temperature. The sensor has to be capable to determine the difference between the heat of a person and the heat of the surroundings. This will be tested and implemented in the software. 
 \\ \\
-All communication to and from the sensor is done over I²C. In addition to hte I²C-communicatie there is a AD-select input to set the I²C-address, you can set to 0x58 or 0x59. There is also an interrupt output if you want to work with interrupts.
+All communication to and from the sensor is done over $\text{I}^2$C. In addition to the $\text{I}^2$C-communication there is a AD-select input to set the $\text{I}^2$C-address, you can set the address to 0x58 or 0x59. There is also an interrupt output if you want to work with interrupts.
 \\ \\
-The last important aspect for this sensor is the power consumption. We can find in its documentation that it has a typical current of 4.5 mA in normal operation mode. When the sensor is brought to sleep the current will drop to 0.2 mA. Our goal is to wake the sensor from sleep and when we have the measurement put in him as fast as possible back to sleep.
-
+The last important aspect for this sensor is the power consumption. In the documentation it is stated that the sensor has a typical current of 4.5 mA in normal operation mode. When the sensor is brought to sleep the current drops to 0.2 mA. Our goal is to wake the sensor from sleep and when we have the measurement put it back to sleep as fast as possible.
 
 \subsection{CCS811 air quality sensor}
-For the air quality in the cafeterie, we have choosen to go for the CCS811 air quality sensor. The CCS811 is an ultra low power gas sensor with propable algortime system for detecting gasses. It has  the ability for sensing TVOC and an equivalent $CO_{2}$ concentration.This sensor has different measure modes that can help to make the application more flexible but also suitable for mobile equipment and battery powered systems. All settings and communication to the sensor is again done with I²C. The I²C-addresses are 0x5A and 0x5B, dependinng on the ADDR-pin. Beside I²C-communication there are some other signals that can control/monitor the sensor. 
+For the air quality in the cafeteria, we have chosen to go for the CCS811 air quality sensor. The CCS811 is an ultra low power gas sensor with propable algortime system for detecting gasses. It has the ability to sense TVOC and an equivalent $CO_{2}$ concentration. This sensor has different measure modes which can help to make the application more flexible but also suitable for mobile equipment and battery powered systems. All settings and communication to the sensor is again done with $\text{I}^2$C. The $\text{I}^2$C-addresses are 0x5A and 0x5B, depending on the ADDR-pin. Besides the $\text{I}^2$C-communication there are some other signals that can control/monitor the sensor. 
 \begin{itemize}
-	\item There is a \textbf{ADDR}-pin for setting the I²C-address to 0x5A or 0x5B
-	\item The\textbf{ nINT}-pin is a active low pin, that generates interrupts depending on his settings. This pin can generate interrupts when a measurement is available or when the equivalent $CO_{2}$ is above or under a certain value. Tthis is an value that is best been buffered for monitoring with a GPIO-pin.
-	\item The \textbf{nReset}-pin is not only a reset pin as an input but also can be monitered to detect a software reset.This can also be an input. If this pin is been pulled low you can reset the sensor.
-	\item Finally, we have the nWake-pin what is also an active low pin. This pin can be used to put the sensor into sleep just by pulling the pin low.
+	\item There is a \textbf{ADDR}-pin for setting the $\text{I}^2$C-address to 0x5A or 0x5B
+	\item The\textbf{ nINT}-pin is an active low pin, that generates interrupts depending on the settings. This pin can generate interrupts when a measurement is available or when the equivalent $CO_{2}$ is above or under a certain value. This is a value that is best buffered before monitoring with a GPIO-pin.
+	\item The \textbf{nReset}-pin is not only a reset pin but it can also be monitored to detect a software reset. This can also be an input. If this pin is pulled low you can reset the sensor.
+	\item The nWake-pin is also an active low pin. This pin can be used to put the sensor into sleep just by pulling the pin low.
 \end{itemize}
 The following modes are possible:
 \begin{itemize}
-	\item \textbf{Idle}: sensor does not perform a measurement, low current mode
-	\item \textbf{Mode 1}: a measurement after every second, constant power mode
-	\item \textbf{Mode 2:}  a measurement after every 10 seconds, Pulse heating mode
-	\item \textbf{Mode 3}:  a measurement after every 60 seconds, Low power pulse heating mode
-	\item \textbf{Mode 4}: a measurement after every 250 millisecond, constant power mode
+	\item \textbf{Idle}: sensor does not perform a measurement: low current mode
+	\item \textbf{Mode 1}: a measurement is performed every second: constant power mode
+	\item \textbf{Mode 2:}  a measurement is performed every 10 seconds: Pulse heating mode
+	\item \textbf{Mode 3}:  a measurement is performed 60 every seconds: Low power pulse heating mode
+	\item \textbf{Mode 4}: a measurement is performed every 250 millisecond: constant power mode
 \end{itemize}
-The Idle-mode has a second purpose when switching from one mode to another. There is a requirement when changing the mode fom one with a higher sample rate a lower one the sensor must be put in idle for at least 10 minutes. This is not interesting in our purpose if we want to handle more flexible the sample rate. When changing the mode from a lower to a higher sample rate this is not needed. In our application, we have choosen to search for one mode to operate in and always placing the sensor back to sleep after the measurement has been read out.
+The Idle-mode has a second purpose when switching from one mode to another. There is a requirement when changing the mode from one with a higher sample rate to one with a lower sample rate. If this occurs, the sensor has to be placed in idle mode for at least 10 minutes. However, this is not necessary in our application. When changing the mode from a lower to a higher sample rate this is not needed. In our application, we have chosen to search for one mode to operate in and always place the sensor back to sleep after the measurement has been read out.
 \\ \\
-In the documentation, we could find the average current for a pulse cycle is $0.7 mA$ with a power supply of $1.8 V$. If we put this in a calculation, we get the following result:
+In the documentation it is stated that the average current for a pulse cycle is $0.7 mA$ with a power supply of $1.8 V$. If we calculate the power, we get the following result:
 \\ \\
 $P= U \cdot I=1.8 V \cdot 0.7 mA = 1.26 mW$
 \\ \\
@@ -486,38 +484,38 @@ What is the power consumption of mode 3. And, if we compare it with the power co
 \\ \\
 $\frac{P_{pulse mode}}{P_{low pulse mode}}= \frac{7 mW}{1.26 mW}= 5.556$
 \\ \\
-This is not aspected, You can perform 6 times the measurements with a lower power consumption.
+This is not expected, You can perform 6 times the measurements with a lower power consumption.
 \\ \\
 If we now perform the same comparison with mode 1 \& 4, we get the following result:
 \\ \\
 $\frac{P_{constant power}} {P_{low pulse power}}= \frac{46mW}{1.2 mW}= 38.333$
 \\ \\
-The power consumption of the constant power modes  is only a factor 38,333 bigger then it is in the low pulse power mode. While the amount of measurement is much higher in the constant power mode. This is something that could make our application more low power. This will be investigated by studying the measure behavior of the sensor. To make it possible that we could use he interrupt functionality of the CSS811, we have foreseen a buffer with an operationale amplifier for the nINT-signal.  This is foreseen in the prototype and if not implemented in the final design, this can be not implemented. The nINT is not an essentiel connection for the CSS811 to work properly.
+The power consumption of the constant power modes is only a factor 38,333 bigger then it is in the low pulse power mode. While the amount of measurement is much higher in the constant power mode. This is something that could make our application more low power. This will be investigated by studying the measure behaviour of the sensor. To make it possible that we could use he interrupt functionality of the CSS811, we have foreseen a buffer with an operational amplifier for the nINT-signal.  This is foreseen in the prototype and if this is eventually not implemented in the final design, this can be removed. The nINT is not an essential connection for the CSS811 to work properly.
 
 
 \subsection{BOB-12758 microphone breakout board}
-We have informed us by colleague students who had  use a microphone module in the first semester. One group came with a breakout board with a microphone and a triple op erational amplifier circuit. The proposed break out board could do several things, one of them was peak detection. For our application,there is only the need to check the average sound level, so we only needed a microphone and one operational amplifier. 
+We have informed us by colleague students who had used a microphone module in the first semester. One group came with a breakout board with a microphone and a triple operational amplifier circuit. The proposed breakout board could do several things, one of them was peak detection. For our application, there is only the need to check the average sound level, so we only needed a microphone and one operational amplifier. 
 \\ \\
-Because we wanted to have the average sound level, we decided to place a detector behind the opamp. The second reason to use the detector is that the ESP32 can sample up to about 27 ksps. By just looking at the sample rate, it is clear that the ADC is not high enough to fullfill the Nyquist theorema. 
+Because we wanted to have the average sound level, we decided to place a detector behind the opamp. The second reason to use the detector is that the ESP32 can sample up to about 27 ksps. By just looking at the sample rate, it is clear that the ADC is not fast enough to fulfil the Nyquist theorem. 
 \\ \\
-The detector needs time to come from the low level to the sound level. Finding the best value of $\tau$ will be one of the investigations. This will be determine along with the test of the other sensors. For the time the supply needs to be apply must be about 10 times $\tau$. We know from the theory that after 5 $\tau$, 97\% of the applied voltage is reach. The extra 5 $\tau$ is chosen for two reasons. Firstly to compesate the rectified signal by the detector and secondly to have a stable value of the average sound level.
+The detector needs time to come from the low level to the sound level. Finding the best value of $\tau$ will be one of the investigations. This will be determine along with the test of the other sensors. The microphone must receive power for about 10 times $\tau$. We know from the theory that after 5 $\tau$, 97\% of the applied voltage is reached. The extra 5 $\tau$ is chosen for two reasons. Firstly to compensate the rectified signal by the detector and secondly to have a stable value of the average sound level.
 
 \subsection{Board design}
-When designing the board, we have started from the basic schematics of the provided break out boards of the sensor boards. With some extra guidelines from the documentations of the sensors. For the microphone sensorboard as mentioned, we needed to design a detector circuit. We have choosen to go a simple detector with a diode followed by a RC circuit. During documentating the circuit it was noticed that the audiosignal of the breakout board is superpositioned onto a DC-voltage that is the half of the supply voltage. In the prototype of the board, this was not taken into consideration. This can be solved in different ways not only by hardware but also by software. If we want to solve this with hardware without loosing information, we can just put several diodes in serie untill we come to a sum of forward voltage that is the half of our voltage supply. The power supply is $3.3 V$. This method will not increase the accuracy of the measurement so is not a approvement. \\ \\
+When designing the board, we have started from the basic schematics of the provided break out boards of the sensor boards. With some extra guidelines from the documentations of the sensors. For the microphone sensorboard as mentioned, we needed to design a detector circuit. We have chosen to go for a simple detector with a diode followed by an RC circuit. During the documentation of the circuit it was noticed that the audiosignal of the breakout board is superpositioned onto a DC-voltage that is the half of the supply voltage. In the prototype of the board, this was not taken into consideration. This can be solved in different ways not only by hardware but also by software. If we want to solve this with hardware without loosing information, we can just put several diodes in series until we come to a sum of the forward voltages that is the half of our voltage supply. The power supply is $3.3 V$. This method will not increase the accuracy of the measurement so it is not an improvement. \\ \\
 $V_{DC offset} = \frac{V_{CC}}{2}= \frac{3.3V}{2} = 1.65V$\\ \\
-This $1.65 V$ can approximatly be obtained by placing 2 schottkey diode with a $V_{f}=0.45 V$ and a normal diode with $V_{f} = 0.7 V$ in serie.\\
+This $1.65 V$ can approximately be obtained by placing 2 Schottky diodes with $V_{f}=0.45 V$ and a normal diode with $V_{f} = 0.7 V$ in series.\\
 $V_{f total} = 2\cdot V_{f schottkey} + V_{f normal diode} = 1.6 V$\\
-This will almost eliminate all the DC-voltage in the audiosignal. But still, there could be some DC- voltage left or some information on the amplitude get lost. \\
-A better approach of the problem would be to solve this with software. Then, there is no chance that any information of the sound get lost expect the information below 0$ 0.45 V$, but also this could be solved by forseeing an own DC-offset on top of the audio signal. To solve it with sofware, we need to know what the ADC value would be if no sound was detected. The DC-voltage after the detector will be $0.45 V$ lower because of the schottkey diode.\\
+This will almost eliminate all the DC-voltage in the audiosignal. But still, there could be some DC- voltage left or some information on the amplitude could get lost. \\
+A better approach to the problem would be to solve this with software. Then, there is no chance that any information of the sound gets lost expect the information below 0$ 0.45 V$, but also this could be solved by providing an own DC-offset on top of the audio signal. To solve it with software, we need to know what the ADC value would be if no sound was detected. The DC-voltage after the detector will be $0.45 V$ lower because of the Schottky diode.\\
 $V_{DC offset} = \frac{V_{CC}}{2}-V_{f schottkey}= \frac{3.3 V}{2}- 0.45 V = 1.2 V$ \\
-The reference level for no sound is $1.2 V$. The maximum audio voltage level would be $2.85 V$. What sound level this would be is unknow to us. Because, it is more a relative perception with a visual indication, exact values are not necessary. The DC-offset has a positieve effect on the detection of the sound level. Because the value is above the forward voltage of the diode we do not loose information on the amplitude. But as mentioned we need to do a comparison with the reference level. We can set some thresholds for indicating the experience of a certain value. For example, if the sound level is above a certain value, it is disturbing to study in the cafeteria.
+The reference level for no sound is $1.2 V$. The maximum audio voltage level would be $2.85 V$. What sound level this would be is unknow to us. Because, it is more a relative perception with a visual indication, exact values are not necessary. The DC-offset has a positive effect on the detection of the sound level. Because the value is above the forward voltage of the diode we do not loose information on the amplitude. But as mentioned we need to do a comparison with the reference level. We can set some thresholds for indicating the experience of a certain value. For example, if the sound level is above a certain value, it is not pleasant to study in the cafeteria.
 
 To determin the optimal value for the resistor and the capacitor of the detector, we would wait to look at the other response time of the other two sensors. We have taken a initial value of 1 ms. This can be realized with a resistor of $ 100k\Omega$ and a capacitor of $0.1 F$.
 \\ \\
-For the other two sensors we have as mentioned based our schematic on the schematic of the break out boards. We only needed one extra component and that was an operational amplifier to buffer the nINt of the CCS811. This was recommended by the documentation of the CCS811. Also, if this interrupt fucntion is not wanted, we can just remove this part of the circuit and the system will just work fine. We have brought all the other connections of the sensors to a central header of 11 pins, so the board can be plugged onto the CPU board. The break out board of the microphone will be placed on top of this board by a 3 pins header. Unfortunatly during the prototype fase, the pitch of the pinheader was not found, we have based the pitch according to a recommended connector of the dealer. Afterwards, we came to the idea to check the value at the developer of the breakout board and find a recommended pinheader with a different pitch. The drawing has been updated. Also, this was not been verified because of the corona situation.
+For the other two sensors we have as mentioned based our schematic on the schematic of the break out boards. We only needed one extra component and that was an operational amplifier to buffer the nINt of the CCS811. This was recommended by the documentation of the CCS811. Also, if this interrupt function is not desired, we can just remove this part of the circuit and the system will work just fine. We have brought all the other connections of the sensors to a central header of 11 pins, so the board can be plugged onto the CPU board. The break out board of the microphone will be placed on top of this board by a 3 pins header. Unfortunately during the prototype phase, the pitch of the pinheader was not found, we have based the pitch according to a recommended connector of the dealer. Afterwards, we came to the idea to check the value at the developer of the breakout board and found a recommended pinheader with a different pitch. The drawing has been updated. Also, this was has been verified because of the corona situation.
 \\ \\
-For making the system low power as possible we have a seperated supply for every sensor, so we can control the supply for every single sensor seperatly.
-So, the system is flexible depending on the needs of what stimulus needed to be monitor.
+For making the system as low power as possible we have a exclusive power supply for every sensor, so we can control the supply for every single sensor separately.
+So, the system is flexible depending on the need of what stimulus needs to be monitored.
 
 \subsection{Investigations}
 In this section, we are reviewing all our investigations on the sensors. The last part of this section will be the conclusion of all results and how we will implement the sensors in the system.
@@ -525,27 +523,28 @@ In this section, we are reviewing all our investigations on the sensors. The las
 \paragraph{Time needed for measurement is available}
 We started to do some measurements on the \textbf{CCS811} what is the difference in the following to situation:
 \begin{itemize}
-	\item Time needed with initalization
-	\item Time needed if the sensor awakes from sleep
+	\item Time needed for initialization
+	\item Time needed for the sensor to wake from sleep
 \end{itemize}
-The first situation is to see if we could save some energy if we shut down the power supply of the sensor. Also, this is inteesting to know if we use the load switches to turn of the power of each sensor. The second situation is as the CCS811 is  normally be used in an application. The test procedure for these tests was as followed. After the sensor was waked or initialized, a timer was started. After every  ms, we looked in the registers of the sensor if a measurement was available. This was done with the following method \textbf{Adafruit\_CCS811::available()} from the\textbf{Adafruit\_CCS811}. If we get \textbf{True} back from this method, we stop the timer and made it visible.
+The first situation is to see if we could save some energy if we shut down the power supply of the sensor. Also, this is interesting to know if we use the load switches to turn of the power of each sensor. The second situation is as the CCS811 is normally used in an application. The test procedure for these tests was as followed. After the sensor was waked or initialized, a timer was started. After every ms, we looked in the registers of the sensor if a measurement was available. This was done with the following method \textbf{Adafruit\_CCS811::available()} from the\textbf{Adafruit\_CCS811}. If we get \textbf{True} back from this method, we stop the timer and made it visible.
 \\ \\
 We got the following results from these test.
 \begin{itemize}
-\item \textbf{Time after initialization:} It takes more than several sample period before we get a result. also in the documentation, it is stated that after initialization the results are not that relialable.
+\item \textbf{Time after initialization:} It takes more than several sample period before we get a result. also in the documentation, it is stated that after initialization the results are not that reliable.
 \item \textbf{Time after sleep:} About the sample rate of the mode that the sensor is set in. the shortest time is 250 ms in \textbf{mode 4}. 
 \item \textbf{ Time started from idle:} It took more time before the first measurement was available when changed from idle to the wanted mode.
 \end{itemize}
-Conclusion: \\ First conclusion on these tests is that bringing the sensors out of sleep is the fastest way to get a measurement. This is because for getting the sensor ou of sleep we just need to of the mode. 
-\\ Second conclusion, the sample period is always been respected. It is not the case that the sensor will perform a measurement at wake up. It it is from wake up it will takes the sample periode for the measurment is available.
+Conclusion: \\ The first conclusion of these tests is that bringing the sensors out of sleep is the fastest way to get a measurement. This is because for getting the sensor out of sleep we just need to alter the mode. 
+\\ Second conclusion, the sample period has always been respected. It is not the case that the sensor will perform a measurement at wake up. If the sensor is woken up, it will take the time of the sample period for a measurement to be available.
 \\ \\
- The second sensor, we needed to check was the \textbf{AMG8833}. The procedure was the same only to bring the AMG8833 out of sleep this needs to be done with a I²C-command. Also, for this we use the library \textbf{SparkFun\_GridEYE\_Arduino\_Library}. The methode to wake the sensor is wake() and putting it back to sleep with sleep(). We have chosen to use the sample tate of 10 samples the second. For reading out the raw data of a single pixel there is the methode "getPixelTemperatureRaw". We checked every millisecond if the first pixel data was available. We noticed during testing that not all pixel data was available after 100ms. So we changed the check that the timer may be stopped if the first pixel and the last pixel of the array had a value. With this measure principle, we found that after 105 ms the data of all pixels were available.
+ The second sensor, we needed to check was the \textbf{AMG8833}. The procedure was the same, the only difference is, to bring the AMG8833 out of sleep, this needs to be done with an $\text{I}^2$C-command instead of a GPIO pin. Also, for this we use the library \textbf{SparkFun\_GridEYE\_Arduino\_Library}. The method to wake the sensor is wake() and putting it back to sleep with sleep(). We have chosen to use the sample rate of 10 samples per second. For reading out the raw data of a single pixel there is the method "getPixelTemperatureRaw". We checked every millisecond if the first pixel data was available. We noticed during testing that not all pixel data was available after 100ms. So we changed the check so that the timer may be stopped if the first pixel and the last pixel of the array had a value. With this measure principle, we found that after 105 ms the data of all pixels was available.
 \\ \\  
-Before going further with the last sensor, we wanted to see if we put the the readings after each other what the effect would be. How much time it cost to read out the AMG8833 sensor. We made a method that read both sensors just after each other we found that the CCS811 was already to read out. What this means for the implementation will be explained further on in the document. 
-\\  \\ Now, we have come to the last sensor the microphone, we have chosen to use a breakout pcb as mentioned above. The only thing, we needed to check is which $\tau$ we can take for the filter of the detector. We could not test this because there was no hardware available for this. Based on the previous resulst, there is a delay of 105 ms between waking the sensors and have the measurements available. As mentioned, we wanted a period of 10 $\tau$ that the detector has to reach a stable average value to measure. If we divide 105 ms  by 10, we get  a $\tau$ equal to 10.5 ms, if we round this to 10 ms. We can realized this $\tau$ with a resistor  of 1 M$\Omega$ and a capacitor of 100 nF.\\
+Before going further with the last sensor, we wanted to see if we put the the readings after each other what the effect would be. How much time it cost to read out the AMG8833 sensor. We made a method that read both sensors after each other. We found that the CCS811 was ready to read out. What this means for the implementation will be explained further on in this report. 
+\\  \\ Now, we have come to the last sensor the microphone, we have chosen to use a breakout pcb as mentioned above. The only thing, we needed to check is which $\tau$ we can take for the filter of the detector. We could not test this because there was no hardware available for this. Based on the previous results, there is a delay of 105 ms between waking the sensors and have the measurements available. As mentioned, we wanted a period of 10 $\tau$ beacause the detector has to reach a stable average value to measure. If we divide 105 ms  by 10, we get  a $\tau$ of 10.5 ms. If we round this to 10 ms, we can realized this $\tau$ with a resistor of 1 M$\Omega$ and a capacitor of 100 nF.\\
 $\tau= R \cdot C = 1 M\Omega \cdot 100 nF= 10 ms$.\\
-What are values that are easily find as SMT-components. If we look more deeply on the 10.5 ms for $\tau$, this is also interesting for audio in another way. All frequency higher then 100 Hz will be detected quite enough. Only some lower frequencies will not be detected propably. But if we look at the chart of equal loudness for the different frequency at different sound pressures. We can see that for frequency lower then say about 400 Hz the amount of sound pressure needed for a same loudness experience is much larger. 
-\\ \\ With this substantiated scientific information, we can state the value of 10 ms is a good value for a quick and correct response for indicating the loudness of noise in the cafeteria. If we also take a look at the frequency response of the breakout board. The signals from 100 Hz will be picked up to about 1 kHz with the same gain value. Outside these boundries, the gain of the audio signal will fall back. The value of 10 ms is again a good value for the $\tau$.
+Which are values that are easily found as SMT-components. If we look more deeply into the 10.5 ms for $\tau$, this is also interesting for audio in another way. All frequency higher then 100 Hz will be detected quite enough. Only some lower frequencies will probably not be detected. But if we look at the chart of equal loudness for the different frequency at different sound pressures. We can see that for frequencies lower then say about 400 Hz the amount of sound pressure needed for a same loudness experience is much larger. 
+\\ \\ With this substantiated scientific information, we can state the value of 10 ms is a good value for a quick and correct response for indicating the loudness of noise in the cafeteria. If we also take a look at the frequency response of the breakout board. The signals from 100 Hz will be picked up to about 1 kHz with the same gain value. Outside these boundaries, the gain of the audio signal will fall back. The value of 10 ms is again a good value for the $\tau$.
+
 
 \paragraph{Human presence detection}
 For this we have done two straight forward experiments with the \textbf{AMG8833}.
@@ -553,39 +552,38 @@ For this we have done two straight forward experiments with the \textbf{AMG8833}
 \item \textbf{First experiment:} Heat detection on a person
 \item \textbf{Second experiment:} Detecting a person from a height
 \end{itemize}
-For the first experiment we have put a person in front of the AMG8833 at about 20 cm, 40 cm. Then measurements were performed when pointing the sensor at the face, a lined body part and the crown of the head.  There was some difference in the measured values. The  difference between the lined boyd part and the face was noteable. There is a small difference between the face and the crown but not that much. 
+For the first experiment we have put a person in front of the AMG8833 at about 20 cm, 40 cm. Then measurements were performed when pointing the sensor at the face, a lined body part and the crown of the head. There was some difference in the measured values. The  difference between the lined body part and the face was noticeable. There is a small difference between the face and the crown but not that much. 
 \\ \\ 
 This concludes, we can detect a human by the radiation coming from the crown of the head.
 \\ \\
-With this confirmed, we progressed into the second experiment. Is it possible to detect a human below the sensor at a height of 3,4 metres (possible to test at home during corona pandemie). The height difference between the head of an average standing person and the sensor is then about 1,7 metres. At this height the sensor will covers a area of $3.85 m²$. We know the sensor had a angle view of 60 °. If we then calculate according to the principal geometric drawing below,  we find:
+With this confirmed, we progressed into the second experiment. Is it possible to detect a human below the sensor at a height of 3,4 metres (possible to test at home during corona pandemic). The height difference between the head of an average standing person and the sensor is about 1,7 metres. At this height the sensor will covers an area of $3.85 m^2$. We know the sensor had a angle view of \SI{60}{\degree}. If we then calculate according to the principal geometric drawing below,  we find:
 \\ \\
-$ x = height \cdot tan (30 °) = 1.7 m \cdot 0.577 = 0.981 m$
+$ x = height \cdot tan (\SI{30}{\celsius}) = 1.7 m \cdot 0.577 = 0.981 m$
 \\ \\
-Finding the field of view of the sensor at this height, $\textbf{x}$ must be doubled and sqaured:\\
-$ A = (2 \cdot x)² = (2 \cdot 0.981 m)² =  3.85 m²$
+Finding the field of view of the sensor at this height, $\textbf{x}$ must be doubled and squared:\\
+$ A = (2 \cdot x)^2 = (2 \cdot 0.981 m)^2 =  3.85 m^2$
 
-if the sensor is at a height of 3.4 metresthe covered area will be 3.85 m², what is a workable area for noticing someone is sitting at a table.
+if the sensor is at a height of 3.4 metres the covered area will be 3.85 $m^2$, which is a workable area for noticing someone is sitting at a table.
 The area will be even bigger because the distance will be bigger. We wanted to know if it is possible to detect a person and to track the person.
-For this we have placed the sensor at this height and analyzef the results if someone moved beneath the sensor. When analyzing the result we found that a person was represented by 1 or 2 pixels with a value that is about $2 - 3 °C$ higher than the surroundings. The test was performed in a space with a overall temperature of about 17 degrees. What is not the normal room temperature. During testing the results were fluctuating about 0,25 °C what is the resolution of the sensor in °C. \\ \\
-\textbf{Conclusion:} It is possible to detect a person at a height of 3.4 m in a room with a temperature of 17 °C. It was also possible the follow his movements. If placing this into practice The best way is to compare the value of a pixel top a overal temperature or to a reference value. This should have been tested at the cafeteria during optimization of the system.
+For this we have placed the sensor at this height and analysed the results if someone moved beneath the sensor. When analysing the result we found that a person was represented by 1 or 2 pixels with a value that is about 2-\SI{3}{\celsius} higher than the surroundings. The test was performed in a space with an overall temperature of about 17 degrees. Which is not the normal room temperature. During testing the results were fluctuating about \SI{0.25}{\celsius} which is the resolution of the sensor in \SI{}{\celsius}. \\ \\
+\textbf{Conclusion:} It is possible to detect a person at a height of 3.4 m in a room with a temperature of \SI{17}{\celsius}. It was also possible the follow his movements. If placing this into practice The best way is to compare the value of a pixel top an overall temperature or to a reference value. This should have been tested at the cafeteria during optimization of the system.
 
 \subsection{Programming the sensors}
-With the experiments mentiond above we made some methods for inititalizing the sensors and getting the measuring results of the sensors. For having a clear overview of our code we have made a own library with these methods, that combines own code with code from the already mentioned libraries. The main 
+With the experiments mentioned above we made some methods for initializing the sensors and getting the measurment results of the sensors. For having a clear overview of our code we have made a own library with these methods, that combines our own code with code from the already mentioned libraries.  
 
-We can divide the created methods in two types initializations methods, for initializing the sensors after power on and methods for reading the sensor data. We have foreseen forthe inititalization a main method were the different methods will be call after each other with the correct flow. The slowest sensor will be initialized first so the time to start up can be use to initialize the other sensors.
+We can divide the created methods in two types initializations methods, for initializing the sensors after power on and methods for reading the sensor data. We have foreseen for the initialisation a main method were the different methods will be called one after each other with the correct flow. The slowest sensor will be initialized first so the time to start up can be use to initialize the other sensors.
 
-For the initialization of the sensors, we just enable the I²C-communication, set some GPIO-pins, set the ADC and set some sensor registers with the methods of the libraries. For setting, the GPIO's and the ADC we use the standard libraries of the system \textbf{driver/gpio.h}  and \textbf{driver/adc.h}.
+For the initialization of the sensors, we just enable the $\text{I}^2$C-communication, set some GPIO-pins, set the ADC and set some sensor registers with the methods of the libraries. For setting, the GPIO's and the ADC we use the standard libraries of the system \textbf{driver/gpio.h}  and \textbf{driver/adc.h}.
 
-For the methods for retreiving the data from the sensor. The method is made in the following steps:
+For the methods for retrieving the data from the sensor. The method is made in the following steps:
 \begin{itemize}
 \item Wake the sensors
-\item wait until data available
+\item Wait until data available
 \item Retrieve data
-\item put the sensor back to sleep
+\item Put the sensor back to sleep
 \end{itemize}
 
 % ============ Geofrey wil zien dat we hebben nagedacht over de dimensionering van de componenten !!! ============
-
 
 \section{Wireless connectivity}
 \subsection{Wi-Fi connection} \label{wifiCon}
