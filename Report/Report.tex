@@ -768,7 +768,7 @@ This gives a nice overview of the busy and the less busy area's in the cafeteria
 
 \subsection{Backend}
 The backend is what runs on our server, in this project a raspberry pi was chosen as it's an easy to use and small computer
- that can easily be set up to be used as a webserver that hostes our dashboard and the database that is used to store the data.
+ that can easily be set up to be used as a webserver, apache2 was used in this project to host our dashboard. Myqsl is used for the database that stores the sensor data.
 
 \paragraph{Recieve data}
 To recieve the data a python script (WiFi.py) is used that listens to the 8091 port, this is the port that the device sends his payload to.
@@ -794,12 +794,50 @@ A visual representation of the database descript above can be seen in figure~\re
 	\label{fig:db_des}
 \end{figure}
 
-\paragraph{Serve data to dashboard}
+\paragraph{Data from database to dashboard}
 A php script is used to serve the data to the frontend of the dashboard. This php script is called database.php. 
-It's a simple script that connects to the database on the raspberry pi and gets the last recieved data from all the different devices.
-Then all this data is encoded as json and passed on to the website that is used as dashboard. 
+It's a simple script that connects to the database on the raspberry pi and gets the last recieved reading from all the different devices.
+Then all this data is encoded as json and passed on to the website, this website is the dashboard. 
 
 \subsection{Frontend}
+The frontend is the part of the part of the dashboard that people can interact with and view the data from all the different devices and sensors.
+This website has 6 different pages, an overview page that shows the averages of all the sensor data from all the different sensornodes.
+The other pages show a heatmap with the specific sensor data of each sensornode seperatly drawn on it. 
+For example, there is an activity page that display where the infraredcamera picks up heat signals, a temperature page that displays where it is warmer or colder.
+Each type of sensor reading has it's own page.
+
+\paragraph{Overview page}
+As already said in the short description above, this page takes the average of of all the sensor data from the different sensornodes. 
+On this page two subsection are made, the first one is named activity and under it the busyness of the cafetara is show by giving the average of all the pixeldata from all the sensornodes.
+In the second subsection the sensor data related the the environment is shown, the numbers desplayed here are also an average taken from all the diffrent sensornodes. 
+The displayed data here is: Co2 level, TVOC level, Sound and temperature. Al this can be seen in figure~\ref{fig:overview_page}. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{overviewPage.png}
+	\caption{Screenshot from the overview page}
+	\label{fig:overview_page}
+\end{figure}
+The avarages of all the data are calculated using a javascript script in the website, so each time there is new data and the webpage is reloaded this wil update to the latest data.
+The javascript loops through the data from the database that it get's in the JSON format from the database.php backend script.
+
+\paragraph{Page with heatmap}
+These pages show one single type of data from that the sensor node gathers, in this case the pixeldata from the infraredcamera.
+On figure~\ref{fig:heatmap_example} you can clearly see the different elements of this dashbaord page. up top there is the Cosy Cafetaria title with the menu to navigate all the different pages below it.
+Under this menu is where the actual data is displayed on the floor plan of the cafeteria. This floor plan is loaded in as an image that is used as background to draw the heatmap over.
+For the heatmap a javascript library is used called heatmap.js, this library makes it easy to add the datapoints with there value and location and draw them ontop of the floor plan.
+It also draws a legend in the botom right corner.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{heatmapExample.png}
+	\caption{Screenshot from the activity page}
+	\label{fig:heatmap_example}
+\end{figure}
+If the cafeteria would be fully equiped with our sensornodes a complerte map could be drawn on which you could clearly see the heatsignature of every person in the cafeteria.
+This would make it easy to see if your favourite spot was still available or not and how busy it is in the row.
+\\
+On the other pages of the dashboard the other sensor data is displayed in the same way. 
+The temperature data would make it easy to spot where it's is hotter or rather where it's colder.
+Same goes for the other data that is collected by the sensornodes.
 
 \section{Case Design}
 For our system, we have designed a simple case for building in the system. We have made the design with fusion 360. This program has the abiliy to import different types of 3D-files. By importing all our seperate parts of the design and align them we could make a case that fits with some holes so the sensors have a opening above them to measure the different stimulus. The design of the case is not a very complex design but there has been taken some important design concernings. For the opening above the AMG8833, we have made the opening a little bit wider so it will not cover parts of the field of view of the sensor. Also, to hang the design to the ceiling we have drawn four loops at the upper side of case so we can hang the case with a cable to the ceiling everywhere the systems needs to be placed.
