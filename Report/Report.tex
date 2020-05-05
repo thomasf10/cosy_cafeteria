@@ -446,10 +446,26 @@ With this in mind we have chosen the following sensors:
 The main goal for the sensor board was to make it as low power as possible. As already mentioned above we have foreseen load switches to cut off the power to the sensors, when the system is non-active for a long period of time. Beside the load switches, we have studied the sensors to optimize the measuring sequence.
 
 \subsection{AMG8833 IR-sensor}
-To detect human presence, we have decided to use an infrared sensor. The human body produces quite some body heat that is emitted. The AMG8833 is an 8x8-pixel IR-sensor, that maps the heat per pixel. This allows us to determine how many people are present in a certain area. For example we can determine if there is a single person present or a group of persons in a row.
-\\ \\
-One of the considerations that has to be studied is the effect of distance, ambient temperature and the field of view of the sensor. The sensor has a total angle view of \SI{60}{\degree} for the horizontal and vertical axis of the pixel grid. Depending on the height, the area that the sensor covers, changes. If the height increases, the area also increases. Not only the field of view is influenced by the height but also the result of the measurements. The further the heat source is from the sensor, the lower the measured temperature will be.
-\\ \\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Schematic AMG8833.png}
+	\caption{Schematic AMG8833}
+	\label{fig:AMG8833}
+\end{figure}
+To detect human presence, we have decided to use an infrared sensor. The human body produces quite some body heat that is emitted. The AMG8833 is an 8x8-pixel IR-sensor, that maps the heat per pixel \ref{fig:heatmap}. This allows us to determine how many people are present in a certain area. For example we can determine if there is a single person present or a group of persons in a row.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{heat map AMG8833.png}
+	\caption{Heatmap as a pixel grid}
+	\label{fig:heatmap}
+\end{figure}
+One of the considerations that has to be studied is the effect of distance, ambient temperature and the field of view of the sensor. The sensor has a total angle view of \SI{60}{\degree} \label{fig:angleview} for the horizontal and vertical axis of the pixel grid. Depending on the height, the area that the sensor covers, changes. If the height increases, the area also increases. Not only the field of view is influenced by the height but also the result of the measurements. The further the heat source is from the sensor, the lower the measured temperature will be.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{view angle AMG8833.png}
+	\caption{View angle AMG8833}
+	\label{fig:angleview}
+\end{figure}
 The sensor operates in a temperature range of \SI{0}{\celsius} up to \SI{50}{\celsius} for the full humidity range between the 15 \%RH and up to about 85 \%RH. Heigher temperatures can be handles if the humidity stays below a certain value. This is illustrated below. Because, the system will be deployed in the cafeteria, this should not be a problem. An other aspect is the ambient temperature. The sensor has to be capable to determine the difference between the heat of a person and the heat of the surroundings. This will be tested and implemented in the software. 
 \\ \\
 All communication to and from the sensor is done over $\text{I}^2$C. In addition to the $\text{I}^2$C-communication there is a AD-select input to set the $\text{I}^2$C-address, you can set the address to 0x58 or 0x59. There is also an interrupt output if you want to work with interrupts.
@@ -457,6 +473,12 @@ All communication to and from the sensor is done over $\text{I}^2$C. In addition
 The last important aspect for this sensor is the power consumption. In the documentation it is stated that the sensor has a typical current of 4.5 mA in normal operation mode. When the sensor is brought to sleep the current drops to 0.2 mA. Our goal is to wake the sensor from sleep and when we have the measurement put it back to sleep as fast as possible.
 
 \subsection{CCS811 air quality sensor}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Schematic CCS811.png}
+	\caption{Schematic CCS811}
+	\label{fig:CCS811}
+\end{figure}
 For the air quality in the cafeteria, we have chosen to go for the CCS811 air quality sensor. The CCS811 is an ultra low power gas sensor with propable algortime system for detecting gasses. It has the ability to sense TVOC and an equivalent $CO_{2}$ concentration. This sensor has different measure modes which can help to make the application more flexible but also suitable for mobile equipment and battery powered systems. All settings and communication to the sensor is again done with $\text{I}^2$C. The $\text{I}^2$C-addresses are 0x5A and 0x5B, depending on the ADDR-pin. Besides the $\text{I}^2$C-communication there are some other signals that can control/monitor the sensor. 
 \begin{itemize}
 	\item There is a \textbf{ADDR}-pin for setting the $\text{I}^2$C-address to 0x5A or 0x5B
@@ -492,14 +514,29 @@ The power consumption of the constant power modes is only a factor 38,333 bigger
 
 
 \subsection{BOB-12758 microphone breakout board}
-We have informed us by colleague students who had used a microphone module in the first semester. One group came with a breakout board with a microphone and a triple operational amplifier circuit. The proposed breakout board could do several things, one of them was peak detection. For our application, there is only the need to check the average sound level, so we only needed a microphone and one operational amplifier. 
-\\ \\
+We have informed us by colleague students who had used a microphone module in the first semester. One group came with a breakout board with a microphone and a triple operational amplifier circuit. The proposed breakout board could do several things, one of them was peak detection. For our application, there is only the need to check the average sound level, so we only needed a microphone and one operational amplifier. In figure \ref{fig:BOB-12758}, we can see the schematic of the breakout board.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{schematic microphone break out board.png}
+	\caption{Schematic BOB-12758 microphone breakout board}
+	\label{fig:BOB-12758}
+\end{figure}
 Because we wanted to have the average sound level, we decided to place a detector behind the opamp. The second reason to use the detector is that the ESP32 can sample up to about 27 ksps. By just looking at the sample rate, it is clear that the ADC is not fast enough to fulfil the Nyquist theorem. 
 \\ \\
 The detector needs time to come from the low level to the sound level. Finding the best value of $\tau$ will be one of the investigations. This will be determine along with the test of the other sensors. The microphone must receive power for about 10 times $\tau$. We know from the theory that after 5 $\tau$, 97\% of the applied voltage is reached. The extra 5 $\tau$ is chosen for two reasons. Firstly to compensate the rectified signal by the detector and secondly to have a stable value of the average sound level.
 
 \subsection{Board design}
-When designing the board, we have started from the basic schematics of the provided break out boards of the sensor boards. With some extra guidelines from the documentations of the sensors. For the microphone sensorboard as mentioned, we needed to design a detector circuit. We have chosen to go for a simple detector with a diode followed by an RC circuit. During the documentation of the circuit it was noticed that the audiosignal of the breakout board is superpositioned onto a DC-voltage that is the half of the supply voltage. In the prototype of the board, this was not taken into consideration. This can be solved in different ways not only by hardware but also by software. If we want to solve this with hardware without loosing information, we can just put several diodes in series until we come to a sum of the forward voltages that is the half of our voltage supply. The power supply is $3.3 V$. This method will not increase the accuracy of the measurement so it is not an improvement. \\ \\
+When designing the board, we have started from the basic schematics of the provided break out boards of the sensor boards \ref{fig:AMG8833} \ref{fig:CCS811}. With some extra guidelines from the documentations of the sensors. For the microphone sensorboard as mentioned, we needed to design a detector circuit. We have chosen to go for a simple detector with a diode followed by an RC circuit, see Figure \ref{app:sensorboard_schematic}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Schematic audio detector.png}
+	\caption{Schematic simple detector}
+	\label{fig:simple_detector}
+\end{figure}
+During the documentation of the circuit it was noticed that the audiosignal of the breakout board is superpositioned onto a DC-voltage that is the half of the supply voltage. This can be seen on figure \ref{fig:BOB-12758}. The resistor circuit R2 and R3 will divide the supply in half, so half of the supply voltage will be available at the non-inverting input of the operational amplifier.
+
+ In the prototype of the board, this was not taken into consideration. This can be solved in different ways not only by hardware but also by software. If we want to solve this with hardware without loosing information, we can just put several diodes in series until we come to a sum of the forward voltages that is the half of our voltage supply. The power supply is $3.3 V$. This method will not increase the accuracy of the measurement so it is not an improvement. \\ \\
 $V_{DC offset} = \frac{V_{CC}}{2}= \frac{3.3V}{2} = 1.65V$\\ \\
 This $1.65 V$ can approximately be obtained by placing 2 Schottky diodes with $V_{f}=0.45 V$ and a normal diode with $V_{f} = 0.7 V$ in series.\\
 $V_{f total} = 2\cdot V_{f schottkey} + V_{f normal diode} = 1.6 V$\\
@@ -508,9 +545,11 @@ A better approach to the problem would be to solve this with software. Then, the
 $V_{DC offset} = \frac{V_{CC}}{2}-V_{f schottkey}= \frac{3.3 V}{2}- 0.45 V = 1.2 V$ \\
 The reference level for no sound is $1.2 V$. The maximum audio voltage level would be $2.85 V$. What sound level this would be is unknow to us. Because, it is more a relative perception with a visual indication, exact values are not necessary. The DC-offset has a positive effect on the detection of the sound level. Because the value is above the forward voltage of the diode we do not loose information on the amplitude. But as mentioned we need to do a comparison with the reference level. We can set some thresholds for indicating the experience of a certain value. For example, if the sound level is above a certain value, it is not pleasant to study in the cafeteria.
 
-To determin the optimal value for the resistor and the capacitor of the detector, we would wait to look at the other response time of the other two sensors. We have taken a initial value of 1 ms. This can be realized with a resistor of $ 100k\Omega$ and a capacitor of $0.1 F$.
+To determin the optimal value for the resistor and the capacitor of the detector, we would wait to look at the other response time of the other two sensors. We have taken a initial value of 1 ms. This can be realized with a resistor of $ 10 k\Omega$ and a capacitor of $0.1 µF$.
 \\ \\
-For the other two sensors we have as mentioned based our schematic on the schematic of the break out boards. We only needed one extra component and that was an operational amplifier to buffer the nINt of the CCS811. This was recommended by the documentation of the CCS811. Also, if this interrupt function is not desired, we can just remove this part of the circuit and the system will work just fine. We have brought all the other connections of the sensors to a central header of 11 pins, so the board can be plugged onto the CPU board. The break out board of the microphone will be placed on top of this board by a 3 pins header. Unfortunately during the prototype phase, the pitch of the pinheader was not found, we have based the pitch according to a recommended connector of the dealer. Afterwards, we came to the idea to check the value at the developer of the breakout board and found a recommended pinheader with a different pitch. The drawing has been updated. Also, this has not been verified because of the corona situation.
+For the other two sensors we have as mentioned based our schematic on the schematic of the break out boards. We only needed one extra component and that was an operational amplifier to buffer the nINt of the CCS811. This was recommended by the documentation of the CCS811. Also, if this interrupt function is not desired, we can just remove this part of the circuit and the system will work just fine. We have brought all the other connections of the sensors to a central header of 11 pins, so the board can be plugged onto the CPU board. The break out board of the microphone will be placed on top of this board by a 3 pins header.  The schematic drawing of the sensor board can be find the appendix \ref{fig:sensor_board}.
+
+Unfortunately during the prototype phase, the pitch of the pinheader was not found, we have based the pitch according to a recommended connector of the dealer. Afterwards, we came to the idea to check the value at the developer of the breakout board and found a recommended pinheader with a different pitch. The drawing has been updated. Also, this has not been verified because of the corona situation.
 \\ \\
 For making the system as low power as possible we have an exclusive power supply for every sensor, so we can control the supply for every single sensor separately.
 So, the system is flexible depending on the need of what stimulus needs to be monitored.
@@ -538,8 +577,8 @@ We got the following results from these test.
  The second sensor, we needed to check was the \textbf{AMG8833}. The procedure was the same, the only difference is, to bring the AMG8833 out of sleep, this needs to be done with an $\text{I}^2$C-command instead of a GPIO pin. Also, for this we use the library \textbf{SparkFun\_GridEYE\_Arduino\_Library}. The method to wake the sensor is wake() and putting it back to sleep with sleep(). We have chosen to use the sample rate of 10 samples per second. For reading out the raw data of a single pixel there is the method "getPixelTemperatureRaw". We checked every millisecond if the first pixel data was available. We noticed during testing that not all pixel data was available after 100ms. So we changed the check so that the timer may be stopped if the first pixel and the last pixel of the array had a value. With this measurement principle, we found that after 105 ms the data of all pixels was available.
 \\ \\  
 Before going further with the last sensor, we wanted to see if we put the the readings after each other what the effect would be. How much time it cost to read out the AMG8833 sensor. We made a method that read both sensors after each other. We found that the CCS811 was ready to read out. What this means for the implementation will be explained further on in this report. 
-\\  \\ Now, we have come to the last sensor the microphone, we have chosen to use a breakout pcb as mentioned above. The only thing, we needed to check is which $\tau$ we can take for the filter of the detector. We could not test this because there was no hardware available for this. Based on the previous results, there is a delay of 105 ms between waking the sensors and have the measurements available. As mentioned, we wanted a period of 10 $\tau$ beacause the detector has to reach a stable average value to measure. If we divide 105 ms  by 10, we get  a $\tau$ of 10.5 ms. If we round this to 10 ms, we can realized this $\tau$ with a resistor of 1 M$\Omega$ and a capacitor of 100 nF.\\
-$\tau= R \cdot C = 1 M\Omega \cdot 100 nF= 10 ms$.\\
+\\  \\ Now, we have come to the last sensor the microphone, we have chosen to use a breakout pcb as mentioned above. The only thing, we needed to check is which $\tau$ we can take for the filter of the detector. We could not test this because there was no hardware available for this. Based on the previous results, there is a delay of 105 ms between waking the sensors and have the measurements available. As mentioned, we wanted a period of 10 $\tau$ beacause the detector has to reach a stable average value to measure. If we divide 105 ms  by 10, we get  a $\tau$ of 10.5 ms. If we round this to 10 ms, we can realized this $\tau$ with a resistor of 100 k$\Omega$ and a capacitor of 100 nF.\\
+$\tau= R \cdot C =  100 k\Omega \cdot 100 nF= 10 ms$.\\
 Which are values that are easily found as SMT-components. If we look more deeply into the 10.5 ms for $\tau$, this is also interesting for audio in another way. All frequency higher then 100 Hz will be detected quite enough. Only some lower frequencies will probably not be detected. But if we look at the chart of equal loudness for the different frequency at different sound pressures. We can see that for frequencies lower then say about 400 Hz the amount of sound pressure needed for a same loudness experience is much larger. 
 \\ \\ With this substantiated scientific information, we can state the value of 10 ms is a good value for a quick and correct response for indicating the loudness of noise in the cafeteria. If we also take a look at the frequency response of the breakout board. The signals from 100 Hz will be picked up to about 1 kHz with the same gain value. Outside these boundaries, the gain of the audio signal will fall back. The value of 10 ms is again a good value for the $\tau$.
 
@@ -554,16 +593,29 @@ For the first experiment we have put a person in front of the AMG8833 at about 2
 \\ \\ 
 This concludes, we can detect a human by the radiation coming from the crown of the head.
 \\ \\
-With this confirmed, we progressed into the second experiment. Is it possible to detect a human below the sensor at a height of 3,4 metres (possible to test at home during corona pandemic). The height difference between the head of an average standing person and the sensor is about 1,7 metres. At this height the sensor will covers an area of $3.85 m^2$. We know the sensor had a angle view of \SI{60}{\degree}. If we then calculate according to the principal geometric drawing below,  we find:
+With this confirmed, we progressed into the second experiment. Is it possible to detect a human below the sensor at a height of 3,4 metres (possible to test at home during corona pandemic). The height difference between the head of an average standing person and the sensor is about 1,7 metres. At this height the sensor will covers an area of $3.85 m^2$. We know the sensor had a angle view of \SI{60}{\degree}. If we then calculate according to the principal geometric drawing \ref{fig:prinicipal drawing},  we find:
 \\ \\
 $ x = height \cdot tan (\SI{30}{\degree}) = 1.7 m \cdot 0.577 = 0.981 m$
 \\ \\
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{field of view AMG8833.png}
+	\caption{Prinicipal drawing view sensor AMG8833}
+	\label{fig:prinicipal drawing}
+\end{figure}
 Finding the field of view of the sensor at this height, $\textbf{x}$ must be doubled and squared:\\
 $ A = (2 \cdot x)^2 = (2 \cdot 0.981 m)^2 =  3.85 m^2$
-
-if the sensor is at a height of 3.4 metres the covered area will be 3.85 $m^2$, which is a workable area for noticing someone is sitting at a table.
+\\
+If the sensor is at a height of 3.4 metres the covered area will be 3.85 $m^2$, which is a workable area for noticing someone is sitting at a table.
 The area will be even bigger because the distance will be bigger. We wanted to know if it is possible to detect a person and to track the person.
-For this we have placed the sensor at this height and analysed the results if someone moved beneath the sensor. When analysing the result we found that a person was represented by 1 or 2 pixels with a value that is about 2-\SI{3}{\celsius} higher than the surroundings. The test was performed in a space with an overall temperature of about 17 degrees. Which is not the normal room temperature. During testing the results were fluctuating about \SI{0.25}{\celsius} which is the resolution of the sensor in \SI{}{\celsius}. \\ \\
+For this we have placed the sensor at this height and analysed the results if someone moved beneath the sensor. When analysing the result we found that a person was represented by 1 or 2 pixels ref{fig:human detection}with a value that is about 2-\SI{3}{\celsius} higher than the surroundings. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{human detection.png}
+	\caption{Human detection at a height of 3.4 metre}
+	\label{fig:humandetection}
+\end{figure}
+The test was performed in a space with an overall temperature of about 17 degrees on ground level. Which is not a normal room temperature. During testing the results were fluctuating about \SI{0.25}{\celsius} which is the resolution of the sensor in \SI{}{\celsius}. Notice the higher numbers at the top pixels. This coud be because the test setup was attached on a wooden staircase at 3.4 metres high where some licht bulbs hang.\\ \\
 \textbf{Conclusion:} It is possible to detect a person at a height of 3.4 m in a room with a temperature of \SI{17}{\celsius}. It was also possible the follow his movements. If placing this into practice The best way is to compare the value of a pixel top an overall temperature or to a reference value. This should have been tested at the cafeteria during optimization of the system.
 
 \subsection{Programming the sensors}
@@ -867,4 +919,11 @@ Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
 
 \newpage
 
+\section{Sensor board schematic}\label{app:sensorboard_schematic}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\linewidth]{schematic drawing sensorboard.pdf}
+%\end{figure}
+\includepdf[pages=-]{fig/schematic drawing sensorboard.pdf}
+\newpage
 \end{document}

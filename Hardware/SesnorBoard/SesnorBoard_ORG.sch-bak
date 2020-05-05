@@ -900,11 +900,11 @@ Wire Wire Line
 	9250 3750 9250 4350
 Text Label 5350 3650 0    50   ~ 0
 CCS811_3V3
-Text Label 1900 2750 2    50   ~ 0
+Text Label 1900 2650 2    50   ~ 0
 AUDIO_3V3
 Wire Wire Line
 	1900 2750 1100 2750
-Text Label 1900 2650 2    50   ~ 0
+Text Label 1900 2750 2    50   ~ 0
 AMG8833_3V3
 Wire Wire Line
 	1900 2650 1100 2650
