@@ -1,594 +1,589 @@
-PWD c:\Users\thoma\Documents\GitHub\cosy_cafeteria\Report
-INPUT C:\Users\thoma\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\thoma\Documents\GitHub\cosy_cafeteria\Report\Report.tex
-OUTPUT Report.log
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size11.clo
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size11.clo
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\unicode-data\UnicodeData.txt
-INPUT nul:.tex
-INPUT nul:.tex
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\translator\translator.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\translator\translator.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\translator\translator.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\base\glossaries.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mfirstuc\mfirstuc.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mfirstuc\mfirstuc.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\textcase\textcase.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\textcase\textcase.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xfor\xfor.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xfor\xfor.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datatool\datatool-base.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datatool\datatool-base.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\substr\substr.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\substr\substr.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datatool\datatool-fp.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\defpattern.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\defpattern.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-basic.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-basic.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-addons.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-addons.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-snap.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-snap.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-exp.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-exp.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-pas.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-pas.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-random.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-random.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-upn.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-upn.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-eval.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-eval.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compatible-307.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\base\glossaries-compatible-307.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tracklang\tracklang.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tracklang\tracklang.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\tracklang\tracklang.tex
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\tracklang\tracklang.tex
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries-english\glossaries-english.ldf
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries-english\glossaries-english.ldf
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries-english\glossaries-english.ldf
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypernav.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-hypernav.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-list.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-long.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-super.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\supertabular\supertabular.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glossary-tree.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eurosym\eurosym.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\svg\svg.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\svg\svg.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\shellesc.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\shellesc.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\trimspaces\trimspaces.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\trimspaces\trimspaces.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifplatform\ifplatform.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifplatform\ifplatform.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\catchfile.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\catchfile.sty
-INPUT nul:.tex
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\transparent.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\transparent.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabularx.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabularx.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltcaption.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\ltcaption.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty
-INPUT Report.aux
-INPUT Report.aux
-OUTPUT Report.aux
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1enc.dfu
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT Report.out
-INPUT Report.out
-INPUT Report.out
-INPUT Report.out
-OUTPUT Report.pdf
-INPUT .\Report.out
-INPUT .\Report.out
-OUTPUT Report.out
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.sty
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss12.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
-INPUT C:\Users\thoma\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT Report.toc
-INPUT Report.toc
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
-OUTPUT Report.toc
-INPUT fig\situation.pdf
-INPUT .\fig\situation.pdf
-INPUT .\fig\situation.pdf
-INPUT .\fig\situation.pdf
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\eurosym\feymr10.tfm
-INPUT fig\architecture.pdf
-INPUT .\fig\architecture.pdf
-INPUT .\fig\architecture.pdf
-INPUT .\fig\architecture.pdf
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi9.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy9.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss9.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmss8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt9.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt8.tfm
-INPUT fig\reverse_polarity_protection_simulation.png
-INPUT .\fig\reverse_polarity_protection_simulation.png
-INPUT .\fig\reverse_polarity_protection_simulation.png
-INPUT .\fig\reverse_polarity_protection_simulation.png
-INPUT .\fig\reverse_polarity_protection_simulation.png
-INPUT fig\Transient_response_negative_input_pulse.eps
-INPUT .\fig\Transient_response_negative_input_pulse.eps
-INPUT .\fig\Transient_response_negative_input_pulse.eps
-INPUT .\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_negative_input_pulse.eps
-INPUT .\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
-INPUT fig\Transient_response_positive_input_pulse.eps
-INPUT .\fig\Transient_response_positive_input_pulse.eps
-INPUT .\fig\Transient_response_positive_input_pulse.eps
-INPUT .\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_positive_input_pulse.eps
-INPUT .\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
-INPUT .\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
-INPUT fig\reverse_polarity_protection.png
-INPUT .\fig\reverse_polarity_protection.png
-INPUT .\fig\reverse_polarity_protection.png
-INPUT .\fig\reverse_polarity_protection.png
-INPUT .\fig\reverse_polarity_protection.png
-INPUT fig\microUSBinput.png
-INPUT .\fig\microUSBinput.png
-INPUT .\fig\microUSBinput.png
-INPUT .\fig\microUSBinput.png
-INPUT .\fig\microUSBinput.png
-INPUT fig\bq24075_toegepast.png
-INPUT .\fig\bq24075_toegepast.png
-INPUT .\fig\bq24075_toegepast.png
-INPUT .\fig\bq24075_toegepast.png
-INPUT .\fig\bq24075_toegepast.png
-INPUT fig\Charge_cycle.png
-INPUT .\fig\Charge_cycle.png
-INPUT .\fig\Charge_cycle.png
-INPUT .\fig\Charge_cycle.png
-INPUT .\fig\Charge_cycle.png
-INPUT fig\bq29700_principeschema.png
-INPUT .\fig\bq29700_principeschema.png
-INPUT .\fig\bq29700_principeschema.png
-INPUT .\fig\bq29700_principeschema.png
-INPUT .\fig\bq29700_principeschema.png
-INPUT fig\bq29700_toegepast.png
-INPUT .\fig\bq29700_toegepast.png
-INPUT .\fig\bq29700_toegepast.png
-INPUT .\fig\bq29700_toegepast.png
-INPUT .\fig\bq29700_toegepast.png
-INPUT fig\TLV75533_toegepast.png
-INPUT .\fig\TLV75533_toegepast.png
-INPUT .\fig\TLV75533_toegepast.png
-INPUT .\fig\TLV75533_toegepast.png
-INPUT .\fig\TLV75533_toegepast.png
-INPUT fig\TPS22919_toegepast.png
-INPUT .\fig\TPS22919_toegepast.png
-INPUT .\fig\TPS22919_toegepast.png
-INPUT .\fig\TPS22919_toegepast.png
-INPUT .\fig\TPS22919_toegepast.png
-INPUT fig\ESP32_toegepast.png
-INPUT .\fig\ESP32_toegepast.png
-INPUT .\fig\ESP32_toegepast.png
-INPUT .\fig\ESP32_toegepast.png
-INPUT .\fig\ESP32_toegepast.png
-INPUT fig\Schematic_AMG8833.png
-INPUT .\fig\Schematic_AMG8833.png
-INPUT .\fig\Schematic_AMG8833.png
-INPUT .\fig\Schematic_AMG8833.png
-INPUT .\fig\Schematic_AMG8833.png
-INPUT fig\heat_map_AMG8833.png
-INPUT .\fig\heat_map_AMG8833.png
-INPUT .\fig\heat_map_AMG8833.png
-INPUT .\fig\heat_map_AMG8833.png
-INPUT .\fig\heat_map_AMG8833.png
-INPUT fig\view_angle_AMG8833.png
-INPUT .\fig\view_angle_AMG8833.png
-INPUT .\fig\view_angle_AMG8833.png
-INPUT .\fig\view_angle_AMG8833.png
-INPUT .\fig\view_angle_AMG8833.png
-INPUT fig\Schematic_CCS811.png
-INPUT .\fig\Schematic_CCS811.png
-INPUT .\fig\Schematic_CCS811.png
-INPUT .\fig\Schematic_CCS811.png
-INPUT .\fig\Schematic_CCS811.png
-INPUT fig\schematic_microphone_break_out_board.png
-INPUT .\fig\schematic_microphone_break_out_board.png
-INPUT .\fig\schematic_microphone_break_out_board.png
-INPUT .\fig\schematic_microphone_break_out_board.png
-INPUT .\fig\schematic_microphone_break_out_board.png
-INPUT fig\Schematic_audio_detector.png
-INPUT .\fig\Schematic_audio_detector.png
-INPUT .\fig\Schematic_audio_detector.png
-INPUT .\fig\Schematic_audio_detector.png
-INPUT .\fig\Schematic_audio_detector.png
-INPUT fig\field_of_view_AMG8833.png
-INPUT .\fig\field_of_view_AMG8833.png
-INPUT .\fig\field_of_view_AMG8833.png
-INPUT .\fig\field_of_view_AMG8833.png
-INPUT .\fig\field_of_view_AMG8833.png
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx8.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx6.tfm
-INPUT fig\humandetection.png
-INPUT .\fig\humandetection.png
-INPUT .\fig\humandetection.png
-INPUT .\fig\humandetection.png
-INPUT .\fig\humandetection.png
-INPUT fig\wifi_pwr.pdf
-INPUT .\fig\wifi_pwr.pdf
-INPUT .\fig\wifi_pwr.pdf
-INPUT .\fig\wifi_pwr.pdf
-INPUT fig\statendiagram.pdf
-INPUT .\fig\statendiagram.pdf
-INPUT .\fig\statendiagram.pdf
-INPUT .\fig\statendiagram.pdf
-INPUT fig\wifi_pwr.pdf
-INPUT .\fig\wifi_pwr.pdf
-INPUT fig\sensor_pwr.pdf
-INPUT .\fig\sensor_pwr.pdf
-INPUT .\fig\sensor_pwr.pdf
-INPUT .\fig\sensor_pwr.pdf
-INPUT fig\sync_pwr.pdf
-INPUT .\fig\sync_pwr.pdf
-INPUT .\fig\sync_pwr.pdf
-INPUT .\fig\sync_pwr.pdf
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm0900.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm0600.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm0500.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbxti10.tfm
-INPUT fig\databaseDesign.png
-INPUT .\fig\databaseDesign.png
-INPUT .\fig\databaseDesign.png
-INPUT .\fig\databaseDesign.png
-INPUT .\fig\databaseDesign.png
-INPUT fig\overviewPage.png
-INPUT .\fig\overviewPage.png
-INPUT .\fig\overviewPage.png
-INPUT .\fig\overviewPage.png
-INPUT .\fig\overviewPage.png
-INPUT fig\heatmapExample.png
-INPUT .\fig\heatmapExample.png
-INPUT .\fig\heatmapExample.png
-INPUT .\fig\heatmapExample.png
-INPUT .\fig\heatmapExample.png
-INPUT fig\devkit.png
-INPUT .\fig\devkit.png
-INPUT .\fig\devkit.png
-INPUT .\fig\devkit.png
-INPUT .\fig\devkit.png
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1095.tfm
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm0800.tfm
-INPUT Report.bbl
-INPUT Report.bbl
-INPUT fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\MainPCB_schematic.pdf
-INPUT .\fig\MainPCB_schematic.pdf
-INPUT fig\schematic_drawing_sensorboard.pdf
-INPUT fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT fig\schematic_drawing_sensorboard.pdf
-INPUT .\fig\schematic_drawing_sensorboard.pdf
-INPUT fig\Pricing_information_PI-1200952.pdf
-INPUT fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT fig\Pricing_information_PI-1200952.pdf
-INPUT .\fig\Pricing_information_PI-1200952.pdf
-INPUT fig\Pricing_information_PI-1200953.pdf
-INPUT fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT fig\Pricing_information_PI-1200953.pdf
-INPUT .\fig\Pricing_information_PI-1200953.pdf
-INPUT Report.aux
-INPUT .\Report.out
-INPUT .\Report.out
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\cm-super\cm-super-ts1.enc
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi9.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi9.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr9.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr9.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt9.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt9.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\eurosym\feymr10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\eurosym\feymr10.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\cm-super\sfrm0900.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\cm-super\sfrm0900.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\cm-super\sfrm1095.pfb
-INPUT C:\Users\thoma\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\cm-super\sfrm1095.pfb
+PWD c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report
+INPUT C:\Users\Arthur\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.tex
+OUTPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.log
+INPUT D:\Programma's\MikTEX\tex\latex\base\article.cls
+INPUT D:\Programma's\MikTEX\tex\latex\base\article.cls
+INPUT D:\Programma's\MikTEX\tex\latex\base\size11.clo
+INPUT D:\Programma's\MikTEX\tex\latex\base\size11.clo
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmr10.tfm
+INPUT D:\Programma's\MikTEX\tex\latex\siunitx\siunitx.sty
+INPUT D:\Programma's\MikTEX\tex\latex\siunitx\siunitx.sty
+INPUT D:\Programma's\MikTEX\tex\latex\l3kernel\expl3.sty
+INPUT D:\Programma's\MikTEX\tex\latex\l3kernel\expl3.sty
+INPUT D:\Programma's\MikTEX\tex\latex\l3backend\l3backend-pdfmode.def
+INPUT D:\Programma's\MikTEX\tex\latex\l3backend\l3backend-pdfmode.def
+INPUT D:\Programma's\MikTEX\tex\latex\l3packages\xparse\xparse.sty
+INPUT D:\Programma's\MikTEX\tex\latex\l3packages\xparse\xparse.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amstext.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amstext.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amsgen.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amsgen.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\array.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\array.sty
+INPUT D:\Programma's\MikTEX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT D:\Programma's\MikTEX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT D:\Programma's\MikTEX\tex\latex\translator\translator.sty
+INPUT D:\Programma's\MikTEX\tex\latex\translator\translator.sty
+INPUT D:\Programma's\MikTEX\tex\latex\translator\translator.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\keyval.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\keyval.sty
+INPUT D:\Programma's\MikTEX\tex\latex\hyperref\hyperref.sty
+INPUT D:\Programma's\MikTEX\tex\latex\hyperref\hyperref.sty
+INPUT D:\Programma's\MikTEX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT D:\Programma's\MikTEX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT D:\Programma's\MikTEX\tex\generic\iftex\iftex.sty
+INPUT D:\Programma's\MikTEX\tex\generic\iftex\iftex.sty
+INPUT D:\Programma's\MikTEX\tex\latex\pdftexcmds\pdftexcmds.sty
+INPUT D:\Programma's\MikTEX\tex\latex\pdftexcmds\pdftexcmds.sty
+INPUT D:\Programma's\MikTEX\tex\generic\infwarerr\infwarerr.sty
+INPUT D:\Programma's\MikTEX\tex\generic\infwarerr\infwarerr.sty
+INPUT D:\Programma's\MikTEX\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT D:\Programma's\MikTEX\tex\generic\kvsetkeys\kvsetkeys.sty
+INPUT D:\Programma's\MikTEX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT D:\Programma's\MikTEX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT D:\Programma's\MikTEX\tex\generic\pdfescape\pdfescape.sty
+INPUT D:\Programma's\MikTEX\tex\generic\pdfescape\pdfescape.sty
+INPUT D:\Programma's\MikTEX\tex\latex\hycolor\hycolor.sty
+INPUT D:\Programma's\MikTEX\tex\latex\hycolor\hycolor.sty
+INPUT D:\Programma's\MikTEX\tex\latex\letltxmacro\letltxmacro.sty
+INPUT D:\Programma's\MikTEX\tex\latex\letltxmacro\letltxmacro.sty
+INPUT D:\Programma's\MikTEX\tex\latex\auxhook\auxhook.sty
+INPUT D:\Programma's\MikTEX\tex\latex\auxhook\auxhook.sty
+INPUT D:\Programma's\MikTEX\tex\latex\kvoptions\kvoptions.sty
+INPUT D:\Programma's\MikTEX\tex\latex\kvoptions\kvoptions.sty
+INPUT D:\Programma's\MikTEX\tex\latex\hyperref\pd1enc.def
+INPUT D:\Programma's\MikTEX\tex\latex\hyperref\pd1enc.def
+INPUT D:\Programma's\MikTEX\tex\generic\intcalc\intcalc.sty
+INPUT D:\Programma's\MikTEX\tex\generic\intcalc\intcalc.sty
+INPUT D:\Programma's\MikTEX\tex\generic\etexcmds\etexcmds.sty
+INPUT D:\Programma's\MikTEX\tex\generic\etexcmds\etexcmds.sty
+INPUT D:\Programma's\MikTEX\tex\latex\url\url.sty
+INPUT D:\Programma's\MikTEX\tex\latex\url\url.sty
+INPUT D:\Programma's\MikTEX\tex\generic\bitset\bitset.sty
+INPUT D:\Programma's\MikTEX\tex\generic\bitset\bitset.sty
+INPUT D:\Programma's\MikTEX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT D:\Programma's\MikTEX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT D:\Programma's\MikTEX\tex\generic\atbegshi\atbegshi.sty
+INPUT D:\Programma's\MikTEX\tex\generic\atbegshi\atbegshi.sty
+INPUT D:\Programma's\MikTEX\tex\latex\hyperref\hpdftex.def
+INPUT D:\Programma's\MikTEX\tex\latex\hyperref\hpdftex.def
+INPUT D:\Programma's\MikTEX\tex\latex\atveryend\atveryend.sty
+INPUT D:\Programma's\MikTEX\tex\latex\atveryend\atveryend.sty
+INPUT D:\Programma's\MikTEX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT D:\Programma's\MikTEX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT D:\Programma's\MikTEX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT D:\Programma's\MikTEX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\base\glossaries.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\base\glossaries.sty
+INPUT D:\Programma's\MikTEX\tex\latex\base\ifthen.sty
+INPUT D:\Programma's\MikTEX\tex\latex\base\ifthen.sty
+INPUT D:\Programma's\MikTEX\tex\latex\xkeyval\xkeyval.sty
+INPUT D:\Programma's\MikTEX\tex\latex\xkeyval\xkeyval.sty
+INPUT D:\Programma's\MikTEX\tex\generic\xkeyval\xkeyval.tex
+INPUT D:\Programma's\MikTEX\tex\generic\xkeyval\xkvutils.tex
+INPUT D:\Programma's\MikTEX\tex\latex\mfirstuc\mfirstuc.sty
+INPUT D:\Programma's\MikTEX\tex\latex\mfirstuc\mfirstuc.sty
+INPUT D:\Programma's\MikTEX\tex\latex\etoolbox\etoolbox.sty
+INPUT D:\Programma's\MikTEX\tex\latex\etoolbox\etoolbox.sty
+INPUT D:\Programma's\MikTEX\tex\latex\textcase\textcase.sty
+INPUT D:\Programma's\MikTEX\tex\latex\textcase\textcase.sty
+INPUT D:\Programma's\MikTEX\tex\latex\xfor\xfor.sty
+INPUT D:\Programma's\MikTEX\tex\latex\xfor\xfor.sty
+INPUT D:\Programma's\MikTEX\tex\latex\datatool\datatool-base.sty
+INPUT D:\Programma's\MikTEX\tex\latex\datatool\datatool-base.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amsmath.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amsmath.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amsbsy.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amsbsy.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amsopn.sty
+INPUT D:\Programma's\MikTEX\tex\latex\amsmath\amsopn.sty
+INPUT D:\Programma's\MikTEX\tex\latex\substr\substr.sty
+INPUT D:\Programma's\MikTEX\tex\latex\substr\substr.sty
+INPUT D:\Programma's\MikTEX\tex\latex\datatool\datatool-fp.sty
+INPUT D:\Programma's\MikTEX\tex\latex\datatool\datatool-fp.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\defpattern.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\defpattern.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-basic.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-basic.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-addons.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-addons.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-snap.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-snap.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-exp.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-exp.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-trigo.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-trigo.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-pas.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-pas.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-random.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-random.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-eqn.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-eqn.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-upn.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-upn.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-eval.sty
+INPUT D:\Programma's\MikTEX\tex\latex\fp\fp-eval.sty
+INPUT D:\Programma's\MikTEX\tex\latex\supertabular\supertabular.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\base\glossaries-compatible-307.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\base\glossaries-compatible-307.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tracklang\tracklang.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tracklang\tracklang.sty
+INPUT D:\Programma's\MikTEX\tex\generic\tracklang\tracklang.tex
+INPUT D:\Programma's\MikTEX\tex\generic\tracklang\tracklang.tex
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries-english\glossaries-english.ldf
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries-english\glossaries-english.ldf
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries-english\glossaries-english.ldf
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-hypernav.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-hypernav.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-list.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-list.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-long.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-long.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\longtable.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\longtable.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-super.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-super.sty
+INPUT D:\Programma's\MikTEX\tex\latex\supertabular\supertabular.sty
+INPUT D:\Programma's\MikTEX\tex\latex\supertabular\supertabular.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-tree.sty
+INPUT D:\Programma's\MikTEX\tex\latex\glossaries\styles\glossary-tree.sty
+INPUT D:\Programma's\MikTEX\tex\latex\eurosym\eurosym.sty
+INPUT D:\Programma's\MikTEX\tex\latex\eurosym\eurosym.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\graphicx.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\graphicx.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\graphics.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\graphics.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\trig.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\trig.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics-cfg\graphics.cfg
+INPUT D:\Programma's\MikTEX\tex\latex\graphics-cfg\graphics.cfg
+INPUT D:\Programma's\MikTEX\tex\latex\graphics-def\pdftex.def
+INPUT D:\Programma's\MikTEX\tex\latex\graphics-def\pdftex.def
+INPUT D:\Programma's\MikTEX\tex\latex\svg\svg.sty
+INPUT D:\Programma's\MikTEX\tex\latex\svg\svg.sty
+INPUT D:\Programma's\MikTEX\tex\latex\koma-script\scrbase.sty
+INPUT D:\Programma's\MikTEX\tex\latex\koma-script\scrbase.sty
+INPUT D:\Programma's\MikTEX\tex\latex\koma-script\scrlfile.sty
+INPUT D:\Programma's\MikTEX\tex\latex\koma-script\scrlfile.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\shellesc.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\shellesc.sty
+INPUT D:\Programma's\MikTEX\tex\latex\trimspaces\trimspaces.sty
+INPUT D:\Programma's\MikTEX\tex\latex\trimspaces\trimspaces.sty
+INPUT D:\Programma's\MikTEX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Programma's\MikTEX\tex\latex\xcolor\xcolor.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Programma's\MikTEX\tex\latex\graphics-cfg\color.cfg
+INPUT D:\Programma's\MikTEX\tex\latex\transparent\transparent.sty
+INPUT D:\Programma's\MikTEX\tex\latex\transparent\transparent.sty
+INPUT D:\Programma's\MikTEX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Programma's\MikTEX\tex\latex\pdfpages\pdfpages.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\calc.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\calc.sty
+INPUT D:\Programma's\MikTEX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Programma's\MikTEX\tex\latex\eso-pic\eso-pic.sty
+INPUT D:\Programma's\MikTEX\tex\latex\pdfpages\pppdftex.def
+INPUT D:\Programma's\MikTEX\tex\latex\pdfpages\pppdftex.def
+INPUT D:\Programma's\MikTEX\tex\latex\natbib\natbib.sty
+INPUT D:\Programma's\MikTEX\tex\latex\natbib\natbib.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\tabularx.sty
+INPUT D:\Programma's\MikTEX\tex\latex\tools\tabularx.sty
+INPUT D:\Programma's\MikTEX\tex\latex\caption\caption.sty
+INPUT D:\Programma's\MikTEX\tex\latex\caption\caption.sty
+INPUT D:\Programma's\MikTEX\tex\latex\caption\caption3.sty
+INPUT D:\Programma's\MikTEX\tex\latex\caption\caption3.sty
+INPUT D:\Programma's\MikTEX\tex\latex\caption\ltcaption.sty
+INPUT D:\Programma's\MikTEX\tex\latex\caption\ltcaption.sty
+INPUT D:\Programma's\MikTEX\tex\latex\colortbl\colortbl.sty
+INPUT D:\Programma's\MikTEX\tex\latex\colortbl\colortbl.sty
+INPUT D:\Programma's\MikTEX\tex\latex\titlesec\titlesec.sty
+INPUT D:\Programma's\MikTEX\tex\latex\titlesec\titlesec.sty
+INPUT D:\Programma's\MikTEX\tex\latex\float\float.sty
+INPUT D:\Programma's\MikTEX\tex\latex\float\float.sty
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.aux
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.aux
+OUTPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.aux
+INPUT D:\Programma's\MikTEX\tex\latex\translator\translator-basic-dictionary-English.dict
+INPUT D:\Programma's\MikTEX\tex\latex\translator\translator-basic-dictionary-English.dict
+INPUT D:\Programma's\MikTEX\tex\latex\siunitx\siunitx-abbreviations.cfg
+INPUT D:\Programma's\MikTEX\tex\latex\siunitx\siunitx-abbreviations.cfg
+INPUT D:\Programma's\MikTEX\tex\latex\hyperref\nameref.sty
+INPUT D:\Programma's\MikTEX\tex\latex\hyperref\nameref.sty
+INPUT D:\Programma's\MikTEX\tex\latex\refcount\refcount.sty
+INPUT D:\Programma's\MikTEX\tex\latex\refcount\refcount.sty
+INPUT D:\Programma's\MikTEX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT D:\Programma's\MikTEX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+OUTPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+OUTPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+INPUT D:\Programma's\MikTEX\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Programma's\MikTEX\tex\context\base\mkii\supp-pdf.mkii
+INPUT D:\Programma's\MikTEX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Programma's\MikTEX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT D:\Programma's\MikTEX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Programma's\MikTEX\tex\latex\pdflscape\pdflscape.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\lscape.sty
+INPUT D:\Programma's\MikTEX\tex\latex\graphics\lscape.sty
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmr8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmr6.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmex10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmss10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmss8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmss8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmr17.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmr17.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmr12.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmex10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmss12.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmtt12.tfm
+INPUT C:\Users\Arthur\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmr12.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.toc
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.toc
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmbx10.tfm
+OUTPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.toc
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\situation.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\situation.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\situation.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\situation.pdf
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\eurosym\feymr10.tfm
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\architecture.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\architecture.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\architecture.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\architecture.pdf
+INPUT D:\Programma's\MikTEX\fonts\tfm\jknappen\ec\tcrm0800.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\jknappen\ec\tcrm0600.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmr9.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmmi9.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmsy9.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmss9.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmss8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmtt9.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection_simulation.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection_simulation.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection_simulation.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection_simulation.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection_simulation.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse.eps
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse.eps
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse.eps
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse.eps
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_negative_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse.eps
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse.eps
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse.eps
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse.eps
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Transient_response_positive_input_pulse-eps-converted-to.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\reverse_polarity_protection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\microUSBinput.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\microUSBinput.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\microUSBinput.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\microUSBinput.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\microUSBinput.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq24075_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq24075_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq24075_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq24075_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq24075_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Charge_cycle.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Charge_cycle.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Charge_cycle.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Charge_cycle.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Charge_cycle.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_principeschema.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_principeschema.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_principeschema.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_principeschema.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_principeschema.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\bq29700_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TLV75533_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TLV75533_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TLV75533_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TLV75533_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TLV75533_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TPS22919_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TPS22919_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TPS22919_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TPS22919_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\TPS22919_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\ESP32_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\ESP32_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\ESP32_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\ESP32_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\ESP32_toegepast.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heat_map_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heat_map_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heat_map_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heat_map_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heat_map_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\view_angle_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\view_angle_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\view_angle_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\view_angle_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\view_angle_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_CCS811.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_CCS811.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_CCS811.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_CCS811.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_CCS811.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_microphone_break_out_board.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_microphone_break_out_board.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_microphone_break_out_board.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_microphone_break_out_board.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_microphone_break_out_board.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_audio_detector.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_audio_detector.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_audio_detector.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_audio_detector.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Schematic_audio_detector.png
+INPUT D:\Programma's\MikTEX\fonts\tfm\jknappen\ec\tcrm0500.tfm
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\field_of_view_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\field_of_view_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\field_of_view_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\field_of_view_AMG8833.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\field_of_view_AMG8833.png
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmbx8.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmbx6.tfm
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\humandetection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\humandetection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\humandetection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\humandetection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\humandetection.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\wifi_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\wifi_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\wifi_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\wifi_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\statendiagram.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\statendiagram.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\statendiagram.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\statendiagram.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\wifi_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\wifi_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\sensor_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\sensor_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\sensor_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\sensor_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\sync_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\sync_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\sync_pwr.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\sync_pwr.pdf
+INPUT D:\Programma's\MikTEX\fonts\tfm\jknappen\ec\tcrm0900.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmti10.tfm
+INPUT D:\Programma's\MikTEX\fonts\tfm\public\cm\cmbxti10.tfm
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\databaseDesign.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\databaseDesign.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\databaseDesign.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\databaseDesign.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\databaseDesign.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\overviewPage.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\overviewPage.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\overviewPage.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\overviewPage.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\overviewPage.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heatmapExample.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heatmapExample.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heatmapExample.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heatmapExample.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\heatmapExample.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\devkit.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\devkit.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\devkit.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\devkit.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\devkit.png
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.bbl
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.bbl
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\MainPCB_schematic.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\schematic_drawing_sensorboard.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200952.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\fig\Pricing_information_PI-1200953.pdf
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.aux
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+INPUT c:\Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.out
+INPUT C:\Users\Arthur\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0900.pk
+INPUT C:\Users\Arthur\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm0900.pk
+INPUT C:\Users\Arthur\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
+INPUT C:\Users\Arthur\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmtt10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmtt9.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\amsfonts\cm\cmtt9.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\eurosym\feymr10.pfb
+INPUT D:\Programma's\MikTEX\fonts\type1\public\eurosym\feymr10.pfb
