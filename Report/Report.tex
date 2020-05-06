@@ -458,25 +458,25 @@ The main goal for the sensor board was to make it as low power as possible. As a
 	\caption{Schematic AMG8833}
 	\label{fig:AMG8833}
 \end{figure}
-To detect human presence, we have decided to use an infrared sensor. The human body produces quite some body heat that is emitted. The AMG8833 is an 8x8-pixel IR-sensor, that maps the heat per pixel this is illustrated in figure \ref{fig:heatmap}. This allows us to determine how many people are present in a certain area. For example we can determine if there is a single person present or a group of persons in a row.
+To detect human presence, we have decided to use an infrared sensor. The human body produces quite some body heat that is emitted. The AMG8833 is an 8x8-pixel IR-sensor, that maps the heat per pixel this is illustrated in figure \ref{fig:heatmap} \cite{bib:AMG8833}. This allows us to determine how many people are present in a certain area. For example we can determine if there is a single person present or a group of persons in a row.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{heat_map_AMG8833.png}
-	\caption{Heatmap as a pixel grid}
+	\caption{Heatmap as a pixel grid \cite{bib:AMG8833}}
 	\label{fig:heatmap}
 \end{figure}
-One of the considerations that has to be studied is the effect of distance, ambient temperature and the field of view of the sensor. The sensor has a total angle view of \SI{60}{\degree} \label{fig:angleview} for the horizontal and vertical axis of the pixel grid. Depending on the height, the area that the sensor covers, changes. If the height increases, the area also increases. Not only the field of view is influenced by the height but also the result of the measurements. The further the heat source is from the sensor, the lower the measured temperature will be.
+One of the considerations that has to be studied is the effect of distance, ambient temperature and the field of view of the sensor. The sensor has a total angle view of \SI{60}{\degree} \label{fig:angleview} \cite{bib:AMG8833} for the horizontal and vertical axis of the pixel grid. Depending on the height, the area that the sensor covers, changes. If the height increases, the area also increases. Not only the field of view is influenced by the height but also the result of the measurements. The further the heat source is from the sensor, the lower the measured temperature will be.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{view_angle_AMG8833.png}
-	\caption{View angle AMG8833}
+	\caption{View angle AMG8833 \cite{bib:AMG8833}}
 	\label{fig:angleview}
 \end{figure}
-The sensor operates in a temperature range of \SI{0}{\celsius} up to \SI{50}{\celsius} for the full humidity range between the 15 \%RH and up to about 85 \%RH. Heigher temperatures can be handles if the humidity stays below a certain value. This is illustrated below. Because, the system will be deployed in the cafeteria, this should not be a problem. An other aspect is the ambient temperature. The sensor has to be capable to determine the difference between the heat of a person and the heat of the surroundings. This will be tested and implemented in the software. 
+The sensor operates in a temperature range of \SI{0}{\celsius} up to \SI{50}{\celsius} for the full humidity range between the 15 \%RH and up to about 85 \%RH \cite{bib:AMG8833} . Heigher temperatures can be handles if the humidity stays below a certain value. This is illustrated below. Because, the system will be deployed in the cafeteria, this should not be a problem. An other aspect is the ambient temperature. The sensor has to be capable to determine the difference between the heat of a person and the heat of the surroundings. This will be tested and implemented in the software. 
 \\ \\
-All communication to and from the sensor is done over $\text{I}^2$C. In addition to the $\text{I}^2$C-communication there is a AD-select input to set the $\text{I}^2$C-address, you can set the address to 0x58 or 0x59. There is also an interrupt output if you want to work with interrupts.
+All communication to and from the sensor is done over $\text{I}^2$C. In addition to the $\text{I}^2$C-communication there is a AD-select input to set the $\text{I}^2$C-address, you can set the address to 0x58 or 0x59 \cite{bib:AMG8833} . There is also an interrupt output if you want to work with interrupts \cite{bib:AMG8833}. 
 \\ \\
-The last important aspect for this sensor is the power consumption. In the documentation it is stated that the sensor has a typical current of 4.5 mA in normal operation mode. When the sensor is brought to sleep the current drops to 0.2 mA. Our goal is to wake the sensor from sleep and when we have the measurement put it back to sleep as fast as possible.
+The last important aspect for this sensor is the power consumption. In the documentation it is stated that the sensor has a typical current of 4.5 mA in normal operation mode \cite{bib:AMG8833} . When the sensor is brought to sleep the current drops to 0.2 mA \cite{bib:AMG8833} . Our goal is to wake the sensor from sleep and when we have the measurement put it back to sleep as fast as possible.
 
 \subsection{CCS811 air quality sensor}
 \begin{figure}[H]
@@ -485,14 +485,14 @@ The last important aspect for this sensor is the power consumption. In the docum
 	\caption{Schematic CCS811}
 	\label{fig:CCS811}
 \end{figure}
-For the air quality in the cafeteria, we have chosen to go for the CCS811 air quality sensor. The CCS811 is an ultra low power gas sensor with propable algortime system for detecting gasses. It has the ability to sense TVOC and an equivalent $CO_{2}$ concentration. This sensor has different measure modes which can help to make the application more flexible but also suitable for mobile equipment and battery powered systems. All settings and communication to the sensor is again done with $\text{I}^2$C. The $\text{I}^2$C-addresses are 0x5A and 0x5B, depending on the ADDR-pin. Besides the $\text{I}^2$C-communication there are some other signals that can control/monitor the sensor. 
+For the air quality in the cafeteria, we have chosen to go for the CCS811 air quality sensor. The CCS811 is an ultra low power gas sensor with propable algortime system for detecting gasses \cite{bib:CCS811}. It has the ability to sense TVOC and an equivalent $CO_{2}$ concentration. This sensor has different measure modes which can help to make the application more flexible but also suitable for mobile equipment and battery powered systems. All settings and communication to the sensor is again done with $\text{I}^2$C. The $\text{I}^2$C-addresses are 0x5A and 0x5B, depending on the ADDR-pin. Besides the $\text{I}^2$C-communication there are some other signals that can control/monitor the sensor. 
 \begin{itemize}
 	\item There is a \textbf{ADDR}-pin for setting the $\text{I}^2$C-address to 0x5A or 0x5B
 	\item The\textbf{ nINT}-pin is an active low pin, that generates interrupts depending on the settings. This pin can generate interrupts when a measurement is available or when the equivalent $CO_{2}$ is above or under a certain value. This is a value that is best buffered before monitoring with a GPIO-pin.
 	\item The \textbf{nReset}-pin is not only a reset pin but it can also be monitored to detect a software reset. This can also be an input. If this pin is pulled low you can reset the sensor.
 	\item The \textbf{nWake}-pin is also an active low pin. This pin can be used to put the sensor into sleep just by pulling the pin low.
 \end{itemize}
-The following modes are possible:
+The following modes \cite{bib:CCS811} are possible:
 \begin{itemize}
 	\item \textbf{Idle}: sensor does not perform a measurement: low current mode
 	\item \textbf{Mode 1}: a measurement is performed every second: constant power mode
@@ -502,7 +502,7 @@ The following modes are possible:
 \end{itemize}
 The Idle-mode has a second purpose when switching from one mode to another. There is a requirement when changing the mode from one with a higher sample rate to one with a lower sample rate. If this occurs, the sensor has to be placed in idle mode for at least 10 minutes. However, this is not necessary in our application. When changing the mode from a lower to a higher sample rate this is not needed. In our application, we have chosen to search for one mode to operate in and always place the sensor back to sleep after the measurement has been read out.
 \\ \\
-In the documentation it is stated that the average current for a pulse cycle is 0.7 mA with a power supply of 1.8 V. If we calculate the power, we get the following result:
+In the documentation \cite{bib:CCS811} it is stated that the average current for a pulse cycle is 0.7 mA with a power supply of 1.8 V. If we calculate the power, we get the following result:
 \\ \\
 $P= U \cdot I=1.8 V \cdot 0.7 mA = 1.26 mW$
 \\ \\
@@ -520,27 +520,27 @@ The power consumption of the constant power modes is only a factor 38,333 bigger
 
 
 \subsection{BOB-12758 microphone breakout board}
-We have informed us by colleague students who had used a microphone module in the first semester. One group came with a breakout board with a microphone and a triple operational amplifier circuit. The proposed breakout board could do several things, one of them was peak detection. For our application, there is only the need to check the average sound level, so we only needed a microphone and one operational amplifier. In figure \ref{fig:BOB-12758}, we can see the schematic of the breakout board.
+We have informed us by colleague students who had used a microphone module in the first semester. One group came with a breakout board with a microphone and a triple operational amplifier circuit. The proposed breakout board could do several things, one of them was peak detection. For our application, there is only the need to check the average sound level, so we only needed a microphone and one operational amplifier. In figure \ref{fig:BOB-12758}, we can see the schematic of the breakout board \cite{bib:breakout_microphone}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{schematic_microphone_break_out_board.png}
-	\caption{Schematic BOB-12758 microphone breakout board}
+	\caption{Schematic BOB-12758 microphone breakout board \cite{bib:breakout_microphone}}
 	\label{fig:BOB-12758}
 \end{figure}
-Because we wanted to have the average sound level, we decided to place a detector behind the opamp. The second reason to use the detector is that the ESP32 can sample up to about 27 ksps. By just looking at the sample rate, it is clear that the ADC is not fast enough to fulfil the Nyquist theorem. 
+Because we wanted to have the average sound level, we decided to place a detector behind the opamp. The second reason to use the detector is that the ESP32 can sample up to about 27 ksps \cite{ADC_speed} . By just looking at the sample rate, it is clear that the ADC is not fast enough to fulfil the Nyquist theorem. 
 \\ \\
 The detector needs time to come from the low level to the sound level. Finding the best value of $\tau$ will be one of the investigations. This will be determine along with the test of the other sensors. The microphone must receive power for about 10 times $\tau$. We know from the theory that after 5 $\tau$, 97\% of the applied voltage is reached. The extra 5 $\tau$ is chosen for two reasons. Firstly to compensate the rectified signal by the detector and secondly to have a stable value of the average sound level.
 
 \subsection{Board design}
-When designing the board, we have started from the basic schematics of the provided break out boards of the sensor boards (see figures \ref{fig:AMG8833} and \ref{fig:CCS811}). With some extra guidelines from the documentations of the sensors. For the microphone sensorboard as mentioned, we needed to design a detector circuit. We have chosen to go for a simple detector with a diode followed by an RC circuit, this is illustrated in figure \ref{fig:simple_detector}.
+When designing the board, we have started from the basic schematics of the provided break out boards of the sensor boards (see figures \ref{fig:AMG8833} and \ref{fig:CCS811}) \cite{bib:AMG8833_schematic} \cite{bib:CCS811_schematic} . With some extra guidelines from the documentations of the sensors  \cite{bib:AMG8833} \cite{bib:CCS811}. For the microphone sensorboard as mentioned, we needed to design a detector circuit. We have chosen to go for a simple detector with a diode followed by an RC circuit, this is illustrated in figure \ref{fig:simple_detector}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{Schematic_audio_detector.png}
-	\caption{Schematic simple detector}
+	\caption{Schematic simple detector \cite{breakout_microphone}}
 	\label{fig:simple_detector}
 \end{figure}
-During the documentation of the circuit it was noticed that the audiosignal of the breakout board is superpositioned onto a DC-voltage that is the half of the supply voltage. This can be seen on figure \ref{fig:BOB-12758}. The resistor circuit R2 and R3 will divide the supply in half, so half of the supply voltage will be available at the non-inverting input of the operational amplifier.
+During the documentation of the circuit it was noticed that the audiosignal of the breakout board is superpositioned onto a DC-voltage that is the half of the supply voltage. This can be seen on figure \ref{fig:BOB-12758} \cite{breakout_microphone} . The resistor circuit R2 and R3 will divide the supply in half, so half of the supply voltage will be available at the non-inverting input of the operational amplifier.
 
  In the prototype of the board, this was not taken into consideration. This can be solved in different ways not only by hardware but also by software. If we want to solve this with hardware without loosing information, we can just put several diodes in series until we come to a sum of the forward voltages that is the half of our voltage supply. The power supply is $3.3 V$. This method will not increase the accuracy of the measurement so it is not an improvement. \\ \\
 $V_{DC offset} = \frac{V_{CC}}{2}= \frac{3.3V}{2} = 1.65V$\\ \\
@@ -553,7 +553,7 @@ The reference level for no sound is $1.2 V$. The maximum audio voltage level wou
 
 To determin the optimal value for the resistor and the capacitor of the detector, we would wait to look at the other response time of the other two sensors. We have taken a initial value of 1 ms. This can be realized with a resistor of $ 10 k\Omega$ and a capacitor of $0.1 \mu$F.
 \\ \\
-For the other two sensors we have as mentioned based our schematic on the schematic of the break out boards. We only needed one extra component and that was an operational amplifier to buffer the nINt of the CCS811. This was recommended by the documentation of the CCS811. Also, if this interrupt function is not desired, we can just remove this part of the circuit and the system will work just fine. We have brought all the other connections of the sensors to a central header of 11 pins, so the board can be plugged onto the CPU board. The break out board of the microphone will be placed on top of this board by a 3 pins header.  The schematic drawing of the sensor board can be find the appendix \ref{fig:sensor_board}.
+For the other two sensors we have as mentioned based our schematic on the schematic of the break out boards \cite{bib:AMG8833_schematic} \cite{bib:CCS811_schematic} . We only needed one extra component and that was an operational amplifier to buffer the nINt of the CCS811. This was recommended by the documentation of the CCS811. Also, if this interrupt function is not desired, we can just remove this part of the circuit and the system will work just fine. We have brought all the other connections of the sensors to a central header of 11 pins, so the board can be plugged onto the CPU board. The break out board of the microphone will be placed on top of this board by a 3 pins header.  The schematic drawing of the sensor board can be find the appendix \ref{fig:sensor_board}.
 
 Unfortunately during the prototype phase, the pitch of the pinheader was not found, we have based the pitch according to a recommended connector of the dealer. Afterwards, we came to the idea to check the value at the developer of the breakout board and found a recommended pinheader with a different pitch. The drawing has been updated. Also, this has not been verified because of the corona situation.
 \\ \\
@@ -569,7 +569,7 @@ We started to do some measurements on the \textbf{CCS811} what is the difference
 	\item Time needed for initialization
 	\item Time needed for the sensor to wake from sleep
 \end{itemize}
-The first situation is to see if we could save some energy if we shut down the power supply of the sensor. Also, this is interesting to know if we use the load switches to turn of the power of each sensor. The second situation is as the CCS811 is normally used in an application. The test procedure for these tests was as followed. After the sensor was waked or initialized, a timer was started. After every ms, we looked in the registers of the sensor if a measurement was available. This was done with the following method \textbf{Adafruit\_CCS811::available()} from the\textbf{Adafruit\_CCS811}. If we get \textbf{True} back from this method, we stop the timer and made it visible.
+The first situation is to see if we could save some energy if we shut down the power supply of the sensor. Also, this is interesting to know if we use the load switches to turn of the power of each sensor. The second situation is as the CCS811 is normally used in an application. The test procedure for these tests was as followed. After the sensor was waked or initialized, a timer was started. After every ms, we looked in the registers of the sensor if a measurement was available. This was done with the following method \textbf{Adafruit\_CCS811::available()} from the \textbf{Adafruit\_CCS811} \cite{lib_CCS811} . If we get \textbf{True} back from this method, we stop the timer and made it visible.
 \\ \\
 We got the following results from these test.
 \begin{itemize}
@@ -580,7 +580,7 @@ We got the following results from these test.
 \textbf{Conclusion:} \\ The first conclusion of these tests is that bringing the sensors out of sleep is the fastest way to get a measurement. This is because for getting the sensor out of sleep we just need to alter the mode. 
 \\ Second conclusion, the sample period has always been respected. It is not the case that the sensor will perform a measurement at wake up. If the sensor is woken up, it will take the time of the sample period for a measurement to be available.
 \\ \\
- The second sensor, we needed to check was the \textbf{AMG8833}. The procedure was the same, the only difference is, to bring the AMG8833 out of sleep, this needs to be done with an $\text{I}^2$C-command instead of a GPIO pin. Also, for this we use the library \textbf{SparkFun\_GridEYE\_Arduino\_Library}. The method to wake the sensor is wake() and putting it back to sleep with sleep(). We have chosen to use the sample rate of 10 samples per second. For reading out the raw data of a single pixel there is the method "getPixelTemperatureRaw". We checked every millisecond if the first pixel data was available. We noticed during testing that not all pixel data was available after 100ms. So we changed the check so that the timer may be stopped if the first pixel and the last pixel of the array had a value. With this measurement principle, we found that after 105 ms the data of all pixels was available.
+ The second sensor, we needed to check was the \textbf{AMG8833}. The procedure was the same, the only difference is, to bring the AMG8833 out of sleep, this needs to be done with an $\text{I}^2$C-command instead of a GPIO pin. Also, for this we use the library \textbf{SparkFun\_GridEYE\_Arduino\_Library} \cite{lib_AMG8833} . The method to wake the sensor is wake() and putting it back to sleep with sleep(). We have chosen to use the sample rate of 10 samples per second. For reading out the raw data of a single pixel there is the method "getPixelTemperatureRaw" \cite{lib_AMG8833} . We checked every millisecond if the first pixel data was available. We noticed during testing that not all pixel data was available after 100ms. So we changed the check so that the timer may be stopped if the first pixel and the last pixel of the array had a value. With this measurement principle, we found that after 105 ms the data of all pixels was available.
 \\ \\  
 Before going further with the last sensor, we wanted to see if we put the the readings after each other what the effect would be. How much time it cost to read out the AMG8833 sensor. We made a method that read both sensors after each other. We found that the CCS811 was ready to read out. What this means for the implementation will be explained further on in this report. 
 \\  \\ Now, we have come to the last sensor the microphone, we have chosen to use a breakout pcb as mentioned above. The only thing, we needed to check is which $\tau$ we can take for the filter of the detector. We could not test this because there was no hardware available for this. Based on the previous results, there is a delay of 105 ms between waking the sensors and have the measurements available. As mentioned, we wanted a period of 10 $\tau$ beacause the detector has to reach a stable average value to measure. If we divide 105 ms  by 10, we get  a $\tau$ of 10.5 ms. If we round this to 10 ms, we can realized this $\tau$ with a resistor of 100 k$\Omega$ and a capacitor of 100 nF.\\
@@ -599,7 +599,7 @@ For the first experiment we have put a person in front of the AMG8833 at about 2
 \\ \\ 
 This concludes, we can detect a human by the radiation coming from the crown of the head.
 \\ \\
-With this confirmed, we progressed into the second experiment. Is it possible to detect a human below the sensor at a height of 3,4 metres (possible to test at home during corona pandemic). The height difference between the head of an average standing person and the sensor is about 1,7 metres. At this height the sensor will covers an area of $3.85 m^2$. We know the sensor had a angle view of \SI{60}{\degree}. If we then calculate according to the principal geometric drawing in figure \ref{fig:prinicipal drawing},  we find:
+With this confirmed, we progressed into the second experiment. Is it possible to detect a human below the sensor at a height of 3,4 metres (possible to test at home during corona pandemic). The height difference between the head of an average standing person and the sensor is about 1,7 metres \cite{average_height}. At this height the sensor will covers an area of $3.85 m^2$. We know the sensor had a angle view of \SI{60}{\degree}. If we then calculate according to the principal geometric drawing in figure \ref{fig:prinicipal drawing},  we find:
 \\ \\
 $ x = height \cdot tan (\SI{30}{\degree}) = 1.7 m \cdot 0.577 = 0.981 m$
 \\ \\
@@ -894,9 +894,42 @@ The temperature data would make it easy to spot where it's is hotter or rather w
 Same goes for the other data that is collected by the sensornodes.
 
 \section{Case Design}
-For our system, we have designed a simple case for building in the system. We have made the design with fusion 360. This program has the ability to import different types of 3D-files. By importing all our separate parts of the design and align them we could make a case that fits with some holes so the sensors have a opening above them to measure the different stimulus. The design of the case is not a very complex design but there have been taken some important design considerations. For the opening above the AMG8833, we have made the opening a little bit wider so it will not cover parts of the field of view of the sensor. Also, to hang the design to the ceiling we have drawn four loops at the upper side of case so we can hang the case with a cable to the ceiling everywhere the systems needs to be placed.
-
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{case_design.png}
+	\caption{Case design different parts}
+	\label{fig:case_design}
+\end{figure}
+For our system, we have designed a simple case with snapfits for building in the system \ref{fig:snapfits_total}. We have made the design with fusion 360. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{snapfits_total.png}
+	\caption{Design with internal parts integrated}
+	\label{fig:snapfits_total}
+\end{figure}
+This program has the ability to import different types of 3D-files \ref{fig:electronic_system}. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{electronic_system.png}
+	\caption{Individuel parts imported in Fusion 360}
+	\label{fig:electronic_system}
+\end{figure}
+By importing all our separate parts of the design and align them. We could make a case that fits with some holes so the sensors have a opening above them to measure the different stimulus \ref{fig:opening_sensors}. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{opening_sensors.png}
+	\caption{Opening in cover for sensors}
+	\label{fig:opening_sensors}
+\end{figure}
+There is also a slot for the wifi-antenne \ref{fig:snapfits_total}. The antenne is uncovered but the circuit is placed in such a way, the antenne is not coming outside the case. This to protected and expose it at the same time.
+\\ \\
+The design of the case is not a very complex design but there have been taken some important design considerations. For the opening above the AMG8833, we have made the opening a little bit wider so it will not cover parts of the field of view of the sensor \ref{fig:opening_sensors} . To instal the design to the ceiling, we have put four loops at the upper side of the case \ref{fig:loops_hang_system}. With these loops the case can be fixed with a cable to the ceiling everywhere the systems needs to be installed at the choosen height.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{loops_hang_system.png}
+	\caption{Loops for installing the system to the ceiling}
+	\label{fig:loops_hang_system}
+\end{figure}
 \paragraph{Possible improvements}
 The case could be made more closely to the the internal parts. Specific at the AMG8833 and the CCS811. For the CCS811 this is not  really an issue because it is a gas sensor but for the AMG8833, the case could block the view of the sensor if the opening is not big enough. The weight distribution is not optimal, the batteries are at one side of the design, so the balance is not even spread through the design. This could result in a not perfect horizontal hanging case. We could adapt the string to balance out the weight so it will hang horizontal.
 
