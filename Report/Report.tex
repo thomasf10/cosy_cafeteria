@@ -15,7 +15,7 @@
 \captionsetup[table]{singlelinecheck=off} % caption van tabellen links uitlijnen
 \usepackage{color, colortbl}
 \definecolor{Gray}{gray}{0.9}
-
+\usepackage{longtable}
 \usepackage{titlesec} 					% voor mooiere paragraph
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -77,7 +77,7 @@ To improve the experience of the students in the cafeteria, an embedded system w
 
 \subsection{Non-technical specifications}
 \begin{itemize}
-	\item Cost: \euro{??}
+	\item Cost: $<$ \euro{100}
 	\item The data should be easy accessible to the students
 \end{itemize}
 
@@ -904,7 +904,7 @@ The case could be made more closely to the the internal parts. Specific at the A
 \section{Financial estimate}
 The price of all the components used in this project is 71,70 Euro, this price can be found in the BOM~\ref{app:BOM}.
 For the case we calculated the price of the print based on how much filament it would use to print it. It takes about 60grams of filament and that would cost about 1 euro.
-The price for both the pcb's is about 71,45 euro. The total estimated price for this project would be € 144,15. 
+The price for both the pcb's is about 71,45 euro. The total estimated price for this project would be \euro 144,15. 
 
 \section{Validation and testing}
 In this section the different functionalities are validated. The aspects that couldn't be validated because of the lack of equipment during the corona pandemic are also discussed. 
@@ -986,54 +986,54 @@ The power consumption of the different sensors, Wi-Fi communication and NTP sync
 \newpage
 
 \section{BOM for main pcb and sensor pcb}\label{app:BOM}
-\begin{table}
-    \centering
-    \begin{tabular}{|l|l|l|l|l|l|l|}
+%\begin{table}
+ %   \centering
+    \begin{longtable}{|p{.15\textwidth}|p{.15\textwidth}||p{.15\textwidth}|p{.15\textwidth}||p{.11\textwidth}|p{.09\textwidth}||p{.09\textwidth}|} %{\linewidth}{|X|X|X|X|X|X|X|}
     \hline
         Function & Description & Part No. & Package & Quantity & Prijs & Prijs tot \\ \hline
-        Battery & 18650 Li-ion Batterij, 3350mAh & NCR18650B &  & 2 & € 4,95 & € 9,90 \\ \hline
-        Battery holder & BATTERY HOLDER 18650 PC PIN & 534-1042P &  & 2 & € 2,17 & € 4,34 \\ \hline
-        Power management & Charger chip & BQ24075RGTR & VQFN-16 & 1 & € 1,99 & € 1,99 \\ \hline
-         & Protection IC & BQ29700DSER & WSON-6 & 1 & € 0,60 & € 0,60 \\ \hline
-         & Dual N-channel MOSFETs & 512-FDS9926A & 8-SOIC & 1 & € 0,54 & € 0,54 \\ \hline
-         & LDO 3,3V 500 mA & TLV75533PDBVR & SOT23-5 & 1 & € 0,56 & € 0,56 \\ \hline
-        Micro USB  B &  & Wurth 629105150521 &  & 1 & € 1,89 & € 1,89 \\ \hline
-        Reverse polarity protection & PMOS & NTR2101PT1G & SOT-23-3 & 1 & € 0,33 & € 0,33 \\ \hline
-        Load switch &  & TPS22919DCKT &  & 3 & € 0,38 & € 1,14 \\ \hline
-        Microfoon & BOB-09964  & BOB-12758 & Eval bord & 1 & € 6,26 & € 6,26 \\ \hline
-        Air quality sensor  & CCS-811 & CCS811B-JOPR5K & LGA & 1 & € 10,17 & € 10,17 \\ \hline
-        IR sensor & AMG8833 & AMG8833  &  & 1 & € 27,04 & € 27,04 \\ \hline
-        Shottkey-diode & RB081LAM-20 & RB081LAM-20 & SOD-128 & 1 & € 0,35 & € 0,35 \\ \hline
-        Microcontroller + WiFi module & ESP32 & ESP32-SOLO-1 &  & 1 & € 3,06 & € 3,06 \\ \hline
-        Buttons &  & 430481035816 &  & 2 & € 0,46 & € 0,92 \\ \hline
-        Inverter & Unbuffered inverter interrupt CCS811 & NC7SVU04P5X & SC-70 & 1 & € 0,42 & € 0,42 \\ \hline
-        Thermistor & 100kOhm thermistor & NCU18WF104D60RB & 1608 & 1 & € 0,30 & € 0,30 \\ \hline
-        Blue led &  & TLHB44K2M1 & TH & 1 & € 0,92 & € 0,92 \\ \hline
-        Green led &  & TLHG44K1L2 & TH & 1 & € 0,52 & € 0,52 \\ \hline
-        11 Pin header &  &  & TH & 2 & € 0,32 & € 0,64 \\ \hline
-        11 jumper wires female-female &  &  &  &  &  & € 0,00 \\ \hline
-        Resistors (main board) & 22 Ohm & CRCW120622R0FKEAC & 1206 & 1 & € 0,09 & € 0,09 \\ \hline
-         & 330 &  & 1206 & 1 & € 0,09 & € 0,09 \\ \hline
-         & 680 &  & 1206 & 4 & € 0,09 & € 0,36 \\ \hline
-         & 1,1k &  & 1206 & 1 & € 0,09 & € 0,09 \\ \hline
-         & 1,5k &  & 1206 & 2 & € 0,09 & € 0,18 \\ \hline
-         & 2,2k &  & 1206 & 1 & € 0,09 & € 0,09 \\ \hline
-         & 4,7 kOhm & CRCW12064K70FKEAC & 1206 & 1 & € 0,09 & € 0,09 \\ \hline
-         & 10k &  & 1206 & 6 & € 0,09 & € 0,54 \\ \hline
-         & 47k &  & 1206 & 1 & € 0,09 & € 0,09 \\ \hline
-         & 100 kOhm & CRCW1206100KFKEAC  & 1206 & 4 & € 0,09 & € 0,36 \\ \hline
-         & 5 Meg &  & 1206 & 2 & € 0,09 & € 0,18 \\ \hline
-        Pol Capacitors (main board) & 47u/16V & EDK476M016A9DAA & 5x5,4mm & 2 & € 0,23 & € 0,46 \\ \hline
-         & 10u/16V & EDH106M016A9BAA & 4x5,4mm & 4 & € 0,22 & € 0,88 \\ \hline
-         & 3,3u/16V & 710-865250340001 & 4x5,5mm & 3 & € 0,24 & € 0,72 \\ \hline
-        Capacitors & 100 nF & GRM319R72A104KA01D & 1206 & 5 & € 0,35 & € 1,75 \\ \hline
-         & 1 µF & GRM31MR71C105KA01L & 1206 & 5 & € 0,26 & € 1,31 \\ \hline
-         & 2,2 µF & GRM31MR71C225KA35L & 1206 & 1 & € 0,30 & € 0,30 \\ \hline
-         & 4,7 µF & GRM31CR61A475KA01L & 1206 & 3 & € 0,37 & € 1,11 \\ \hline
-         & 10 µF & GRM319C81C106MA12J & 1206 & 1 & € 0,28 & € 0,28 \\ \hline
-         & 47u/10V X5R & GRM31CR61A476ME15L & 1206 & 1 & € 0,76 & € 0,76 \\ \hline
+        Battery & 18650 Li-ion Batterij, 3350mAh & NCR18650B &  & 2 & \euro 4,95 & \euro 9,90 \\ \hline
+        Battery holder & BATTERY HOLDER 18650 PC PIN & 534-1042P &  & 2 & \euro 2,17 & \euro 4,34 \\ \hline
+        Power management & Charger chip & BQ24075 RGTR & VQFN-16 & 1 & \euro 1,99 & \euro 1,99 \\ \hline
+         & Protection IC & BQ29700 DSER & WSON-6 & 1 & \euro 0,60 & \euro 0,60 \\ \hline
+         & Dual N-channel MOSFETs & 512-FDS9926A & 8-SOIC & 1 & \euro 0,54 & \euro 0,54 \\ \hline
+         & LDO 3,3V 500 mA & TLV75533 PDBVR & SOT23-5 & 1 & \euro 0,56 & \euro 0,56 \\ \hline
+        Micro USB  B &  & Wurth 629105 150521 &  & 1 & \euro 1,89 & \euro 1,89 \\ \hline
+        Reverse polarity protection & PMOS & NTR2101 PT1G & SOT-23-3 & 1 & \euro 0,33 & \euro 0,33 \\ \hline
+        Load switch &  & TPS22919 DCKT &  & 3 & \euro 0,38 & \euro 1,14 \\ \hline
+        Microfoon & BOB-09964  & BOB-12758 & Eval bord & 1 & \euro 6,26 & \euro 6,26 \\ \hline
+        Air quality sensor  & CCS-811 & CCS811B-JOPR5K & LGA & 1 & \euro 10,17 & \euro 10,17 \\ \hline
+        IR sensor & AMG8833 & AMG8833  &  & 1 & \euro 27,04 & \euro 27,04 \\ \hline
+        Shottkey-diode & RB081LAM-20 & RB081LAM-20 & SOD-128 & 1 & \euro 0,35 & \euro 0,35 \\ \hline
+        Microcontroller + WiFi module & ESP32 & ESP32-SOLO-1 &  & 1 & \euro 3,06 & \euro 3,06 \\ \hline
+        Buttons &  & 430481 035816 &  & 2 & \euro 0,46 & \euro 0,92 \\ \hline
+        Inverter & Unbuffered inverter interrupt CCS811 & NC7SV U04P5X & SC-70 & 1 & \euro 0,42 & \euro 0,42 \\ \hline
+        Thermistor & 100kOhm thermistor & NCU18WF1 04D60RB & 1608 & 1 & \euro 0,30 & \euro 0,30 \\ \hline
+        Blue led &  & TLHB44 K2M1 & TH & 1 & \euro 0,92 & \euro 0,92 \\ \hline
+        Green led &  & TLHG4 4K1L2 & TH & 1 & \euro 0,52 & \euro 0,52 \\ \hline
+        11 Pin header &  &  & TH & 2 & \euro 0,32 & \euro 0,64 \\ \hline
+        11 jumper wires female-female &  &  &  &  &  & \euro 0,00 \\ \hline
+        Resistors (main board) & 22 Ohm & CRCW 12062 2R0FKEAC & 1206 & 1 & \euro 0,09 & \euro 0,09 \\ \hline
+         & 330 &  & 1206 & 1 & \euro 0,09 & \euro 0,09 \\ \hline
+         & 680 &  & 1206 & 4 & \euro 0,09 & \euro 0,36 \\ \hline
+         & 1,1k &  & 1206 & 1 & \euro 0,09 & \euro 0,09 \\ \hline
+         & 1,5k &  & 1206 & 2 & \euro 0,09 & \euro 0,18 \\ \hline
+         & 2,2k &  & 1206 & 1 & \euro 0,09 & \euro 0,09 \\ \hline
+         & 4,7 kOhm & CRCW12 064K70 FKEAC & 1206 & 1 & \euro 0,09 & \euro 0,09 \\ \hline
+         & 10k &  & 1206 & 6 & \euro 0,09 & \euro 0,54 \\ \hline
+         & 47k &  & 1206 & 1 & \euro 0,09 & \euro 0,09 \\ \hline
+         & 100 kOhm & CRCW1206 100KFKEAC  & 1206 & 4 & \euro 0,09 & \euro 0,36 \\ \hline
+         & 5 Meg &  & 1206 & 2 & \euro 0,09 & \euro 0,18 \\ \hline
+        Pol Capacitors (main board) & 47u/16V & EDK476 M016A 9DAA & 5x5,4mm & 2 & \euro 0,23 & \euro 0,46 \\ \hline
+         & 10u/16V & EDH106M0 16A9BAA & 4x5,4mm & 4 & \euro 0,22 & \euro 0,88 \\ \hline
+         & 3,3u/16V & 710-86525034 0001 & 4x5,5mm & 3 & \euro 0,24 & \euro 0,72 \\ \hline
+        Capacitors & 100 nF & GRM319R7 2A104K A01D & 1206 & 5 & \euro 0,35 & \euro 1,75 \\ \hline
+         & 1 $\mu$F & GRM31M R71C105 KA01L & 1206 & 5 & \euro 0,26 & \euro 1,31 \\ \hline
+         & 2,2 $\mu$F & GRM31MR 71C225 KA35L & 1206 & 1 & \euro 0,30 & \euro 0,30 \\ \hline
+         & 4,7 $\mu$F & GRM31C R61A475 KA01L & 1206 & 3 & \euro 0,37 & \euro 1,11 \\ \hline
+         & 10 $\mu$F & GRM319 C81C106M A12J & 1206 & 1 & \euro 0,28 & \euro 0,28 \\ \hline
+         & 47u/10V X5R & GRM31CR 61A476 ME15L & 1206 & 1 & \euro 0,76 & \euro 0,76 \\ \hline
          &  &  &  &  &  &  \\ \hline
-         &  &  &  &  & Tot: & € 71,70 \\ \hline
-    \end{tabular}
-\end{table}
+         &  &  &  &  & Tot: & \euro 71,70 \\ \hline
+    \end{longtable}
+%\end{table}
 \end{document}
