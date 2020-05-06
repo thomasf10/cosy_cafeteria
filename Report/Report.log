@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.11)  6 MAY 2020 01:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.11)  6 MAY 2020 03:23
 entering extended mode
 **c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.tex
 (c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/Report.tex
@@ -596,7 +596,7 @@ Package caption Info: End \AtBeginDocument code.
 \openout4 = `Report.toc'.
 
  [3]
-<fig/situation.pdf, id=275, 467.82779pt x 147.67169pt>
+<fig/situation.pdf, id=285, 467.82779pt x 147.67169pt>
 File: fig/situation.pdf Graphic file (type pdf)
 <use fig/situation.pdf>
 Package pdftex.def Info: fig/situation.pdf  used on input line 48.
@@ -605,7 +605,7 @@ Package pdftex.def Info: fig/situation.pdf  used on input line 48.
 
 pdfTeX warning: pdflatex (file c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/situation.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-<fig/architecture.pdf, id=303, 395.55779pt x 363.27718pt>
+<fig/architecture.pdf, id=313, 395.55779pt x 363.27718pt>
 File: fig/architecture.pdf Graphic file (type pdf)
 <use fig/architecture.pdf>
 Package pdftex.def Info: fig/architecture.pdf  used on input line 89.
@@ -631,7 +631,7 @@ Package natbib Warning: Citation `LiIonVsLi-Po_Ovonic' on page 7 undefined on in
 Package natbib Warning: Citation `Li-Po_Wiki' on page 7 undefined on input line 134.
 
 [7]
-<fig/reverse_polarity_protection_simulation.png, id=374, 506.6428pt x 381.67593pt>
+<fig/reverse_polarity_protection_simulation.png, id=384, 506.6428pt x 381.67593pt>
 File: fig/reverse_polarity_protection_simulation.png Graphic file (type png)
 <use fig/reverse_polarity_protection_simulation.png>
 Package pdftex.def Info: fig/reverse_polarity_protection_simulation.png  used on input line 165.
@@ -649,7 +649,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Transient_response_negative_input_pulse-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig/Transient_response_negative_input_pulse-eps-converted-to.pdf, id=386, 462.72874pt x 346.29375pt>
+<fig/Transient_response_negative_input_pulse-eps-converted-to.pdf, id=396, 462.72874pt x 346.29375pt>
 File: fig/Transient_response_negative_input_pulse-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/Transient_response_negative_input_pulse-eps-converted-to.pdf>
 Package pdftex.def Info: fig/Transient_response_negative_input_pulse-eps-converted-to.pdf  used on input line 172.
@@ -667,30 +667,30 @@ Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Transient_response_positive_input_pulse-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig/Transient_response_positive_input_pulse-eps-converted-to.pdf, id=397, 462.72874pt x 346.29375pt>
+<fig/Transient_response_positive_input_pulse-eps-converted-to.pdf, id=407, 462.72874pt x 346.29375pt>
 File: fig/Transient_response_positive_input_pulse-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/Transient_response_positive_input_pulse-eps-converted-to.pdf>
 Package pdftex.def Info: fig/Transient_response_positive_input_pulse-eps-converted-to.pdf  used on input line 179.
 (pdftex.def)             Requested size: 288.0011pt x 215.53477pt.
-<fig/reverse_polarity_protection.png, id=398, 622.57594pt x 422.32782pt>
+<fig/reverse_polarity_protection.png, id=408, 622.57594pt x 422.32782pt>
 File: fig/reverse_polarity_protection.png Graphic file (type png)
 <use fig/reverse_polarity_protection.png>
 Package pdftex.def Info: fig/reverse_polarity_protection.png  used on input line 188.
 (pdftex.def)             Requested size: 288.0011pt x 195.36867pt.
 [10 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Transient_response_negative_input_pulse-eps-converted-to.pdf> <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Transient_response_positive_input_pulse-eps-converted-to.pdf>]
-<fig/microUSBinput.png, id=469, 484.81125pt x 331.99031pt>
+<fig/microUSBinput.png, id=479, 484.81125pt x 331.99031pt>
 File: fig/microUSBinput.png Graphic file (type png)
 <use fig/microUSBinput.png>
 Package pdftex.def Info: fig/microUSBinput.png  used on input line 197.
 (pdftex.def)             Requested size: 288.0011pt x 197.22513pt.
  [11 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/reverse_polarity_protection.png>]
-<fig/bq24075_toegepast.png, id=483, 468.24937pt x 300.3722pt>
+<fig/bq24075_toegepast.png, id=493, 468.24937pt x 300.3722pt>
 File: fig/bq24075_toegepast.png Graphic file (type png)
 <use fig/bq24075_toegepast.png>
 Package pdftex.def Info: fig/bq24075_toegepast.png  used on input line 212.
 (pdftex.def)             Requested size: 323.9978pt x 207.84827pt.
  [12 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/microUSBinput.png>]
-<fig/Charge_cycle.png, id=495, 572.1375pt x 425.33907pt>
+<fig/Charge_cycle.png, id=505, 572.1375pt x 425.33907pt>
 File: fig/Charge_cycle.png Graphic file (type png)
 <use fig/Charge_cycle.png>
 Package pdftex.def Info: fig/Charge_cycle.png  used on input line 227.
@@ -736,12 +736,12 @@ Overfull \hbox (1.66985pt too wide) in paragraph at lines 327--328
 []\OT1/cmr/bx/n/10.95 Load short-circuit de-tec-tion (SCD): \OT1/cmr/m/n/10.95 Sim-i-lar to over-cur-rent thresh-
  []
 
-<fig/bq29700_principeschema.png, id=561, 843.15pt x 372.64218pt>
+<fig/bq29700_principeschema.png, id=571, 843.15pt x 372.64218pt>
 File: fig/bq29700_principeschema.png Graphic file (type png)
 <use fig/bq29700_principeschema.png>
 Package pdftex.def Info: fig/bq29700_principeschema.png  used on input line 344.
 (pdftex.def)             Requested size: 323.9978pt x 143.19759pt.
-<fig/bq29700_toegepast.png, id=569, 511.15968pt x 337.26pt>
+<fig/bq29700_toegepast.png, id=579, 511.15968pt x 337.26pt>
 File: fig/bq29700_toegepast.png Graphic file (type png)
 <use fig/bq29700_toegepast.png>
 Package pdftex.def Info: fig/bq29700_toegepast.png  used on input line 356.
@@ -756,7 +756,7 @@ Overfull \hbox (1.23529pt too wide) in paragraph at lines 367--368
 []\OT1/cmr/m/n/10.95 At least 500 mA max-i-mum out-put cur-rent $\OML/cmm/m/it/10.95 I[]$ \OT1/cmr/m/n/10.95 needed for ESP32
  []
 
-<fig/TLV75533_toegepast.png, id=592, 576.65437pt x 282.30469pt>
+<fig/TLV75533_toegepast.png, id=602, 576.65437pt x 282.30469pt>
 File: fig/TLV75533_toegepast.png Graphic file (type png)
 <use fig/TLV75533_toegepast.png>
 Package pdftex.def Info: fig/TLV75533_toegepast.png  used on input line 385.
@@ -772,7 +772,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 378--388
  []
 
 [20] [21 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/TLV75533_toegepast.png>]
-<fig/TPS22919_toegepast.png, id=622, 338.01282pt x 423.83344pt>
+<fig/TPS22919_toegepast.png, id=632, 338.01282pt x 423.83344pt>
 File: fig/TPS22919_toegepast.png Graphic file (type png)
 <use fig/TPS22919_toegepast.png>
 Package pdftex.def Info: fig/TPS22919_toegepast.png  used on input line 422.
@@ -783,215 +783,219 @@ Underfull \hbox (badness 10000) in paragraph at lines 417--425
  []
 
 [22]
-<fig/ESP32_toegepast.png, id=631, 561.59813pt x 439.6425pt>
+<fig/ESP32_toegepast.png, id=642, 561.59813pt x 439.6425pt>
 File: fig/ESP32_toegepast.png Graphic file (type png)
 <use fig/ESP32_toegepast.png>
-Package pdftex.def Info: fig/ESP32_toegepast.png  used on input line 431.
+Package pdftex.def Info: fig/ESP32_toegepast.png  used on input line 437.
 (pdftex.def)             Requested size: 360.0pt x 281.81969pt.
  [23 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/TPS22919_toegepast.png>] [24 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/ESP32_toegepast.png>]
-<fig/Schematic AMG8833.png, id=644, 509.65407pt x 318.43968pt>
+<fig/Schematic AMG8833.png, id=655, 509.65407pt x 318.43968pt>
 File: fig/Schematic AMG8833.png Graphic file (type png)
 <use fig/Schematic AMG8833.png>
-Package pdftex.def Info: fig/Schematic AMG8833.png  used on input line 451.
+Package pdftex.def Info: fig/Schematic AMG8833.png  used on input line 457.
 (pdftex.def)             Requested size: 288.0011pt x 179.95276pt.
-<fig/heat map AMG8833.png, id=646, 488.42474pt x 187.29974pt>
+<fig/heat map AMG8833.png, id=657, 488.42474pt x 187.29974pt>
 File: fig/heat map AMG8833.png Graphic file (type png)
 <use fig/heat map AMG8833.png>
-Package pdftex.def Info: fig/heat map AMG8833.png  used on input line 458.
+Package pdftex.def Info: fig/heat map AMG8833.png  used on input line 464.
 (pdftex.def)             Requested size: 288.0011pt x 110.44301pt.
-<fig/view angle AMG8833.png, id=647, 461.3235pt x 205.9695pt>
+ [25 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Schematic AMG8833.png>]
+<fig/view angle AMG8833.png, id=665, 461.3235pt x 205.9695pt>
 File: fig/view angle AMG8833.png Graphic file (type png)
 <use fig/view angle AMG8833.png>
-Package pdftex.def Info: fig/view angle AMG8833.png  used on input line 465.
+Package pdftex.def Info: fig/view angle AMG8833.png  used on input line 471.
 (pdftex.def)             Requested size: 288.0011pt x 128.58603pt.
- [25 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Schematic AMG8833.png> <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/heat map AMG8833.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 469--474
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--474
+Underfull \hbox (badness 10000) in paragraph at lines 475--480
 
  []
 
-<fig/Schematic CCS811.png, id=657, 618.81187pt x 312.41719pt>
+[26 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/heat map AMG8833.png> <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/view angle AMG8833.png>]
+<fig/Schematic CCS811.png, id=674, 618.81187pt x 312.41719pt>
 File: fig/Schematic CCS811.png Graphic file (type png)
 <use fig/Schematic CCS811.png>
-Package pdftex.def Info: fig/Schematic CCS811.png  used on input line 478.
+Package pdftex.def Info: fig/Schematic CCS811.png  used on input line 484.
 (pdftex.def)             Requested size: 288.0011pt x 145.40596pt.
-[26 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/view angle AMG8833.png>] [27 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Schematic CCS811.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 497--514
+ [27 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Schematic CCS811.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 503--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--514
+Underfull \hbox (badness 10000) in paragraph at lines 503--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--514
+Underfull \hbox (badness 10000) in paragraph at lines 503--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--514
+Underfull \hbox (badness 10000) in paragraph at lines 503--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--514
+Underfull \hbox (badness 10000) in paragraph at lines 503--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--514
+Underfull \hbox (badness 10000) in paragraph at lines 503--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--514
+Underfull \hbox (badness 10000) in paragraph at lines 503--520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--514
+Underfull \hbox (badness 10000) in paragraph at lines 503--520
 
  []
 
 [28]
-<fig/schematic microphone break out board.png, id=675, 371.58826pt x 147.55125pt>
+<fig/schematic microphone break out board.png, id=686, 371.58826pt x 147.55125pt>
 File: fig/schematic microphone break out board.png Graphic file (type png)
 <use fig/schematic microphone break out board.png>
-Package pdftex.def Info: fig/schematic microphone break out board.png  used on input line 521.
+Package pdftex.def Info: fig/schematic microphone break out board.png  used on input line 527.
 (pdftex.def)             Requested size: 288.0011pt x 114.36678pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 525--528
+Underfull \hbox (badness 10000) in paragraph at lines 531--534
 
  []
 
-<fig/Schematic audio detector.png, id=679, 471.26062pt x 423.08063pt>
+[29 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/schematic microphone break out board.png>]
+<fig/Schematic audio detector.png, id=696, 471.26062pt x 423.08063pt>
 File: fig/Schematic audio detector.png Graphic file (type png)
 <use fig/Schematic audio detector.png>
-Package pdftex.def Info: fig/Schematic audio detector.png  used on input line 533.
+Package pdftex.def Info: fig/Schematic audio detector.png  used on input line 539.
 (pdftex.def)             Requested size: 288.0011pt x 258.55652pt.
-[29 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/schematic microphone break out board.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 539--547
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--553
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 539--547
+Underfull \hbox (badness 10000) in paragraph at lines 545--553
 
  []
 
 [30 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Schematic audio detector.png>]
 
-LaTeX Warning: Command \textmu invalid in math mode on input line 548.
+LaTeX Warning: Command \textmu invalid in math mode on input line 554.
 
 
-LaTeX Warning: Command \textmu invalid in math mode on input line 548.
+LaTeX Warning: Command \textmu invalid in math mode on input line 554.
 
 Missing character: There is no µ in font cmr10!
 
-LaTeX Warning: Reference `fig:sensor_board' on page 31 undefined on input line 550.
+LaTeX Warning: Reference `fig:sensor_board' on page 31 undefined on input line 556.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 548--551
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 552--556
+Underfull \hbox (badness 10000) in paragraph at lines 554--557
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 566--569
+Underfull \hbox (badness 10000) in paragraph at lines 558--562
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--584
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 574--584
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 574--584
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 574--584
+Underfull \hbox (badness 10000) in paragraph at lines 572--575
 
  []
 
 [32]
-Overfull \hbox (1.21306pt too wide) in paragraph at lines 587--588
-\OT1/cmr/m/n/10.95 For this we have done two straight for-ward ex-per-i-ments with the \OT1/cmr/bx/n/10.95 AMG8833\OT1/cmr/m/n/10.95 . 
+Underfull \hbox (badness 10000) in paragraph at lines 580--590
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--590
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--590
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--590
+
  []
 
 [33]
-<fig/field of view AMG8833.png, id=707, 314.3745pt x 144.54pt>
+Overfull \hbox (1.21306pt too wide) in paragraph at lines 593--594
+\OT1/cmr/m/n/10.95 For this we have done two straight for-ward ex-per-i-ments with the \OT1/cmr/bx/n/10.95 AMG8833\OT1/cmr/m/n/10.95 . 
+ []
+
+<fig/field of view AMG8833.png, id=718, 314.3745pt x 144.54pt>
 File: fig/field of view AMG8833.png Graphic file (type png)
 <use fig/field of view AMG8833.png>
-Package pdftex.def Info: fig/field of view AMG8833.png  used on input line 602.
+Package pdftex.def Info: fig/field of view AMG8833.png  used on input line 608.
 (pdftex.def)             Requested size: 288.0011pt x 132.4248pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--605
+Underfull \hbox (badness 10000) in paragraph at lines 598--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--605
+Underfull \hbox (badness 10000) in paragraph at lines 598--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--605
+Underfull \hbox (badness 10000) in paragraph at lines 598--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--605
+Underfull \hbox (badness 10000) in paragraph at lines 598--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--605
+Underfull \hbox (badness 10000) in paragraph at lines 598--611
 
  []
 
-<fig/human detection.png, id=708, 274.626pt x 112.0185pt>
+[34]
+<fig/human detection.png, id=724, 274.626pt x 112.0185pt>
 File: fig/human detection.png Graphic file (type png)
 <use fig/human detection.png>
-Package pdftex.def Info: fig/human detection.png  used on input line 614.
+Package pdftex.def Info: fig/human detection.png  used on input line 620.
 (pdftex.def)             Requested size: 288.0011pt x 117.47417pt.
-[34 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/field of view AMG8833.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 618--620
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--626
 
  []
 
-[35 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/human detection.png>]
-Overfull \hbox (5.8542pt too wide) in paragraph at lines 626--627
+[35 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/field of view AMG8833.png> <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/human detection.png>]
+Overfull \hbox (5.8542pt too wide) in paragraph at lines 632--633
 []\OT1/cmr/m/n/10.95 For the ini-tial-iza-tion of the sen-sors, we just en-able the $[][]$C-communication,
  []
 
-<fig/wifi_pwr.pdf, id=722, 450.63155pt x 327.1472pt>
+[36]
+<fig/wifi_pwr.pdf, id=737, 450.63155pt x 327.1472pt>
 File: fig/wifi_pwr.pdf Graphic file (type pdf)
 <use fig/wifi_pwr.pdf>
-Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 646.
+Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 652.
 (pdftex.def)             Requested size: 360.0pt x 261.3537pt.
-[36] [37 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/wifi_pwr.pdf>]
-<fig/statendiagram.pdf, id=764, 467.82779pt x 396.52138pt>
+ [37 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/wifi_pwr.pdf>]
+<fig/statendiagram.pdf, id=775, 467.82779pt x 396.52138pt>
 File: fig/statendiagram.pdf Graphic file (type pdf)
 <use fig/statendiagram.pdf>
-Package pdftex.def Info: fig/statendiagram.pdf  used on input line 670.
+Package pdftex.def Info: fig/statendiagram.pdf  used on input line 676.
 (pdftex.def)             Requested size: 360.0pt x 305.13483pt.
  [38 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/statendiagram.pdf
 
@@ -999,37 +1003,37 @@ pdfTeX warning: pdflatex (file c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/R
 >] [39]
 File: fig/wifi_pwr.pdf Graphic file (type pdf)
 <use fig/wifi_pwr.pdf>
-Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 708.
+Package pdftex.def Info: fig/wifi_pwr.pdf  used on input line 714.
 (pdftex.def)             Requested size: 360.0pt x 261.3537pt.
  [40]
-<fig/sensor_pwr.pdf, id=793, 450.63155pt x 327.1472pt>
+<fig/sensor_pwr.pdf, id=804, 450.63155pt x 327.1472pt>
 File: fig/sensor_pwr.pdf Graphic file (type pdf)
 <use fig/sensor_pwr.pdf>
-Package pdftex.def Info: fig/sensor_pwr.pdf  used on input line 722.
+Package pdftex.def Info: fig/sensor_pwr.pdf  used on input line 728.
 (pdftex.def)             Requested size: 360.0pt x 261.3537pt.
  [41]
-<fig/sync_pwr.pdf, id=801, 450.63155pt x 327.1472pt>
+<fig/sync_pwr.pdf, id=812, 450.63155pt x 327.1472pt>
 File: fig/sync_pwr.pdf Graphic file (type pdf)
 <use fig/sync_pwr.pdf>
-Package pdftex.def Info: fig/sync_pwr.pdf  used on input line 737.
+Package pdftex.def Info: fig/sync_pwr.pdf  used on input line 743.
 (pdftex.def)             Requested size: 360.0pt x 261.3537pt.
  [42 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/sensor_pwr.pdf>] [43 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/sync_pwr.pdf>] [44] [45]
-<fig/databaseDesign.png, id=878, 504.38437pt x 244.66406pt>
+<fig/databaseDesign.png, id=889, 504.38437pt x 244.66406pt>
 File: fig/databaseDesign.png Graphic file (type png)
 <use fig/databaseDesign.png>
-Package pdftex.def Info: fig/databaseDesign.png  used on input line 840.
+Package pdftex.def Info: fig/databaseDesign.png  used on input line 846.
 (pdftex.def)             Requested size: 360.0pt x 174.62733pt.
  [46 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/databaseDesign.png>]
-<fig/overviewPage.png, id=886, 1445.4pt x 813.0375pt>
+<fig/overviewPage.png, id=897, 1445.4pt x 813.0375pt>
 File: fig/overviewPage.png Graphic file (type png)
 <use fig/overviewPage.png>
-Package pdftex.def Info: fig/overviewPage.png  used on input line 864.
+Package pdftex.def Info: fig/overviewPage.png  used on input line 870.
 (pdftex.def)             Requested size: 360.0pt x 202.5021pt.
  [47 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/overviewPage.png>]
-<fig/heatmapExample.png, id=894, 1445.4pt x 813.0375pt>
+<fig/heatmapExample.png, id=905, 1445.4pt x 813.0375pt>
 File: fig/heatmapExample.png Graphic file (type png)
 <use fig/heatmapExample.png>
-Package pdftex.def Info: fig/heatmapExample.png  used on input line 879.
+Package pdftex.def Info: fig/heatmapExample.png  used on input line 885.
 (pdftex.def)             Requested size: 360.0pt x 202.5021pt.
  [48 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/heatmapExample.png>] [49] (c:/Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.bbl
 Underfull \hbox (badness 4303) in paragraph at lines 29--31
@@ -1077,65 +1081,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--73
  []
 
 ) [50]
-<fig/MainPCB_schematic.pdf, id=925, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=936, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 925.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf  used on input line 925.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<fig/MainPCB_schematic.pdf, id=928, page=1, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=939, page=1, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 925.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 925.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
  [51]
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 925.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 925.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 1>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page1 used on input line 925.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
  [52 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/MainPCB_schematic.pdf>]
-<fig/MainPCB_schematic.pdf, id=942, page=2, 845.1575pt x 598.235pt>
+<fig/MainPCB_schematic.pdf, id=953, page=2, 845.1575pt x 598.235pt>
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 925.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 925.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
 File: fig/MainPCB_schematic.pdf Graphic file (type pdf)
 <use fig/MainPCB_schematic.pdf, page 2>
-Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 918.
+Package pdftex.def Info: fig/MainPCB_schematic.pdf , page2 used on input line 925.
 (pdftex.def)             Requested size: 597.61578pt x 423.01544pt.
  [53 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/MainPCB_schematic.pdf>]
 
 pdfTeX warning: pdflatex (file c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/schematic drawing sensorboard.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig/schematic drawing sensorboard.pdf, id=947, 794.97pt x 614.295pt>
+<fig/schematic drawing sensorboard.pdf, id=958, 794.97pt x 614.295pt>
 File: fig/schematic drawing sensorboard.pdf Graphic file (type pdf)
 <use fig/schematic drawing sensorboard.pdf>
-Package pdftex.def Info: fig/schematic drawing sensorboard.pdf  used on input line 927.
+Package pdftex.def Info: fig/schematic drawing sensorboard.pdf  used on input line 934.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
 pdfTeX warning: pdflatex (file c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/schematic drawing sensorboard.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: fig/schematic drawing sensorboard.pdf Graphic file (type pdf)
 <use fig/schematic drawing sensorboard.pdf>
-Package pdftex.def Info: fig/schematic drawing sensorboard.pdf  used on input line 927.
+Package pdftex.def Info: fig/schematic drawing sensorboard.pdf  used on input line 934.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
@@ -1143,39 +1147,103 @@ pdfTeX warning: pdflatex (file c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/R
 
 
 pdfTeX warning: pdflatex (file c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/schematic drawing sensorboard.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<fig/schematic drawing sensorboard.pdf, id=950, page=1, 794.97pt x 614.295pt>
+<fig/schematic drawing sensorboard.pdf, id=961, page=1, 794.97pt x 614.295pt>
 File: fig/schematic drawing sensorboard.pdf Graphic file (type pdf)
 <use fig/schematic drawing sensorboard.pdf, page 1>
-Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 927.
+Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 934.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 File: fig/schematic drawing sensorboard.pdf Graphic file (type pdf)
 <use fig/schematic drawing sensorboard.pdf, page 1>
-Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 927.
+Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 934.
 (pdftex.def)             Requested size: 598.22752pt x 462.26671pt.
 [54]
 File: fig/schematic drawing sensorboard.pdf Graphic file (type pdf)
 <use fig/schematic drawing sensorboard.pdf, page 1>
-Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 927.
+Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 934.
 (pdftex.def)             Requested size: 598.22752pt x 462.26671pt.
 File: fig/schematic drawing sensorboard.pdf Graphic file (type pdf)
 <use fig/schematic drawing sensorboard.pdf, page 1>
-Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 927.
+Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 934.
 (pdftex.def)             Requested size: 598.22752pt x 462.26671pt.
 File: fig/schematic drawing sensorboard.pdf Graphic file (type pdf)
 <use fig/schematic drawing sensorboard.pdf, page 1>
-Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 927.
+Package pdftex.def Info: fig/schematic drawing sensorboard.pdf , page1 used on input line 934.
 (pdftex.def)             Requested size: 598.22752pt x 462.26671pt.
  [55 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/schematic drawing sensorboard.pdf>]
+<fig/Pricing information PI-1200952.pdf, id=972, 597.23125pt x 845.1575pt>
+File: fig/Pricing information PI-1200952.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200952.pdf>
+Package pdftex.def Info: fig/Pricing information PI-1200952.pdf  used on input line 942.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: fig/Pricing information PI-1200952.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200952.pdf>
+Package pdftex.def Info: fig/Pricing information PI-1200952.pdf  used on input line 942.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+<fig/Pricing information PI-1200952.pdf, id=975, page=1, 597.23125pt x 845.1575pt>
+File: fig/Pricing information PI-1200952.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200952.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200952.pdf , page1 used on input line 942.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: fig/Pricing information PI-1200952.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200952.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200952.pdf , page1 used on input line 942.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [56]
+File: fig/Pricing information PI-1200952.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200952.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200952.pdf , page1 used on input line 942.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/Pricing information PI-1200952.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200952.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200952.pdf , page1 used on input line 942.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/Pricing information PI-1200952.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200952.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200952.pdf , page1 used on input line 942.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [57 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Pricing information PI-1200952.pdf>]
+<fig/Pricing information PI-1200953.pdf, id=1003, 597.23125pt x 845.1575pt>
+File: fig/Pricing information PI-1200953.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200953.pdf>
+Package pdftex.def Info: fig/Pricing information PI-1200953.pdf  used on input line 950.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: fig/Pricing information PI-1200953.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200953.pdf>
+Package pdftex.def Info: fig/Pricing information PI-1200953.pdf  used on input line 950.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+<fig/Pricing information PI-1200953.pdf, id=1006, page=1, 597.23125pt x 845.1575pt>
+File: fig/Pricing information PI-1200953.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200953.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200953.pdf , page1 used on input line 950.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: fig/Pricing information PI-1200953.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200953.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200953.pdf , page1 used on input line 950.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [58]
+File: fig/Pricing information PI-1200953.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200953.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200953.pdf , page1 used on input line 950.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/Pricing information PI-1200953.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200953.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200953.pdf , page1 used on input line 950.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: fig/Pricing information PI-1200953.pdf Graphic file (type pdf)
+<use fig/Pricing information PI-1200953.pdf, page 1>
+Package pdftex.def Info: fig/Pricing information PI-1200953.pdf , page1 used on input line 950.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [59 <c:/Users/Arthur/Documents/GitHub/cosy_cafeteria/Report/fig/Pricing information PI-1200953.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 929.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 929.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 952.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 952.
 (c:/Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 929.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 929.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 952.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 952.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: D871220AD8357B888680E473F9A3C129;3356.
+(rerunfilecheck)             Checksum: ADD2E656415913FA7054A42641ED26D8;3464.
 
 
 LaTeX Warning: There were undefined references.
@@ -1183,20 +1251,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 929.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 952.
  ) 
 Here is how much of TeX's memory you used:
- 19112 strings out of 480932
- 354540 string characters out of 2912487
- 691557 words of memory out of 3000000
- 34413 multiletter control sequences out of 15000+200000
+ 19144 strings out of 480932
+ 355684 string characters out of 2912487
+ 690641 words of memory out of 3000000
+ 34435 multiletter control sequences out of 15000+200000
  546341 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,106p,1353b,889s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Arthur\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\Arthur\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Programma's/MikTEX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><D:/Programma's/MikTEX/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on c:/Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.pdf (55 pages, 1434990 bytes).
+Output written on c:/Users\Arthur\Documents\GitHub\cosy_cafeteria\Report\Report.pdf (59 pages, 1504040 bytes).
 PDF statistics:
- 1069 PDF objects out of 1200 (max. 8388607)
- 191 named destinations out of 1000 (max. 500000)
- 591 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1143 PDF objects out of 1200 (max. 8388607)
+ 197 named destinations out of 1000 (max. 500000)
+ 647 words of extra memory for PDF output out of 10000 (max. 10000000)
 

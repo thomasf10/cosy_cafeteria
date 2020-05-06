@@ -426,6 +426,12 @@ Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 
 
 
 \section{Microcontroller}
+The microcontroller for this project had to be able to do a view things: connect to the school network which is an enterprise network, send data over wifi, have the necessary io pins to read out all the sensors and be low power.
+At first the ESP8266 was considerd as this is an easy to use microcontroller. The problem with this microcontroller is that it can't connect to the wifi network at school as it doesn't support enterprise networks.
+Because of this the ESP32 was used, this is the 'bigger' brother of the ESP8266 that supports the enterprise connection. To be more specific the single core vresion of this ESP32 is used because it uses less power then the normal two core model.
+In figure~\ref{fig:ESP32_toegepast} the schematic design is displayed. The PowerS1-3 pins are used to control the loadswitches. SDA and SCL are the clock and data line for the i\textsuperscript{2}c  bus that is used to communicate with the AMG8833 and CSS811.
+Then there are also interrupt pins those are recognisable by the int in the name. The detector from the microphone is labeled Detector\_out and is connected to a pin that is internally connected to an ADC.
+Two buttons were also added to be able to put the ESP32 in flash mode, the pins used to flash the ESP32 are the TX and RX pins. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{ESP32_toegepast.png}
@@ -896,7 +902,8 @@ The case could be made more closely to the the internal parts. Specific at the A
 
 
 \section{Financial estimate}
-Kostprijs van het project opstellen.
+The price of all the components used in this project is 71,70 Euro.  
+LOAD BOM EXCEL??? 
 
 \section{Validation and measurements}
 Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
@@ -925,5 +932,21 @@ Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
 %	\includegraphics[width=1\linewidth]{schematic drawing sensorboard.pdf}
 %\end{figure}
 \includepdf[pages=-]{fig/schematic drawing sensorboard.pdf}
+\newpage
+
+\section{Pricing main pcb}\label{app:pricing main pcb}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\linewidth]{schematic drawing sensorboard.pdf}
+%\end{figure}
+\includepdf[pages=-]{fig/Pricing information PI-1200952.pdf}
+\newpage
+
+\section{pricing sensor pcb}\label{app:pricing sensor pcb}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=1\linewidth]{schematic drawing sensorboard.pdf}
+%\end{figure}
+\includepdf[pages=-]{fig/Pricing information PI-1200953.pdf}
 \newpage
 \end{document}
