@@ -45,8 +45,10 @@
 \BOOKMARK [2][-]{subsection.10.2}{Frontend}{section.10}% 45
 \BOOKMARK [1][-]{section.11}{Case Design}{}% 46
 \BOOKMARK [1][-]{section.12}{Financial estimate}{}% 47
-\BOOKMARK [1][-]{section.13}{Validation and measurements}{}% 48
-\BOOKMARK [1][-]{appendix.A}{MainPCB schematic}{}% 49
-\BOOKMARK [1][-]{appendix.B}{Sensor board schematic}{}% 50
-\BOOKMARK [1][-]{appendix.C}{Pricing main pcb}{}% 51
-\BOOKMARK [1][-]{appendix.D}{pricing sensor pcb}{}% 52
+\BOOKMARK [1][-]{section.13}{Validation and testing}{}% 48
+\BOOKMARK [2][-]{subsection.13.1}{Successfully validated}{section.13}% 49
+\BOOKMARK [2][-]{subsection.13.2}{To validate}{section.13}% 50
+\BOOKMARK [1][-]{appendix.A}{MainPCB schematic}{}% 51
+\BOOKMARK [1][-]{appendix.B}{Sensor board schematic}{}% 52
+\BOOKMARK [1][-]{appendix.C}{Pricing main PCB}{}% 53
+\BOOKMARK [1][-]{appendix.D}{pricing sensor PCB}{}% 54

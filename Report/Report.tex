@@ -426,11 +426,11 @@ Figure \ref{fig:TPS22919_toegepast} shows the application of TPS22919 for our 3 
 
 
 \section{Microcontroller}
-The microcontroller for this project had to be able to do a view things: connect to the school network which is an enterprise network, send data over wifi, have the necessary io pins to read out all the sensors and be low power.
-At first the ESP8266 was considerd as this is an easy to use microcontroller. The problem with this microcontroller is that it can't connect to the wifi network at school as it doesn't support enterprise networks.
-Because of this the ESP32 was used, this is the 'bigger' brother of the ESP8266 that supports the enterprise connection. To be more specific the single core vresion of this ESP32 is used because it uses less power then the normal two core model.
+The microcontroller for this project had to be able to do a few things: connect to the school network, which is an enterprise network, send data over Wi-Fi, have the necessary IO pins to read out all the sensors and be low power.
+At first the ESP8266 was considered as this is an easy to use microcontroller. The problem with this microcontroller is that it can't connect to the Wi-Fi network at school as it doesn't support enterprise networks.
+Because of this the ESP32 was used, this is the 'bigger' brother of the ESP8266 that supports the enterprise connection. To be more specific the single core version of this ESP32 is used because it uses less power then the normal two core model.
 In figure~\ref{fig:ESP32_toegepast} the schematic design is displayed. The PowerS1-3 pins are used to control the loadswitches. SDA and SCL are the clock and data line for the i\textsuperscript{2}c  bus that is used to communicate with the AMG8833 and CSS811.
-Then there are also interrupt pins those are recognisable by the int in the name. The detector from the microphone is labeled Detector\_out and is connected to a pin that is internally connected to an ADC.
+Then there are also interrupt pins those are recognisable by the int in the name. The detector from the microphone is labelled Detector\_out and is connected to a pin that is internally connected to an ADC.
 Two buttons were also added to be able to put the ESP32 in flash mode, the pins used to flash the ESP32 are the TX and RX pins. 
 \begin{figure}[H]
 	\centering
@@ -454,21 +454,21 @@ The main goal for the sensor board was to make it as low power as possible. As a
 \subsection{AMG8833 IR-sensor}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Schematic AMG8833.png}
+	\includegraphics[width=0.8\linewidth]{Schematic_AMG8833.png}
 	\caption{Schematic AMG8833}
 	\label{fig:AMG8833}
 \end{figure}
-To detect human presence, we have decided to use an infrared sensor. The human body produces quite some body heat that is emitted. The AMG8833 is an 8x8-pixel IR-sensor, that maps the heat per pixel \ref{fig:heatmap}. This allows us to determine how many people are present in a certain area. For example we can determine if there is a single person present or a group of persons in a row.
+To detect human presence, we have decided to use an infrared sensor. The human body produces quite some body heat that is emitted. The AMG8833 is an 8x8-pixel IR-sensor, that maps the heat per pixel this is illustrated in figure \ref{fig:heatmap}. This allows us to determine how many people are present in a certain area. For example we can determine if there is a single person present or a group of persons in a row.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{heat map AMG8833.png}
+	\includegraphics[width=0.8\linewidth]{heat_map_AMG8833.png}
 	\caption{Heatmap as a pixel grid}
 	\label{fig:heatmap}
 \end{figure}
 One of the considerations that has to be studied is the effect of distance, ambient temperature and the field of view of the sensor. The sensor has a total angle view of \SI{60}{\degree} \label{fig:angleview} for the horizontal and vertical axis of the pixel grid. Depending on the height, the area that the sensor covers, changes. If the height increases, the area also increases. Not only the field of view is influenced by the height but also the result of the measurements. The further the heat source is from the sensor, the lower the measured temperature will be.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{view angle AMG8833.png}
+	\includegraphics[width=0.8\linewidth]{view_angle_AMG8833.png}
 	\caption{View angle AMG8833}
 	\label{fig:angleview}
 \end{figure}
@@ -481,7 +481,7 @@ The last important aspect for this sensor is the power consumption. In the docum
 \subsection{CCS811 air quality sensor}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Schematic CCS811.png}
+	\includegraphics[width=0.8\linewidth]{Schematic_CCS811.png}
 	\caption{Schematic CCS811}
 	\label{fig:CCS811}
 \end{figure}
@@ -524,7 +524,7 @@ We have informed us by colleague students who had used a microphone module in th
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{schematic microphone break out board.png}
+	\includegraphics[width=0.8\linewidth]{schematic_microphone_break_out_board.png}
 	\caption{Schematic BOB-12758 microphone breakout board}
 	\label{fig:BOB-12758}
 \end{figure}
@@ -533,10 +533,10 @@ Because we wanted to have the average sound level, we decided to place a detecto
 The detector needs time to come from the low level to the sound level. Finding the best value of $\tau$ will be one of the investigations. This will be determine along with the test of the other sensors. The microphone must receive power for about 10 times $\tau$. We know from the theory that after 5 $\tau$, 97\% of the applied voltage is reached. The extra 5 $\tau$ is chosen for two reasons. Firstly to compensate the rectified signal by the detector and secondly to have a stable value of the average sound level.
 
 \subsection{Board design}
-When designing the board, we have started from the basic schematics of the provided break out boards of the sensor boards \ref{fig:AMG8833} \ref{fig:CCS811}. With some extra guidelines from the documentations of the sensors. For the microphone sensorboard as mentioned, we needed to design a detector circuit. We have chosen to go for a simple detector with a diode followed by an RC circuit, see Figure \ref{app:sensorboard_schematic}.
+When designing the board, we have started from the basic schematics of the provided break out boards of the sensor boards (see figures \ref{fig:AMG8833} and \ref{fig:CCS811}). With some extra guidelines from the documentations of the sensors. For the microphone sensorboard as mentioned, we needed to design a detector circuit. We have chosen to go for a simple detector with a diode followed by an RC circuit, this is illustrated in figure \ref{fig:simple_detector}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{Schematic audio detector.png}
+	\includegraphics[width=0.8\linewidth]{Schematic_audio_detector.png}
 	\caption{Schematic simple detector}
 	\label{fig:simple_detector}
 \end{figure}
@@ -551,7 +551,7 @@ A better approach to the problem would be to solve this with software. Then, the
 $V_{DC offset} = \frac{V_{CC}}{2}-V_{f schottkey}= \frac{3.3 V}{2}- 0.45 V = 1.2 V$ \\
 The reference level for no sound is $1.2 V$. The maximum audio voltage level would be $2.85 V$. What sound level this would be is unknow to us. Because, it is more a relative perception with a visual indication, exact values are not necessary. The DC-offset has a positive effect on the detection of the sound level. Because the value is above the forward voltage of the diode we do not loose information on the amplitude. But as mentioned we need to do a comparison with the reference level. We can set some thresholds for indicating the experience of a certain value. For example, if the sound level is above a certain value, it is not pleasant to study in the cafeteria.
 
-To determin the optimal value for the resistor and the capacitor of the detector, we would wait to look at the other response time of the other two sensors. We have taken a initial value of 1 ms. This can be realized with a resistor of $ 10 k\Omega$ and a capacitor of $0.1 µF$.
+To determin the optimal value for the resistor and the capacitor of the detector, we would wait to look at the other response time of the other two sensors. We have taken a initial value of 1 ms. This can be realized with a resistor of $ 10 k\Omega$ and a capacitor of $0.1 \mu$F.
 \\ \\
 For the other two sensors we have as mentioned based our schematic on the schematic of the break out boards. We only needed one extra component and that was an operational amplifier to buffer the nINt of the CCS811. This was recommended by the documentation of the CCS811. Also, if this interrupt function is not desired, we can just remove this part of the circuit and the system will work just fine. We have brought all the other connections of the sensors to a central header of 11 pins, so the board can be plugged onto the CPU board. The break out board of the microphone will be placed on top of this board by a 3 pins header.  The schematic drawing of the sensor board can be find the appendix \ref{fig:sensor_board}.
 
@@ -589,7 +589,7 @@ Which are values that are easily found as SMT-components. If we look more deeply
 \\ \\ With this substantiated scientific information, we can state the value of 10 ms is a good value for a quick and correct response for indicating the loudness of noise in the cafeteria. If we also take a look at the frequency response of the breakout board. The signals from 100 Hz will be picked up to about 1 kHz with the same gain value. Outside these boundaries, the gain of the audio signal will fall back. The value of 10 ms is again a good value for the $\tau$.
 
 
-\paragraph{Human presence detection}
+\paragraph{Human presence detection}\label{sec:amg}
 For this we have done two straight forward experiments with the \textbf{AMG8833}.
 \begin{itemize}
 \item \textbf{First experiment:} Heat detection on a person
@@ -599,14 +599,14 @@ For the first experiment we have put a person in front of the AMG8833 at about 2
 \\ \\ 
 This concludes, we can detect a human by the radiation coming from the crown of the head.
 \\ \\
-With this confirmed, we progressed into the second experiment. Is it possible to detect a human below the sensor at a height of 3,4 metres (possible to test at home during corona pandemic). The height difference between the head of an average standing person and the sensor is about 1,7 metres. At this height the sensor will covers an area of $3.85 m^2$. We know the sensor had a angle view of \SI{60}{\degree}. If we then calculate according to the principal geometric drawing \ref{fig:prinicipal drawing},  we find:
+With this confirmed, we progressed into the second experiment. Is it possible to detect a human below the sensor at a height of 3,4 metres (possible to test at home during corona pandemic). The height difference between the head of an average standing person and the sensor is about 1,7 metres. At this height the sensor will covers an area of $3.85 m^2$. We know the sensor had a angle view of \SI{60}{\degree}. If we then calculate according to the principal geometric drawing in figure \ref{fig:prinicipal drawing},  we find:
 \\ \\
 $ x = height \cdot tan (\SI{30}{\degree}) = 1.7 m \cdot 0.577 = 0.981 m$
 \\ \\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{field of view AMG8833.png}
-	\caption{Prinicipal drawing view sensor AMG8833}
+	\includegraphics[width=0.8\linewidth]{field_of_view_AMG8833.png}
+	\caption{Principale drawing view sensor AMG8833}
 	\label{fig:prinicipal drawing}
 \end{figure}
 Finding the field of view of the sensor at this height, $\textbf{x}$ must be doubled and squared:\\
@@ -614,18 +614,18 @@ $ A = (2 \cdot x)^2 = (2 \cdot 0.981 m)^2 =  3.85 m^2$
 \\
 If the sensor is at a height of 3.4 metres the covered area will be 3.85 $m^2$, which is a workable area for noticing someone is sitting at a table.
 The area will be even bigger because the distance will be bigger. We wanted to know if it is possible to detect a person and to track the person.
-For this we have placed the sensor at this height and analysed the results if someone moved beneath the sensor. When analysing the result we found that a person was represented by 1 or 2 pixels ref{fig:human detection}with a value that is about 2-\SI{3}{\celsius} higher than the surroundings. 
+For this we have placed the sensor at this height and analysed the results if someone moved beneath the sensor. When analysing the result we found that a person was represented by 1 or 2 pixels, with a value that is about 2-\SI{3}{\celsius} higher than the surroundings this is illustrated in figure~\ref{fig:humandetection}. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{human detection.png}
+	\includegraphics[width=0.8\linewidth]{humandetection.png}
 	\caption{Human detection at a height of 3.4 metre}
 	\label{fig:humandetection}
 \end{figure}
-The test was performed in a space with an overall temperature of about 17 degrees on ground level. Which is not a normal room temperature. During testing the results were fluctuating about \SI{0.25}{\celsius} which is the resolution of the sensor in \SI{}{\celsius}. Notice the higher numbers at the top pixels. This coud be because the test setup was attached on a wooden staircase at 3.4 metres high where some licht bulbs hang.\\ \\
+The test was performed in a space with an overall temperature of about 17 degrees on ground level. Which is not a normal room temperature. During testing the results were fluctuating about \SI{0.25}{\celsius} which is the resolution of the sensor in \SI{}{\celsius}. Notice the higher numbers at the top pixels. This could be because the test setup was attached on a wooden staircase at 3.4 metres high where some light bulbs hang.\\ \\
 \textbf{Conclusion:} It is possible to detect a person at a height of 3.4 m in a room with a temperature of \SI{17}{\celsius}. It was also possible the follow his movements. If placing this into practice The best way is to compare the value of a pixel top an overall temperature or to a reference value. This should have been tested at the cafeteria during optimization of the system.
 
 \subsection{Programming the sensors}
-With the experiments mentioned above we made some methods for initializing the sensors and getting the measurment results of the sensors. For having a clear overview of our code we have made a own library with these methods, that combines our own code with code from the already mentioned libraries.  
+With the experiments mentioned above we made some methods for initializing the sensors and getting the measurement results of the sensors. For having a clear overview of our code we have made a own library with these methods, that combines our own code with code from the already mentioned libraries.  
 
 We can divide the created methods in two types: initializations methods, for initializing the sensors after power on and methods for reading the sensor data. We have foreseen for the initialisation a main method were the different methods will be called one after each other with the correct flow. The slowest sensor will be initialized first so the time to start up can be use to initialize the other sensors.
 
@@ -808,15 +808,15 @@ There are two Li-Ion cells that are used to power the system, they both have a c
 \section{DashBoard}
 \paragraph{Functionality}
 \begin{itemize}
-	\item Recieve the data from the sensor
+	\item Receive the data from the sensor
 	\item Store the data in a database
-	\item Display an overview with the avarages of every sensor
+	\item Display an overview with the averages of every sensor
 	\item Display the data from each sensor on a heatmap
 \end{itemize}
 
 \paragraph{Overview}
 The intention of this dashboard is to display the data that the different sensors on all the devices in the cafeteria generate.
-It gives an overview of what's happening in the cafeteria in an airquality, temperature and sound perspective. 
+It gives an overview of what's happening in the cafeteria in an air quality, temperature and sound perspective. 
 The infrared camera data which is an 8 by 8 pixel picture is drawn on a heatmap. 
 This gives a nice overview of the busy and the less busy area's in the cafeteria.  
 
@@ -825,26 +825,26 @@ The backend is what runs on our server, in this project a raspberry pi was chose
  that can easily be set up to be used as a webserver, apache2 was used in this project to host our dashboard. Myqsl is used for the database that stores the sensor data.
 
 \paragraph{Recieve data}
-To recieve the data a python script (WiFi.py) is used that listens to the 8091 port, this is the port that the device sends his payload to.
+To receive the data a python script (WiFi.py) is used that listens to the 8091 port, this is the port that the device sends his payload to.
 The protocol that is used to send data from the device to the raspberry pi is TCP. A more in depth explanation can be found in \nameref{wifiCon}.
 
 \paragraph{Store data}
-The recieved data is stored in a mysql database, this is also implemented in the WiFi.py script that is used to recieve the data.
+The received data is stored in a mysql database, this is also implemented in the WiFi.py script that is used to receive the data.
 To use the database in the python script a mysql.connector is used.
 The database uses 3 tables: 
 \begin{itemize}
 	\item location: this table is used to store the location of the sensor. It has an x-, y-coordinate and the location id.
 	\item sensor: this table stores the sensor id  and has the location id as a foreign key.
-	\item readings: This is the table that stores all the sensor data with the date and time that it was recieved. 
+	\item readings: This is the table that stores all the sensor data with the date and time that it was received. 
 					All the data that isn't an array is stored as a float, the arrays with the 64 pixels from the infrared camera are stored as a json string.
-					The two other columms in this table are the reading id and the sensor id.  
+					The two other columns in this table are the reading id and the sensor id.  
 \end{itemize}
 A visual representation of the database descript above can be seen in figure~\ref{fig:db_des}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{databaseDesign.png}
-	\caption{Visual represntation of the database}
+	\caption{Visual representation of the database}
 	\label{fig:db_des}
 \end{figure}
 
@@ -856,14 +856,14 @@ Then all this data is encoded as json and passed on to the website, this website
 \subsection{Frontend}
 The frontend is the part of the dashboard that people can interact with and view the data from all the different devices and sensors.
 This website has 6 different pages, an overview page that shows the averages of all the sensor data from all the different sensornodes.
-The other pages show a heatmap with the specific sensor data of each sensornode seperatly drawn on it. 
-For example, there is an activity page that display where the infraredcamera picks up heat signals, a temperature page that displays where it is warmer or colder.
+The other pages show a heatmap with the specific sensor data of each sensornode separately drawn on it. 
+For example, there is an activity page that display where the infrared camera picks up heat signals, a temperature page that displays where it is warmer or colder.
 Each type of sensor reading has it's own page.
 
 \paragraph{Overview page}
 As already said in the short description above, this page takes the average of all the sensor data from the different sensornodes. 
-On this page two subsection are made, the first one is named activity and under it the busyness of the cafetara is show by giving the average of all the pixeldata from all the sensornodes.
-In the second subsection the sensor data related the the environment is shown, the numbers desplayed here are also an average taken from all the diffrent sensornodes. 
+On this page two subsection are made, the first one is named activity and under it the busyness of the cafeteria is show by giving the average of all the pixeldata from all the sensornodes.
+In the second subsection the sensor data related the the environment is shown, the numbers displayed here are also an average taken from all the different sensornodes. 
 The displayed data here is: Co2 level, TVOC level, Sound and temperature. Al this can be seen in figure~\ref{fig:overview_page}. 
 \begin{figure}[H]
 	\centering
@@ -871,22 +871,22 @@ The displayed data here is: Co2 level, TVOC level, Sound and temperature. Al thi
 	\caption{Screenshot from the overview page}
 	\label{fig:overview_page}
 \end{figure}
-The avarages of all the data are calculated using a javascript script in the website, so each time there is new data and the webpage is reloaded this wil update to the latest data.
+The averages of all the data are calculated using a javascript script in the website, so each time there is new data and the webpage is reloaded this will update to the latest data.
 The javascript loops through the data from the database that it get's in the JSON format from the database.php backend script.
 
 \paragraph{Page with heatmap}
-These pages show one single type of data from that the sensor node gathers, in this case the pixeldata from the infraredcamera.
-On figure~\ref{fig:heatmap_example} you can clearly see the different elements of this dashbaord page. up top there is the Cosy Cafetaria title with the menu to navigate all the different pages below it.
+These pages show one single type of data from that the sensor node gathers, in this case the pixeldata from the infrared camera.
+On figure~\ref{fig:heatmap_example} you can clearly see the different elements of this dashboard page. up top there is the Cosy Cafeteria title with the menu to navigate all the different pages below it.
 Under this menu is where the actual data is displayed on the floor plan of the cafeteria. This floor plan is loaded in as an image that is used as background to draw the heatmap over.
-For the heatmap a javascript library is used called heatmap.js, this library makes it easy to add the datapoints with there value and location and draw them ontop of the floor plan.
-It also draws a legend in the botom right corner.
+For the heatmap a javascript library is used called heatmap.js, this library makes it easy to add the data points with there value and location and draw them on top of the floor plan.
+It also draws a legend in the bottom right corner.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{heatmapExample.png}
 	\caption{Screenshot from the activity page}
 	\label{fig:heatmap_example}
 \end{figure}
-If the cafeteria would be fully equiped with our sensornodes a completer map could be drawn on which you could clearly see the heatsignature of every person in the cafeteria.
+If the cafeteria would be fully equipped with our sensornodes a completer map could be drawn on which you could clearly see the heat signature of every person in the cafeteria.
 This would make it easy to see if your favourite spot was still available or not and how busy it is in the queue.
 \\
 On the other pages of the dashboard the other sensor data is displayed in the same way. 
@@ -894,7 +894,7 @@ The temperature data would make it easy to spot where it's is hotter or rather w
 Same goes for the other data that is collected by the sensornodes.
 
 \section{Case Design}
-For our system, we have designed a simple case for building in the system. We have made the design with fusion 360. This program has the abiliy to import different types of 3D-files. By importing all our seperate parts of the design and align them we could make a case that fits with some holes so the sensors have a opening above them to measure the different stimulus. The design of the case is not a very complex design but there have been taken some important design considerations. For the opening above the AMG8833, we have made the opening a little bit wider so it will not cover parts of the field of view of the sensor. Also, to hang the design to the ceiling we have drawn four loops at the upper side of case so we can hang the case with a cable to the ceiling everywhere the systems needs to be placed.
+For our system, we have designed a simple case for building in the system. We have made the design with fusion 360. This program has the ability to import different types of 3D-files. By importing all our separate parts of the design and align them we could make a case that fits with some holes so the sensors have a opening above them to measure the different stimulus. The design of the case is not a very complex design but there have been taken some important design considerations. For the opening above the AMG8833, we have made the opening a little bit wider so it will not cover parts of the field of view of the sensor. Also, to hang the design to the ceiling we have drawn four loops at the upper side of case so we can hang the case with a cable to the ceiling everywhere the systems needs to be placed.
 
 
 \paragraph{Possible improvements}
@@ -905,8 +905,42 @@ The case could be made more closely to the the internal parts. Specific at the A
 The price of all the components used in this project is 71,70 Euro.  
 LOAD BOM EXCEL??? 
 
-\section{Validation and measurements}
-Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
+\section{Validation and testing}
+In this section the different functionalities are validated. The aspects that couldn't be validated because of the lack of equipment during the corona pandemic are also discussed. 
+\subsection{Successfully validated}
+In order to validate the correct operation of the system a number of tests were performed. The system was tested on an ESP32-DEVKitC which is illustrated in figure~\ref{fig:devkit}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,width=1.0\linewidth]{devkit.png}
+	\caption{ESP32-DeVKit~\cite{devkit}}
+	\label{fig:devkit}
+\end{figure}
+This devkit uses the same ESP32-SOLO-1 chip that is used in our design, which makes it perfect to test the software. Next to this devkit two breakout boards were used, namely a breakout board for the AMG8833 and one for the CCS811. Unfortunately no breakout board was available for the microphone, so this wasn't fully tested. 
+\paragraph{AMG8833}
+To verify the correct functionality of the AMG8833 the developed code was tested on the ESP32-DEVKitC, together with a breakout board for the AMG8833. When a heat source is brought closer to the sensor, it is clear that this is picked up by the sensor and correctly translated in a higher pixel value. This has already been discussed in section~\ref{sec:amg}. We can conclude that the AMG8833 functions correctly. 
+\paragraph{CCS811}
+To verify the correct functionality of the CCS811 the developed code was tested on the ESP32-DEVKitC, together with a breakout board for the CCS811. This sensor measures $CO_2$ levels and TVOC levels. To verify that the correct values are read out, a person exhaled on the sensor, this resulted in higher $CO_2$ and TVOC levels, as expected. This ensures that we can conclude that the sensor is working correctly
+\paragraph{Microphone}
+Unfortunately no breakout board was available for the microphone. However, the microphone produces an analog signal that has to be read out with the ADC of the ESP32. The correct operation of the ADC was tested by connecting an analog output pin of the ESP32 to the ADC of the ESP32. By setting a value on the output pin and registering the same value with the ADC, the correct functionality of the ADC was verified. Given that the developed sensorboard for the microphone produces a correct output signal, it can be read out correctly by the ESP23. 
+
+\paragraph{Full system}
+In order to test the full system, the final code was uploaded to the ESP32-DeVKitC. The devkit was connected to the AMG8833 and the CCS811 on a breadboard, the ADC pin for the microphone was left floating, because no microphone board was available. This was set up at one students house. Next to this a raspberry pi was setup in another students house, to act as the server which receives the sensor data and hosts the website. This setup was used to test the system for one full day. Every ten minutes the system correctly read out the sensors and successfully sent the data to the server that was running on the raspberry pi. On the server side the sensor values that were received, were then used to update the Mysql databases that stores the data. From this test we can conclude that the full system works correctly and can retrieve and send the sensor data every 10 minutes.\\
+
+To verify the correct working of the NTP synchronisation and the use of the timing information, the system was tested for one full day. As expected, when it was 4 PM the system went to sleep for the night and raised the GPIO pins to disable the power to the sensors through the load switches. Unfortunately the final hardware wasn't available to test the correct functionality of the load switches. However, the correct functionality of the software can be assured. 
+
+
+\subsection{To validate}
+\paragraph{Hardware}
+The hardware has been fully developed but unfortunately due to the corona pandemic, couldn't be verified. The main parts that need verification are:
+\begin{itemize}
+	\item Power management
+	\item Correct functionality load switches
+	\item Correct functionality sensor board
+	\item Correct functionality ESP32
+\end{itemize}
+
+\paragraph{Power consumption}
+The power consumption of the different sensors, Wi-Fi communication and NTP synchronisation could be verified by placing a one ohm resistor between the power supply and the devkit and measuring the voltage across this resistor. However, the stand-by/sleep consumption could not be verified because the devkit has an onboard LED which causes an additional consumption. Next to this, the measurement principle couldn't provide the necessary accuracy to measure \SI{}{\micro\ampere} currents, because there was a lot of noise present in the measurement. 
 
 % bibliografie toevoegen
 \newpage
@@ -922,7 +956,7 @@ Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
 %	\centering
 %	\includegraphics[width=1\linewidth]{MainPCB_schematic.pdf}
 %\end{figure}
-\includepdf[pages=-]{fig/MainPCB_schematic.pdf}
+\includepdf[pages=-,landscape=true]{fig/MainPCB_schematic.pdf}
 
 \newpage
 
@@ -931,22 +965,22 @@ Hier moeten we aantonen of dat alles werkt. Of eventuele fouten verklaren.
 %	\centering
 %	\includegraphics[width=1\linewidth]{schematic drawing sensorboard.pdf}
 %\end{figure}
-\includepdf[pages=-]{fig/schematic drawing sensorboard.pdf}
+\includepdf[pages=-,landscape=true]{fig/schematic_drawing_sensorboard.pdf}
 \newpage
 
-\section{Pricing main pcb}\label{app:pricing main pcb}
+\section{Pricing main PCB}\label{app:pricing main pcb}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=1\linewidth]{schematic drawing sensorboard.pdf}
 %\end{figure}
-\includepdf[pages=-]{fig/Pricing information PI-1200952.pdf}
+\includepdf[pages=-]{fig/Pricing_information_PI-1200952.pdf}
 \newpage
 
-\section{pricing sensor pcb}\label{app:pricing sensor pcb}
+\section{pricing sensor PCB}\label{app:pricing sensor pcb}
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[width=1\linewidth]{schematic drawing sensorboard.pdf}
 %\end{figure}
-\includepdf[pages=-]{fig/Pricing information PI-1200953.pdf}
+\includepdf[pages=-]{fig/Pricing_information_PI-1200953.pdf}
 \newpage
 \end{document}
