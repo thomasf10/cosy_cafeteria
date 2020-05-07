@@ -8,7 +8,7 @@ This repository contains the developed software and hardware for the lab project
 - [Hardware](Hardware)
   * [Main PCB](Hardware/MainPCB)
   * [Sensor PCB](Hardware/SesnorBoard)
-- [Website](website)
+- [Website/Dashboard](Dashboard)
 - [Report](Report/Report.pdf)
 
 ## Project discription
