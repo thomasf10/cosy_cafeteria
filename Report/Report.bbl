@@ -91,6 +91,11 @@ L.~Frenzel, ``7 good reasons why you should use integrated load switches,''
 \emph{CCS811Ultra-Low Power Digital Gas Sensor for Monitoring Indoor Air
   Quality}, AMS, December 2016, datasheet.
 
+\bibitem{bib:breakout_microphone}
+{LightningHawk}, ``Electret mic breakout board hookup guide,''
+  \url{https://learn.sparkfun.com/tutorials/electret-mic-breakout-board-hookup-guide?_ga=2.82876757.255172152.1588796082-1615138342.1582837712},
+  (Accessed on 5-May-2020).
+
 \bibitem{ADC_speed}
 {Patrick}, ``Esp32 adc speed,''
   \url{https://www.labfruits.com/esp32-adc-speed/}.
@@ -104,10 +109,6 @@ L.~Frenzel, ``7 good reasons why you should use integrated load switches,''
 ``Pmodaqs,''
   \url{https://store.digilentinc.com/pmod-aqs-digital-gas-sensor-for-air-quality/},
   Digilent, September 2018, schematic break out Digilent CCS811.
-
-\bibitem{breakout_microphone}
-{LightningHawk}, ``Electret mic breakout board hookup guide,''
-  \url{https://learn.sparkfun.com/tutorials/electret-mic-breakout-board-hookup-guide?_ga=2.82876757.255172152.1588796082-1615138342.1582837712}.
 
 \bibitem{lib_CCS811}
 {Adafruit}, ``Adafruit ccs811 library,''

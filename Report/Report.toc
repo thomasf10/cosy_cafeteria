@@ -52,10 +52,10 @@
 \contentsline {section}{\numberline {9}Autonomy}{40}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Consumption sources}{40}{subsection.9.1}%
 \contentsline {paragraph}{Wi-Fi communication}{40}{subsection.9.1}%
-\contentsline {paragraph}{Sensors}{41}{figure.caption.26}%
-\contentsline {paragraph}{NTP synchronisation}{42}{figure.caption.27}%
-\contentsline {paragraph}{Standby daytime}{43}{figure.caption.28}%
-\contentsline {paragraph}{Standby nighttime}{44}{figure.caption.28}%
+\contentsline {paragraph}{Sensors}{41}{equation.9.12}%
+\contentsline {paragraph}{NTP synchronisation}{42}{equation.9.13}%
+\contentsline {paragraph}{Standby daytime}{43}{equation.9.14}%
+\contentsline {paragraph}{Standby nighttime}{44}{equation.9.16}%
 \contentsline {subsection}{\numberline {9.2}Total power consumption}{44}{subsection.9.2}%
 \contentsline {section}{\numberline {10}DashBoard}{45}{section.10}%
 \contentsline {paragraph}{Functionality}{45}{section.10}%

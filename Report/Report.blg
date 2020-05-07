@@ -1,58 +1,10 @@
-This is BibTeX, Version 0.99d (MiKTeX 2.9.7380 64-bit)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: Report.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Report.aux
 The style file: IEEEtran.bst
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "bib:breakout_microphone"
+Warning--I didn't find a database entry for "breakout_microphone"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 26 entries,
-            4087 wiz_defined-function locations,
-            954 strings with 10869 characters,
-and the built_in function-call counts, 8327 in all, are:
-= -- 633
-> -- 65
-< -- 0
-+ -- 39
-- -- 13
-* -- 249
-:= -- 1455
-add.period$ -- 43
-call.type$ -- 26
-change.case$ -- 27
-chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 778
-empty$ -- 870
-format.name$ -- 13
-if$ -- 1864
-int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 179
-newline$ -- 101
-num.names$ -- 13
-pop$ -- 438
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 2
-skip$ -- 714
-stack$ -- 0
-substring$ -- 37
-swap$ -- 431
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 5
-type$ -- 26
-warning$ -- 0
-while$ -- 13
-width$ -- 28
-write$ -- 212
 (There was 1 warning)
