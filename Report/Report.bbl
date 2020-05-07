@@ -25,9 +25,17 @@
 ``Wat je moet weten over lithium ion accu's,''
   \url{https://www.ledscherp.nl/blog/blog/wat-je-moet-weten-over-lithium-ion-accus}.
 
+\bibitem{LiIonVsLiPo_Ovonic}
+``Li-po vs li-ion battery,what are the difference between them?''
+  \url{https://www.ovonicshop.com/blogs/how-to/li-po-vs-li-ion-battery-what-are-the-difference-between-them}.
+
 \bibitem{LiIon_Wiki}
 Wikipedia, ``Lithium-ion battery,''
   \url{https://en.wikipedia.org/wiki/Lithium-ion_battery}.
+
+\bibitem{LiPo_Wiki}
+------, ``Lithium polymer battery,''
+  \url{https://en.wikipedia.org/wiki/Lithium_polymer_battery}.
 
 \bibitem{bib:NTR2101P}
 \emph{NTR2101P, Single P-Channel, Small Signal, SOT-23}, ON Semiconductor, June
@@ -74,6 +82,48 @@ L.~Frenzel, ``7 good reasons why you should use integrated load switches,''
 \bibitem{bib:TPS22919}
 \emph{TPS22919 5.5 V, 1.5 A, 90-mOhm Self-Protected Load Switch with Controlled
   Rise Time}, Texas Instruments, October 2018, datasheet.
+
+\bibitem{bib:AMG8833}
+\emph{Infrared Array Sensor Grid-EYE (AMG88)}, Panasonic, February 2019,
+  datasheet.
+
+\bibitem{bib:CCS811}
+\emph{CCS811Ultra-Low Power Digital Gas Sensor for Monitoring Indoor Air
+  Quality}, AMS, December 2016, datasheet.
+
+\bibitem{ADC_speed}
+{Patrick}, ``Esp32 adc speed,''
+  \url{https://www.labfruits.com/esp32-adc-speed/}.
+
+\bibitem{bib:AMG8833_schematic}
+{Adafruit}, ``Pcb files for the adafruit amg8833 8x8 ir sensor breakout
+  board,''
+  \url{https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/downloads}.
+
+\bibitem{bib:CCS811_schematic}
+``Pmodaqs,''
+  \url{https://store.digilentinc.com/pmod-aqs-digital-gas-sensor-for-air-quality/},
+  Digilent, September 2018, schematic break out Digilent CCS811.
+
+\bibitem{breakout_microphone}
+{LightningHawk}, ``Electret mic breakout board hookup guide,''
+  \url{https://learn.sparkfun.com/tutorials/electret-mic-breakout-board-hookup-guide?_ga=2.82876757.255172152.1588796082-1615138342.1582837712}.
+
+\bibitem{lib_CCS811}
+{Adafruit}, ``Adafruit ccs811 library,''
+  \url{https://github.com/adafruit/Adafruit_CCS811}.
+
+\bibitem{lib_AMG8833}
+{SparkFun GridEYE AMG88 Library}, ``Adafruit ccs811 library,''
+  \url{https://github.com/sparkfun/SparkFun_GridEYE_Arduino_Library}.
+
+\bibitem{average_height}
+{WorldData}, ``Average sizes of men and women,''
+  \url{https://www.worlddata.info/average-bodyheight.php}.
+
+\bibitem{heatmap.js}
+{Patrick wied}, ``heatmap.js source,''
+  \url{https://www.patrick-wied.at/static/heatmapjs/}.
 
 \bibitem{devkit}
 {ESPRESSIF}, ``Esp32-s2 series development boards,''

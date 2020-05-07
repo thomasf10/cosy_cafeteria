@@ -131,7 +131,7 @@ The most common Li-Ion battery is the 18650 cylindrical cell which is 18mm wide,
 %	\item Flexible: can bent (up to $90^\circ$) and deform + can be made in a variety of shapes
 %	\item More expensive
 %\end{itemize}
-Li-Po's are preferred over standard Li-Ion batteries in application where weight reduction is important, fast charge opportunity is needed and which need a very high current during discharge time. Li-Po's are more used for drones (where lightweight is a requirement) and electric cars (fast charging requirement). Li-Po's are also less likely to combust or explode and are more expensive. Therefor a Li-Po would be overkill in our application \cite{LiIonVsLi-Po_Ovonic,LiIon_Wiki,Li-Po_Wiki}. 
+Li-Po's are preferred over standard Li-Ion batteries in application where weight reduction is important, fast charge opportunity is needed and which need a very high current during discharge time. Li-Po's are more used for drones (where lightweight is a requirement) and electric cars (fast charging requirement). Li-Po's are also less likely to combust or explode and are more expensive. Therefor a Li-Po would be overkill in our application \cite{LiIonVsLiPo_Ovonic,LiIon_Wiki,LiPo_Wiki}. 
 
 \subsubsection{Selected battery}\label{sec:selected_battery}
 The reason we chose a single cell Li-Ion battery was:
@@ -861,7 +861,7 @@ For example, there is an activity page that display where the infrared camera pi
 Each type of sensor reading has it's own page.
 
 \paragraph{Overview page}
-As already said in the short description above, this page takes the average of all the sensor data from the different sensornodes. 
+As already stated in the short description above, this page takes the average of all the sensor data from the different sensornodes. 
 On this page two subsection are made, the first one is named activity and under it the busyness of the cafeteria is show by giving the average of all the pixeldata from all the sensornodes.
 In the second subsection the sensor data related the the environment is shown, the numbers displayed here are also an average taken from all the different sensornodes. 
 The displayed data here is: Co2 level, TVOC level, Sound and temperature. Al this can be seen in figure~\ref{fig:overview_page}. 
@@ -878,7 +878,7 @@ The javascript loops through the data from the database that it get's in the JSO
 These pages show one single type of data from that the sensor node gathers, in this case the pixeldata from the infrared camera.
 On figure~\ref{fig:heatmap_example} you can clearly see the different elements of this dashboard page. up top there is the Cosy Cafeteria title with the menu to navigate all the different pages below it.
 Under this menu is where the actual data is displayed on the floor plan of the cafeteria. This floor plan is loaded in as an image that is used as background to draw the heatmap over.
-For the heatmap a javascript library is used called heatmap.js, this library makes it easy to add the data points with there value and location and draw them on top of the floor plan.
+For the heatmap a javascript library is used called heatmap.js \cite{heatmap.js}, this library makes it easy to add the data points with there value and location and draw them on top of the floor plan.
 It also draws a legend in the bottom right corner.
 \begin{figure}[H]
 	\centering
@@ -914,14 +914,14 @@ This program has the ability to import different types of 3D-files \ref{fig:elec
 	\caption{Individuel parts imported in Fusion 360}
 	\label{fig:electronic_system}
 \end{figure}
-By importing all our separate parts of the design and align them. We could make a case that fits with some holes so the sensors have a opening above them to measure the different stimulus \ref{fig:opening_sensors}. 
+By importing all our separate parts of the design and aligning them. We could make a case that fits with some holes so the sensors have a opening above them to measure the different stimulus \ref{fig:opening_sensors}. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{opening_sensors.png}
 	\caption{Opening in cover for sensors}
 	\label{fig:opening_sensors}
 \end{figure}
-There is also a slot for the wifi-antenne \ref{fig:snapfits_total}. The antenne is uncovered but the circuit is placed in such a way, the antenne is not coming outside the case. This to protected and expose it at the same time.
+There is also a slot for the wifi-antenne \ref{fig:snapfits_total}. This antenne is uncovered but the circuit is placed in such a way that the antenne is not coming outside the case. This to protected and expose it at the same time.
 \\ \\
 The design of the case is not a very complex design but there have been taken some important design considerations. For the opening above the AMG8833, we have made the opening a little bit wider so it will not cover parts of the field of view of the sensor \ref{fig:opening_sensors} . To instal the design to the ceiling, we have put four loops at the upper side of the case \ref{fig:loops_hang_system}. With these loops the case can be fixed with a cable to the ceiling everywhere the systems needs to be installed at the choosen height.
 \begin{figure}[H]

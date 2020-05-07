@@ -8,52 +8,51 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "LiIonVsLi-Po_Ovonic"
-Warning--I didn't find a database entry for "Li-Po_Wiki"
+Warning--I didn't find a database entry for "bib:breakout_microphone"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 14 entries,
+You've used 26 entries,
             4087 wiz_defined-function locations,
-            900 strings with 9311 characters,
-and the built_in function-call counts, 4461 in all, are:
-= -- 342
-> -- 29
+            954 strings with 10869 characters,
+and the built_in function-call counts, 8327 in all, are:
+= -- 633
+> -- 65
 < -- 0
-+ -- 19
-- -- 5
-* -- 144
-:= -- 788
-add.period$ -- 21
-call.type$ -- 14
-change.case$ -- 14
++ -- 39
+- -- 13
+* -- 249
+:= -- 1455
+add.period$ -- 43
+call.type$ -- 26
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 416
-empty$ -- 452
-format.name$ -- 5
-if$ -- 988
+cite$ -- 26
+duplicate$ -- 778
+empty$ -- 870
+format.name$ -- 13
+if$ -- 1864
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 96
-newline$ -- 65
-num.names$ -- 5
-pop$ -- 224
+int.to.str$ -- 26
+missing$ -- 179
+newline$ -- 101
+num.names$ -- 13
+pop$ -- 438
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 380
+skip$ -- 714
 stack$ -- 0
-substring$ -- 21
-swap$ -- 237
+substring$ -- 37
+swap$ -- 431
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 14
+type$ -- 26
 warning$ -- 0
-while$ -- 5
-width$ -- 16
-write$ -- 125
-(There were 2 warnings)
+while$ -- 13
+width$ -- 28
+write$ -- 212
+(There was 1 warning)
